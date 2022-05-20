@@ -1,0 +1,92 @@
+\hypertarget{class_e_n_1_1_e_n___u_d_p___server}{}\doxysection{EN\+::EN\+\_\+\+UDP\+\_\+\+Server Class Reference}
+\label{class_e_n_1_1_e_n___u_d_p___server}\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+Inheritance diagram for EN\+::EN\+\_\+\+UDP\+\_\+\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_n_1_1_e_n___u_d_p___server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a73a2a1d4d18cdf5faea6679a79378651}\label{class_e_n_1_1_e_n___u_d_p___server_a73a2a1d4d18cdf5faea6679a79378651}} 
+void {\bfseries Set\+Server\+Bufer\+Type} (EN\+\_\+\+UDP\+\_\+\+Server\+Bufer\+Type type)
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a4c21feada2b13f2a6643f05316659e88}\label{class_e_n_1_1_e_n___u_d_p___server_a4c21feada2b13f2a6643f05316659e88}} 
+void {\bfseries Call} (std\+::string message, sockaddr\+\_\+in Client\+Socket\+Addr, long long Time\+Since\+Package\+Arrived)
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}\label{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}} 
+int {\bfseries Get\+Port} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}\label{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}} 
+std\+::string {\bfseries Get\+Ip\+Addr} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}\label{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}} 
+void {\bfseries Run} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}\label{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}} 
+void {\bfseries Shutdown} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a2aa585f47baec3bca9d7d5b71a01f7ad}\label{class_e_n_1_1_e_n___u_d_p___server_a2aa585f47baec3bca9d7d5b71a01f7ad}} 
+void {\bfseries Send\+To\+Client} (std\+::string msg, sockaddr\+\_\+in Client\+Socket\+Addr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a032f478780618e7277126c09ba2a0023}\label{class_e_n_1_1_e_n___u_d_p___server_a032f478780618e7277126c09ba2a0023}} 
+bool $\ast$ {\bfseries Which\+Thread\+Flushing}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a96ae37582db69b7b31cae4848e86b235}\label{class_e_n_1_1_e_n___u_d_p___server_a96ae37582db69b7b31cae4848e86b235}} 
+virtual void {\bfseries Client\+Message\+Handler} (std\+::string message, sockaddr\+\_\+in Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a34728b8b3189e2b6a5d94938e9e0cc10}\label{class_e_n_1_1_e_n___u_d_p___server_a34728b8b3189e2b6a5d94938e9e0cc10}} 
+virtual bool {\bfseries Important\+Client\+Message\+Handler} (std\+::string message, sockaddr\+\_\+in Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}\label{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}} 
+int {\bfseries Port} = 1111
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_afe7190d8c1cf38109564546cdca2d33e}\label{class_e_n_1_1_e_n___u_d_p___server_afe7190d8c1cf38109564546cdca2d33e}} 
+int {\bfseries Max\+Message\+Size} = 256
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}\label{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}} 
+std\+::string {\bfseries Ip\+Address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0283dc835dc2ec472f2d86d0227051d9}\label{class_e_n_1_1_e_n___u_d_p___server_a0283dc835dc2ec472f2d86d0227051d9}} 
+EN\+\_\+\+SOCKET {\bfseries s}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}\label{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}} 
+int {\bfseries Thread\+Amount} = 8
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a58167b143da66d6a5b89a09bf13220d4}\label{class_e_n_1_1_e_n___u_d_p___server_a58167b143da66d6a5b89a09bf13220d4}} 
+bool {\bfseries Is\+Shutdown} = false
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a8a1351d83d25f22e5a87be208331b530}\label{class_e_n_1_1_e_n___u_d_p___server_a8a1351d83d25f22e5a87be208331b530}} 
+sockaddr\+\_\+in {\bfseries server}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}\label{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}} 
+EN\+\_\+\+UDP\+\_\+\+Server\+Bufer\+Type {\bfseries Server\+Bufer\+Type} = Queue
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0bc30db4fccd9b4ae5ac0757c0bf3d21}\label{class_e_n_1_1_e_n___u_d_p___server_a0bc30db4fccd9b4ae5ac0757c0bf3d21}} 
+std\+::list$<$ std\+::string $>$ $\ast$$\ast$ {\bfseries Queue\+Message\+Vec}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a757254744e6bac48dfeac53350695efb}\label{class_e_n_1_1_e_n___u_d_p___server_a757254744e6bac48dfeac53350695efb}} 
+std\+::list$<$ sockaddr\+\_\+in $>$ $\ast$$\ast$ {\bfseries Queue\+Addr\+Vec}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_aaf559f53276bb97cea740de399fbcdd1}\label{class_e_n_1_1_e_n___u_d_p___server_aaf559f53276bb97cea740de399fbcdd1}} 
+std\+::list$<$ EN\+\_\+\+Time\+Point $>$ $\ast$$\ast$ {\bfseries Queue\+Time\+Vec}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a76e5d467497a8dd8ca90c8a7f11c093a}\label{class_e_n_1_1_e_n___u_d_p___server_a76e5d467497a8dd8ca90c8a7f11c093a}} 
+std\+::condition\+\_\+variable $\ast$$\ast$ {\bfseries Cond\+Var\+Vec}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+\_\+\+Network/EN\+\_\+\+UDP\+\_\+\+Server.\+h\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+\_\+\+Network/EN\+\_\+\+UDP\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

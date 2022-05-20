@@ -1,0 +1,43 @@
+\hypertarget{_e_n___t_c_p___file_sender_8h_source}{}\doxysection{EN\+\_\+\+TCP\+\_\+\+File\+Sender.\+h}
+\label{_e_n___t_c_p___file_sender_8h_source}\index{C:/Users/timur/Desktop/Easy\_Network/EN\_TCP\_FileSender.h@{C:/Users/timur/Desktop/Easy\_Network/EN\_TCP\_FileSender.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}EN\_TCP\_Client.h"{}}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{4 \{}
+\DoxyCodeLine{5     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender}{EN\_TCP\_FileSender}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN::EN\_TCP\_Client}}}
+\DoxyCodeLine{6     \{}
+\DoxyCodeLine{7     \textcolor{keyword}{private}:}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9         \textcolor{comment}{// A function to be defined by the user. It is used for logic after connection}}
+\DoxyCodeLine{10         \textcolor{keywordtype}{void} AfterConnect() \{\};}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
+\DoxyCodeLine{13         \textcolor{keywordtype}{void} Run() \{\};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
+\DoxyCodeLine{16         \textcolor{keywordtype}{void} ServerMessageHandler(std::string message) \{\};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
+\DoxyCodeLine{19         \textcolor{keywordtype}{void} BeforeDisconnect() \{\};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         \textcolor{keywordtype}{bool} IsStop = \textcolor{keyword}{false};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{public}:}
+\DoxyCodeLine{24         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender}{EN\_TCP\_FileSender}}() : \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN\_TCP\_Client}}() \{\};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{comment}{// Function to send file to server. First parametr is file name. Second is pointer to progress function}}
+\DoxyCodeLine{27         \textcolor{keywordtype}{bool} SendFileToServer(std::string FileName, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta));}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \textcolor{comment}{// Function to recv file from server}}
+\DoxyCodeLine{30         \textcolor{keywordtype}{bool} RecvFileFromServer();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{comment}{// Function to get message from server}}
+\DoxyCodeLine{33         \textcolor{keywordtype}{bool} RecvMessageFromServer(std::string\& msg);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} StopDownloading() \{ IsStop = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{36     \};}
+\DoxyCodeLine{37 \}}
+
+\end{DoxyCode}

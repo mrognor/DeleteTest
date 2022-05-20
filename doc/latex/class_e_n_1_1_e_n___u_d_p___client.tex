@@ -1,0 +1,56 @@
+\hypertarget{class_e_n_1_1_e_n___u_d_p___client}{}\doxysection{EN\+::EN\+\_\+\+UDP\+\_\+\+Client Class Reference}
+\label{class_e_n_1_1_e_n___u_d_p___client}\index{EN::EN\_UDP\_Client@{EN::EN\_UDP\_Client}}
+Inheritance diagram for EN\+::EN\+\_\+\+UDP\+\_\+\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_n_1_1_e_n___u_d_p___client}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_a1e8589d4b8a8af5a2db313a65be30bfb}\label{class_e_n_1_1_e_n___u_d_p___client_a1e8589d4b8a8af5a2db313a65be30bfb}} 
+int {\bfseries Get\+Port} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_a297b8d26f3965a2ecc1609ae62a7364e}\label{class_e_n_1_1_e_n___u_d_p___client_a297b8d26f3965a2ecc1609ae62a7364e}} 
+std\+::string {\bfseries Get\+Ip\+Addr} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_a3bfe1eea12ddbba93d2bba3a97764500}\label{class_e_n_1_1_e_n___u_d_p___client_a3bfe1eea12ddbba93d2bba3a97764500}} 
+EN\+\_\+\+SOCKET $\ast$ {\bfseries Get\+Socket} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_a4751eab3ad696f6f740cbb21434b54ed}\label{class_e_n_1_1_e_n___u_d_p___client_a4751eab3ad696f6f740cbb21434b54ed}} 
+void {\bfseries Run} ()
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_a95b11e4a64358af9ffe7287eac17f279}\label{class_e_n_1_1_e_n___u_d_p___client_a95b11e4a64358af9ffe7287eac17f279}} 
+void {\bfseries Send\+To\+Server} (std\+::string message, int Message\+Delay=10)
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_a4580def64540c7156f606832ba0c4b70}\label{class_e_n_1_1_e_n___u_d_p___client_a4580def64540c7156f606832ba0c4b70}} 
+void {\bfseries Close} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}\label{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}} 
+virtual void {\bfseries Server\+Message\+Handler} (std\+::string message)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_ad234ba02ece2d965b157e9100c8639d9}\label{class_e_n_1_1_e_n___u_d_p___client_ad234ba02ece2d965b157e9100c8639d9}} 
+int {\bfseries Max\+Message\+Size} = 256
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}\label{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}} 
+std\+::string {\bfseries Server\+Ip\+Addres} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_aba348f1caae476ce1033a43539851abc}\label{class_e_n_1_1_e_n___u_d_p___client_aba348f1caae476ce1033a43539851abc}} 
+EN\+\_\+\+SOCKET {\bfseries Server\+Connection\+Socket} = INVALID\+\_\+\+SOCKET
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_adfa9145d87de78fb2d29b0b2c4c0eb6e}\label{class_e_n_1_1_e_n___u_d_p___client_adfa9145d87de78fb2d29b0b2c4c0eb6e}} 
+sockaddr\+\_\+in {\bfseries Server\+Sock\+Addr}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+\_\+\+Network/EN\+\_\+\+UDP\+\_\+\+Client.\+h\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+\_\+\+Network/EN\+\_\+\+UDP\+\_\+\+Client.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,52 @@
+\hypertarget{_e_n___functions_8h_source}{}\doxysection{EN\+\_\+\+Functions.\+h}
+\label{_e_n___functions_8h_source}\index{C:/Users/timur/Desktop/Easy\_Network/EN\_Functions.h@{C:/Users/timur/Desktop/Easy\_Network/EN\_Functions.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
+\DoxyCodeLine{8 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <netinet/in.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET;}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define SendFileBufLen 1024}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{30 \{ }
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} TCP\_Send(EN\_SOCKET\& sock, std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} TCP\_Recv(EN\_SOCKET\& sock, std::string\& message);}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{38     std::vector<std::string> Split(std::string StringToSplit);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{41     std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString);}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{45     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET\& FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET\& FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} DownloadStatus(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55     \textcolor{keywordtype}{bool} IsFileExist(std::string filePath);}
+\DoxyCodeLine{56 \}}
+
+\end{DoxyCode}

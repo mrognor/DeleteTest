@@ -1,0 +1,91 @@
+\hypertarget{_e_n___t_c_p___server_8h_source}{}\doxysection{EN\+\_\+\+TCP\+\_\+\+Server.\+h}
+\label{_e_n___t_c_p___server_8h_source}\index{C:/Users/timur/Desktop/Easy\_Network/EN\_TCP\_Server.h@{C:/Users/timur/Desktop/Easy\_Network/EN\_TCP\_Server.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
+\DoxyCodeLine{8 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <netinet/in.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET; }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define INVALID\_SOCKET -\/1}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SOCKET\_ERROR -\/1}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}thread"{}}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\_TCP\_Server}}}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30     \textcolor{keyword}{private}:}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{comment}{// Boolean variable that displays the status of the server }}
+\DoxyCodeLine{33         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{comment}{// A method that processes messages from clients. Sends a message to the function ClientMessageHandler().}}
+\DoxyCodeLine{36         \textcolor{keywordtype}{void} ClientHandler(\textcolor{keywordtype}{int} ClientID);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// The method that receives messages from the client. The first parameter is the socket index in the vector}}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} RecvFromClient(\textcolor{keywordtype}{int} ClientSocketID, std::string\& message);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43         \textcolor{comment}{// Default port}}
+\DoxyCodeLine{44         \textcolor{keywordtype}{int} Port = 1111;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         \textcolor{comment}{// Server ip address string. Default set to localhost}}
+\DoxyCodeLine{47         std::string IpAddress = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49         \textcolor{comment}{// Connected clients}}
+\DoxyCodeLine{50         std::vector<EN\_SOCKET> ClientSockets;}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{52         \textcolor{comment}{// The method that is executed when the client connects to the server}}
+\DoxyCodeLine{53         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnClientConnected(\textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55         \textcolor{comment}{// Method that processes incoming messages}}
+\DoxyCodeLine{56         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} ClientMessageHandler(std::string message, \textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \textcolor{comment}{// Method that runs after the client is disconnected}}
+\DoxyCodeLine{59         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} OnClientDisconnect(\textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61     \textcolor{keyword}{public}:}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \textcolor{comment}{// Default constructor. Port: 1111. Ip address: 127.0.0.1(localhost)}}
+\DoxyCodeLine{64         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\_TCP\_Server}}();}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66         \textcolor{comment}{// Port getter}}
+\DoxyCodeLine{67         \textcolor{keywordtype}{int} GetPort() \{ \textcolor{keywordflow}{return} Port; \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69         \textcolor{comment}{// Ip getter}}
+\DoxyCodeLine{70         std::string GetIpAddr() \{ \textcolor{keywordflow}{return} IpAddress; \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72         \textcolor{comment}{// Method to start server.}}
+\DoxyCodeLine{73         \textcolor{keywordtype}{void} Run();}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \textcolor{comment}{// Method that disconnects the client from the server}}
+\DoxyCodeLine{76         \textcolor{keywordtype}{void} DisconnectClient(\textcolor{keywordtype}{int} ClientID);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{comment}{// Method that stops the server}}
+\DoxyCodeLine{79         \textcolor{keywordtype}{void} Shutdown();}
+\DoxyCodeLine{80         }
+\DoxyCodeLine{81         \textcolor{keywordtype}{void} SendToClient(\textcolor{keywordtype}{int} ClientId, std::string message);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83         \textcolor{keywordtype}{int} GetConnectionsCount() \{ \textcolor{keywordflow}{return} ClientSockets.size(); \}}
+\DoxyCodeLine{84     \};}
+\DoxyCodeLine{85 \}}
+
+\end{DoxyCode}
