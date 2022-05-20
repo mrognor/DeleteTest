@@ -30,7 +30,7 @@ var NAVTREE =
       [ "Windows library usage guide", "index.html#autotoc_md2", null ],
       [ "Linux library usage", "index.html#autotoc_md3", null ]
     ] ],
-    [ "Usefull library functions", "md__e_n__functions.html", null ],
+    [ "Usefull library functions", "md__easy__network__documentation__e_n__functions.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
