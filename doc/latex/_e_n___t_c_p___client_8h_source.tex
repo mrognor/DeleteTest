@@ -31,78 +31,58 @@
 \DoxyCodeLine{27 }
 \DoxyCodeLine{28 \textcolor{keyword}{namespace }EN}
 \DoxyCodeLine{29 \{}
-\DoxyCodeLine{30     \textcolor{comment}{// Easy network class}}
 \DoxyCodeLine{31     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN\_TCP\_Client}}}
 \DoxyCodeLine{32     \{}
 \DoxyCodeLine{33     \textcolor{keyword}{private}:}
 \DoxyCodeLine{34 }
 \DoxyCodeLine{35         \textcolor{comment}{// Default port}}
-\DoxyCodeLine{36         \textcolor{keywordtype}{int} Port = 1111;}
+\DoxyCodeLine{36         \textcolor{keywordtype}{int} ServerPort = 1111;}
 \DoxyCodeLine{37 }
 \DoxyCodeLine{38         \textcolor{comment}{// Server ip address string. Default set to localhost}}
-\DoxyCodeLine{39         std::string ServerIpAddres = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{39         std::string ServerIpAddress = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
 \DoxyCodeLine{40 }
-\DoxyCodeLine{41         \textcolor{comment}{// The server's internal method for processing incoming messages. }}
-\DoxyCodeLine{42         \textcolor{comment}{// Passes the incoming string to method ServerMessageHandler to interpretate incoming message}}
-\DoxyCodeLine{43         \textcolor{keywordtype}{void} ServerHandler();}
-\DoxyCodeLine{44 }
-\DoxyCodeLine{45     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47         \textcolor{comment}{// Socket to connect to server}}
-\DoxyCodeLine{48         EN\_SOCKET ServerConnectionSocket = INVALID\_SOCKET;}
+\DoxyCodeLine{41         \textcolor{comment}{// Socket to connect to server. Library wrapper for your operating system socket}}
+\DoxyCodeLine{42         EN\_SOCKET ServerConnectionSocket = INVALID\_SOCKET;}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44         \textcolor{comment}{// The server's internal method for processing incoming messages. }}
+\DoxyCodeLine{45         \textcolor{comment}{// Passes the incoming string to method ServerMessageHandler to interpretate incoming message}}
+\DoxyCodeLine{46         \textcolor{keywordtype}{void} ServerHandler();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keyword}{protected}:}
 \DoxyCodeLine{49 }
-\DoxyCodeLine{50         \textcolor{comment}{// A function to be defined by the user. It is used for logic after connection}}
-\DoxyCodeLine{51         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} AfterConnect() = 0;}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{53         \textcolor{comment}{// A function to be defined by the user. It is used to process incoming messages from the server}}
-\DoxyCodeLine{54         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} ServerMessageHandler(std::string message) = 0;}
-\DoxyCodeLine{55 }
-\DoxyCodeLine{56         \textcolor{comment}{// A function to be defined by the user. Performed before disconnected from the server}}
-\DoxyCodeLine{57         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} BeforeDisconnect() = 0;}
-\DoxyCodeLine{58 }
-\DoxyCodeLine{59     \textcolor{keyword}{public}:}
-\DoxyCodeLine{60         \textcolor{comment}{// Default constructor. Initiate winsock api}}
-\DoxyCodeLine{61         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN\_TCP\_Client}}();}
-\DoxyCodeLine{62 }
-\DoxyCodeLine{63         \textcolor{comment}{// Port getter}}
-\DoxyCodeLine{64         \textcolor{keywordtype}{int} GetPort() \{ \textcolor{keywordflow}{return} Port; \}}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66         \textcolor{comment}{// Ip getter}}
-\DoxyCodeLine{67         std::string GetIpAddr() \{ \textcolor{keywordflow}{return} ServerIpAddres; \}}
-\DoxyCodeLine{68 }
-\DoxyCodeLine{69         \textcolor{comment}{// Socket getter}}
-\DoxyCodeLine{70         EN\_SOCKET* GetSocket() \{ \textcolor{keywordflow}{return} \&ServerConnectionSocket; \}}
+\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}{AfterConnect}}() = 0;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{62         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}{ServerMessageHandler}}(std::string message) = 0;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{70         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}{BeforeDisconnect}}() = 0;}
 \DoxyCodeLine{71 }
-\DoxyCodeLine{72         \textcolor{comment}{// Function return true if client connected to server}}
-\DoxyCodeLine{73         \textcolor{keywordtype}{bool} IsConnected();}
-\DoxyCodeLine{74 }
-\DoxyCodeLine{75         \textcolor{comment}{// Connect to localhost and default port. Return low-\/level function connect result.}}
-\DoxyCodeLine{76         \textcolor{comment}{// See platform documentation if you want get more information about errors}}
-\DoxyCodeLine{77         \textcolor{keywordtype}{bool} Connect();}
+\DoxyCodeLine{72     \textcolor{keyword}{public}:}
+\DoxyCodeLine{74         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a1c968989a646442b1938b83181881d60}{EN\_TCP\_Client}}();}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{77         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a1b7a235e03db3098d9d29dee85e13af0}{GetServerPort}}() \{ \textcolor{keywordflow}{return} ServerPort; \}}
 \DoxyCodeLine{78 }
-\DoxyCodeLine{79         \textcolor{comment}{// Connect to localhost and current port. Return low-\/level function connect result.}}
-\DoxyCodeLine{80         \textcolor{comment}{// See platform documentation if you want get more information about errors}}
-\DoxyCodeLine{81         \textcolor{keywordtype}{bool} Connect(\textcolor{keywordtype}{int} port);}
-\DoxyCodeLine{82 }
-\DoxyCodeLine{83         \textcolor{comment}{// Connect to server with current ip and port. Return low-\/level function connect result.}}
-\DoxyCodeLine{84         \textcolor{comment}{// See platform documentation if you want get more information about errors}}
-\DoxyCodeLine{85         \textcolor{keywordtype}{bool} Connect(std::string ipAddr, \textcolor{keywordtype}{int} port);}
-\DoxyCodeLine{86 }
-\DoxyCodeLine{87         \textcolor{comment}{// Method to start server. Starts a thread to process server responses}}
-\DoxyCodeLine{88         \textcolor{comment}{// You have to determine BeforeDisconnect() and ServerMessageHandler()}}
-\DoxyCodeLine{89         \textcolor{keywordtype}{void} Run();}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{91         \textcolor{comment}{// Function for sending a message to a connected server}}
-\DoxyCodeLine{92         \textcolor{comment}{// As an additional parameter, it takes the delay in executing the code to send the message}}
-\DoxyCodeLine{93         \textcolor{keywordtype}{void} SendToServer(std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
-\DoxyCodeLine{94 }
-\DoxyCodeLine{95         \textcolor{comment}{// This function disconnect client from server}}
-\DoxyCodeLine{96         \textcolor{keywordtype}{void} Disconnect();}
-\DoxyCodeLine{97 }
-\DoxyCodeLine{98         \textcolor{comment}{// Default destructor}}
-\DoxyCodeLine{99         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{\string~EN\_TCP\_Client}}();}
-\DoxyCodeLine{100     \};}
-\DoxyCodeLine{101 \}}
-\DoxyCodeLine{102 }
+\DoxyCodeLine{80         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aec271dd5d04eb40795b010ec7f5d3964}{GetServerIpAddress}}() \{ \textcolor{keywordflow}{return} ServerIpAddress; \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83         EN\_SOCKET* \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aee26c7dd14648fb0388c69c9d26392e8}{GetSocket}}() \{ \textcolor{keywordflow}{return} \&ServerConnectionSocket; \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{86         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a94e673593d1d188f9bfe5ffea57eb6e3}{IsConnected}}();}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{92         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}{Connect}}();}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{99         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}{Connect}}(\textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{107         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}{Connect}}(std::string ipAddr, \textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{115         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_ad54c154f41759d2baa00a5c33217552c}{Run}}();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{122         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aa7e4bcc151d94ae31ef5864b36cdd746}{SendToServer}}(std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a61c7c25d34cebbb4e203a99d2973a824}{Disconnect}}();}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127         \textcolor{comment}{// Default destructor}}
+\DoxyCodeLine{128         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{\string~EN\_TCP\_Client}}();}
+\DoxyCodeLine{129     \};}
+\DoxyCodeLine{130 \}}
+\DoxyCodeLine{131 }
 
 \end{DoxyCode}

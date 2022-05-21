@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('_e_n___t_c_p___file_sender_8h_source.h
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">bool</span> IsStop = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN_TCP_FileSender</a>() : <a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___client.html">EN_TCP_Client</a>() {};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN_TCP_FileSender</a>() : <a class="code hl_function" href="class_e_n_1_1_e_n___t_c_p___client.html#a1c968989a646442b1938b83181881d60">EN_TCP_Client</a>() {};</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// Function to send file to server. First parametr is file name. Second is pointer to progress function</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> SendFileToServer(std::string FileName, <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta));</div>
@@ -124,7 +124,8 @@ $(document).ready(function(){initNavTree('_e_n___t_c_p___file_sender_8h_source.h
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> StopDownloading() { IsStop = <span class="keyword">true</span>; }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
-<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___client_html"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___client.html">EN::EN_TCP_Client</a></div><div class="ttdef"><b>Definition:</b> EN_TCP_Client.h:32</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___client_html"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___client.html">EN::EN_TCP_Client</a></div><div class="ttdoc">Base tcp client class.</div><div class="ttdef"><b>Definition:</b> EN_TCP_Client.h:32</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___client_html_a1c968989a646442b1938b83181881d60"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___client.html#a1c968989a646442b1938b83181881d60">EN::EN_TCP_Client::EN_TCP_Client</a></div><div class="ttdeci">EN_TCP_Client()</div><div class="ttdoc">Default constructor. On Windows initiate winsock api.</div><div class="ttdef"><b>Definition:</b> EN_TCP_Client.cpp:5</div></div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___file_sender_html"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN::EN_TCP_FileSender</a></div><div class="ttdef"><b>Definition:</b> EN_TCP_FileSender.h:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

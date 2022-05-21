@@ -87,11 +87,15 @@ $(document).ready(function(){initNavTree('class_e_n_1_1_e_n___t_c_p___client.htm
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_e_n_1_1_e_n___t_c_p___client-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">EN::EN_TCP_Client Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base tcp client class.  
+ <a href="class_e_n_1_1_e_n___t_c_p___client.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_e_n___t_c_p___client_8h_source.html">EN_TCP_Client.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for EN::EN_TCP_Client:</div>
 <div class="dyncontent">
@@ -104,55 +108,288 @@ Inheritance diagram for EN::EN_TCP_Client:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c86c9c65b66912c9c98aa54beb14aa3"><td class="memItemLeft" align="right" valign="top"><a id="a4c86c9c65b66912c9c98aa54beb14aa3" name="a4c86c9c65b66912c9c98aa54beb14aa3"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPort</b> ()</td></tr>
-<tr class="separator:a4c86c9c65b66912c9c98aa54beb14aa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ecfeafd67f357037f1363388b161086"><td class="memItemLeft" align="right" valign="top"><a id="a0ecfeafd67f357037f1363388b161086" name="a0ecfeafd67f357037f1363388b161086"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetIpAddr</b> ()</td></tr>
-<tr class="separator:a0ecfeafd67f357037f1363388b161086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c968989a646442b1938b83181881d60"><td class="memItemLeft" align="right" valign="top"><a id="a1c968989a646442b1938b83181881d60" name="a1c968989a646442b1938b83181881d60"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>EN_TCP_Client</b> ()</td></tr>
+<tr class="memdesc:a1c968989a646442b1938b83181881d60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. On Windows initiate winsock api. <br /></td></tr>
+<tr class="separator:a1c968989a646442b1938b83181881d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b7a235e03db3098d9d29dee85e13af0"><td class="memItemLeft" align="right" valign="top"><a id="a1b7a235e03db3098d9d29dee85e13af0" name="a1b7a235e03db3098d9d29dee85e13af0"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerPort</b> ()</td></tr>
+<tr class="memdesc:a1b7a235e03db3098d9d29dee85e13af0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server port getter. <br /></td></tr>
+<tr class="separator:a1b7a235e03db3098d9d29dee85e13af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec271dd5d04eb40795b010ec7f5d3964"><td class="memItemLeft" align="right" valign="top"><a id="aec271dd5d04eb40795b010ec7f5d3964" name="aec271dd5d04eb40795b010ec7f5d3964"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerIpAddress</b> ()</td></tr>
+<tr class="memdesc:aec271dd5d04eb40795b010ec7f5d3964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server ip getter. <br /></td></tr>
+<tr class="separator:aec271dd5d04eb40795b010ec7f5d3964"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee26c7dd14648fb0388c69c9d26392e8"><td class="memItemLeft" align="right" valign="top"><a id="aee26c7dd14648fb0388c69c9d26392e8" name="aee26c7dd14648fb0388c69c9d26392e8"></a>
 EN_SOCKET *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSocket</b> ()</td></tr>
+<tr class="memdesc:aee26c7dd14648fb0388c69c9d26392e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket getter. <br /></td></tr>
 <tr class="separator:aee26c7dd14648fb0388c69c9d26392e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e673593d1d188f9bfe5ffea57eb6e3"><td class="memItemLeft" align="right" valign="top"><a id="a94e673593d1d188f9bfe5ffea57eb6e3" name="a94e673593d1d188f9bfe5ffea57eb6e3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsConnected</b> ()</td></tr>
+<tr class="memdesc:a94e673593d1d188f9bfe5ffea57eb6e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function return true if client connected to server. <br /></td></tr>
 <tr class="separator:a94e673593d1d188f9bfe5ffea57eb6e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeac3fb7af04083e895992763e9d47bd5"><td class="memItemLeft" align="right" valign="top"><a id="aeac3fb7af04083e895992763e9d47bd5" name="aeac3fb7af04083e895992763e9d47bd5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Connect</b> ()</td></tr>
+<tr class="memitem:aeac3fb7af04083e895992763e9d47bd5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#aeac3fb7af04083e895992763e9d47bd5">Connect</a> ()</td></tr>
+<tr class="memdesc:aeac3fb7af04083e895992763e9d47bd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to localhost and default port.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#aeac3fb7af04083e895992763e9d47bd5">More...</a><br /></td></tr>
 <tr class="separator:aeac3fb7af04083e895992763e9d47bd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad784a3bdc195584d060ee946912f5a5d"><td class="memItemLeft" align="right" valign="top"><a id="ad784a3bdc195584d060ee946912f5a5d" name="ad784a3bdc195584d060ee946912f5a5d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Connect</b> (int port)</td></tr>
+<tr class="memitem:ad784a3bdc195584d060ee946912f5a5d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#ad784a3bdc195584d060ee946912f5a5d">Connect</a> (int port)</td></tr>
+<tr class="memdesc:ad784a3bdc195584d060ee946912f5a5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to localhost and current port.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#ad784a3bdc195584d060ee946912f5a5d">More...</a><br /></td></tr>
 <tr class="separator:ad784a3bdc195584d060ee946912f5a5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1334d26f09c128aaaacdc901253c7261"><td class="memItemLeft" align="right" valign="top"><a id="a1334d26f09c128aaaacdc901253c7261" name="a1334d26f09c128aaaacdc901253c7261"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Connect</b> (std::string ipAddr, int port)</td></tr>
+<tr class="memitem:a1334d26f09c128aaaacdc901253c7261"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#a1334d26f09c128aaaacdc901253c7261">Connect</a> (std::string ipAddr, int port)</td></tr>
+<tr class="memdesc:a1334d26f09c128aaaacdc901253c7261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to current ip and current port.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#a1334d26f09c128aaaacdc901253c7261">More...</a><br /></td></tr>
 <tr class="separator:a1334d26f09c128aaaacdc901253c7261"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad54c154f41759d2baa00a5c33217552c"><td class="memItemLeft" align="right" valign="top"><a id="ad54c154f41759d2baa00a5c33217552c" name="ad54c154f41759d2baa00a5c33217552c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> ()</td></tr>
+<tr class="memitem:ad54c154f41759d2baa00a5c33217552c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#ad54c154f41759d2baa00a5c33217552c">Run</a> ()</td></tr>
+<tr class="memdesc:ad54c154f41759d2baa00a5c33217552c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to start server.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#ad54c154f41759d2baa00a5c33217552c">More...</a><br /></td></tr>
 <tr class="separator:ad54c154f41759d2baa00a5c33217552c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7e4bcc151d94ae31ef5864b36cdd746"><td class="memItemLeft" align="right" valign="top"><a id="aa7e4bcc151d94ae31ef5864b36cdd746" name="aa7e4bcc151d94ae31ef5864b36cdd746"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendToServer</b> (std::string message, int MessageDelay=10)</td></tr>
+<tr class="memitem:aa7e4bcc151d94ae31ef5864b36cdd746"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#aa7e4bcc151d94ae31ef5864b36cdd746">SendToServer</a> (std::string message, int MessageDelay=10)</td></tr>
+<tr class="memdesc:aa7e4bcc151d94ae31ef5864b36cdd746"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for sending a message to a connected server.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#aa7e4bcc151d94ae31ef5864b36cdd746">More...</a><br /></td></tr>
 <tr class="separator:aa7e4bcc151d94ae31ef5864b36cdd746"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61c7c25d34cebbb4e203a99d2973a824"><td class="memItemLeft" align="right" valign="top"><a id="a61c7c25d34cebbb4e203a99d2973a824" name="a61c7c25d34cebbb4e203a99d2973a824"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Disconnect</b> ()</td></tr>
+<tr class="memdesc:a61c7c25d34cebbb4e203a99d2973a824"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function disconnect client from server. <br /></td></tr>
 <tr class="separator:a61c7c25d34cebbb4e203a99d2973a824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a2a65531b657fe16f0d6dc159bc238aab"><td class="memItemLeft" align="right" valign="top"><a id="a2a65531b657fe16f0d6dc159bc238aab" name="a2a65531b657fe16f0d6dc159bc238aab"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>AfterConnect</b> ()=0</td></tr>
+<tr class="memitem:a2a65531b657fe16f0d6dc159bc238aab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#a2a65531b657fe16f0d6dc159bc238aab">AfterConnect</a> ()=0</td></tr>
+<tr class="memdesc:a2a65531b657fe16f0d6dc159bc238aab"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function must be defined by the library user.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#a2a65531b657fe16f0d6dc159bc238aab">More...</a><br /></td></tr>
 <tr class="separator:a2a65531b657fe16f0d6dc159bc238aab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b6a5f4f8306afdb2326c22a3c1cd581"><td class="memItemLeft" align="right" valign="top"><a id="a6b6a5f4f8306afdb2326c22a3c1cd581" name="a6b6a5f4f8306afdb2326c22a3c1cd581"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ServerMessageHandler</b> (std::string message)=0</td></tr>
+<tr class="memitem:a6b6a5f4f8306afdb2326c22a3c1cd581"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#a6b6a5f4f8306afdb2326c22a3c1cd581">ServerMessageHandler</a> (std::string message)=0</td></tr>
+<tr class="memdesc:a6b6a5f4f8306afdb2326c22a3c1cd581"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function must be defined by the library user.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#a6b6a5f4f8306afdb2326c22a3c1cd581">More...</a><br /></td></tr>
 <tr class="separator:a6b6a5f4f8306afdb2326c22a3c1cd581"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac870faf6c3c6c245fbeace71f5c398c0"><td class="memItemLeft" align="right" valign="top"><a id="ac870faf6c3c6c245fbeace71f5c398c0" name="ac870faf6c3c6c245fbeace71f5c398c0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>BeforeDisconnect</b> ()=0</td></tr>
+<tr class="memitem:ac870faf6c3c6c245fbeace71f5c398c0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#ac870faf6c3c6c245fbeace71f5c398c0">BeforeDisconnect</a> ()=0</td></tr>
+<tr class="memdesc:ac870faf6c3c6c245fbeace71f5c398c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function must be defined by the library user.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#ac870faf6c3c6c245fbeace71f5c398c0">More...</a><br /></td></tr>
 <tr class="separator:ac870faf6c3c6c245fbeace71f5c398c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a7e76be5d7d89701ececf155a568b0e98"><td class="memItemLeft" align="right" valign="top"><a id="a7e76be5d7d89701ececf155a568b0e98" name="a7e76be5d7d89701ececf155a568b0e98"></a>
-EN_SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>ServerConnectionSocket</b> = INVALID_SOCKET</td></tr>
-<tr class="separator:a7e76be5d7d89701ececf155a568b0e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Base tcp client class. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2a65531b657fe16f0d6dc159bc238aab" name="a2a65531b657fe16f0d6dc159bc238aab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a65531b657fe16f0d6dc159bc238aab">&#9670;&nbsp;</a></span>AfterConnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EN::EN_TCP_Client::AfterConnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function must be defined by the library user. </p>
+<p >This function is called after connecting to the server </p>
+
+</div>
+</div>
+<a id="ac870faf6c3c6c245fbeace71f5c398c0" name="ac870faf6c3c6c245fbeace71f5c398c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac870faf6c3c6c245fbeace71f5c398c0">&#9670;&nbsp;</a></span>BeforeDisconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EN::EN_TCP_Client::BeforeDisconnect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function must be defined by the library user. </p>
+<p >The function is called before disconnecting from the server. Important! If disconnection occurs from the server side or connection lost, the <a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#a94e673593d1d188f9bfe5ffea57eb6e3" title="Function return true if client connected to server.">IsConnected()</a> function returns false </p>
+
+</div>
+</div>
+<a id="aeac3fb7af04083e895992763e9d47bd5" name="aeac3fb7af04083e895992763e9d47bd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeac3fb7af04083e895992763e9d47bd5">&#9670;&nbsp;</a></span>Connect() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::EN_TCP_Client::Connect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connect to localhost and default port. </p>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ad784a3bdc195584d060ee946912f5a5d" name="ad784a3bdc195584d060ee946912f5a5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad784a3bdc195584d060ee946912f5a5d">&#9670;&nbsp;</a></span>Connect() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::EN_TCP_Client::Connect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connect to localhost and current port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>port to connect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a1334d26f09c128aaaacdc901253c7261" name="a1334d26f09c128aaaacdc901253c7261"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1334d26f09c128aaaacdc901253c7261">&#9670;&nbsp;</a></span>Connect() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::EN_TCP_Client::Connect </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>ipAddr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Connect to current ip and current port. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ip</td><td>server ip address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>port to connect </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ad54c154f41759d2baa00a5c33217552c" name="ad54c154f41759d2baa00a5c33217552c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54c154f41759d2baa00a5c33217552c">&#9670;&nbsp;</a></span>Run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EN::EN_TCP_Client::Run </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Method to start server. </p>
+<p >Starts a thread to process server responses Important! You have to determine <a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#a2a65531b657fe16f0d6dc159bc238aab" title="The function must be defined by the library user.">AfterConnect()</a>, <a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#a6b6a5f4f8306afdb2326c22a3c1cd581" title="The function must be defined by the library user.">ServerMessageHandler()</a> and <a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html#ac870faf6c3c6c245fbeace71f5c398c0" title="The function must be defined by the library user.">BeforeDisconnect()</a> </p>
+
+</div>
+</div>
+<a id="aa7e4bcc151d94ae31ef5864b36cdd746" name="aa7e4bcc151d94ae31ef5864b36cdd746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7e4bcc151d94ae31ef5864b36cdd746">&#9670;&nbsp;</a></span>SendToServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EN::EN_TCP_Client::SendToServer </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MessageDelay</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for sending a message to a connected server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>the message string to send to the server </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MessageDelay</td><td>Optional parameter. the time that will pass after sending the message to the server </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6b6a5f4f8306afdb2326c22a3c1cd581" name="a6b6a5f4f8306afdb2326c22a3c1cd581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b6a5f4f8306afdb2326c22a3c1cd581">&#9670;&nbsp;</a></span>ServerMessageHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EN::EN_TCP_Client::ServerMessageHandler </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The function must be defined by the library user. </p>
+<p >The function processes all incoming messages </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Easy_Network/<a class="el" href="_e_n___t_c_p___client_8h_source.html">EN_TCP_Client.h</a></li>
 <li>Easy_Network/EN_TCP_Client.cpp</li>

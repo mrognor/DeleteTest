@@ -1,5 +1,14 @@
 \hypertarget{class_e_n_1_1_e_n___t_c_p___client}{}\doxysection{EN\+::EN\+\_\+\+TCP\+\_\+\+Client Class Reference}
 \label{class_e_n_1_1_e_n___t_c_p___client}\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+
+
+Base tcp client class.  
+
+
+
+
+{\ttfamily \#include $<$EN\+\_\+\+TCP\+\_\+\+Client.\+h$>$}
+
 Inheritance diagram for EN\+::EN\+\_\+\+TCP\+\_\+\+Client\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,55 +18,158 @@ Inheritance diagram for EN\+::EN\+\_\+\+TCP\+\_\+\+Client\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a4c86c9c65b66912c9c98aa54beb14aa3}\label{class_e_n_1_1_e_n___t_c_p___client_a4c86c9c65b66912c9c98aa54beb14aa3}} 
-int {\bfseries Get\+Port} ()
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a0ecfeafd67f357037f1363388b161086}\label{class_e_n_1_1_e_n___t_c_p___client_a0ecfeafd67f357037f1363388b161086}} 
-std\+::string {\bfseries Get\+Ip\+Addr} ()
-\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a1c968989a646442b1938b83181881d60}\label{class_e_n_1_1_e_n___t_c_p___client_a1c968989a646442b1938b83181881d60}} 
+{\bfseries EN\+\_\+\+TCP\+\_\+\+Client} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. On Windows initiate winsock api. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a1b7a235e03db3098d9d29dee85e13af0}\label{class_e_n_1_1_e_n___t_c_p___client_a1b7a235e03db3098d9d29dee85e13af0}} 
+int {\bfseries Get\+Server\+Port} ()
+\begin{DoxyCompactList}\small\item\em Server port getter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aec271dd5d04eb40795b010ec7f5d3964}\label{class_e_n_1_1_e_n___t_c_p___client_aec271dd5d04eb40795b010ec7f5d3964}} 
+std\+::string {\bfseries Get\+Server\+Ip\+Address} ()
+\begin{DoxyCompactList}\small\item\em Server ip getter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aee26c7dd14648fb0388c69c9d26392e8}\label{class_e_n_1_1_e_n___t_c_p___client_aee26c7dd14648fb0388c69c9d26392e8}} 
 EN\+\_\+\+SOCKET $\ast$ {\bfseries Get\+Socket} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Socket getter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a94e673593d1d188f9bfe5ffea57eb6e3}\label{class_e_n_1_1_e_n___t_c_p___client_a94e673593d1d188f9bfe5ffea57eb6e3}} 
 bool {\bfseries Is\+Connected} ()
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}\label{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}} 
-bool {\bfseries Connect} ()
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ad784a3bdc195584d060ee946912f5a5d}\label{class_e_n_1_1_e_n___t_c_p___client_ad784a3bdc195584d060ee946912f5a5d}} 
-bool {\bfseries Connect} (int port)
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a1334d26f09c128aaaacdc901253c7261}\label{class_e_n_1_1_e_n___t_c_p___client_a1334d26f09c128aaaacdc901253c7261}} 
-bool {\bfseries Connect} (std\+::string ip\+Addr, int port)
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ad54c154f41759d2baa00a5c33217552c}\label{class_e_n_1_1_e_n___t_c_p___client_ad54c154f41759d2baa00a5c33217552c}} 
-void {\bfseries Run} ()
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aa7e4bcc151d94ae31ef5864b36cdd746}\label{class_e_n_1_1_e_n___t_c_p___client_aa7e4bcc151d94ae31ef5864b36cdd746}} 
-void {\bfseries Send\+To\+Server} (std\+::string message, int Message\+Delay=10)
-\item 
+\begin{DoxyCompactList}\small\item\em Function return true if client connected to server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}{Connect}} ()
+\begin{DoxyCompactList}\small\item\em Connect to localhost and default port. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_ad784a3bdc195584d060ee946912f5a5d}{Connect}} (int port)
+\begin{DoxyCompactList}\small\item\em Connect to localhost and current port. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a1334d26f09c128aaaacdc901253c7261}{Connect}} (std\+::string ip\+Addr, int port)
+\begin{DoxyCompactList}\small\item\em Connect to current ip and current port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_ad54c154f41759d2baa00a5c33217552c}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Method to start server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_aa7e4bcc151d94ae31ef5864b36cdd746}{Send\+To\+Server}} (std\+::string message, int Message\+Delay=10)
+\begin{DoxyCompactList}\small\item\em Function for sending a message to a connected server. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a61c7c25d34cebbb4e203a99d2973a824}\label{class_e_n_1_1_e_n___t_c_p___client_a61c7c25d34cebbb4e203a99d2973a824}} 
 void {\bfseries Disconnect} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This function disconnect client from server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}\label{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}} 
-virtual void {\bfseries After\+Connect} ()=0
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}\label{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}} 
-virtual void {\bfseries Server\+Message\+Handler} (std\+::string message)=0
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}\label{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}} 
-virtual void {\bfseries Before\+Disconnect} ()=0
-\end{DoxyCompactItemize}
-\doxysubsection*{Protected Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a7e76be5d7d89701ececf155a568b0e98}\label{class_e_n_1_1_e_n___t_c_p___client_a7e76be5d7d89701ececf155a568b0e98}} 
-EN\+\_\+\+SOCKET {\bfseries Server\+Connection\+Socket} = INVALID\+\_\+\+SOCKET
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}{After\+Connect}} ()=0
+\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}{Server\+Message\+Handler}} (std\+::string message)=0
+\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}{Before\+Disconnect}} ()=0
+\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Base tcp client class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}\label{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!AfterConnect@{AfterConnect}}
+\index{AfterConnect@{AfterConnect}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{AfterConnect()}{AfterConnect()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+After\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+The function must be defined by the library user. 
+
+This function is called after connecting to the server \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}\label{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!BeforeDisconnect@{BeforeDisconnect}}
+\index{BeforeDisconnect@{BeforeDisconnect}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{BeforeDisconnect()}{BeforeDisconnect()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+Before\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+The function must be defined by the library user. 
+
+The function is called before disconnecting from the server. Important! If disconnection occurs from the server side or connection lost, the \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a94e673593d1d188f9bfe5ffea57eb6e3}{Is\+Connected()}} function returns false \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}\label{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!Connect@{Connect}}
+\index{Connect@{Connect}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Connect to localhost and default port. 
+
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ad784a3bdc195584d060ee946912f5a5d}\label{class_e_n_1_1_e_n___t_c_p___client_ad784a3bdc195584d060ee946912f5a5d}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!Connect@{Connect}}
+\index{Connect@{Connect}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+Connect (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+Connect to localhost and current port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & port to connect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a1334d26f09c128aaaacdc901253c7261}\label{class_e_n_1_1_e_n___t_c_p___client_a1334d26f09c128aaaacdc901253c7261}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!Connect@{Connect}}
+\index{Connect@{Connect}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+Connect (\begin{DoxyParamCaption}\item[{std\+::string}]{ip\+Addr,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+Connect to current ip and current port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ip} & server ip address \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & port to connect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ad54c154f41759d2baa00a5c33217552c}\label{class_e_n_1_1_e_n___t_c_p___client_ad54c154f41759d2baa00a5c33217552c}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!Run@{Run}}
+\index{Run@{Run}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to start server. 
+
+Starts a thread to process server responses Important! You have to determine \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}{After\+Connect()}}, \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}{Server\+Message\+Handler()}} and \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}{Before\+Disconnect()}} \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aa7e4bcc151d94ae31ef5864b36cdd746}\label{class_e_n_1_1_e_n___t_c_p___client_aa7e4bcc151d94ae31ef5864b36cdd746}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!SendToServer@{SendToServer}}
+\index{SendToServer@{SendToServer}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{SendToServer()}{SendToServer()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+Send\+To\+Server (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{int}]{Message\+Delay = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Function for sending a message to a connected server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em message} & the message string to send to the server \\
+\hline
+\mbox{\texttt{ in}}  & {\em Message\+Delay} & Optional parameter. the time that will pass after sending the message to the server \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}\label{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}} 
+\index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!ServerMessageHandler@{ServerMessageHandler}}
+\index{ServerMessageHandler@{ServerMessageHandler}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
+\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client\+::\+Server\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+The function must be defined by the library user. 
+
+The function processes all incoming messages 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
