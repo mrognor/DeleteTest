@@ -57,51 +57,50 @@
 \DoxyCodeLine{53 }
 \DoxyCodeLine{54         EN\_SOCKET s;}
 \DoxyCodeLine{55 }
-\DoxyCodeLine{56         \textcolor{keywordtype}{int} ThreadAmount = 8;}
+\DoxyCodeLine{56         \textcolor{keywordtype}{int} ThreadAmount = 2;}
 \DoxyCodeLine{57 }
-\DoxyCodeLine{58         \textcolor{comment}{// Method that processes incoming messages}}
-\DoxyCodeLine{59         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} ClientMessageHandler(std::string message, sockaddr\_in ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{61         \textcolor{comment}{// Method that processes incoming messages}}
-\DoxyCodeLine{62         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} ImportantClientMessageHandler(std::string message, sockaddr\_in ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
+\DoxyCodeLine{58         \textcolor{keywordtype}{int} MaxStackBuffSize = 16;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \textcolor{comment}{// Method that processes incoming messages}}
+\DoxyCodeLine{61         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} ClientMessageHandler(std::string message, sockaddr\_in ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63         \textcolor{comment}{// Method that processes incoming messages}}
+\DoxyCodeLine{64         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} ImportantClientMessageHandler(std::string message, sockaddr\_in ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
 \DoxyCodeLine{65 }
-\DoxyCodeLine{66         sockaddr\_in server;}
+\DoxyCodeLine{66         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
 \DoxyCodeLine{67 }
-\DoxyCodeLine{68         EN\_UDP\_ServerBuferType ServerBuferType = Queue;}
-\DoxyCodeLine{69         }
-\DoxyCodeLine{70         std::list<std::string>** QueueMessageVec;}
-\DoxyCodeLine{71         std::list<sockaddr\_in>** QueueAddrVec;}
-\DoxyCodeLine{72         std::list<EN\_TimePoint>** QueueTimeVec;}
-\DoxyCodeLine{73         std::condition\_variable** CondVarVec;}
-\DoxyCodeLine{74     \textcolor{keyword}{public}:}
-\DoxyCodeLine{75 }
-\DoxyCodeLine{76         \textcolor{keywordtype}{bool}* WhichThreadFlushing;}
-\DoxyCodeLine{77 }
-\DoxyCodeLine{78         \textcolor{keywordtype}{void} SetServerBuferType(EN\_UDP\_ServerBuferType type) \{ ServerBuferType = type; \}}
-\DoxyCodeLine{79 }
-\DoxyCodeLine{80         \textcolor{keywordtype}{void} Call(std::string message, sockaddr\_in ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeSincePackageArrived) \{ ClientMessageHandler(message, ClientSocketAddr, TimeSincePackageArrived); \}}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{82         \textcolor{comment}{// Default constructor. Port: 1111. Ip address: 127.0.0.1(localhost)}}
-\DoxyCodeLine{83         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\_UDP\_Server}}();}
-\DoxyCodeLine{84 }
-\DoxyCodeLine{85         \textcolor{comment}{// Port getter}}
-\DoxyCodeLine{86         \textcolor{keywordtype}{int} GetPort() \{ \textcolor{keywordflow}{return} Port; \}}
-\DoxyCodeLine{87 }
-\DoxyCodeLine{88         \textcolor{comment}{// Ip getter}}
-\DoxyCodeLine{89         std::string GetIpAddr() \{ \textcolor{keywordflow}{return} IpAddress; \}}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{91         \textcolor{comment}{// Method to start server.}}
-\DoxyCodeLine{92         \textcolor{keywordtype}{void} Run();}
-\DoxyCodeLine{93 }
-\DoxyCodeLine{94         \textcolor{comment}{// Method that stops the server}}
-\DoxyCodeLine{95         \textcolor{keywordtype}{void} Shutdown();}
-\DoxyCodeLine{96 }
-\DoxyCodeLine{97         \textcolor{keywordtype}{void} SendToClient(std::string msg, sockaddr\_in ClientSocketAddr);}
-\DoxyCodeLine{98 }
-\DoxyCodeLine{99         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{\string~EN\_UDP\_Server}}();}
-\DoxyCodeLine{100     \};}
-\DoxyCodeLine{101 \}}
+\DoxyCodeLine{68         sockaddr\_in server;}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70         EN\_UDP\_ServerBuferType ServerBuferType = Queue;}
+\DoxyCodeLine{71         }
+\DoxyCodeLine{72         std::list<std::string>** QueueMessageVec;}
+\DoxyCodeLine{73     \textcolor{keyword}{public}:}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \textcolor{keywordtype}{bool}* WhichThreadFlushing;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77         \textcolor{keywordtype}{void} SetServerBuferType(EN\_UDP\_ServerBuferType type) \{ ServerBuferType = type; \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{void} Call(std::string message, sockaddr\_in ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeSincePackageArrived) \{ ClientMessageHandler(message, ClientSocketAddr, TimeSincePackageArrived); \}}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81         \textcolor{comment}{// Default constructor. Port: 1111. Ip address: 127.0.0.1(localhost)}}
+\DoxyCodeLine{82         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\_UDP\_Server}}();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         \textcolor{comment}{// Port getter}}
+\DoxyCodeLine{85         \textcolor{keywordtype}{int} GetPort() \{ \textcolor{keywordflow}{return} Port; \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87         \textcolor{comment}{// Ip getter}}
+\DoxyCodeLine{88         std::string GetIpAddr() \{ \textcolor{keywordflow}{return} IpAddress; \}}
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90         \textcolor{comment}{// Method to start server.}}
+\DoxyCodeLine{91         \textcolor{keywordtype}{void} Run();}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{comment}{// Method that stops the server}}
+\DoxyCodeLine{94         \textcolor{keywordtype}{void} Shutdown();}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96         \textcolor{keywordtype}{void} SendToClient(std::string msg, sockaddr\_in ClientSocketAddr);}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{\string~EN\_UDP\_Server}}();}
+\DoxyCodeLine{99     \};}
+\DoxyCodeLine{100 \}}
 
 \end{DoxyCode}

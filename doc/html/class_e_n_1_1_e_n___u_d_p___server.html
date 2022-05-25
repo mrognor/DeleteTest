@@ -148,8 +148,11 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>IpAddress</b> 
 EN_SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>s</b></td></tr>
 <tr class="separator:a0283dc835dc2ec472f2d86d0227051d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41009349c2879bc3baca632b23009374"><td class="memItemLeft" align="right" valign="top"><a id="a41009349c2879bc3baca632b23009374" name="a41009349c2879bc3baca632b23009374"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadAmount</b> = 8</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadAmount</b> = 2</td></tr>
 <tr class="separator:a41009349c2879bc3baca632b23009374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c9bf106cf479503e430a13aa580e5c"><td class="memItemLeft" align="right" valign="top"><a id="a46c9bf106cf479503e430a13aa580e5c" name="a46c9bf106cf479503e430a13aa580e5c"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxStackBuffSize</b> = 16</td></tr>
+<tr class="separator:a46c9bf106cf479503e430a13aa580e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58167b143da66d6a5b89a09bf13220d4"><td class="memItemLeft" align="right" valign="top"><a id="a58167b143da66d6a5b89a09bf13220d4" name="a58167b143da66d6a5b89a09bf13220d4"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsShutdown</b> = false</td></tr>
 <tr class="separator:a58167b143da66d6a5b89a09bf13220d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,15 +165,6 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
 <tr class="memitem:a0bc30db4fccd9b4ae5ac0757c0bf3d21"><td class="memItemLeft" align="right" valign="top"><a id="a0bc30db4fccd9b4ae5ac0757c0bf3d21" name="a0bc30db4fccd9b4ae5ac0757c0bf3d21"></a>
 std::list&lt; std::string &gt; **&#160;</td><td class="memItemRight" valign="bottom"><b>QueueMessageVec</b></td></tr>
 <tr class="separator:a0bc30db4fccd9b4ae5ac0757c0bf3d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a757254744e6bac48dfeac53350695efb"><td class="memItemLeft" align="right" valign="top"><a id="a757254744e6bac48dfeac53350695efb" name="a757254744e6bac48dfeac53350695efb"></a>
-std::list&lt; sockaddr_in &gt; **&#160;</td><td class="memItemRight" valign="bottom"><b>QueueAddrVec</b></td></tr>
-<tr class="separator:a757254744e6bac48dfeac53350695efb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaf559f53276bb97cea740de399fbcdd1"><td class="memItemLeft" align="right" valign="top"><a id="aaf559f53276bb97cea740de399fbcdd1" name="aaf559f53276bb97cea740de399fbcdd1"></a>
-std::list&lt; EN_TimePoint &gt; **&#160;</td><td class="memItemRight" valign="bottom"><b>QueueTimeVec</b></td></tr>
-<tr class="separator:aaf559f53276bb97cea740de399fbcdd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76e5d467497a8dd8ca90c8a7f11c093a"><td class="memItemLeft" align="right" valign="top"><a id="a76e5d467497a8dd8ca90c8a7f11c093a" name="a76e5d467497a8dd8ca90c8a7f11c093a"></a>
-std::condition_variable **&#160;</td><td class="memItemRight" valign="bottom"><b>CondVarVec</b></td></tr>
-<tr class="separator:a76e5d467497a8dd8ca90c8a7f11c093a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Easy_Network/<a class="el" href="_e_n___u_d_p___server_8h_source.html">EN_UDP_Server.h</a></li>

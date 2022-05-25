@@ -1,0 +1,64 @@
+\hypertarget{md__easy__network__documentation__e_n__functions_autotoc_md6}{}\doxysection{Split}\label{md__easy__network__documentation__e_n__functions_autotoc_md6}
+{\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::string\texorpdfstring{$>$}{>} Split(std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})} ~\newline
+ The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation\hypertarget{md__easy__network__documentation__e_n__functions_autotoc_md7}{}\doxysection{Send\+File}\label{md__easy__network__documentation__e_n__functions_autotoc_md7}
+{\ttfamily bool Send\+File(EN\+\_\+\+SOCKET\& File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
+ The function is needed to send files. The message receiving function should be called on the other side. ~\newline
+
+\begin{DoxyItemize}
+\item The first parameter is the socket for sending files ~\newline
+
+\item The second parameter is the full path to the file to be sent ~\newline
+
+\item The third parameter is a reference to a boolean variable to stop file transfer ~\newline
+
+\item The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. ~\newline
+
+\begin{DoxyItemize}
+\item The first is how many bytes were transmitted. ~\newline
+
+\item The second is the total number of bytes. ~\newline
+
+\item The third parameter shows the transfer rate in bytes. ~\newline
+
+\item The fourth shows the remaining time in seconds ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+By default, the library function is used to output to the console ~\newline
+\hypertarget{md__easy__network__documentation__e_n__functions_autotoc_md8}{}\doxysection{Recv\+File}\label{md__easy__network__documentation__e_n__functions_autotoc_md8}
+{\ttfamily bool Recv\+File(EN\+\_\+\+SOCKET\& File\+Send\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
+ The function is needed to receiving files. ~\newline
+
+\begin{DoxyItemize}
+\item The first parameter is the socket for receiving files ~\newline
+
+\item The second parameter is a reference to a boolean variable to stop file transfer
+\item The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. ~\newline
+
+\begin{DoxyItemize}
+\item The first is how many bytes were transmitted. ~\newline
+
+\item The second is the total number of bytes. ~\newline
+
+\item The third parameter shows the transfer rate in bytes. ~\newline
+
+\item The fourth shows the remaining time in seconds ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+By default, the library function is used to output to the console\hypertarget{md__easy__network__documentation__e_n__functions_autotoc_md9}{}\doxysection{Download\+Status}\label{md__easy__network__documentation__e_n__functions_autotoc_md9}
+{\ttfamily void Download\+Status(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)} The function displays the status of the file transfer to the console
+\begin{DoxyItemize}
+\item The first is how many bytes were transmitted. ~\newline
+
+\item The second is the total number of bytes. ~\newline
+
+\item The third parameter shows the transfer rate in bytes. ~\newline
+
+\item The fourth shows the remaining time in seconds ~\newline
+
+\end{DoxyItemize}\hypertarget{md__easy__network__documentation__e_n__functions_autotoc_md10}{}\doxysection{Is\+File\+Exist}\label{md__easy__network__documentation__e_n__functions_autotoc_md10}
+{\ttfamily bool Is\+File\+Exist(std\+::string file\+Path)} ~\newline
+ Return true if file exists, otherwise rerurn false 

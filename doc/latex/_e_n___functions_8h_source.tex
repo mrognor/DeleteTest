@@ -36,17 +36,15 @@
 \DoxyCodeLine{33 }
 \DoxyCodeLine{35     \textcolor{keywordtype}{bool} TCP\_Recv(EN\_SOCKET\& sock, std::string\& message);}
 \DoxyCodeLine{36 }
-\DoxyCodeLine{38     std::vector<std::string> Split(std::string StringToSplit);}
+\DoxyCodeLine{38     std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString=\textcolor{stringliteral}{"{} "{}});}
 \DoxyCodeLine{39 }
-\DoxyCodeLine{41     std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString);}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{45     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET\& FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{49     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET\& FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{42     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET\& FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{46     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET\& FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} DownloadStatus(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta);}
 \DoxyCodeLine{50 }
-\DoxyCodeLine{52     \textcolor{keywordtype}{void} DownloadStatus(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta);}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{55     \textcolor{keywordtype}{bool} IsFileExist(std::string filePath);}
-\DoxyCodeLine{56 \}}
+\DoxyCodeLine{52     \textcolor{keywordtype}{bool} IsFileExist(std::string filePath);}
+\DoxyCodeLine{53 \}}
 
 \end{DoxyCode}
