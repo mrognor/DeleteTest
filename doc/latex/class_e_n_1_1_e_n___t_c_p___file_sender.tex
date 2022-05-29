@@ -1,5 +1,14 @@
 \hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender}{}\doxysection{EN\+::EN\+\_\+\+TCP\+\_\+\+File\+Sender Class Reference}
 \label{class_e_n_1_1_e_n___t_c_p___file_sender}\index{EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}}
+
+
+Client class for sending files to the server.  
+
+
+
+
+{\ttfamily \#include $<$EN\+\_\+\+TCP\+\_\+\+File\+Sender.\+h$>$}
+
 Inheritance diagram for EN\+::EN\+\_\+\+TCP\+\_\+\+File\+Sender\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,19 +18,52 @@ Inheritance diagram for EN\+::EN\+\_\+\+TCP\+\_\+\+File\+Sender\+:\begin{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}} 
-bool {\bfseries Send\+File\+To\+Server} (std\+::string File\+Name, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}{Send\+File\+To\+Server}} (std\+::string File\+Name, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+\begin{DoxyCompactList}\small\item\em Function to send file to server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}{Recv\+File\+From\+Server}} ()
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}} 
-bool {\bfseries Recv\+File\+From\+Server} ()
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a4a51a3dc917dd5c6a58bcdaad0fa6f8e}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a4a51a3dc917dd5c6a58bcdaad0fa6f8e}} 
-bool {\bfseries Recv\+Message\+From\+Server} (std\+::string \&msg)
-\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a08bf5ac1cd4717a74c08d6f95a5ab546}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a08bf5ac1cd4717a74c08d6f95a5ab546}} 
+void {\bfseries Recv\+Message\+From\+Server} (std\+::string \&msg)
+\begin{DoxyCompactList}\small\item\em Function to get message from server. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a563840cb76422102ae085bda65ba7b88}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a563840cb76422102ae085bda65ba7b88}} 
 void {\bfseries Stop\+Downloading} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Function to stop file transmission. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Client class for sending files to the server. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}} 
+\index{EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}!RecvFileFromServer@{RecvFileFromServer}}
+\index{RecvFileFromServer@{RecvFileFromServer}!EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}}
+\doxysubsubsection{\texorpdfstring{RecvFileFromServer()}{RecvFileFromServer()}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+File\+Sender\+::\+Recv\+File\+From\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function to recv file from server \begin{DoxyReturn}{Returns}
+Return true if file transmission success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}} 
+\index{EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}!SendFileToServer@{SendFileToServer}}
+\index{SendFileToServer@{SendFileToServer}!EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}}
+\doxysubsubsection{\texorpdfstring{SendFileToServer()}{SendFileToServer()}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+File\+Sender\+::\+Send\+File\+To\+Server (\begin{DoxyParamCaption}\item[{std\+::string}]{File\+Name,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function }\end{DoxyParamCaption})}
+
+
+
+Function to send file to server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em File\+Name} & name of file to be sent \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pointer} & to progress function. By default set to library function which displays progress in terminal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return true if file transmission success, false otherwise 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -99,9 +99,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a73a2a1d4d18cdf5faea6679a79378651"><td class="memItemLeft" align="right" valign="top"><a id="a73a2a1d4d18cdf5faea6679a79378651" name="a73a2a1d4d18cdf5faea6679a79378651"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetServerBuferType</b> (EN_UDP_ServerBuferType type)</td></tr>
 <tr class="separator:a73a2a1d4d18cdf5faea6679a79378651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c21feada2b13f2a6643f05316659e88"><td class="memItemLeft" align="right" valign="top"><a id="a4c21feada2b13f2a6643f05316659e88" name="a4c21feada2b13f2a6643f05316659e88"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Call</b> (std::string message, sockaddr_in ClientSocketAddr, long long TimeSincePackageArrived)</td></tr>
-<tr class="separator:a4c21feada2b13f2a6643f05316659e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56575d52d8bf202b1100f3ad78f17e3b"><td class="memItemLeft" align="right" valign="top"><a id="a56575d52d8bf202b1100f3ad78f17e3b" name="a56575d52d8bf202b1100f3ad78f17e3b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Call</b> (std::string message, std::string ClientSocketAddr, long long TimeSincePackageArrived)</td></tr>
+<tr class="separator:a56575d52d8bf202b1100f3ad78f17e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70bb71aac592d474f86245d12550a4e6"><td class="memItemLeft" align="right" valign="top"><a id="a70bb71aac592d474f86245d12550a4e6" name="a70bb71aac592d474f86245d12550a4e6"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>GetPort</b> ()</td></tr>
 <tr class="separator:a70bb71aac592d474f86245d12550a4e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -114,9 +114,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> ()</td></tr>
 <tr class="memitem:a5d67e5fe4de7566dfc931bc96e3954d6"><td class="memItemLeft" align="right" valign="top"><a id="a5d67e5fe4de7566dfc931bc96e3954d6" name="a5d67e5fe4de7566dfc931bc96e3954d6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> ()</td></tr>
 <tr class="separator:a5d67e5fe4de7566dfc931bc96e3954d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2aa585f47baec3bca9d7d5b71a01f7ad"><td class="memItemLeft" align="right" valign="top"><a id="a2aa585f47baec3bca9d7d5b71a01f7ad" name="a2aa585f47baec3bca9d7d5b71a01f7ad"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SendToClient</b> (std::string msg, sockaddr_in ClientSocketAddr)</td></tr>
-<tr class="separator:a2aa585f47baec3bca9d7d5b71a01f7ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc76a84022251778cad5978d96ad8818"><td class="memItemLeft" align="right" valign="top"><a id="abc76a84022251778cad5978d96ad8818" name="abc76a84022251778cad5978d96ad8818"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>SendToClient</b> (std::string msg, std::string ClientSocketAddr)</td></tr>
+<tr class="separator:abc76a84022251778cad5978d96ad8818"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -126,46 +126,76 @@ bool *&#160;</td><td class="memItemRight" valign="bottom"><b>WhichThreadFlushing
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a96ae37582db69b7b31cae4848e86b235"><td class="memItemLeft" align="right" valign="top"><a id="a96ae37582db69b7b31cae4848e86b235" name="a96ae37582db69b7b31cae4848e86b235"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ClientMessageHandler</b> (std::string message, sockaddr_in ClientSocketAddr, long long TimeWhenPackageArrived)=0</td></tr>
-<tr class="separator:a96ae37582db69b7b31cae4848e86b235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34728b8b3189e2b6a5d94938e9e0cc10"><td class="memItemLeft" align="right" valign="top"><a id="a34728b8b3189e2b6a5d94938e9e0cc10" name="a34728b8b3189e2b6a5d94938e9e0cc10"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>ImportantClientMessageHandler</b> (std::string message, sockaddr_in ClientSocketAddr, long long TimeWhenPackageArrived)=0</td></tr>
-<tr class="separator:a34728b8b3189e2b6a5d94938e9e0cc10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6343c34978da206a30c69ed54ebc048d"><td class="memItemLeft" align="right" valign="top"><a id="a6343c34978da206a30c69ed54ebc048d" name="a6343c34978da206a30c69ed54ebc048d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ClientMessageHandler</b> (std::string message, std::string ClientSocketAddr, long long TimeWhenPackageArrived)=0</td></tr>
+<tr class="separator:a6343c34978da206a30c69ed54ebc048d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c66e4af457450076435699bbd57b40f"><td class="memItemLeft" align="right" valign="top"><a id="a1c66e4af457450076435699bbd57b40f" name="a1c66e4af457450076435699bbd57b40f"></a>
+virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>ImportantClientMessageHandler</b> (std::string message, std::string ClientSocketAddr, long long TimeWhenPackageArrived)=0</td></tr>
+<tr class="separator:a1c66e4af457450076435699bbd57b40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a57eefa7f21f48f8d089c054c4b3ec8c9"><td class="memItemLeft" align="right" valign="top"><a id="a57eefa7f21f48f8d089c054c4b3ec8c9" name="a57eefa7f21f48f8d089c054c4b3ec8c9"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>Port</b> = 1111</td></tr>
+<tr class="memdesc:a57eefa7f21f48f8d089c054c4b3ec8c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server port. Default set to 1111. <br /></td></tr>
 <tr class="separator:a57eefa7f21f48f8d089c054c4b3ec8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afe7190d8c1cf38109564546cdca2d33e"><td class="memItemLeft" align="right" valign="top"><a id="afe7190d8c1cf38109564546cdca2d33e" name="afe7190d8c1cf38109564546cdca2d33e"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxMessageSize</b> = 256</td></tr>
+<tr class="memdesc:afe7190d8c1cf38109564546cdca2d33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum number of characters in a message. <br /></td></tr>
 <tr class="separator:afe7190d8c1cf38109564546cdca2d33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0642c0623cbb5ad0e36376bcdb315131"><td class="memItemLeft" align="right" valign="top"><a id="a0642c0623cbb5ad0e36376bcdb315131" name="a0642c0623cbb5ad0e36376bcdb315131"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>IpAddress</b> = &quot;127.0.0.1&quot;</td></tr>
+<tr class="memdesc:a0642c0623cbb5ad0e36376bcdb315131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server ip address string. Default set to localhost. <br /></td></tr>
 <tr class="separator:a0642c0623cbb5ad0e36376bcdb315131"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0283dc835dc2ec472f2d86d0227051d9"><td class="memItemLeft" align="right" valign="top"><a id="a0283dc835dc2ec472f2d86d0227051d9" name="a0283dc835dc2ec472f2d86d0227051d9"></a>
-EN_SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>s</b></td></tr>
-<tr class="separator:a0283dc835dc2ec472f2d86d0227051d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d49ec75481f8b44720f518e93852f6f"><td class="memItemLeft" align="right" valign="top"><a id="a2d49ec75481f8b44720f518e93852f6f" name="a2d49ec75481f8b44720f518e93852f6f"></a>
+EN_SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>ServerSocket</b></td></tr>
+<tr class="memdesc:a2d49ec75481f8b44720f518e93852f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server socket. <br /></td></tr>
+<tr class="separator:a2d49ec75481f8b44720f518e93852f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41009349c2879bc3baca632b23009374"><td class="memItemLeft" align="right" valign="top"><a id="a41009349c2879bc3baca632b23009374" name="a41009349c2879bc3baca632b23009374"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadAmount</b> = 2</td></tr>
+<tr class="memdesc:a41009349c2879bc3baca632b23009374"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of threads in which incoming messages will be processed. <br /></td></tr>
 <tr class="separator:a41009349c2879bc3baca632b23009374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46c9bf106cf479503e430a13aa580e5c"><td class="memItemLeft" align="right" valign="top"><a id="a46c9bf106cf479503e430a13aa580e5c" name="a46c9bf106cf479503e430a13aa580e5c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxStackBuffSize</b> = 16</td></tr>
+<tr class="memitem:a46c9bf106cf479503e430a13aa580e5c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___server.html#a46c9bf106cf479503e430a13aa580e5c">MaxStackBuffSize</a> = 16</td></tr>
+<tr class="memdesc:a46c9bf106cf479503e430a13aa580e5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum size of the incoming message stack.  <a href="class_e_n_1_1_e_n___u_d_p___server.html#a46c9bf106cf479503e430a13aa580e5c">More...</a><br /></td></tr>
 <tr class="separator:a46c9bf106cf479503e430a13aa580e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58167b143da66d6a5b89a09bf13220d4"><td class="memItemLeft" align="right" valign="top"><a id="a58167b143da66d6a5b89a09bf13220d4" name="a58167b143da66d6a5b89a09bf13220d4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsShutdown</b> = false</td></tr>
-<tr class="separator:a58167b143da66d6a5b89a09bf13220d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a1351d83d25f22e5a87be208331b530"><td class="memItemLeft" align="right" valign="top"><a id="a8a1351d83d25f22e5a87be208331b530" name="a8a1351d83d25f22e5a87be208331b530"></a>
-sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><b>server</b></td></tr>
-<tr class="separator:a8a1351d83d25f22e5a87be208331b530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d0dd89f816128802db01cb123e2868a"><td class="memItemLeft" align="right" valign="top"><a id="a5d0dd89f816128802db01cb123e2868a" name="a5d0dd89f816128802db01cb123e2868a"></a>
+sockaddr_in&#160;</td><td class="memItemRight" valign="bottom"><b>ServerAddress</b></td></tr>
+<tr class="memdesc:a5d0dd89f816128802db01cb123e2868a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server address. <br /></td></tr>
+<tr class="separator:a5d0dd89f816128802db01cb123e2868a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8d74ed37894279619f988eb9083444f"><td class="memItemLeft" align="right" valign="top"><a id="aa8d74ed37894279619f988eb9083444f" name="aa8d74ed37894279619f988eb9083444f"></a>
 EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>ServerBuferType</b> = Queue</td></tr>
+<tr class="memdesc:aa8d74ed37894279619f988eb9083444f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incoming message buffer type. <br /></td></tr>
 <tr class="separator:aa8d74ed37894279619f988eb9083444f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc30db4fccd9b4ae5ac0757c0bf3d21"><td class="memItemLeft" align="right" valign="top"><a id="a0bc30db4fccd9b4ae5ac0757c0bf3d21" name="a0bc30db4fccd9b4ae5ac0757c0bf3d21"></a>
 std::list&lt; std::string &gt; **&#160;</td><td class="memItemRight" valign="bottom"><b>QueueMessageVec</b></td></tr>
 <tr class="separator:a0bc30db4fccd9b4ae5ac0757c0bf3d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a46c9bf106cf479503e430a13aa580e5c" name="a46c9bf106cf479503e430a13aa580e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c9bf106cf479503e430a13aa580e5c">&#9670;&nbsp;</a></span>MaxStackBuffSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EN::EN_UDP_Server::MaxStackBuffSize = 16</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The maximum size of the incoming message stack. </p>
+<p >Used only if ServerBuferType set to EN::Stack </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Easy_Network/<a class="el" href="_e_n___u_d_p___server_8h_source.html">EN_UDP_Server.h</a></li>
 <li>Easy_Network/EN_UDP_Server.cpp</li>

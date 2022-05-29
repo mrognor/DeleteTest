@@ -90,6 +90,11 @@ $(document).ready(function(){initNavTree('class_e_n_1_1_e_n___t_c_p___file_sende
   <div class="headertitle"><div class="title">EN::EN_TCP_FileSender Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Client class for sending files to the server.  
+ <a href="class_e_n_1_1_e_n___t_c_p___file_sender.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_e_n___t_c_p___file_sender_8h_source.html">EN_TCP_FileSender.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for EN::EN_TCP_FileSender:</div>
 <div class="dyncontent">
@@ -102,17 +107,18 @@ Inheritance diagram for EN::EN_TCP_FileSender:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a879d96a96901df866f0d0688550fadd1"><td class="memItemLeft" align="right" valign="top"><a id="a879d96a96901df866f0d0688550fadd1" name="a879d96a96901df866f0d0688550fadd1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>SendFileToServer</b> (std::string FileName, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</td></tr>
+<tr class="memitem:a879d96a96901df866f0d0688550fadd1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a879d96a96901df866f0d0688550fadd1">SendFileToServer</a> (std::string FileName, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</td></tr>
+<tr class="memdesc:a879d96a96901df866f0d0688550fadd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to send file to server.  <a href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a879d96a96901df866f0d0688550fadd1">More...</a><br /></td></tr>
 <tr class="separator:a879d96a96901df866f0d0688550fadd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e15d5b14fb0ed5c8e9a03be65fda2a7"><td class="memItemLeft" align="right" valign="top"><a id="a8e15d5b14fb0ed5c8e9a03be65fda2a7" name="a8e15d5b14fb0ed5c8e9a03be65fda2a7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>RecvFileFromServer</b> ()</td></tr>
+<tr class="memitem:a8e15d5b14fb0ed5c8e9a03be65fda2a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a8e15d5b14fb0ed5c8e9a03be65fda2a7">RecvFileFromServer</a> ()</td></tr>
 <tr class="separator:a8e15d5b14fb0ed5c8e9a03be65fda2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a51a3dc917dd5c6a58bcdaad0fa6f8e"><td class="memItemLeft" align="right" valign="top"><a id="a4a51a3dc917dd5c6a58bcdaad0fa6f8e" name="a4a51a3dc917dd5c6a58bcdaad0fa6f8e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>RecvMessageFromServer</b> (std::string &amp;msg)</td></tr>
-<tr class="separator:a4a51a3dc917dd5c6a58bcdaad0fa6f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bf5ac1cd4717a74c08d6f95a5ab546"><td class="memItemLeft" align="right" valign="top"><a id="a08bf5ac1cd4717a74c08d6f95a5ab546" name="a08bf5ac1cd4717a74c08d6f95a5ab546"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>RecvMessageFromServer</b> (std::string &amp;msg)</td></tr>
+<tr class="memdesc:a08bf5ac1cd4717a74c08d6f95a5ab546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get message from server. <br /></td></tr>
+<tr class="separator:a08bf5ac1cd4717a74c08d6f95a5ab546"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a563840cb76422102ae085bda65ba7b88"><td class="memItemLeft" align="right" valign="top"><a id="a563840cb76422102ae085bda65ba7b88" name="a563840cb76422102ae085bda65ba7b88"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>StopDownloading</b> ()</td></tr>
+<tr class="memdesc:a563840cb76422102ae085bda65ba7b88"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to stop file transmission. <br /></td></tr>
 <tr class="separator:a563840cb76422102ae085bda65ba7b88"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_e_n_1_1_e_n___t_c_p___client')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_e_n_1_1_e_n___t_c_p___client.html">EN::EN_TCP_Client</a></td></tr>
 <tr class="memitem:a1c968989a646442b1938b83181881d60 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="memItemLeft" align="right" valign="top"><a id="a1c968989a646442b1938b83181881d60" name="a1c968989a646442b1938b83181881d60"></a>
@@ -167,6 +173,65 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memdesc:ac870faf6c3c6c245fbeace71f5c398c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function must be defined by the library user.  <a href="class_e_n_1_1_e_n___t_c_p___client.html#ac870faf6c3c6c245fbeace71f5c398c0">More...</a><br /></td></tr>
 <tr class="separator:ac870faf6c3c6c245fbeace71f5c398c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Client class for sending files to the server. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8e15d5b14fb0ed5c8e9a03be65fda2a7" name="a8e15d5b14fb0ed5c8e9a03be65fda2a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e15d5b14fb0ed5c8e9a03be65fda2a7">&#9670;&nbsp;</a></span>RecvFileFromServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::EN_TCP_FileSender::RecvFileFromServer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function to recv file from server </p><dl class="section return"><dt>Returns</dt><dd>Return true if file transmission success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a879d96a96901df866f0d0688550fadd1" name="a879d96a96901df866f0d0688550fadd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a879d96a96901df866f0d0688550fadd1">&#9670;&nbsp;</a></span>SendFileToServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::EN_TCP_FileSender::SendFileToServer </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>FileName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)&#160;</td>
+          <td class="paramname"><em>ProgressFunction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to send file to server. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">FileName</td><td>name of file to be sent </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">Pointer</td><td>to progress function. By default set to library function which displays progress in terminal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return true if file transmission success, false otherwise </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>Easy_Network/<a class="el" href="_e_n___t_c_p___file_sender_8h_source.html">EN_TCP_FileSender.h</a></li>
 <li>Easy_Network/EN_TCP_FileSender.cpp</li>

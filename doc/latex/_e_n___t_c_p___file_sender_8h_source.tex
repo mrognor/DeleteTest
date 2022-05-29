@@ -6,38 +6,36 @@
 \DoxyCodeLine{2 }
 \DoxyCodeLine{3 \textcolor{keyword}{namespace }EN}
 \DoxyCodeLine{4 \{}
-\DoxyCodeLine{5     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender}{EN\_TCP\_FileSender}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN::EN\_TCP\_Client}}}
-\DoxyCodeLine{6     \{}
-\DoxyCodeLine{7     \textcolor{keyword}{private}:}
-\DoxyCodeLine{8 }
-\DoxyCodeLine{9         \textcolor{comment}{// A function to be defined by the user. It is used for logic after connection}}
-\DoxyCodeLine{10         \textcolor{keywordtype}{void} AfterConnect() \{\};}
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
-\DoxyCodeLine{13         \textcolor{keywordtype}{void} Run() \{\};}
-\DoxyCodeLine{14 }
-\DoxyCodeLine{15         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
-\DoxyCodeLine{16         \textcolor{keywordtype}{void} ServerMessageHandler(std::string message) \{\};}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
-\DoxyCodeLine{19         \textcolor{keywordtype}{void} BeforeDisconnect() \{\};}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21         \textcolor{keywordtype}{bool} IsStop = \textcolor{keyword}{false};}
-\DoxyCodeLine{22 }
-\DoxyCodeLine{23     \textcolor{keyword}{public}:}
-\DoxyCodeLine{24         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender}{EN\_TCP\_FileSender}}() : \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a1c968989a646442b1938b83181881d60}{EN\_TCP\_Client}}() \{\};}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26         \textcolor{comment}{// Function to send file to server. First parametr is file name. Second is pointer to progress function}}
-\DoxyCodeLine{27         \textcolor{keywordtype}{bool} SendFileToServer(std::string FileName, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta));}
-\DoxyCodeLine{28 }
-\DoxyCodeLine{29         \textcolor{comment}{// Function to recv file from server}}
-\DoxyCodeLine{30         \textcolor{keywordtype}{bool} RecvFileFromServer();}
-\DoxyCodeLine{31 }
-\DoxyCodeLine{32         \textcolor{comment}{// Function to get message from server}}
-\DoxyCodeLine{33         \textcolor{keywordtype}{bool} RecvMessageFromServer(std::string\& msg);}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35         \textcolor{keywordtype}{void} StopDownloading() \{ IsStop = \textcolor{keyword}{true}; \}}
-\DoxyCodeLine{36     \};}
-\DoxyCodeLine{37 \}}
+\DoxyCodeLine{6     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender}{EN\_TCP\_FileSender}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN::EN\_TCP\_Client}}}
+\DoxyCodeLine{7     \{}
+\DoxyCodeLine{8     \textcolor{keyword}{private}:}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10         \textcolor{comment}{// A function to be defined by the user. It is used for logic after connection}}
+\DoxyCodeLine{11         \textcolor{keywordtype}{void} AfterConnect() \{\};}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
+\DoxyCodeLine{14         \textcolor{keywordtype}{void} Run() \{\};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
+\DoxyCodeLine{17         \textcolor{keywordtype}{void} ServerMessageHandler(std::string message) \{\};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         \textcolor{comment}{// This method does nothing but we have to redefine it to work correctly}}
+\DoxyCodeLine{20         \textcolor{keywordtype}{void} BeforeDisconnect() \{\};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22         \textcolor{comment}{// Variable to stop file transmission}}
+\DoxyCodeLine{23         \textcolor{keywordtype}{bool} IsStop = \textcolor{keyword}{false};}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{keyword}{public}:}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender}{EN\_TCP\_FileSender}}() : \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a1c968989a646442b1938b83181881d60}{EN\_TCP\_Client}}() \{\};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{35         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}{SendFileToServer}}(std::string FileName, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta));}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{39         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}{RecvFileFromServer}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{42         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a08bf5ac1cd4717a74c08d6f95a5ab546}{RecvMessageFromServer}}(std::string\& msg);}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a563840cb76422102ae085bda65ba7b88}{StopDownloading}}() \{ IsStop = \textcolor{keyword}{true}; \}}
+\DoxyCodeLine{46     \};}
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}

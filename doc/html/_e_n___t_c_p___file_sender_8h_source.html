@@ -91,42 +91,44 @@ $(document).ready(function(){initNavTree('_e_n___t_c_p___file_sender_8h_source.h
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">namespace </span>EN</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span>{</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">    5</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN_TCP_FileSender</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___client.html">EN::EN_TCP_Client</a></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    {</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <span class="comment">// A function to be defined by the user. It is used for logic after connection</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="keywordtype">void</span> AfterConnect() {};</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        <span class="comment">// This method does nothing but we have to redefine it to work correctly</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">void</span> Run() {};</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="comment">// This method does nothing but we have to redefine it to work correctly</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordtype">void</span> ServerMessageHandler(std::string message) {};</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="comment">// This method does nothing but we have to redefine it to work correctly</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordtype">void</span> BeforeDisconnect() {};</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordtype">bool</span> IsStop = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN_TCP_FileSender</a>() : <a class="code hl_function" href="class_e_n_1_1_e_n___t_c_p___client.html#a1c968989a646442b1938b83181881d60">EN_TCP_Client</a>() {};</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="comment">// Function to send file to server. First parametr is file name. Second is pointer to progress function</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> SendFileToServer(std::string FileName, <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta));</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="comment">// Function to recv file from server</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">bool</span> RecvFileFromServer();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="comment">// Function to get message from server</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordtype">bool</span> RecvMessageFromServer(std::string&amp; msg);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">void</span> StopDownloading() { IsStop = <span class="keyword">true</span>; }</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    };</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>}</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">    6</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN_TCP_FileSender</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___client.html">EN::EN_TCP_Client</a></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    {</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>        <span class="comment">// A function to be defined by the user. It is used for logic after connection</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <span class="keywordtype">void</span> AfterConnect() {};</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="comment">// This method does nothing but we have to redefine it to work correctly</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordtype">void</span> Run() {};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="comment">// This method does nothing but we have to redefine it to work correctly</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordtype">void</span> ServerMessageHandler(std::string message) {};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="comment">// This method does nothing but we have to redefine it to work correctly</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keywordtype">void</span> BeforeDisconnect() {};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        <span class="comment">// Variable to stop file transmission</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        <span class="keywordtype">bool</span> IsStop = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN_TCP_FileSender</a>() : <a class="code hl_function" href="class_e_n_1_1_e_n___t_c_p___client.html#a1c968989a646442b1938b83181881d60">EN_TCP_Client</a>() {};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a879d96a96901df866f0d0688550fadd1">SendFileToServer</a>(std::string FileName, <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta));</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a8e15d5b14fb0ed5c8e9a03be65fda2a7">RecvFileFromServer</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a08bf5ac1cd4717a74c08d6f95a5ab546">RecvMessageFromServer</a>(std::string&amp; msg);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a563840cb76422102ae085bda65ba7b88">   45</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a563840cb76422102ae085bda65ba7b88">StopDownloading</a>() { IsStop = <span class="keyword">true</span>; }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    };</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___client_html"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___client.html">EN::EN_TCP_Client</a></div><div class="ttdoc">Base tcp client class.</div><div class="ttdef"><b>Definition:</b> EN_TCP_Client.h:32</div></div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___client_html_a1c968989a646442b1938b83181881d60"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___client.html#a1c968989a646442b1938b83181881d60">EN::EN_TCP_Client::EN_TCP_Client</a></div><div class="ttdeci">EN_TCP_Client()</div><div class="ttdoc">Default constructor. On Windows initiate winsock api.</div><div class="ttdef"><b>Definition:</b> EN_TCP_Client.cpp:5</div></div>
-<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___file_sender_html"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN::EN_TCP_FileSender</a></div><div class="ttdef"><b>Definition:</b> EN_TCP_FileSender.h:6</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___file_sender_html"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___file_sender.html">EN::EN_TCP_FileSender</a></div><div class="ttdoc">Client class for sending files to the server.</div><div class="ttdef"><b>Definition:</b> EN_TCP_FileSender.h:7</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___file_sender_html_a08bf5ac1cd4717a74c08d6f95a5ab546"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a08bf5ac1cd4717a74c08d6f95a5ab546">EN::EN_TCP_FileSender::RecvMessageFromServer</a></div><div class="ttdeci">void RecvMessageFromServer(std::string &amp;msg)</div><div class="ttdoc">Function to get message from server.</div><div class="ttdef"><b>Definition:</b> EN_TCP_FileSender.cpp:21</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___file_sender_html_a563840cb76422102ae085bda65ba7b88"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a563840cb76422102ae085bda65ba7b88">EN::EN_TCP_FileSender::StopDownloading</a></div><div class="ttdeci">void StopDownloading()</div><div class="ttdoc">Function to stop file transmission.</div><div class="ttdef"><b>Definition:</b> EN_TCP_FileSender.h:45</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___file_sender_html_a879d96a96901df866f0d0688550fadd1"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a879d96a96901df866f0d0688550fadd1">EN::EN_TCP_FileSender::SendFileToServer</a></div><div class="ttdeci">bool SendFileToServer(std::string FileName, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</div><div class="ttdoc">Function to send file to server.</div><div class="ttdef"><b>Definition:</b> EN_TCP_FileSender.cpp:5</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___t_c_p___file_sender_html_a8e15d5b14fb0ed5c8e9a03be65fda2a7"><div class="ttname"><a href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a8e15d5b14fb0ed5c8e9a03be65fda2a7">EN::EN_TCP_FileSender::RecvFileFromServer</a></div><div class="ttdeci">bool RecvFileFromServer()</div><div class="ttdef"><b>Definition:</b> EN_TCP_FileSender.cpp:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
