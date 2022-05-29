@@ -126,9 +126,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Close</b> ()</td></tr
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:aec18f98cbdc95f77816f070bba6b3afb"><td class="memItemLeft" align="right" valign="top"><a id="aec18f98cbdc95f77816f070bba6b3afb" name="aec18f98cbdc95f77816f070bba6b3afb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ServerMessageHandler</b> (std::string message)=0</td></tr>
-<tr class="memdesc:aec18f98cbdc95f77816f070bba6b3afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to be defined by the user. It is used to process incoming messages from the server. <br /></td></tr>
+<tr class="memitem:aec18f98cbdc95f77816f070bba6b3afb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___client.html#aec18f98cbdc95f77816f070bba6b3afb">ServerMessageHandler</a> (std::string message)=0</td></tr>
 <tr class="separator:aec18f98cbdc95f77816f070bba6b3afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -145,10 +143,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxMessageSize</b> = 2
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>ServerIpAddres</b> = &quot;127.0.0.1&quot;</td></tr>
 <tr class="memdesc:aa06dbbf9a125ffb9fe009bbbcf190414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server ip address string. Default set to localhost. <br /></td></tr>
 <tr class="separator:aa06dbbf9a125ffb9fe009bbbcf190414"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba348f1caae476ce1033a43539851abc"><td class="memItemLeft" align="right" valign="top"><a id="aba348f1caae476ce1033a43539851abc" name="aba348f1caae476ce1033a43539851abc"></a>
-EN_SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>ServerConnectionSocket</b> = INVALID_SOCKET</td></tr>
-<tr class="memdesc:aba348f1caae476ce1033a43539851abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket to connect to server. <br /></td></tr>
-<tr class="separator:aba348f1caae476ce1033a43539851abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base udp client class. </p>
@@ -187,6 +181,33 @@ EN_SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>ServerConnection
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="aec18f98cbdc95f77816f070bba6b3afb" name="aec18f98cbdc95f77816f070bba6b3afb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec18f98cbdc95f77816f070bba6b3afb">&#9670;&nbsp;</a></span>ServerMessageHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EN::EN_UDP_Client::ServerMessageHandler </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >It is used to process incoming messages from the server </p><dl class="section warning"><dt>Warning</dt><dd>Must be defined by the user </dd></dl>
 
 </div>
 </div>

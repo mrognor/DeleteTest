@@ -1,44 +1,38 @@
 \hypertarget{class_e_n_1_1_e_n___u_d_p___server}{}\doxysection{EN\+::EN\+\_\+\+UDP\+\_\+\+Server Class Reference}
 \label{class_e_n_1_1_e_n___u_d_p___server}\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+
+
+Base udp server class.  
+
+
+
+
+{\ttfamily \#include $<$EN\+\_\+\+UDP\+\_\+\+Server.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a73a2a1d4d18cdf5faea6679a79378651}\label{class_e_n_1_1_e_n___u_d_p___server_a73a2a1d4d18cdf5faea6679a79378651}} 
-void {\bfseries Set\+Server\+Bufer\+Type} (EN\+\_\+\+UDP\+\_\+\+Server\+Bufer\+Type type)
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a56575d52d8bf202b1100f3ad78f17e3b}\label{class_e_n_1_1_e_n___u_d_p___server_a56575d52d8bf202b1100f3ad78f17e3b}} 
-void {\bfseries Call} (std\+::string message, std\+::string Client\+Socket\+Addr, long long Time\+Since\+Package\+Arrived)
-\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}\label{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}} 
 int {\bfseries Get\+Port} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Port getter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}\label{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}} 
 std\+::string {\bfseries Get\+Ip\+Addr} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Ip getter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}\label{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}} 
 void {\bfseries Run} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Method to start server. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}\label{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}} 
 void {\bfseries Shutdown} ()
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_abc76a84022251778cad5978d96ad8818}\label{class_e_n_1_1_e_n___u_d_p___server_abc76a84022251778cad5978d96ad8818}} 
-void {\bfseries Send\+To\+Client} (std\+::string msg, std\+::string Client\+Socket\+Addr)
-\end{DoxyCompactItemize}
-\doxysubsection*{Public Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a032f478780618e7277126c09ba2a0023}\label{class_e_n_1_1_e_n___u_d_p___server_a032f478780618e7277126c09ba2a0023}} 
-bool $\ast$ {\bfseries Which\+Thread\+Flushing}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_ab114e1ac8508e6108d6c7bab69b7a3e4}{Send\+To\+Client}} (std\+::string message, UDP\+\_\+\+Address Client\+Socket\+Addr)
+\begin{DoxyCompactList}\small\item\em function for sending a message to the client \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a6343c34978da206a30c69ed54ebc048d}\label{class_e_n_1_1_e_n___u_d_p___server_a6343c34978da206a30c69ed54ebc048d}} 
-virtual void {\bfseries Client\+Message\+Handler} (std\+::string message, std\+::string Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
-\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a1c66e4af457450076435699bbd57b40f}\label{class_e_n_1_1_e_n___u_d_p___server_a1c66e4af457450076435699bbd57b40f}} 
-virtual bool {\bfseries Important\+Client\+Message\+Handler} (std\+::string message, std\+::string Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
-\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_add8ec4dd1ae4dfc9640d0c2b4bd8d50c}{Client\+Message\+Handler}} (std\+::string message, UDP\+\_\+\+Address Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a48bd96e905fc1eae53fa9c0b28bdb6a8}{Instant\+Client\+Message\+Handler}} (std\+::string message, UDP\+\_\+\+Address Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,23 +45,63 @@ int {\bfseries Max\+Message\+Size} = 256
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}\label{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}} 
 std\+::string {\bfseries Ip\+Address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
 \begin{DoxyCompactList}\small\item\em Server ip address string. Default set to localhost. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a2d49ec75481f8b44720f518e93852f6f}\label{class_e_n_1_1_e_n___u_d_p___server_a2d49ec75481f8b44720f518e93852f6f}} 
-EN\+\_\+\+SOCKET {\bfseries Server\+Socket}
-\begin{DoxyCompactList}\small\item\em Server socket. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}\label{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}} 
 int {\bfseries Thread\+Amount} = 2
 \begin{DoxyCompactList}\small\item\em The number of threads in which incoming messages will be processed. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a46c9bf106cf479503e430a13aa580e5c}{Max\+Stack\+Buff\+Size}} = 16
 \begin{DoxyCompactList}\small\item\em The maximum size of the incoming message stack. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a5d0dd89f816128802db01cb123e2868a}\label{class_e_n_1_1_e_n___u_d_p___server_a5d0dd89f816128802db01cb123e2868a}} 
-sockaddr\+\_\+in {\bfseries Server\+Address}
-\begin{DoxyCompactList}\small\item\em Server address. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}\label{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}} 
 EN\+\_\+\+UDP\+\_\+\+Server\+Bufer\+Type {\bfseries Server\+Bufer\+Type} = Queue
-\begin{DoxyCompactList}\small\item\em Incoming message buffer type. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0bc30db4fccd9b4ae5ac0757c0bf3d21}\label{class_e_n_1_1_e_n___u_d_p___server_a0bc30db4fccd9b4ae5ac0757c0bf3d21}} 
-std\+::list$<$ std\+::string $>$ $\ast$$\ast$ {\bfseries Queue\+Message\+Vec}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Incoming message buffer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base udp server class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_add8ec4dd1ae4dfc9640d0c2b4bd8d50c}\label{class_e_n_1_1_e_n___u_d_p___server_add8ec4dd1ae4dfc9640d0c2b4bd8d50c}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!ClientMessageHandler@{ClientMessageHandler}}
+\index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{UDP\+\_\+\+Address}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+This method processes a message from the buffer \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a48bd96e905fc1eae53fa9c0b28bdb6a8}\label{class_e_n_1_1_e_n___u_d_p___server_a48bd96e905fc1eae53fa9c0b28bdb6a8}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!InstantClientMessageHandler@{InstantClientMessageHandler}}
+\index{InstantClientMessageHandler@{InstantClientMessageHandler}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{InstantClientMessageHandler()}{InstantClientMessageHandler()}}
+{\footnotesize\ttfamily virtual bool EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Instant\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{UDP\+\_\+\+Address}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+This method processes messages before they are placed in the buffer \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_ab114e1ac8508e6108d6c7bab69b7a3e4}\label{class_e_n_1_1_e_n___u_d_p___server_ab114e1ac8508e6108d6c7bab69b7a3e4}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!SendToClient@{SendToClient}}
+\index{SendToClient@{SendToClient}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{UDP\+\_\+\+Address}]{Client\+Socket\+Addr }\end{DoxyParamCaption})}
+
+
+
+function for sending a message to the client 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em message} & string to send to server \\
+\hline
+\mbox{\texttt{ in}}  & {\em Client\+Socket\+Addr} & variable with udp client address \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}

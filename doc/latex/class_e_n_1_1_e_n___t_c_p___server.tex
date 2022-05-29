@@ -38,11 +38,11 @@ void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}{On\+Client\+Connected}} (int Client\+ID)=0
-\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}{Client\+Message\+Handler}} (std\+::string message, int Client\+ID)=0
-\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}{On\+Client\+Disconnect}} (int Client\+ID)=0
-\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -69,9 +69,12 @@ Base tcp server class.
 
 
 
-The function must be defined by the library user. 
+Method that processes incoming messages. 
 
-Method that processes incoming messages \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}\label{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}} 
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}\label{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!DisconnectClient@{DisconnectClient}}
 \index{DisconnectClient@{DisconnectClient}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{DisconnectClient()}{DisconnectClient()}}
@@ -94,9 +97,12 @@ Method that disconnects the client from the server.
 
 
 
-The function must be defined by the library user. 
+The method that is executed when the client connects to the server. 
 
-The method that is executed when the client connects to the server \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}\label{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}} 
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}\label{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!OnClientDisconnect@{OnClientDisconnect}}
 \index{OnClientDisconnect@{OnClientDisconnect}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{OnClientDisconnect()}{OnClientDisconnect()}}
@@ -104,9 +110,12 @@ The method that is executed when the client connects to the server \mbox{\Hypert
 
 
 
-The function must be defined by the library user. 
+Method that runs after the client is disconnected. 
 
-Method that runs after the client is disconnected \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4d822de166c}\label{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4d822de166c}} 
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4d822de166c}\label{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4d822de166c}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!SendToClient@{SendToClient}}
 \index{SendToClient@{SendToClient}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}

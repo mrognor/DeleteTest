@@ -36,42 +36,42 @@
 \DoxyCodeLine{33         \textcolor{comment}{// Server address}}
 \DoxyCodeLine{34         sockaddr\_in ServerSockAddr;}
 \DoxyCodeLine{35 }
-\DoxyCodeLine{36         \textcolor{comment}{// The server's internal method for processing incoming messages. }}
-\DoxyCodeLine{37         \textcolor{comment}{// Passes the incoming string to method ServerMessageHandler to interpretate incoming message}}
-\DoxyCodeLine{38         \textcolor{keywordtype}{void} ServerHandler();}
-\DoxyCodeLine{39 }
-\DoxyCodeLine{40     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{43         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}} = 1111;}
+\DoxyCodeLine{37         EN\_SOCKET ServerConnectionSocket = INVALID\_SOCKET;}
+\DoxyCodeLine{38         }
+\DoxyCodeLine{39         \textcolor{comment}{// The server's internal method for processing incoming messages. }}
+\DoxyCodeLine{40         \textcolor{comment}{// Passes the incoming string to method ServerMessageHandler to interpretate incoming message}}
+\DoxyCodeLine{41         \textcolor{keywordtype}{void} ServerHandler();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43     \textcolor{keyword}{protected}:}
 \DoxyCodeLine{44 }
-\DoxyCodeLine{46         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ad234ba02ece2d965b157e9100c8639d9}{MaxMessageSize}} = 256;}
+\DoxyCodeLine{46         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}} = 1111;}
 \DoxyCodeLine{47 }
-\DoxyCodeLine{49         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}{ServerIpAddres}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{49         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ad234ba02ece2d965b157e9100c8639d9}{MaxMessageSize}} = 256;}
 \DoxyCodeLine{50 }
-\DoxyCodeLine{52         EN\_SOCKET \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aba348f1caae476ce1033a43539851abc}{ServerConnectionSocket}} = INVALID\_SOCKET;}
+\DoxyCodeLine{52         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}{ServerIpAddres}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
 \DoxyCodeLine{53 }
-\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}{ServerMessageHandler}}(std::string message) = 0;}
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57     \textcolor{keyword}{public}:}
-\DoxyCodeLine{58         \textcolor{comment}{// Default constructor. Initiate winsock api}}
-\DoxyCodeLine{59         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{EN\_UDP\_Client}}();}
-\DoxyCodeLine{60 }
-\DoxyCodeLine{62         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a1e8589d4b8a8af5a2db313a65be30bfb}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}}; \}}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{65         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a297b8d26f3965a2ecc1609ae62a7364e}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}{ServerIpAddres}}; \}}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{68         EN\_SOCKET* \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a3bfe1eea12ddbba93d2bba3a97764500}{GetSocket}}() \{ \textcolor{keywordflow}{return} \&\mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aba348f1caae476ce1033a43539851abc}{ServerConnectionSocket}}; \}}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{71         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a4751eab3ad696f6f740cbb21434b54ed}{Run}}();}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{79         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a95b11e4a64358af9ffe7287eac17f279}{SendToServer}}(std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
-\DoxyCodeLine{80 }
-\DoxyCodeLine{82         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a4580def64540c7156f606832ba0c4b70}{Close}}();}
-\DoxyCodeLine{83 }
-\DoxyCodeLine{84         \textcolor{comment}{// Default destructor}}
-\DoxyCodeLine{85         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{\string~EN\_UDP\_Client}}();}
-\DoxyCodeLine{86     \};}
-\DoxyCodeLine{87 \}}
-\DoxyCodeLine{88 }
+\DoxyCodeLine{56         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}{ServerMessageHandler}}(std::string message) = 0;}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     \textcolor{keyword}{public}:}
+\DoxyCodeLine{59         \textcolor{comment}{// Default constructor. Initiate winsock api}}
+\DoxyCodeLine{60         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{EN\_UDP\_Client}}();}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{63         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a1e8589d4b8a8af5a2db313a65be30bfb}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}}; \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{66         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a297b8d26f3965a2ecc1609ae62a7364e}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}{ServerIpAddres}}; \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{69         EN\_SOCKET* \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a3bfe1eea12ddbba93d2bba3a97764500}{GetSocket}}() \{ \textcolor{keywordflow}{return} \&ServerConnectionSocket; \}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{72         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a4751eab3ad696f6f740cbb21434b54ed}{Run}}();}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{80         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a95b11e4a64358af9ffe7287eac17f279}{SendToServer}}(std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{83         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a4580def64540c7156f606832ba0c4b70}{Close}}();}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85         \textcolor{comment}{// Default destructor}}
+\DoxyCodeLine{86         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{\string~EN\_UDP\_Client}}();}
+\DoxyCodeLine{87     \};}
+\DoxyCodeLine{88 \}}
+\DoxyCodeLine{89 }
 
 \end{DoxyCode}

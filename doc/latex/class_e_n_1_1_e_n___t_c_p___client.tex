@@ -50,11 +50,11 @@ void {\bfseries Disconnect} ()
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a2a65531b657fe16f0d6dc159bc238aab}{After\+Connect}} ()=0
-\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em This function is called after connecting to the server. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a6b6a5f4f8306afdb2326c22a3c1cd581}{Server\+Message\+Handler}} (std\+::string message)=0
-\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The function processes all incoming messages. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}{Before\+Disconnect}} ()=0
-\begin{DoxyCompactList}\small\item\em The function must be defined by the library user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The function is called before disconnecting from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -69,9 +69,12 @@ Base tcp client class.
 
 
 
-The function must be defined by the library user. 
+This function is called after connecting to the server. 
 
-This function is called after connecting to the server \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}\label{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}} 
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}\label{class_e_n_1_1_e_n___t_c_p___client_ac870faf6c3c6c245fbeace71f5c398c0}} 
 \index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!BeforeDisconnect@{BeforeDisconnect}}
 \index{BeforeDisconnect@{BeforeDisconnect}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
 \doxysubsubsection{\texorpdfstring{BeforeDisconnect()}{BeforeDisconnect()}}
@@ -79,9 +82,12 @@ This function is called after connecting to the server \mbox{\Hypertarget{class_
 
 
 
-The function must be defined by the library user. 
+The function is called before disconnecting from the server. 
 
-The function is called before disconnecting from the server. Important! If disconnection occurs from the server side or connection lost, the \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a94e673593d1d188f9bfe5ffea57eb6e3}{Is\+Connected()}} function returns false \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}\label{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}} 
+Important! If disconnection occurs from the server side or connection lost, the \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client_a94e673593d1d188f9bfe5ffea57eb6e3}{Is\+Connected()}} function returns false \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}\label{class_e_n_1_1_e_n___t_c_p___client_aeac3fb7af04083e895992763e9d47bd5}} 
 \index{EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}!Connect@{Connect}}
 \index{Connect@{Connect}!EN::EN\_TCP\_Client@{EN::EN\_TCP\_Client}}
 \doxysubsubsection{\texorpdfstring{Connect()}{Connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
@@ -167,9 +173,12 @@ Function for sending a message to a connected server.
 
 
 
-The function must be defined by the library user. 
+The function processes all incoming messages. 
 
-The function processes all incoming messages 
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

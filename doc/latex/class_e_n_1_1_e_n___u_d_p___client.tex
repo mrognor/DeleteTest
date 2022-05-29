@@ -32,9 +32,8 @@ void {\bfseries Close} ()
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}\label{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}} 
-virtual void {\bfseries Server\+Message\+Handler} (std\+::string message)=0
-\begin{DoxyCompactList}\small\item\em A function to be defined by the user. It is used to process incoming messages from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}{Server\+Message\+Handler}} (std\+::string message)=0
+\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -46,10 +45,7 @@ int {\bfseries Max\+Message\+Size} = 256
 \begin{DoxyCompactList}\small\item\em Maximum number of characters in a message. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}\label{class_e_n_1_1_e_n___u_d_p___client_aa06dbbf9a125ffb9fe009bbbcf190414}} 
 std\+::string {\bfseries Server\+Ip\+Addres} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
-\begin{DoxyCompactList}\small\item\em Server ip address string. Default set to localhost. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_aba348f1caae476ce1033a43539851abc}\label{class_e_n_1_1_e_n___u_d_p___client_aba348f1caae476ce1033a43539851abc}} 
-EN\+\_\+\+SOCKET {\bfseries Server\+Connection\+Socket} = INVALID\+\_\+\+SOCKET
-\begin{DoxyCompactList}\small\item\em Socket to connect to server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Server ip address string. Default set to localhost. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -73,6 +69,15 @@ Function for sending a message to a connected server.
 \mbox{\texttt{ in}}  & {\em Message\+Delay} & Additional parameter, it takes the delay in executing the code to send the message \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}\label{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}} 
+\index{EN::EN\_UDP\_Client@{EN::EN\_UDP\_Client}!ServerMessageHandler@{ServerMessageHandler}}
+\index{ServerMessageHandler@{ServerMessageHandler}!EN::EN\_UDP\_Client@{EN::EN\_UDP\_Client}}
+\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Client\+::\+Server\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+It is used to process incoming messages from the server \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

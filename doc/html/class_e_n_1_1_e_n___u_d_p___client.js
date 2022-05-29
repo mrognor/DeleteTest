@@ -8,7 +8,6 @@ var class_e_n_1_1_e_n___u_d_p___client =
     [ "SendToServer", "class_e_n_1_1_e_n___u_d_p___client.html#a95b11e4a64358af9ffe7287eac17f279", null ],
     [ "ServerMessageHandler", "class_e_n_1_1_e_n___u_d_p___client.html#aec18f98cbdc95f77816f070bba6b3afb", null ],
     [ "MaxMessageSize", "class_e_n_1_1_e_n___u_d_p___client.html#ad234ba02ece2d965b157e9100c8639d9", null ],
-    [ "ServerConnectionSocket", "class_e_n_1_1_e_n___u_d_p___client.html#aba348f1caae476ce1033a43539851abc", null ],
     [ "ServerIpAddres", "class_e_n_1_1_e_n___u_d_p___client.html#aa06dbbf9a125ffb9fe009bbbcf190414", null ],
     [ "ServerPort", "class_e_n_1_1_e_n___u_d_p___client.html#ae259275e8195c9de6e0e8d75b00e4b23", null ]
 ];

@@ -134,13 +134,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> ()</td><
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad3f664072e682537d3ff7a1b3dc17350"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___server.html#ad3f664072e682537d3ff7a1b3dc17350">OnClientConnected</a> (int ClientID)=0</td></tr>
-<tr class="memdesc:ad3f664072e682537d3ff7a1b3dc17350"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function must be defined by the library user.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#ad3f664072e682537d3ff7a1b3dc17350">More...</a><br /></td></tr>
+<tr class="memdesc:ad3f664072e682537d3ff7a1b3dc17350"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that is executed when the client connects to the server.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#ad3f664072e682537d3ff7a1b3dc17350">More...</a><br /></td></tr>
 <tr class="separator:ad3f664072e682537d3ff7a1b3dc17350"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fdafde84bab249425fa9514c3d4b3dd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___server.html#a6fdafde84bab249425fa9514c3d4b3dd">ClientMessageHandler</a> (std::string message, int ClientID)=0</td></tr>
-<tr class="memdesc:a6fdafde84bab249425fa9514c3d4b3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function must be defined by the library user.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#a6fdafde84bab249425fa9514c3d4b3dd">More...</a><br /></td></tr>
+<tr class="memdesc:a6fdafde84bab249425fa9514c3d4b3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that processes incoming messages.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#a6fdafde84bab249425fa9514c3d4b3dd">More...</a><br /></td></tr>
 <tr class="separator:a6fdafde84bab249425fa9514c3d4b3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06ea023f3b6a3302f8731addf59cad0d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___server.html#a06ea023f3b6a3302f8731addf59cad0d">OnClientDisconnect</a> (int ClientID)=0</td></tr>
-<tr class="memdesc:a06ea023f3b6a3302f8731addf59cad0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function must be defined by the library user.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#a06ea023f3b6a3302f8731addf59cad0d">More...</a><br /></td></tr>
+<tr class="memdesc:a06ea023f3b6a3302f8731addf59cad0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that runs after the client is disconnected.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#a06ea023f3b6a3302f8731addf59cad0d">More...</a><br /></td></tr>
 <tr class="separator:a06ea023f3b6a3302f8731addf59cad0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -195,8 +195,8 @@ std::vector&lt; EN_SOCKET &gt;&#160;</td><td class="memItemRight" valign="bottom
 </table>
 </div><div class="memdoc">
 
-<p>The function must be defined by the library user. </p>
-<p >Method that processes incoming messages </p>
+<p>Method that processes incoming messages. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must be defined by the user </dd></dl>
 
 </div>
 </div>
@@ -250,8 +250,8 @@ std::vector&lt; EN_SOCKET &gt;&#160;</td><td class="memItemRight" valign="bottom
 </table>
 </div><div class="memdoc">
 
-<p>The function must be defined by the library user. </p>
-<p >The method that is executed when the client connects to the server </p>
+<p>The method that is executed when the client connects to the server. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must be defined by the user </dd></dl>
 
 </div>
 </div>
@@ -279,8 +279,8 @@ std::vector&lt; EN_SOCKET &gt;&#160;</td><td class="memItemRight" valign="bottom
 </table>
 </div><div class="memdoc">
 
-<p>The function must be defined by the library user. </p>
-<p >Method that runs after the client is disconnected </p>
+<p>Method that runs after the client is disconnected. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must be defined by the user </dd></dl>
 
 </div>
 </div>
