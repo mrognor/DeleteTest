@@ -46,3 +46,7 @@ The function displays the status of the file transfer to the console
 ## IsFileExist  
 `bool IsFileExist(std::string filePath)`  
 Return true if file exists, otherwise rerurn false
+
+## Delay
+`void Delay(int milliseconds)`  
+Crossplatform function for program suspension. Gets milliseconds

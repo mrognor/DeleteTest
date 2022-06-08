@@ -1,0 +1,90 @@
+\hypertarget{class_e_n_1_1_e_n___r_a_u___t_c_p___server}{}\doxysection{EN\+::EN\+\_\+\+RAU\+\_\+\+TCP\+\_\+\+Server Class Reference}
+\label{class_e_n_1_1_e_n___r_a_u___t_c_p___server}\index{EN::EN\_RAU\_TCP\_Server@{EN::EN\_RAU\_TCP\_Server}}
+Inheritance diagram for EN\+::EN\+\_\+\+RAU\+\_\+\+TCP\+\_\+\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_n_1_1_e_n___r_a_u___t_c_p___server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___t_c_p___server_adfd9d7892f81fb140bae6a80a345f2be}\label{class_e_n_1_1_e_n___r_a_u___t_c_p___server_adfd9d7892f81fb140bae6a80a345f2be}} 
+{\bfseries EN\+\_\+\+RAU\+\_\+\+TCP\+\_\+\+Server} (\mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{EN\+\_\+\+RAU\+\_\+\+Server}} $\ast$rau\+\_\+\+Server)
+\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___t_c_p___server_af13b9709df8d07a87c9d712210495cad}{On\+Client\+Connected}} (int Client\+ID)
+\begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___t_c_p___server_ab6d85777abc57c1551f8797a2b22bd9a}{Client\+Message\+Handler}} (std\+::string message, int Client\+ID)
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___t_c_p___server_aa8662d54387ad205f824ee9c7d687162}{On\+Client\+Disconnect}} (int Client\+ID)
+\begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___t_c_p___server_adb2bc06add958d72eb8064092d827d5b}\label{class_e_n_1_1_e_n___r_a_u___t_c_p___server_adb2bc06add958d72eb8064092d827d5b}} 
+friend {\bfseries EN\+\_\+\+RAU\+\_\+\+Server}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___t_c_p___server_a59d5edb7b722dc32bb79cb5b83993a2a}\label{class_e_n_1_1_e_n___r_a_u___t_c_p___server_a59d5edb7b722dc32bb79cb5b83993a2a}} 
+\mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{EN\+\_\+\+RAU\+\_\+\+Server}} $\ast$ {\bfseries RAU\+\_\+\+Server}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___t_c_p___server_ab6d85777abc57c1551f8797a2b22bd9a}\label{class_e_n_1_1_e_n___r_a_u___t_c_p___server_ab6d85777abc57c1551f8797a2b22bd9a}} 
+\index{EN::EN\_RAU\_TCP\_Server@{EN::EN\_RAU\_TCP\_Server}!ClientMessageHandler@{ClientMessageHandler}}
+\index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_RAU\_TCP\_Server@{EN::EN\_RAU\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+TCP\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{int}]{Client\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___t_c_p___server_af13b9709df8d07a87c9d712210495cad}\label{class_e_n_1_1_e_n___r_a_u___t_c_p___server_af13b9709df8d07a87c9d712210495cad}} 
+\index{EN::EN\_RAU\_TCP\_Server@{EN::EN\_RAU\_TCP\_Server}!OnClientConnected@{OnClientConnected}}
+\index{OnClientConnected@{OnClientConnected}!EN::EN\_RAU\_TCP\_Server@{EN::EN\_RAU\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{OnClientConnected()}{OnClientConnected()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+TCP\+\_\+\+Server\+::\+On\+Client\+Connected (\begin{DoxyParamCaption}\item[{int}]{Client\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method that is executed when the client connects to the server. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___t_c_p___server_aa8662d54387ad205f824ee9c7d687162}\label{class_e_n_1_1_e_n___r_a_u___t_c_p___server_aa8662d54387ad205f824ee9c7d687162}} 
+\index{EN::EN\_RAU\_TCP\_Server@{EN::EN\_RAU\_TCP\_Server}!OnClientDisconnect@{OnClientDisconnect}}
+\index{OnClientDisconnect@{OnClientDisconnect}!EN::EN\_RAU\_TCP\_Server@{EN::EN\_RAU\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{OnClientDisconnect()}{OnClientDisconnect()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+TCP\+\_\+\+Server\+::\+On\+Client\+Disconnect (\begin{DoxyParamCaption}\item[{int}]{Client\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that runs after the client is disconnected. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Server.\+h\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

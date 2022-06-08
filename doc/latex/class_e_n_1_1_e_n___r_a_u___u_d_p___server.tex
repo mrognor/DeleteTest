@@ -1,0 +1,71 @@
+\hypertarget{class_e_n_1_1_e_n___r_a_u___u_d_p___server}{}\doxysection{EN\+::EN\+\_\+\+RAU\+\_\+\+UDP\+\_\+\+Server Class Reference}
+\label{class_e_n_1_1_e_n___r_a_u___u_d_p___server}\index{EN::EN\_RAU\_UDP\_Server@{EN::EN\_RAU\_UDP\_Server}}
+Inheritance diagram for EN\+::EN\+\_\+\+RAU\+\_\+\+UDP\+\_\+\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_n_1_1_e_n___r_a_u___u_d_p___server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___u_d_p___server_afc5cfdaec4681cadaaf5d303b2286f7a}\label{class_e_n_1_1_e_n___r_a_u___u_d_p___server_afc5cfdaec4681cadaaf5d303b2286f7a}} 
+{\bfseries EN\+\_\+\+RAU\+\_\+\+UDP\+\_\+\+Server} (\mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{EN\+\_\+\+RAU\+\_\+\+Server}} $\ast$rau\+\_\+\+Server)
+\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a8091cfaba8993cfab7a637594253ac7b}{Client\+Message\+Handler}} (std\+::string message, std\+::string Client\+Socket\+Addr, long long Time\+Since\+Package\+Arrived)
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a625ee2f5346cc33690ba1076ad32b0e6}{Instant\+Client\+Message\+Handler}} (std\+::string message, std\+::string Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a7dfaec6c93c75e6489532d7a5420ae75}\label{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a7dfaec6c93c75e6489532d7a5420ae75}} 
+friend {\bfseries EN\+\_\+\+RAU\+\_\+\+Server}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a98248ed3eed89f29d13686ba814c7169}\label{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a98248ed3eed89f29d13686ba814c7169}} 
+\mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{EN\+\_\+\+RAU\+\_\+\+Server}} $\ast$ {\bfseries RAU\+\_\+\+Server}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a8091cfaba8993cfab7a637594253ac7b}\label{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a8091cfaba8993cfab7a637594253ac7b}} 
+\index{EN::EN\_RAU\_UDP\_Server@{EN::EN\_RAU\_UDP\_Server}!ClientMessageHandler@{ClientMessageHandler}}
+\index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_RAU\_UDP\_Server@{EN::EN\_RAU\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+UDP\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+This method processes a message from the buffer Get message, UDP client address and time since message come to server \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a6343c34978da206a30c69ed54ebc048d}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a625ee2f5346cc33690ba1076ad32b0e6}\label{class_e_n_1_1_e_n___r_a_u___u_d_p___server_a625ee2f5346cc33690ba1076ad32b0e6}} 
+\index{EN::EN\_RAU\_UDP\_Server@{EN::EN\_RAU\_UDP\_Server}!InstantClientMessageHandler@{InstantClientMessageHandler}}
+\index{InstantClientMessageHandler@{InstantClientMessageHandler}!EN::EN\_RAU\_UDP\_Server@{EN::EN\_RAU\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{InstantClientMessageHandler()}{InstantClientMessageHandler()}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+RAU\+\_\+\+UDP\+\_\+\+Server\+::\+Instant\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+This method processes messages before they are placed in the buffer Get message, UDP client address and time since message come to server Return true if you want to put message into bufer, false otherwise \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a26235d96390965c8bd88f46ac83c89fa}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Server.\+h\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

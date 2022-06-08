@@ -24,14 +24,14 @@ void {\bfseries Run} ()
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}\label{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}} 
 void {\bfseries Shutdown} ()
 \begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_ab114e1ac8508e6108d6c7bab69b7a3e4}{Send\+To\+Client}} (std\+::string message, UDP\+\_\+\+Address Client\+Socket\+Addr)
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a741f40c45c15ea3600313307e696ecfd}{Send\+To\+Client}} (std\+::string message, std\+::string Client\+Socket\+Addr)
 \begin{DoxyCompactList}\small\item\em function for sending a message to the client \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_add8ec4dd1ae4dfc9640d0c2b4bd8d50c}{Client\+Message\+Handler}} (std\+::string message, UDP\+\_\+\+Address Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a6343c34978da206a30c69ed54ebc048d}{Client\+Message\+Handler}} (std\+::string message, std\+::string Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
 \begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
-virtual bool \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a48bd96e905fc1eae53fa9c0b28bdb6a8}{Instant\+Client\+Message\+Handler}} (std\+::string message, UDP\+\_\+\+Address Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
+virtual bool \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a26235d96390965c8bd88f46ac83c89fa}{Instant\+Client\+Message\+Handler}} (std\+::string message, std\+::string Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)=0
 \begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -59,37 +59,37 @@ EN\+\_\+\+UDP\+\_\+\+Server\+Bufer\+Type {\bfseries Server\+Bufer\+Type} = Queue
 Base udp server class. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_add8ec4dd1ae4dfc9640d0c2b4bd8d50c}\label{class_e_n_1_1_e_n___u_d_p___server_add8ec4dd1ae4dfc9640d0c2b4bd8d50c}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a6343c34978da206a30c69ed54ebc048d}\label{class_e_n_1_1_e_n___u_d_p___server_a6343c34978da206a30c69ed54ebc048d}} 
 \index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!ClientMessageHandler@{ClientMessageHandler}}
 \index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 \doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
-{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{UDP\+\_\+\+Address}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
 Method that processes incoming messages. 
 
-This method processes a message from the buffer \begin{DoxyWarning}{Warning}
+This method processes a message from the buffer Get message, UDP client address and time since message come to server \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a48bd96e905fc1eae53fa9c0b28bdb6a8}\label{class_e_n_1_1_e_n___u_d_p___server_a48bd96e905fc1eae53fa9c0b28bdb6a8}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a26235d96390965c8bd88f46ac83c89fa}\label{class_e_n_1_1_e_n___u_d_p___server_a26235d96390965c8bd88f46ac83c89fa}} 
 \index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!InstantClientMessageHandler@{InstantClientMessageHandler}}
 \index{InstantClientMessageHandler@{InstantClientMessageHandler}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 \doxysubsubsection{\texorpdfstring{InstantClientMessageHandler()}{InstantClientMessageHandler()}}
-{\footnotesize\ttfamily virtual bool EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Instant\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{UDP\+\_\+\+Address}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Instant\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
 Method that processes incoming messages. 
 
-This method processes messages before they are placed in the buffer \begin{DoxyWarning}{Warning}
+This method processes messages before they are placed in the buffer Get message, UDP client address and time since message come to server Return true if you want to put message into bufer, false otherwise \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_ab114e1ac8508e6108d6c7bab69b7a3e4}\label{class_e_n_1_1_e_n___u_d_p___server_ab114e1ac8508e6108d6c7bab69b7a3e4}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a741f40c45c15ea3600313307e696ecfd}\label{class_e_n_1_1_e_n___u_d_p___server_a741f40c45c15ea3600313307e696ecfd}} 
 \index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!SendToClient@{SendToClient}}
 \index{SendToClient@{SendToClient}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 \doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}
-{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{UDP\+\_\+\+Address}]{Client\+Socket\+Addr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Socket\+Addr }\end{DoxyParamCaption})}
 
 
 
@@ -99,7 +99,7 @@ function for sending a message to the client
 \begin{DoxyParams}[1]{Parameters}
 \mbox{\texttt{ in}}  & {\em message} & string to send to server \\
 \hline
-\mbox{\texttt{ in}}  & {\em Client\+Socket\+Addr} & variable with udp client address \\
+\mbox{\texttt{ in}}  & {\em Client\+Socket\+Addr} & string with server address. Format\+: 127.\+0.\+0.\+1\+:1111 \\
 \hline
 \end{DoxyParams}
 

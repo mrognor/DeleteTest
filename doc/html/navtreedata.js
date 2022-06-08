@@ -36,7 +36,8 @@ var NAVTREE =
       [ "SendFile", "md__easy__network__documentation__e_n__functions.html#autotoc_md7", null ],
       [ "RecvFile", "md__easy__network__documentation__e_n__functions.html#autotoc_md8", null ],
       [ "DownloadStatus", "md__easy__network__documentation__e_n__functions.html#autotoc_md9", null ],
-      [ "IsFileExist", "md__easy__network__documentation__e_n__functions.html#autotoc_md10", null ]
+      [ "IsFileExist", "md__easy__network__documentation__e_n__functions.html#autotoc_md10", null ],
+      [ "Delay", "md__easy__network__documentation__e_n__functions.html#autotoc_md11", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],

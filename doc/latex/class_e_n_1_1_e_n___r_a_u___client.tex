@@ -1,0 +1,138 @@
+\hypertarget{class_e_n_1_1_e_n___r_a_u___client}{}\doxysection{EN\+::EN\+\_\+\+RAU\+\_\+\+Client Class Reference}
+\label{class_e_n_1_1_e_n___r_a_u___client}\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+
+
+Client class with connection and the possibility of reliable and unreliable sending and receiveng.  
+
+
+
+
+{\ttfamily \#include $<$EN\+\_\+\+RAU\+\_\+\+Client.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_af94927308bcd89d72e7afeb2c2ae1847}\label{class_e_n_1_1_e_n___r_a_u___client_af94927308bcd89d72e7afeb2c2ae1847}} 
+int {\bfseries Get\+Server\+Port} ()
+\begin{DoxyCompactList}\small\item\em Server port getter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a0cce51ec1e1b395a4e43c844009bdcc7}\label{class_e_n_1_1_e_n___r_a_u___client_a0cce51ec1e1b395a4e43c844009bdcc7}} 
+std\+::string {\bfseries Get\+Server\+Ip\+Address} ()
+\begin{DoxyCompactList}\small\item\em Server ip getter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_aa5e5322ad47f24b342d1cfe6e1d4a371}\label{class_e_n_1_1_e_n___r_a_u___client_aa5e5322ad47f24b342d1cfe6e1d4a371}} 
+bool {\bfseries Is\+Connected} ()
+\begin{DoxyCompactList}\small\item\em Function return true if client connected to server. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}{Connect}} ()
+\begin{DoxyCompactList}\small\item\em Connect to localhost and default port. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_ad3a0b8c584870062ce7ba1b7e7950023}{Connect}} (int port)
+\begin{DoxyCompactList}\small\item\em Connect to localhost and current port. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_af98ad9b3c3de71b876ef817cd186ec10}{Connect}} (std\+::string ip\+Addr, int port)
+\begin{DoxyCompactList}\small\item\em Connect to current ip and current port. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_ad2c32cbaf50b1336b16247465329042d}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Method to start server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}{Send\+To\+Server}} (std\+::string message, bool Is\+Reliable=true, int Message\+Delay=10)
+\begin{DoxyCompactList}\small\item\em Function for sending a message to a connected server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_ac5d179e920398855cb17ec7ca09faeef}\label{class_e_n_1_1_e_n___r_a_u___client_ac5d179e920398855cb17ec7ca09faeef}} 
+void {\bfseries Disconnect} ()
+\begin{DoxyCompactList}\small\item\em This function disconnect client from server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}\label{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}} 
+virtual void {\bfseries After\+Connect} ()=0
+\begin{DoxyCompactList}\small\item\em A function to be defined by the user. It is used for logic after connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}\label{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}} 
+virtual void {\bfseries Server\+Message\+Handler} (std\+::string message)=0
+\begin{DoxyCompactList}\small\item\em A function to be defined by the user. It is used to process incoming messages from the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}\label{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}} 
+virtual void {\bfseries Before\+Disconnect} ()=0
+\begin{DoxyCompactList}\small\item\em A function to be defined by the user. Performed before disconnected from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Client class with connection and the possibility of reliable and unreliable sending and receiveng. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}\label{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!Connect@{Connect}}
+\index{Connect@{Connect}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Connect to localhost and default port. 
+
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_ad3a0b8c584870062ce7ba1b7e7950023}\label{class_e_n_1_1_e_n___r_a_u___client_ad3a0b8c584870062ce7ba1b7e7950023}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!Connect@{Connect}}
+\index{Connect@{Connect}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+Connect (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+Connect to localhost and current port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em port} & port to connect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_af98ad9b3c3de71b876ef817cd186ec10}\label{class_e_n_1_1_e_n___r_a_u___client_af98ad9b3c3de71b876ef817cd186ec10}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!Connect@{Connect}}
+\index{Connect@{Connect}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{Connect()}{Connect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+Connect (\begin{DoxyParamCaption}\item[{std\+::string}]{ip\+Addr,  }\item[{int}]{port }\end{DoxyParamCaption})}
+
+
+
+Connect to current ip and current port. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ip} & server ip address \\
+\hline
+\mbox{\texttt{ in}}  & {\em port} & port to connect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_ad2c32cbaf50b1336b16247465329042d}\label{class_e_n_1_1_e_n___r_a_u___client_ad2c32cbaf50b1336b16247465329042d}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!Run@{Run}}
+\index{Run@{Run}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to start server. 
+
+Starts a thread to process server responses Important! You have to determine \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}{After\+Connect()}}, \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}{Server\+Message\+Handler()}} and \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}{Before\+Disconnect()}} \mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}\label{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!SendToServer@{SendToServer}}
+\index{SendToServer@{SendToServer}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{SendToServer()}{SendToServer()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+Send\+To\+Server (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{bool}]{Is\+Reliable = {\ttfamily true},  }\item[{int}]{Message\+Delay = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+
+
+Function for sending a message to a connected server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em message} & the message string to send to the server \\
+\hline
+\mbox{\texttt{ in}}  & {\em Message\+Delay} & Optional parameter. the time that will pass after sending the message to the server \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Client.\+h\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Client.\+cpp\end{DoxyCompactItemize}

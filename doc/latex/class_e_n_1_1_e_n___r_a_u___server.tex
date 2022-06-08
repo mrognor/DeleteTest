@@ -1,0 +1,103 @@
+\hypertarget{class_e_n_1_1_e_n___r_a_u___server}{}\doxysection{EN\+::EN\+\_\+\+RAU\+\_\+\+Server Class Reference}
+\label{class_e_n_1_1_e_n___r_a_u___server}\index{EN::EN\_RAU\_Server@{EN::EN\_RAU\_Server}}
+
+
+Server class with connection and the possibility of reliable and unreliable sending.  
+
+
+
+
+{\ttfamily \#include $<$EN\+\_\+\+RAU\+\_\+\+Server.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a3bf674899372960f9af1fda0df67cbc9}\label{class_e_n_1_1_e_n___r_a_u___server_a3bf674899372960f9af1fda0df67cbc9}} 
+int {\bfseries Get\+Port} ()
+\begin{DoxyCompactList}\small\item\em Port getter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a743eb092e6d4d12222a745bc66f3322d}\label{class_e_n_1_1_e_n___r_a_u___server_a743eb092e6d4d12222a745bc66f3322d}} 
+std\+::string {\bfseries Get\+Ip\+Addr} ()
+\begin{DoxyCompactList}\small\item\em Ip getter. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a83e5056d9c22e5d340d126209639555b}\label{class_e_n_1_1_e_n___r_a_u___server_a83e5056d9c22e5d340d126209639555b}} 
+int {\bfseries Get\+Connections\+Count} ()
+\begin{DoxyCompactList}\small\item\em The function returns the number of connected devices. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_add7f8f310cbd778b0949197fc70542ef}\label{class_e_n_1_1_e_n___r_a_u___server_add7f8f310cbd778b0949197fc70542ef}} 
+void {\bfseries Run} ()
+\begin{DoxyCompactList}\small\item\em Method to start server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a9491516a94dece0d7c765453e98d007a}{Disconnect\+Client}} (int Client\+ID)
+\begin{DoxyCompactList}\small\item\em Method that disconnects the client from the server. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a827357084d58ea5b6b9ac06430a5420e}\label{class_e_n_1_1_e_n___r_a_u___server_a827357084d58ea5b6b9ac06430a5420e}} 
+void {\bfseries Shutdown} ()
+\begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}{Send\+To\+Client}} (int Client\+Id, std\+::string message, bool Is\+Reliable=true)
+\begin{DoxyCompactList}\small\item\em Method that send message to client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a312ce506bb37a9afcc741a0517b6071f}\label{class_e_n_1_1_e_n___r_a_u___server_a312ce506bb37a9afcc741a0517b6071f}} 
+virtual void {\bfseries On\+Client\+Connected} (int Client\+ID)=0
+\begin{DoxyCompactList}\small\item\em A function to be defined by the user. It is used for logic after client connection. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_afad250f6f8e4c28dc41d42b4745a3551}\label{class_e_n_1_1_e_n___r_a_u___server_afad250f6f8e4c28dc41d42b4745a3551}} 
+virtual void {\bfseries Client\+Message\+Handler} (std\+::string message, int Client\+ID)=0
+\begin{DoxyCompactList}\small\item\em A function to be defined by the user. It is used to process incoming messages from the clients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_ad75fd37d93add79583e0b2f7bdb334f4}\label{class_e_n_1_1_e_n___r_a_u___server_ad75fd37d93add79583e0b2f7bdb334f4}} 
+virtual void {\bfseries On\+Client\+Disconnect} (int Client\+ID)=0
+\begin{DoxyCompactList}\small\item\em A function to be defined by the user. Performed before client disconnected from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a602209f1da4beb21ac6c330e5fdcab40}\label{class_e_n_1_1_e_n___r_a_u___server_a602209f1da4beb21ac6c330e5fdcab40}} 
+int {\bfseries Port} = 1111
+\begin{DoxyCompactList}\small\item\em Server port. By default set to 1111. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a327db3e95b2bc5c7c4ceff7c33fdef2d}\label{class_e_n_1_1_e_n___r_a_u___server_a327db3e95b2bc5c7c4ceff7c33fdef2d}} 
+std\+::string {\bfseries Ip\+Address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+\begin{DoxyCompactList}\small\item\em Server ip address. By default set to localhost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_acef93b6b1bd191f1ff5528522855fbe5}\label{class_e_n_1_1_e_n___r_a_u___server_acef93b6b1bd191f1ff5528522855fbe5}} 
+int {\bfseries Max\+Unreliable\+Message\+Size} = 64
+\begin{DoxyCompactList}\small\item\em Max size of unreliable message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Server class with connection and the possibility of reliable and unreliable sending. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a9491516a94dece0d7c765453e98d007a}\label{class_e_n_1_1_e_n___r_a_u___server_a9491516a94dece0d7c765453e98d007a}} 
+\index{EN::EN\_RAU\_Server@{EN::EN\_RAU\_Server}!DisconnectClient@{DisconnectClient}}
+\index{DisconnectClient@{DisconnectClient}!EN::EN\_RAU\_Server@{EN::EN\_RAU\_Server}}
+\doxysubsubsection{\texorpdfstring{DisconnectClient()}{DisconnectClient()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Server\+::\+Disconnect\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+ID }\end{DoxyParamCaption})}
+
+
+
+Method that disconnects the client from the server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Client\+ID} & The number of the client to be disconnect \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}\label{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}} 
+\index{EN::EN\_RAU\_Server@{EN::EN\_RAU\_Server}!SendToClient@{SendToClient}}
+\index{SendToClient@{SendToClient}!EN::EN\_RAU\_Server@{EN::EN\_RAU\_Server}}
+\doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+Id,  }\item[{std\+::string}]{message,  }\item[{bool}]{Is\+Reliable = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Method that send message to client. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Client\+ID} & The number of the client \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & The message to be sent to the client \\
+\hline
+\mbox{\texttt{ in}}  & {\em Is\+Reliable} & if the parameter is set to true, the message is guaranteed to reach. if the parameter is set to false before the message delivery is not guaranteed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Server.\+h\item 
+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

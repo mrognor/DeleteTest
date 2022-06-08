@@ -1,0 +1,117 @@
+\hypertarget{_e_n___r_a_u___client_8h_source}{}\doxysection{EN\+\_\+\+RAU\+\_\+\+Client.\+h}
+\label{_e_n___r_a_u___client_8h_source}\index{Easy\_Network/EN\_RAU\_Client.h@{Easy\_Network/EN\_RAU\_Client.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}EN\_TCP\_Client.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}EN\_UDP\_Client.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <condition\_variable>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     \textcolor{comment}{// EN\_RAU\_Client class definition}}
+\DoxyCodeLine{13     \textcolor{keyword}{class }EN\_RAU\_Client;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{16     \textcolor{keyword}{class }EN\_RAU\_TCP\_Client : \textcolor{keyword}{public} EN\_TCP\_Client}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18     \textcolor{keyword}{public}:}
+\DoxyCodeLine{19         EN\_RAU\_Client* RAU\_Client;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21         EN\_RAU\_TCP\_Client(EN\_RAU\_Client* rau\_Client);}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{comment}{// A function to be defined by the user. It is used for logic after connection}}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} AfterConnect() \{\};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26         \textcolor{comment}{// A function to be defined by the user. It is used to process incoming messages from the server}}
+\DoxyCodeLine{27         \textcolor{keywordtype}{void} ServerMessageHandler(std::string message);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29         \textcolor{comment}{// A function to be defined by the user. Performed before disconnected from the server}}
+\DoxyCodeLine{30         \textcolor{keywordtype}{void} BeforeDisconnect();}
+\DoxyCodeLine{31     \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keyword}{class }EN\_RAU\_UDP\_Client : \textcolor{keyword}{public} EN\_UDP\_Client}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35     \textcolor{keyword}{public}:}
+\DoxyCodeLine{36         EN\_RAU\_Client* RAU\_Client;}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{keywordtype}{void} SetIpAndPort(std::string Ip, \textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40         EN\_RAU\_UDP\_Client(EN\_RAU\_Client* rau\_Client);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42         \textcolor{keywordtype}{void} ServerMessageHandler(std::string message);}
+\DoxyCodeLine{43     \};}
+\DoxyCodeLine{45     }
+\DoxyCodeLine{47     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client}{EN\_RAU\_Client}} }
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49     \textcolor{keyword}{private}:}
+\DoxyCodeLine{50         \textcolor{comment}{// RAU\_TCP\_Client and RAU\_UDP\_Client pointers}}
+\DoxyCodeLine{51         \textcolor{keyword}{friend} EN\_RAU\_TCP\_Client;}
+\DoxyCodeLine{52         \textcolor{keyword}{friend} EN\_RAU\_UDP\_Client;}
+\DoxyCodeLine{53         EN\_RAU\_TCP\_Client* TCP\_Client;}
+\DoxyCodeLine{54         EN\_RAU\_UDP\_Client* UDP\_Client;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{comment}{// Client number on the server}}
+\DoxyCodeLine{57         \textcolor{keywordtype}{int} ClientId = -\/1;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59         \textcolor{comment}{// Boolean variable for tracking the connection status. }}
+\DoxyCodeLine{60         \textcolor{comment}{// When the server receives the client's IP address, }}
+\DoxyCodeLine{61         \textcolor{comment}{// it will send a message via tsp and this variable will become true}}
+\DoxyCodeLine{62         \textcolor{keywordtype}{bool} IsServerGetUDPAddress = \textcolor{keyword}{false};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{comment}{// Variable to shutdown server}}
+\DoxyCodeLine{65         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \textcolor{comment}{// Incoming messages buffer}}
+\DoxyCodeLine{68         std::queue<std::string> Messages;}
+\DoxyCodeLine{69         \textcolor{comment}{// Condition variable to wake up server messahe handle thread}}
+\DoxyCodeLine{70         std::condition\_variable CondVar;}
+\DoxyCodeLine{71         \textcolor{comment}{// Mutex to make code thread-\/safety}}
+\DoxyCodeLine{72         std::mutex Mtx;}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         \textcolor{comment}{// Incoming messages handler}}
+\DoxyCodeLine{75         \textcolor{keywordtype}{void} QueueMessageHandler();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77         \textcolor{comment}{// Default port}}
+\DoxyCodeLine{78         \textcolor{keywordtype}{int} ServerPort = 1111;}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80         \textcolor{comment}{// Server ip address string. Default set to localhost}}
+\DoxyCodeLine{81         std::string ServerIpAddress = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{86         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}{AfterConnect}}() = 0; }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{89         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}{ServerMessageHandler}}(std::string message) = 0;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{92         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}{BeforeDisconnect}}() = 0;}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keyword}{public}:}
+\DoxyCodeLine{95         \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client}{EN\_RAU\_Client}}();}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{98         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_af94927308bcd89d72e7afeb2c2ae1847}{GetServerPort}}() \{ \textcolor{keywordflow}{return} ServerPort; \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{101         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a0cce51ec1e1b395a4e43c844009bdcc7}{GetServerIpAddress}}() \{ \textcolor{keywordflow}{return} ServerIpAddress; \}}
+\DoxyCodeLine{102 }
+\DoxyCodeLine{104         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa5e5322ad47f24b342d1cfe6e1d4a371}{IsConnected}}();}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{110         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}{Connect}}();}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{117         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}{Connect}}(\textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{125         \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}{Connect}}(std::string ipAddr, \textcolor{keywordtype}{int} port);}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{133         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_ad2c32cbaf50b1336b16247465329042d}{Run}}();}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{140         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}{SendToServer}}(std::string message, \textcolor{keywordtype}{bool} IsReliable = \textcolor{keyword}{true}, \textcolor{keywordtype}{int} MessageDelay = 10);}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{143         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_ac5d179e920398855cb17ec7ca09faeef}{Disconnect}}();}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145         \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client}{\string~EN\_RAU\_Client}}();}
+\DoxyCodeLine{146     \};}
+\DoxyCodeLine{147 \}}
+
+\end{DoxyCode}
