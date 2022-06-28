@@ -37,21 +37,44 @@ void {\bfseries Disconnect} ()
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}\label{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}} 
-virtual void {\bfseries After\+Connect} ()=0
-\begin{DoxyCompactList}\small\item\em A function to be defined by the user. It is used for logic after connection. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}\label{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}} 
-virtual void {\bfseries Server\+Message\+Handler} (std\+::string message)=0
-\begin{DoxyCompactList}\small\item\em A function to be defined by the user. It is used to process incoming messages from the server. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}\label{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}} 
-virtual void {\bfseries Before\+Disconnect} ()=0
-\begin{DoxyCompactList}\small\item\em A function to be defined by the user. Performed before disconnected from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}{After\+Connect}} ()=0
+\begin{DoxyCompactList}\small\item\em This function is called after connecting to the server. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}{Server\+Message\+Handler}} (std\+::string message)=0
+\begin{DoxyCompactList}\small\item\em The function processes all incoming messages. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}{Before\+Disconnect}} ()=0
+\begin{DoxyCompactList}\small\item\em The function is called before disconnecting from the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Client class with connection and the possibility of reliable and unreliable sending and receiveng. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}\label{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!AfterConnect@{AfterConnect}}
+\index{AfterConnect@{AfterConnect}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{AfterConnect()}{AfterConnect()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+After\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+This function is called after connecting to the server. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}\label{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!BeforeDisconnect@{BeforeDisconnect}}
+\index{BeforeDisconnect@{BeforeDisconnect}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{BeforeDisconnect()}{BeforeDisconnect()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+Before\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+The function is called before disconnecting from the server. 
+
+Important! If disconnection occurs from the server side or connection lost, the \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa5e5322ad47f24b342d1cfe6e1d4a371}{Is\+Connected()}} function returns false \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
 \mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}\label{class_e_n_1_1_e_n___r_a_u___client_a59e11c68f5e7f54f8fdcd773d2013044}} 
 \index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!Connect@{Connect}}
 \index{Connect@{Connect}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
@@ -130,9 +153,22 @@ Function for sending a message to a connected server.
 \mbox{\texttt{ in}}  & {\em Message\+Delay} & Optional parameter. the time that will pass after sending the message to the server \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}\label{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}} 
+\index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!ServerMessageHandler@{ServerMessageHandler}}
+\index{ServerMessageHandler@{ServerMessageHandler}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
+\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}}
+{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client\+::\+Server\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+The function processes all incoming messages. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Client.\+h\item 
-Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Client.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Client.\+h\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/EN\+\_\+\+RAU\+\_\+\+Client.\+cpp\end{DoxyCompactItemize}

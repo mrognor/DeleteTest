@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['easy_20network_0',['Easy network',['../index.html',1,'']]]
+  ['classes_20overview_0',['Classes overview',['../md__e_n__classes_overview.html',1,'']]]
 ];

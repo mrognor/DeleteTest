@@ -24,9 +24,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.2</span>
+   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.3</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -87,7 +87,79 @@ $(document).ready(function(){initNavTree('md__e_n__functions.html',''); initResi
   <div class="headertitle"><div class="title">Usefull library functions </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="autotoc_md6"></a>
+Split</h1>
+<p ><code>std::vector&lt;std::string&gt; Split(std::string StringToSplit, std::string SplitterString=" ")</code> <br  />
+ The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+SendFile</h1>
+<p ><code>bool SendFile(EN_SOCKET&amp; FileSendSocket, std::string FilePath, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
+ The function is needed to send files. The message receiving function should be called on the other side. <br  />
+</p><ul>
+<li>The first parameter is the socket for sending files <br  />
+</li>
+<li>The second parameter is the full path to the file to be sent <br  />
+</li>
+<li>The third parameter is a reference to a boolean variable to stop file transfer <br  />
+</li>
+<li>The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. <br  />
+<ul>
+<li>The first is how many bytes were transmitted. <br  />
+</li>
+<li>The second is the total number of bytes. <br  />
+</li>
+<li>The third parameter shows the transfer rate in bytes. <br  />
+</li>
+<li>The fourth shows the remaining time in seconds <br  />
+</li>
+</ul>
+</li>
+</ul>
+<p >By default, the library function is used to output to the console <br  />
+</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
+RecvFile</h1>
+<p ><code>bool RecvFile(EN_SOCKET&amp; FileSendSocket, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
+ The function is needed to receiving files. <br  />
+</p><ul>
+<li>The first parameter is the socket for receiving files <br  />
+</li>
+<li>The second parameter is a reference to a boolean variable to stop file transfer</li>
+<li>The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. <br  />
+<ul>
+<li>The first is how many bytes were transmitted. <br  />
+</li>
+<li>The second is the total number of bytes. <br  />
+</li>
+<li>The third parameter shows the transfer rate in bytes. <br  />
+</li>
+<li>The fourth shows the remaining time in seconds <br  />
+</li>
+</ul>
+</li>
+</ul>
+<p >By default, the library function is used to output to the console</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+DownloadStatus</h1>
+<p ><code>void DownloadStatus(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)</code> The function displays the status of the file transfer to the console</p><ul>
+<li>The first is how many bytes were transmitted. <br  />
+</li>
+<li>The second is the total number of bytes. <br  />
+</li>
+<li>The third parameter shows the transfer rate in bytes. <br  />
+</li>
+<li>The fourth shows the remaining time in seconds <br  />
+</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md10"></a>
+IsFileExist</h1>
+<p ><code>bool IsFileExist(std::string filePath)</code> <br  />
+ Return true if file exists, otherwise rerurn false</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Delay</h1>
+<p ><code>void Delay(int milliseconds)</code> <br  />
+ Crossplatform function for program suspension. Gets milliseconds </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <!-- start footer part -->

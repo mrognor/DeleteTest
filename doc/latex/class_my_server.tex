@@ -10,24 +10,24 @@ Inheritance diagram for My\+Server\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_my_server_af78996cea3d505e3194aed521f60a36a}{On\+Client\+Connected}} (int Client\+ID)
-\item 
+\begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_my_server_afb210643204399ac87d356a16447073b}{Client\+Message\+Handler}} (std\+::string message, int Client\+ID)
-\item 
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_my_server_ad8299e243433f65cd5ff7d913cb1a129}{On\+Client\+Disconnect}} (int Client\+ID)
-\item 
+\begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_my_server_aa2c6bbd05c9eaf11ff9fa7c0481bb187}\label{class_my_server_aa2c6bbd05c9eaf11ff9fa7c0481bb187}} 
 {\bfseries My\+Server} (std\+::string ip)
 \item 
 void \mbox{\hyperlink{class_my_server_af78996cea3d505e3194aed521f60a36a}{On\+Client\+Connected}} (int Client\+ID)
-\item 
+\begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_my_server_afb210643204399ac87d356a16447073b}{Client\+Message\+Handler}} (std\+::string message, int Client\+ID)
-\item 
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_my_server_ad8299e243433f65cd5ff7d913cb1a129}{On\+Client\+Disconnect}} (int Client\+ID)
-\item 
-void \mbox{\hyperlink{class_my_server_a3243525ce33f1b9f52f598d81d93d819}{Client\+Message\+Handler}} (std\+::string message, sockaddr\+\_\+in Client\+Socket\+Addr, long long Time\+Since\+Package\+Arrived)
-\item 
-bool \mbox{\hyperlink{class_my_server_a4b01dd629c87c06dd9896236dd03c12c}{Important\+Client\+Message\+Handler}} (std\+::string message, sockaddr\+\_\+in Client\+Socket\+Addr, long long Time\+When\+Package\+Arrived)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_server_a26065546c8f7f9aac0e4aa3192e70662}{Client\+Message\+Handler}} (std\+::string message, std\+::string Client\+Ip\+Address, long long Time\+Since\+Package\+Arrived)
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_my_server_a14b9ed8950d5c65c1885a9667e95ca0b}{Instant\+Client\+Message\+Handler}} (std\+::string message, std\+::string Client\+Ip\+Address, long long Time\+When\+Package\+Arrived)
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -40,7 +40,14 @@ bool \mbox{\hyperlink{class_my_server_a4b01dd629c87c06dd9896236dd03c12c}{Importa
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+Method that processes incoming messages. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
 
 \mbox{\Hypertarget{class_my_server_afb210643204399ac87d356a16447073b}\label{class_my_server_afb210643204399ac87d356a16447073b}} 
 \index{MyServer@{MyServer}!ClientMessageHandler@{ClientMessageHandler}}
@@ -50,27 +57,48 @@ Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+Method that processes incoming messages. 
 
-\mbox{\Hypertarget{class_my_server_a3243525ce33f1b9f52f598d81d93d819}\label{class_my_server_a3243525ce33f1b9f52f598d81d93d819}} 
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_my_server_a26065546c8f7f9aac0e4aa3192e70662}\label{class_my_server_a26065546c8f7f9aac0e4aa3192e70662}} 
 \index{MyServer@{MyServer}!ClientMessageHandler@{ClientMessageHandler}}
 \index{ClientMessageHandler@{ClientMessageHandler}!MyServer@{MyServer}}
 \doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily void My\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{sockaddr\+\_\+in}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+Since\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void My\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server}}.
+Method that processes incoming messages. 
 
-\mbox{\Hypertarget{class_my_server_a4b01dd629c87c06dd9896236dd03c12c}\label{class_my_server_a4b01dd629c87c06dd9896236dd03c12c}} 
-\index{MyServer@{MyServer}!ImportantClientMessageHandler@{ImportantClientMessageHandler}}
-\index{ImportantClientMessageHandler@{ImportantClientMessageHandler}!MyServer@{MyServer}}
-\doxysubsubsection{\texorpdfstring{ImportantClientMessageHandler()}{ImportantClientMessageHandler()}}
-{\footnotesize\ttfamily bool My\+Server\+::\+Important\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{sockaddr\+\_\+in}]{Client\+Socket\+Addr,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+This method processes a message from the buffer Get message, UDP client address and time since message come to server \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
 
 
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_ae30a93ee005f4517f7500c4294e021ae}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server}}.
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server}}.
+\mbox{\Hypertarget{class_my_server_a14b9ed8950d5c65c1885a9667e95ca0b}\label{class_my_server_a14b9ed8950d5c65c1885a9667e95ca0b}} 
+\index{MyServer@{MyServer}!InstantClientMessageHandler@{InstantClientMessageHandler}}
+\index{InstantClientMessageHandler@{InstantClientMessageHandler}!MyServer@{MyServer}}
+\doxysubsubsection{\texorpdfstring{InstantClientMessageHandler()}{InstantClientMessageHandler()}}
+{\footnotesize\ttfamily bool My\+Server\+::\+Instant\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+This method processes messages before they are placed in the buffer Get message, UDP client address and time since message come to server Return true if you want to put message into bufer, false otherwise \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a87bdc6ad475dcea3d6e8b40b3148e0d1}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server}}.
 
 \mbox{\Hypertarget{class_my_server_af78996cea3d505e3194aed521f60a36a}\label{class_my_server_af78996cea3d505e3194aed521f60a36a}} 
 \index{MyServer@{MyServer}!OnClientConnected@{OnClientConnected}}
@@ -80,7 +108,14 @@ Implements \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\+::\+EN\+\_\+
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+The method that is executed when the client connects to the server. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
 
 \mbox{\Hypertarget{class_my_server_af78996cea3d505e3194aed521f60a36a}\label{class_my_server_af78996cea3d505e3194aed521f60a36a}} 
 \index{MyServer@{MyServer}!OnClientConnected@{OnClientConnected}}
@@ -90,7 +125,14 @@ Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+The method that is executed when the client connects to the server. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
 
 \mbox{\Hypertarget{class_my_server_ad8299e243433f65cd5ff7d913cb1a129}\label{class_my_server_ad8299e243433f65cd5ff7d913cb1a129}} 
 \index{MyServer@{MyServer}!OnClientDisconnect@{OnClientDisconnect}}
@@ -100,7 +142,14 @@ Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+Method that runs after the client is disconnected. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
 
 \mbox{\Hypertarget{class_my_server_ad8299e243433f65cd5ff7d913cb1a129}\label{class_my_server_ad8299e243433f65cd5ff7d913cb1a129}} 
 \index{MyServer@{MyServer}!OnClientDisconnect@{OnClientDisconnect}}
@@ -110,12 +159,19 @@ Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
+Method that runs after the client is disconnected. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Easy\+\_\+\+Network/\+Examples/TCP\+\_\+\+Chat\+\_\+\+Server.\+cpp\item 
-Easy\+\_\+\+Network/\+Examples/TCP\+\_\+\+File\+Sender\+\_\+\+Server.\+cpp\item 
-Easy\+\_\+\+Network/\+Examples/UDP\+\_\+\+Chat\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+Examples/TCP\+\_\+\+Chat\+\_\+\+Server.\+cpp\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+Examples/TCP\+\_\+\+File\+Sender\+\_\+\+Server.\+cpp\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+Examples/UDP\+\_\+\+Chat\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

@@ -24,9 +24,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.2</span>
+   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.3</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -129,17 +129,14 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> ()</td><
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a312ce506bb37a9afcc741a0517b6071f"><td class="memItemLeft" align="right" valign="top"><a id="a312ce506bb37a9afcc741a0517b6071f" name="a312ce506bb37a9afcc741a0517b6071f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClientConnected</b> (int ClientID)=0</td></tr>
-<tr class="memdesc:a312ce506bb37a9afcc741a0517b6071f"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to be defined by the user. It is used for logic after client connection. <br /></td></tr>
+<tr class="memitem:a312ce506bb37a9afcc741a0517b6071f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___r_a_u___server.html#a312ce506bb37a9afcc741a0517b6071f">OnClientConnected</a> (int ClientID)=0</td></tr>
+<tr class="memdesc:a312ce506bb37a9afcc741a0517b6071f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method that is executed when the client connects to the server.  <a href="class_e_n_1_1_e_n___r_a_u___server.html#a312ce506bb37a9afcc741a0517b6071f">More...</a><br /></td></tr>
 <tr class="separator:a312ce506bb37a9afcc741a0517b6071f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad250f6f8e4c28dc41d42b4745a3551"><td class="memItemLeft" align="right" valign="top"><a id="afad250f6f8e4c28dc41d42b4745a3551" name="afad250f6f8e4c28dc41d42b4745a3551"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>ClientMessageHandler</b> (std::string message, int ClientID)=0</td></tr>
-<tr class="memdesc:afad250f6f8e4c28dc41d42b4745a3551"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to be defined by the user. It is used to process incoming messages from the clients. <br /></td></tr>
+<tr class="memitem:afad250f6f8e4c28dc41d42b4745a3551"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___r_a_u___server.html#afad250f6f8e4c28dc41d42b4745a3551">ClientMessageHandler</a> (std::string message, int ClientID)=0</td></tr>
+<tr class="memdesc:afad250f6f8e4c28dc41d42b4745a3551"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that processes incoming messages.  <a href="class_e_n_1_1_e_n___r_a_u___server.html#afad250f6f8e4c28dc41d42b4745a3551">More...</a><br /></td></tr>
 <tr class="separator:afad250f6f8e4c28dc41d42b4745a3551"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad75fd37d93add79583e0b2f7bdb334f4"><td class="memItemLeft" align="right" valign="top"><a id="ad75fd37d93add79583e0b2f7bdb334f4" name="ad75fd37d93add79583e0b2f7bdb334f4"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClientDisconnect</b> (int ClientID)=0</td></tr>
-<tr class="memdesc:ad75fd37d93add79583e0b2f7bdb334f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to be defined by the user. Performed before client disconnected from the server. <br /></td></tr>
+<tr class="memitem:ad75fd37d93add79583e0b2f7bdb334f4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___r_a_u___server.html#ad75fd37d93add79583e0b2f7bdb334f4">OnClientDisconnect</a> (int ClientID)=0</td></tr>
+<tr class="memdesc:ad75fd37d93add79583e0b2f7bdb334f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that runs after the client is disconnected.  <a href="class_e_n_1_1_e_n___r_a_u___server.html#ad75fd37d93add79583e0b2f7bdb334f4">More...</a><br /></td></tr>
 <tr class="separator:ad75fd37d93add79583e0b2f7bdb334f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -160,6 +157,45 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxUnreliableMessageSi
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Server class with connection and the possibility of reliable and unreliable sending. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afad250f6f8e4c28dc41d42b4745a3551" name="afad250f6f8e4c28dc41d42b4745a3551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad250f6f8e4c28dc41d42b4745a3551">&#9670;&nbsp;</a></span>ClientMessageHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EN::EN_RAU_Server::ClientMessageHandler </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ClientID</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method that processes incoming messages. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must be defined by the user </dd></dl>
+
+</div>
+</div>
 <a id="a9491516a94dece0d7c765453e98d007a" name="a9491516a94dece0d7c765453e98d007a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9491516a94dece0d7c765453e98d007a">&#9670;&nbsp;</a></span>DisconnectClient()</h2>
 
@@ -183,6 +219,64 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxUnreliableMessageSi
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a312ce506bb37a9afcc741a0517b6071f" name="a312ce506bb37a9afcc741a0517b6071f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312ce506bb37a9afcc741a0517b6071f">&#9670;&nbsp;</a></span>OnClientConnected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EN::EN_RAU_Server::OnClientConnected </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ClientID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The method that is executed when the client connects to the server. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must be defined by the user </dd></dl>
+
+</div>
+</div>
+<a id="ad75fd37d93add79583e0b2f7bdb334f4" name="ad75fd37d93add79583e0b2f7bdb334f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75fd37d93add79583e0b2f7bdb334f4">&#9670;&nbsp;</a></span>OnClientDisconnect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void EN::EN_RAU_Server::OnClientDisconnect </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ClientID</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Method that runs after the client is disconnected. </p>
+<dl class="section warning"><dt>Warning</dt><dd>Must be defined by the user </dd></dl>
 
 </div>
 </div>
@@ -231,8 +325,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxUnreliableMessageSi
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Easy_Network/<a class="el" href="_e_n___r_a_u___server_8h_source.html">EN_RAU_Server.h</a></li>
-<li>Easy_Network/EN_RAU_Server.cpp</li>
+<li>C:/Users/timur/Desktop/EasyNetwork/Easy_Network/<a class="el" href="_e_n___r_a_u___server_8h_source.html">EN_RAU_Server.h</a></li>
+<li>C:/Users/timur/Desktop/EasyNetwork/Easy_Network/EN_RAU_Server.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

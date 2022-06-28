@@ -10,13 +10,19 @@ Inheritance diagram for My\+Client\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_my_client_aa8d52f55173809e78bd1ce150c3c14d5}{After\+Connect}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em This function is called after connecting to the server. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}{Server\+Message\+Handler}} (std\+::string message)
-\item 
+\begin{DoxyCompactList}\small\item\em The function processes all incoming messages. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_my_client_abecf54ba5e8b42e60274d733dcdf3774}{Before\+Disconnect}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em The function is called before disconnecting from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_client_aa8d52f55173809e78bd1ce150c3c14d5}{After\+Connect}} ()
+\begin{DoxyCompactList}\small\item\em This function is called after connecting to the server. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}{Server\+Message\+Handler}} (std\+::string message)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The function processes all incoming messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_client_abecf54ba5e8b42e60274d733dcdf3774}{Before\+Disconnect}} ()
+\begin{DoxyCompactList}\small\item\em The function is called before disconnecting from the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}{Server\+Message\+Handler}} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em The function processes all incoming messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
@@ -24,46 +30,126 @@ void \mbox{\hyperlink{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}{Server\
 \mbox{\Hypertarget{class_my_client_aa8d52f55173809e78bd1ce150c3c14d5}\label{class_my_client_aa8d52f55173809e78bd1ce150c3c14d5}} 
 \index{MyClient@{MyClient}!AfterConnect@{AfterConnect}}
 \index{AfterConnect@{AfterConnect}!MyClient@{MyClient}}
-\doxysubsubsection{\texorpdfstring{AfterConnect()}{AfterConnect()}}
+\doxysubsubsection{\texorpdfstring{AfterConnect()}{AfterConnect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void My\+Client\+::\+After\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client}}.
+This function is called after connecting to the server. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}{EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client}}.
+
+\mbox{\Hypertarget{class_my_client_aa8d52f55173809e78bd1ce150c3c14d5}\label{class_my_client_aa8d52f55173809e78bd1ce150c3c14d5}} 
+\index{MyClient@{MyClient}!AfterConnect@{AfterConnect}}
+\index{AfterConnect@{AfterConnect}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{AfterConnect()}{AfterConnect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void My\+Client\+::\+After\+Connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+This function is called after connecting to the server. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}{EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client}}.
 
 \mbox{\Hypertarget{class_my_client_abecf54ba5e8b42e60274d733dcdf3774}\label{class_my_client_abecf54ba5e8b42e60274d733dcdf3774}} 
 \index{MyClient@{MyClient}!BeforeDisconnect@{BeforeDisconnect}}
 \index{BeforeDisconnect@{BeforeDisconnect}!MyClient@{MyClient}}
-\doxysubsubsection{\texorpdfstring{BeforeDisconnect()}{BeforeDisconnect()}}
+\doxysubsubsection{\texorpdfstring{BeforeDisconnect()}{BeforeDisconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily void My\+Client\+::\+Before\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client}}.
+The function is called before disconnecting from the server. 
+
+Important! If disconnection occurs from the server side or connection lost, the \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa5e5322ad47f24b342d1cfe6e1d4a371}{Is\+Connected()}} function returns false \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}{EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client}}.
+
+\mbox{\Hypertarget{class_my_client_abecf54ba5e8b42e60274d733dcdf3774}\label{class_my_client_abecf54ba5e8b42e60274d733dcdf3774}} 
+\index{MyClient@{MyClient}!BeforeDisconnect@{BeforeDisconnect}}
+\index{BeforeDisconnect@{BeforeDisconnect}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{BeforeDisconnect()}{BeforeDisconnect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void My\+Client\+::\+Before\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+The function is called before disconnecting from the server. 
+
+Important! If disconnection occurs from the server side or connection lost, the \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa5e5322ad47f24b342d1cfe6e1d4a371}{Is\+Connected()}} function returns false \begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}{EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client}}.
 
 \mbox{\Hypertarget{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}\label{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}} 
 \index{MyClient@{MyClient}!ServerMessageHandler@{ServerMessageHandler}}
 \index{ServerMessageHandler@{ServerMessageHandler}!MyClient@{MyClient}}
-\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
 {\footnotesize\ttfamily void My\+Client\+::\+Server\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client}}.
+The function processes all incoming messages. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}{EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client}}.
 
 \mbox{\Hypertarget{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}\label{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}} 
 \index{MyClient@{MyClient}!ServerMessageHandler@{ServerMessageHandler}}
 \index{ServerMessageHandler@{ServerMessageHandler}!MyClient@{MyClient}}
-\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
 {\footnotesize\ttfamily void My\+Client\+::\+Server\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___client}{EN\+::\+EN\+\_\+\+TCP\+\_\+\+Client}}.
+The function processes all incoming messages. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}{EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client}}.
+
+\mbox{\Hypertarget{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}\label{class_my_client_aed81f9f1c5dfcb1db58c2e9dc9a0a4a9}} 
+\index{MyClient@{MyClient}!ServerMessageHandler@{ServerMessageHandler}}
+\index{ServerMessageHandler@{ServerMessageHandler}!MyClient@{MyClient}}
+\doxysubsubsection{\texorpdfstring{ServerMessageHandler()}{ServerMessageHandler()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void My\+Client\+::\+Server\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+The function processes all incoming messages. 
+
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}{EN\+::\+EN\+\_\+\+RAU\+\_\+\+Client}}.
 
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Easy\+\_\+\+Network/\+Examples/TCP\+\_\+\+Chat\+\_\+\+Client.\+cpp\item 
-Easy\+\_\+\+Network/\+Examples/UDP\+\_\+\+Chat\+\_\+\+Client.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+Examples/RAU\+\_\+\+Chat\+\_\+\+Client.\+cpp\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+Examples/TCP\+\_\+\+Chat\+\_\+\+Client.\+cpp\item 
+C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+Examples/UDP\+\_\+\+Chat\+\_\+\+Client.\+cpp\end{DoxyCompactItemize}

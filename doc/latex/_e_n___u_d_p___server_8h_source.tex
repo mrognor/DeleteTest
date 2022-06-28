@@ -1,5 +1,5 @@
 \hypertarget{_e_n___u_d_p___server_8h_source}{}\doxysection{EN\+\_\+\+UDP\+\_\+\+Server.\+h}
-\label{_e_n___u_d_p___server_8h_source}\index{Easy\_Network/EN\_UDP\_Server.h@{Easy\_Network/EN\_UDP\_Server.h}}
+\label{_e_n___u_d_p___server_8h_source}\index{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_UDP\_Server.h@{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_UDP\_Server.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
@@ -81,9 +81,9 @@
 \DoxyCodeLine{88 }
 \DoxyCodeLine{90         EN\_UDP\_ServerBuferType \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}{ServerBuferType}} = Queue;}
 \DoxyCodeLine{91 }
-\DoxyCodeLine{99         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a6343c34978da206a30c69ed54ebc048d}{ClientMessageHandler}}(std::string message, std::string ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
+\DoxyCodeLine{99         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_ae30a93ee005f4517f7500c4294e021ae}{ClientMessageHandler}}(std::string message, std::string ClientIpAddress, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
 \DoxyCodeLine{100 }
-\DoxyCodeLine{109         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a26235d96390965c8bd88f46ac83c89fa}{InstantClientMessageHandler}}(std::string message, std::string ClientSocketAddr, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
+\DoxyCodeLine{109         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a87bdc6ad475dcea3d6e8b40b3148e0d1}{InstantClientMessageHandler}}(std::string message, std::string ClientIpAddress, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
 \DoxyCodeLine{110 }
 \DoxyCodeLine{111     \textcolor{keyword}{public}:}
 \DoxyCodeLine{112 }
@@ -98,7 +98,7 @@
 \DoxyCodeLine{124 }
 \DoxyCodeLine{126         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}{Shutdown}}();}
 \DoxyCodeLine{127 }
-\DoxyCodeLine{134         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a741f40c45c15ea3600313307e696ecfd}{SendToClient}}(std::string message, std::string ClientSocketAddr);}
+\DoxyCodeLine{134         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}{SendToClient}}(std::string ClientIpAddress, std::string message);}
 \DoxyCodeLine{135 }
 \DoxyCodeLine{136         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{\string~EN\_UDP\_Server}}();}
 \DoxyCodeLine{137     \};}

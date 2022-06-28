@@ -24,9 +24,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="Icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.2</span>
+   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.3</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -116,18 +116,18 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> ()</td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> ()</td></tr>
 <tr class="memdesc:a5d67e5fe4de7566dfc931bc96e3954d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that stops the server. <br /></td></tr>
 <tr class="separator:a5d67e5fe4de7566dfc931bc96e3954d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a741f40c45c15ea3600313307e696ecfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___server.html#a741f40c45c15ea3600313307e696ecfd">SendToClient</a> (std::string message, std::string ClientSocketAddr)</td></tr>
-<tr class="memdesc:a741f40c45c15ea3600313307e696ecfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for sending a message to the client  <a href="class_e_n_1_1_e_n___u_d_p___server.html#a741f40c45c15ea3600313307e696ecfd">More...</a><br /></td></tr>
-<tr class="separator:a741f40c45c15ea3600313307e696ecfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a493dc5a1c0014b2d759cb6b74a98b12f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___server.html#a493dc5a1c0014b2d759cb6b74a98b12f">SendToClient</a> (std::string ClientIpAddress, std::string message)</td></tr>
+<tr class="memdesc:a493dc5a1c0014b2d759cb6b74a98b12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">function for sending a message to the client  <a href="class_e_n_1_1_e_n___u_d_p___server.html#a493dc5a1c0014b2d759cb6b74a98b12f">More...</a><br /></td></tr>
+<tr class="separator:a493dc5a1c0014b2d759cb6b74a98b12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6343c34978da206a30c69ed54ebc048d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___server.html#a6343c34978da206a30c69ed54ebc048d">ClientMessageHandler</a> (std::string message, std::string ClientSocketAddr, long long TimeWhenPackageArrived)=0</td></tr>
-<tr class="memdesc:a6343c34978da206a30c69ed54ebc048d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that processes incoming messages.  <a href="class_e_n_1_1_e_n___u_d_p___server.html#a6343c34978da206a30c69ed54ebc048d">More...</a><br /></td></tr>
-<tr class="separator:a6343c34978da206a30c69ed54ebc048d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26235d96390965c8bd88f46ac83c89fa"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___server.html#a26235d96390965c8bd88f46ac83c89fa">InstantClientMessageHandler</a> (std::string message, std::string ClientSocketAddr, long long TimeWhenPackageArrived)=0</td></tr>
-<tr class="memdesc:a26235d96390965c8bd88f46ac83c89fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that processes incoming messages.  <a href="class_e_n_1_1_e_n___u_d_p___server.html#a26235d96390965c8bd88f46ac83c89fa">More...</a><br /></td></tr>
-<tr class="separator:a26235d96390965c8bd88f46ac83c89fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae30a93ee005f4517f7500c4294e021ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___server.html#ae30a93ee005f4517f7500c4294e021ae">ClientMessageHandler</a> (std::string message, std::string ClientIpAddress, long long TimeWhenPackageArrived)=0</td></tr>
+<tr class="memdesc:ae30a93ee005f4517f7500c4294e021ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that processes incoming messages.  <a href="class_e_n_1_1_e_n___u_d_p___server.html#ae30a93ee005f4517f7500c4294e021ae">More...</a><br /></td></tr>
+<tr class="separator:ae30a93ee005f4517f7500c4294e021ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87bdc6ad475dcea3d6e8b40b3148e0d1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___u_d_p___server.html#a87bdc6ad475dcea3d6e8b40b3148e0d1">InstantClientMessageHandler</a> (std::string message, std::string ClientIpAddress, long long TimeWhenPackageArrived)=0</td></tr>
+<tr class="memdesc:a87bdc6ad475dcea3d6e8b40b3148e0d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that processes incoming messages.  <a href="class_e_n_1_1_e_n___u_d_p___server.html#a87bdc6ad475dcea3d6e8b40b3148e0d1">More...</a><br /></td></tr>
+<tr class="separator:a87bdc6ad475dcea3d6e8b40b3148e0d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -158,8 +158,8 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Base udp server class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a6343c34978da206a30c69ed54ebc048d" name="a6343c34978da206a30c69ed54ebc048d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6343c34978da206a30c69ed54ebc048d">&#9670;&nbsp;</a></span>ClientMessageHandler()</h2>
+<a id="ae30a93ee005f4517f7500c4294e021ae" name="ae30a93ee005f4517f7500c4294e021ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae30a93ee005f4517f7500c4294e021ae">&#9670;&nbsp;</a></span>ClientMessageHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +177,7 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>ClientSocketAddr</em>, </td>
+          <td class="paramname"><em>ClientIpAddress</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -203,8 +203,8 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
 
 </div>
 </div>
-<a id="a26235d96390965c8bd88f46ac83c89fa" name="a26235d96390965c8bd88f46ac83c89fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26235d96390965c8bd88f46ac83c89fa">&#9670;&nbsp;</a></span>InstantClientMessageHandler()</h2>
+<a id="a87bdc6ad475dcea3d6e8b40b3148e0d1" name="a87bdc6ad475dcea3d6e8b40b3148e0d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87bdc6ad475dcea3d6e8b40b3148e0d1">&#9670;&nbsp;</a></span>InstantClientMessageHandler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +222,7 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>ClientSocketAddr</em>, </td>
+          <td class="paramname"><em>ClientIpAddress</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -248,8 +248,8 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
 
 </div>
 </div>
-<a id="a741f40c45c15ea3600313307e696ecfd" name="a741f40c45c15ea3600313307e696ecfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a741f40c45c15ea3600313307e696ecfd">&#9670;&nbsp;</a></span>SendToClient()</h2>
+<a id="a493dc5a1c0014b2d759cb6b74a98b12f" name="a493dc5a1c0014b2d759cb6b74a98b12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a493dc5a1c0014b2d759cb6b74a98b12f">&#9670;&nbsp;</a></span>SendToClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,13 +258,13 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
           <td class="memname">void EN::EN_UDP_Server::SendToClient </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>message</em>, </td>
+          <td class="paramname"><em>ClientIpAddress</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>ClientSocketAddr</em>&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -312,8 +312,8 @@ EN_UDP_ServerBuferType&#160;</td><td class="memItemRight" valign="bottom"><b>Ser
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>Easy_Network/<a class="el" href="_e_n___u_d_p___server_8h_source.html">EN_UDP_Server.h</a></li>
-<li>Easy_Network/EN_UDP_Server.cpp</li>
+<li>C:/Users/timur/Desktop/EasyNetwork/Easy_Network/<a class="el" href="_e_n___u_d_p___server_8h_source.html">EN_UDP_Server.h</a></li>
+<li>C:/Users/timur/Desktop/EasyNetwork/Easy_Network/EN_UDP_Server.cpp</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

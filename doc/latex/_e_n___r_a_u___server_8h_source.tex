@@ -1,5 +1,5 @@
 \hypertarget{_e_n___r_a_u___server_8h_source}{}\doxysection{EN\+\_\+\+RAU\+\_\+\+Server.\+h}
-\label{_e_n___r_a_u___server_8h_source}\index{Easy\_Network/EN\_RAU\_Server.h@{Easy\_Network/EN\_RAU\_Server.h}}
+\label{_e_n___r_a_u___server_8h_source}\index{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_RAU\_Server.h@{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_RAU\_Server.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
@@ -77,31 +77,31 @@
 \DoxyCodeLine{78 }
 \DoxyCodeLine{80         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_acef93b6b1bd191f1ff5528522855fbe5}{MaxUnreliableMessageSize}} = 64;}
 \DoxyCodeLine{81 }
-\DoxyCodeLine{83         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a312ce506bb37a9afcc741a0517b6071f}{OnClientConnected}}(\textcolor{keywordtype}{int} ClientID) = 0;}
-\DoxyCodeLine{84 }
-\DoxyCodeLine{86         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_afad250f6f8e4c28dc41d42b4745a3551}{ClientMessageHandler}}(std::string message, \textcolor{keywordtype}{int} ClientID) = 0;}
-\DoxyCodeLine{87 }
-\DoxyCodeLine{89         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_ad75fd37d93add79583e0b2f7bdb334f4}{OnClientDisconnect}}(\textcolor{keywordtype}{int} ClientID) = 0;}
-\DoxyCodeLine{90 }
-\DoxyCodeLine{91     \textcolor{keyword}{public}:}
-\DoxyCodeLine{92         \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{EN\_RAU\_Server}}();}
-\DoxyCodeLine{93 }
-\DoxyCodeLine{95         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a3bf674899372960f9af1fda0df67cbc9}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a602209f1da4beb21ac6c330e5fdcab40}{Port}}; \}}
-\DoxyCodeLine{96 }
-\DoxyCodeLine{98         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a743eb092e6d4d12222a745bc66f3322d}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a327db3e95b2bc5c7c4ceff7c33fdef2d}{IpAddress}}; \}}
-\DoxyCodeLine{99 }
-\DoxyCodeLine{101         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a83e5056d9c22e5d340d126209639555b}{GetConnectionsCount}}() \{ \textcolor{keywordflow}{return} TCP\_Server-\/>GetConnectionsCount(); \}}
+\DoxyCodeLine{87         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a312ce506bb37a9afcc741a0517b6071f}{OnClientConnected}}(\textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{94         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_afad250f6f8e4c28dc41d42b4745a3551}{ClientMessageHandler}}(std::string message, \textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{101         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_ad75fd37d93add79583e0b2f7bdb334f4}{OnClientDisconnect}}(\textcolor{keywordtype}{int} ClientID) = 0;}
 \DoxyCodeLine{102 }
-\DoxyCodeLine{104         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_add7f8f310cbd778b0949197fc70542ef}{Run}}();}
+\DoxyCodeLine{103     \textcolor{keyword}{public}:}
+\DoxyCodeLine{104         \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{EN\_RAU\_Server}}();}
 \DoxyCodeLine{105 }
-\DoxyCodeLine{111         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a9491516a94dece0d7c765453e98d007a}{DisconnectClient}}(\textcolor{keywordtype}{int} ClientID);}
-\DoxyCodeLine{112 }
-\DoxyCodeLine{114         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a827357084d58ea5b6b9ac06430a5420e}{Shutdown}}();}
-\DoxyCodeLine{115 }
-\DoxyCodeLine{124         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}{SendToClient}}(\textcolor{keywordtype}{int} ClientId, std::string message, \textcolor{keywordtype}{bool} IsReliable = \textcolor{keyword}{true});}
-\DoxyCodeLine{125 }
-\DoxyCodeLine{126         \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{\string~EN\_RAU\_Server}}();}
-\DoxyCodeLine{127     \};}
-\DoxyCodeLine{128 \}}
+\DoxyCodeLine{107         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a3bf674899372960f9af1fda0df67cbc9}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a602209f1da4beb21ac6c330e5fdcab40}{Port}}; \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a743eb092e6d4d12222a745bc66f3322d}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a327db3e95b2bc5c7c4ceff7c33fdef2d}{IpAddress}}; \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{113         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a83e5056d9c22e5d340d126209639555b}{GetConnectionsCount}}() \{ \textcolor{keywordflow}{return} TCP\_Server-\/>GetConnectionsCount(); \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_add7f8f310cbd778b0949197fc70542ef}{Run}}();}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{123         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a9491516a94dece0d7c765453e98d007a}{DisconnectClient}}(\textcolor{keywordtype}{int} ClientID);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{126         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a827357084d58ea5b6b9ac06430a5420e}{Shutdown}}();}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{136         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}{SendToClient}}(\textcolor{keywordtype}{int} ClientId, std::string message, \textcolor{keywordtype}{bool} IsReliable = \textcolor{keyword}{true});}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138         \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{\string~EN\_RAU\_Server}}();}
+\DoxyCodeLine{139     \};}
+\DoxyCodeLine{140 \}}
 
 \end{DoxyCode}
