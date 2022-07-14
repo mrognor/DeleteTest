@@ -18,9 +18,9 @@ Inheritance diagram for EN\+::EN\+\_\+\+TCP\+\_\+\+File\+Sender\+:\begin{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}{Send\+File\+To\+Server}} (std\+::string File\+Name, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a8765a2ffe8f4e442305edcf645bfc381}{Send\+File\+To\+Server}} (std\+::string File\+Name, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta), int Delay\+In\+Milliseconds=0)
 \begin{DoxyCompactList}\small\item\em Function to send file to server. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}{Recv\+File\+From\+Server}} ()
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_af19298d072e4c89232ec9004deaed86e}{Recv\+File\+From\+Server}} (void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
 \item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a08bf5ac1cd4717a74c08d6f95a5ab546}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a08bf5ac1cd4717a74c08d6f95a5ab546}} 
 void {\bfseries Recv\+Message\+From\+Server} (std\+::string \&msg)
@@ -35,20 +35,20 @@ void {\bfseries Stop\+Downloading} ()
 Client class for sending files to the server. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a8e15d5b14fb0ed5c8e9a03be65fda2a7}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_af19298d072e4c89232ec9004deaed86e}\label{class_e_n_1_1_e_n___t_c_p___file_sender_af19298d072e4c89232ec9004deaed86e}} 
 \index{EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}!RecvFileFromServer@{RecvFileFromServer}}
 \index{RecvFileFromServer@{RecvFileFromServer}!EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}}
 \doxysubsubsection{\texorpdfstring{RecvFileFromServer()}{RecvFileFromServer()}}
-{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+File\+Sender\+::\+Recv\+File\+From\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+File\+Sender\+::\+Recv\+File\+From\+Server (\begin{DoxyParamCaption}\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function }\end{DoxyParamCaption})}
 
 Function to recv file from server \begin{DoxyReturn}{Returns}
 Return true if file transmission success, false otherwise 
 \end{DoxyReturn}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a879d96a96901df866f0d0688550fadd1}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a8765a2ffe8f4e442305edcf645bfc381}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a8765a2ffe8f4e442305edcf645bfc381}} 
 \index{EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}!SendFileToServer@{SendFileToServer}}
 \index{SendFileToServer@{SendFileToServer}!EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}}
 \doxysubsubsection{\texorpdfstring{SendFileToServer()}{SendFileToServer()}}
-{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+File\+Sender\+::\+Send\+File\+To\+Server (\begin{DoxyParamCaption}\item[{std\+::string}]{File\+Name,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+File\+Sender\+::\+Send\+File\+To\+Server (\begin{DoxyParamCaption}\item[{std\+::string}]{File\+Name,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function,  }\item[{int}]{Delay\+In\+Milliseconds = {\ttfamily 0} }\end{DoxyParamCaption})}
 
 
 

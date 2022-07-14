@@ -93,7 +93,7 @@ Split</h1>
  The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation</p>
 <h1><a class="anchor" id="autotoc_md7"></a>
 SendFile</h1>
-<p ><code>bool SendFile(EN_SOCKET&amp; FileSendSocket, std::string FilePath, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
+<p ><code>bool SendFile(EN_SOCKET FileSendSocket, std::string FilePath, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr, int DelayInMilliseconds = 0)</code> <br  />
  The function is needed to send files. The message receiving function should be called on the other side. <br  />
 </p><ul>
 <li>The first parameter is the socket for sending files <br  />
@@ -114,8 +114,11 @@ SendFile</h1>
 </li>
 </ul>
 </li>
+<li>The fifth parameter is needed to regulate the file transfer rate. Gets milliseconds for the delay between sending chunks of the file <br  />
+</li>
 </ul>
 <p >By default, the library function is used to output to the console <br  />
+ One kilobyte of data is transmitted at a time. If you make a delay of 100 milliseconds, 10 pieces or 10 kilobytes will be transmitted per second <br  />
 </p>
 <h1><a class="anchor" id="autotoc_md8"></a>
 RecvFile</h1>

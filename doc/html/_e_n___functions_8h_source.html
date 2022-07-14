@@ -123,16 +123,17 @@ $(document).ready(function(){initNavTree('_e_n___functions_8h_source.html',''); 
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::vector&lt;std::string&gt; Split(std::string StringToSplit, std::string SplitterString=<span class="stringliteral">&quot; &quot;</span>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">bool</span> SendFile(EN_SOCKET&amp; FileSendSocket, std::string FilePath, <span class="keywordtype">bool</span>&amp; IsStop, <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">bool</span> RecvFile(EN_SOCKET&amp; FileSendSocket, <span class="keywordtype">bool</span>&amp; IsStop, <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">void</span> DownloadStatus(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">bool</span> IsFileExist(std::string filePath);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">void</span> Delay(<span class="keywordtype">int</span> milliseconds);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span> SendFile(EN_SOCKET FileSendSocket, std::string FilePath, <span class="keywordtype">bool</span>&amp; IsStop, </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = <span class="keyword">nullptr</span>, <span class="keywordtype">int</span> DelayInMilliseconds = 0);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> RecvFile(EN_SOCKET&amp; FileSendSocket, <span class="keywordtype">bool</span>&amp; IsStop, <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> DownloadStatus(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">bool</span> IsFileExist(std::string filePath);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> Delay(<span class="keywordtype">int</span> milliseconds);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

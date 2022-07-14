@@ -38,15 +38,16 @@
 \DoxyCodeLine{36 }
 \DoxyCodeLine{38     std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString=\textcolor{stringliteral}{"{} "{}});}
 \DoxyCodeLine{39 }
-\DoxyCodeLine{42     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET\& FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{43 }
-\DoxyCodeLine{46     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET\& FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{49     \textcolor{keywordtype}{void} DownloadStatus(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta);}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{52     \textcolor{keywordtype}{bool} IsFileExist(std::string filePath);}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{55     \textcolor{keywordtype}{void} Delay(\textcolor{keywordtype}{int} milliseconds);}
-\DoxyCodeLine{56 \}}
+\DoxyCodeLine{43     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, }
+\DoxyCodeLine{44         \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr}, \textcolor{keywordtype}{int} DelayInMilliseconds = 0);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET\& FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} DownloadStatus(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{bool} IsFileExist(std::string filePath);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} Delay(\textcolor{keywordtype}{int} milliseconds);}
+\DoxyCodeLine{58 \}}
 
 \end{DoxyCode}
