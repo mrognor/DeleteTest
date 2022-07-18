@@ -130,76 +130,76 @@ $(document).ready(function(){initNavTree('_e_n___r_a_u___client_8h_source.html',
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> ServerMessageHandler(std::string message);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    };</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html">   47</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_e_n_1_1_e_n___r_a_u___client.html">EN_RAU_Client</a> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="comment">// RAU_TCP_Client and RAU_UDP_Client pointers</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keyword">friend</span> EN_RAU_TCP_Client;</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">friend</span> EN_RAU_UDP_Client;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        EN_RAU_TCP_Client* TCP_Client;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        EN_RAU_UDP_Client* UDP_Client;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="comment">// Client number on the server</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">int</span> ClientId = -1;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="comment">// Boolean variable for tracking the connection status. </span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">// When the server receives the client&#39;s IP address, </span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="comment">// it will send a message via tsp and this variable will become true</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordtype">bool</span> IsServerGetUDPAddress = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// Variable to shutdown server</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="keywordtype">bool</span> IsShutdown = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="comment">// Incoming messages buffer</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        std::queue&lt;std::string&gt; Messages;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">// Condition variable to wake up server messahe handle thread</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::condition_variable CondVar;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="comment">// Mutex to make code thread-safety</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::mutex Mtx;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="comment">// Incoming messages handler</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> QueueMessageHandler();</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="comment">// Default port</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="keywordtype">int</span> ServerPort = 1111;</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="comment">// Server ip address string. Default set to localhost</span></div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        std::string ServerIpAddress = <span class="stringliteral">&quot;127.0.0.1&quot;</span>;</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#a9f55c59b8f0bca6d79b0c21f20aecda4">   90</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a9f55c59b8f0bca6d79b0c21f20aecda4">AfterConnect</a>() = 0; </div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e">   98</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e">ServerMessageHandler</a>(std::string message) = 0;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#aa84dbde7f8803ff82b91bfbfd5beffbb">  106</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#aa84dbde7f8803ff82b91bfbfd5beffbb">BeforeDisconnect</a>() = 0;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___r_a_u___client.html">EN_RAU_Client</a>();</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#af94927308bcd89d72e7afeb2c2ae1847">  112</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#af94927308bcd89d72e7afeb2c2ae1847">GetServerPort</a>() { <span class="keywordflow">return</span> ServerPort; }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#a0cce51ec1e1b395a4e43c844009bdcc7">  115</a></span>        std::string <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a0cce51ec1e1b395a4e43c844009bdcc7">GetServerIpAddress</a>() { <span class="keywordflow">return</span> ServerIpAddress; }</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#aa5e5322ad47f24b342d1cfe6e1d4a371">IsConnected</a>();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a59e11c68f5e7f54f8fdcd773d2013044">Connect</a>();</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a59e11c68f5e7f54f8fdcd773d2013044">Connect</a>(<span class="keywordtype">int</span> port);</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a59e11c68f5e7f54f8fdcd773d2013044">Connect</a>(std::string ipAddr, <span class="keywordtype">int</span> port);</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#ad2c32cbaf50b1336b16247465329042d">Run</a>();</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a511c3631134f12e7cc3afa4573575821">SendToServer</a>(std::string message, <span class="keywordtype">bool</span> IsReliable = <span class="keyword">true</span>, <span class="keywordtype">int</span> MessageDelay = 10);</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#ac5d179e920398855cb17ec7ca09faeef">Disconnect</a>();</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___r_a_u___client.html">~EN_RAU_Client</a>();</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    };</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>}</div>
-<div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html">EN::EN_RAU_Client</a></div><div class="ttdoc">Client class with connection and the possibility of reliable and unreliable sending and receiveng.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.h:48</div></div>
-<div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_a0cce51ec1e1b395a4e43c844009bdcc7"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#a0cce51ec1e1b395a4e43c844009bdcc7">EN::EN_RAU_Client::GetServerIpAddress</a></div><div class="ttdeci">std::string GetServerIpAddress()</div><div class="ttdoc">Server ip getter.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.h:115</div></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html">   51</a></span>    <span class="keyword">class </span><a class="code hl_class" href="class_e_n_1_1_e_n___r_a_u___client.html">EN_RAU_Client</a> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="comment">// RAU_TCP_Client and RAU_UDP_Client pointers</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keyword">friend</span> EN_RAU_TCP_Client;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <span class="keyword">friend</span> EN_RAU_UDP_Client;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        EN_RAU_TCP_Client* TCP_Client;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        EN_RAU_UDP_Client* UDP_Client;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="comment">// Client number on the server</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">int</span> ClientId = -1;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="comment">// Boolean variable for tracking the connection status. </span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="comment">// When the server receives the client&#39;s IP address, </span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        <span class="comment">// it will send a message via tsp and this variable will become true</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordtype">bool</span> IsServerGetUDPAddress = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="comment">// Variable to shutdown server</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordtype">bool</span> IsShutdown = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        <span class="comment">// Incoming messages buffer</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::queue&lt;std::string&gt; Messages;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="comment">// Condition variable to wake up server messahe handle thread</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        std::condition_variable CondVar;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="comment">// Mutex to make code thread-safety</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        std::mutex Mtx;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <span class="comment">// Incoming messages handler</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordtype">void</span> QueueMessageHandler();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="comment">// Default port</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordtype">int</span> ServerPort = 1111;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="comment">// Server ip address string. Default set to localhost</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        std::string ServerIpAddress = <span class="stringliteral">&quot;127.0.0.1&quot;</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#a9f55c59b8f0bca6d79b0c21f20aecda4">   94</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a9f55c59b8f0bca6d79b0c21f20aecda4">AfterConnect</a>() = 0; </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e">  102</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e">ServerMessageHandler</a>(std::string message) = 0;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#aa84dbde7f8803ff82b91bfbfd5beffbb">  110</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#aa84dbde7f8803ff82b91bfbfd5beffbb">BeforeDisconnect</a>() = 0;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___r_a_u___client.html">EN_RAU_Client</a>();</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#af94927308bcd89d72e7afeb2c2ae1847">  116</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#af94927308bcd89d72e7afeb2c2ae1847">GetServerPort</a>() { <span class="keywordflow">return</span> ServerPort; }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_e_n_1_1_e_n___r_a_u___client.html#a0cce51ec1e1b395a4e43c844009bdcc7">  119</a></span>        std::string <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a0cce51ec1e1b395a4e43c844009bdcc7">GetServerIpAddress</a>() { <span class="keywordflow">return</span> ServerIpAddress; }</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#aa5e5322ad47f24b342d1cfe6e1d4a371">IsConnected</a>();</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a59e11c68f5e7f54f8fdcd773d2013044">Connect</a>();</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a59e11c68f5e7f54f8fdcd773d2013044">Connect</a>(<span class="keywordtype">int</span> port);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a59e11c68f5e7f54f8fdcd773d2013044">Connect</a>(std::string ipAddr, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span> </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#ad2c32cbaf50b1336b16247465329042d">Run</a>();</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#a511c3631134f12e7cc3afa4573575821">SendToServer</a>(std::string message, <span class="keywordtype">bool</span> IsReliable = <span class="keyword">true</span>, <span class="keywordtype">int</span> MessageDelay = 10);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_e_n_1_1_e_n___r_a_u___client.html#ac5d179e920398855cb17ec7ca09faeef">Disconnect</a>();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_class" href="class_e_n_1_1_e_n___r_a_u___client.html">~EN_RAU_Client</a>();</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    };</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>}</div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html">EN::EN_RAU_Client</a></div><div class="ttdoc">Client class with connection and the possibility of reliable and unreliable sending and receiveng.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.h:52</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_a0cce51ec1e1b395a4e43c844009bdcc7"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#a0cce51ec1e1b395a4e43c844009bdcc7">EN::EN_RAU_Client::GetServerIpAddress</a></div><div class="ttdeci">std::string GetServerIpAddress()</div><div class="ttdoc">Server ip getter.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.h:119</div></div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_a2e628002b39e45466005bf5ba154392e"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e">EN::EN_RAU_Client::ServerMessageHandler</a></div><div class="ttdeci">virtual void ServerMessageHandler(std::string message)=0</div><div class="ttdoc">The function processes all incoming messages.</div></div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_a511c3631134f12e7cc3afa4573575821"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#a511c3631134f12e7cc3afa4573575821">EN::EN_RAU_Client::SendToServer</a></div><div class="ttdeci">void SendToServer(std::string message, bool IsReliable=true, int MessageDelay=10)</div><div class="ttdoc">Function for sending a message to a connected server.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.cpp:132</div></div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_a59e11c68f5e7f54f8fdcd773d2013044"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#a59e11c68f5e7f54f8fdcd773d2013044">EN::EN_RAU_Client::Connect</a></div><div class="ttdeci">bool Connect()</div><div class="ttdoc">Connect to localhost and default port.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.cpp:69</div></div>
@@ -208,7 +208,7 @@ $(document).ready(function(){initNavTree('_e_n___r_a_u___client_8h_source.html',
 <div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_aa84dbde7f8803ff82b91bfbfd5beffbb"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#aa84dbde7f8803ff82b91bfbfd5beffbb">EN::EN_RAU_Client::BeforeDisconnect</a></div><div class="ttdeci">virtual void BeforeDisconnect()=0</div><div class="ttdoc">The function is called before disconnecting from the server.</div></div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_ac5d179e920398855cb17ec7ca09faeef"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#ac5d179e920398855cb17ec7ca09faeef">EN::EN_RAU_Client::Disconnect</a></div><div class="ttdeci">void Disconnect()</div><div class="ttdoc">This function disconnect client from server.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.cpp:140</div></div>
 <div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_ad2c32cbaf50b1336b16247465329042d"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#ad2c32cbaf50b1336b16247465329042d">EN::EN_RAU_Client::Run</a></div><div class="ttdeci">void Run()</div><div class="ttdoc">Method to start server.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.cpp:114</div></div>
-<div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_af94927308bcd89d72e7afeb2c2ae1847"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#af94927308bcd89d72e7afeb2c2ae1847">EN::EN_RAU_Client::GetServerPort</a></div><div class="ttdeci">int GetServerPort()</div><div class="ttdoc">Server port getter.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.h:112</div></div>
+<div class="ttc" id="aclass_e_n_1_1_e_n___r_a_u___client_html_af94927308bcd89d72e7afeb2c2ae1847"><div class="ttname"><a href="class_e_n_1_1_e_n___r_a_u___client.html#af94927308bcd89d72e7afeb2c2ae1847">EN::EN_RAU_Client::GetServerPort</a></div><div class="ttdeci">int GetServerPort()</div><div class="ttdoc">Server port getter.</div><div class="ttdef"><b>Definition:</b> EN_RAU_Client.h:116</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
