@@ -11,5 +11,6 @@ var class_e_n_1_1_e_n___r_a_u___client =
     [ "IsConnected", "class_e_n_1_1_e_n___r_a_u___client.html#aa5e5322ad47f24b342d1cfe6e1d4a371", null ],
     [ "Run", "class_e_n_1_1_e_n___r_a_u___client.html#ad2c32cbaf50b1336b16247465329042d", null ],
     [ "SendToServer", "class_e_n_1_1_e_n___r_a_u___client.html#a511c3631134f12e7cc3afa4573575821", null ],
-    [ "ServerMessageHandler", "class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e", null ]
+    [ "ServerMessageHandler", "class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e", null ],
+    [ "MaxUnreliableMessageSize", "class_e_n_1_1_e_n___r_a_u___client.html#a991012d6b90195640e1622471f57eefc", null ]
 ];
