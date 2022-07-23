@@ -39,14 +39,6 @@ var NAVTREE =
       [ "IsFileExist", "md__e_n__functions.html#autotoc_md10", null ],
       [ "Delay", "md__e_n__functions.html#autotoc_md11", null ]
     ] ],
-    [ "Classes overview", "md__e_n__classes_overview.html", [
-      [ "TCP server", "md__e_n__classes_overview.html#autotoc_md13", null ],
-      [ "TCP client", "md__e_n__classes_overview.html#autotoc_md14", null ],
-      [ "UDP server", "md__e_n__classes_overview.html#autotoc_md15", null ],
-      [ "UDP client", "md__e_n__classes_overview.html#autotoc_md16", null ],
-      [ "RAU server", "md__e_n__classes_overview.html#autotoc_md17", null ],
-      [ "RAU client", "md__e_n__classes_overview.html#autotoc_md18", null ]
-    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
