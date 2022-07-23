@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usefull_20library_20functions_0',['Usefull library functions',['../md__e_n__functions.html',1,'']]]
+  ['easy_20network_0',['Easy network',['../index.html',1,'']]]
 ];

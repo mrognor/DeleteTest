@@ -40,6 +40,8 @@ var NAVTREE =
       [ "IsFileExist", "md__e_n__functions.html#autotoc_md11", null ],
       [ "Delay", "md__e_n__functions.html#autotoc_md12", null ]
     ] ],
+    [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
+    [ "ClassesOverview", "md__e_n__classes_overview.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
