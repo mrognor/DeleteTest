@@ -1,6 +1,6 @@
-\hypertarget{md__e_n__functions_autotoc_md6}{}\doxysection{Split}\label{md__e_n__functions_autotoc_md6}
+\hypertarget{md__e_n__functions_autotoc_md7}{}\doxysection{Split}\label{md__e_n__functions_autotoc_md7}
 {\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::string\texorpdfstring{$>$}{>} Split(std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})} ~\newline
- The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation\hypertarget{md__e_n__functions_autotoc_md7}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md7}
+ The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation\hypertarget{md__e_n__functions_autotoc_md8}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md8}
 {\ttfamily bool Send\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr, int Delay\+In\+Milliseconds = 0)} ~\newline
  The function is needed to send files. The message receiving function should be called on the other side. ~\newline
 
@@ -29,7 +29,7 @@
 
 By default, the library function is used to output to the console ~\newline
  One kilobyte of data is transmitted at a time. If you make a delay of 100 milliseconds, 10 pieces or 10 kilobytes will be transmitted per second ~\newline
-\hypertarget{md__e_n__functions_autotoc_md8}{}\doxysection{Recv\+File}\label{md__e_n__functions_autotoc_md8}
+\hypertarget{md__e_n__functions_autotoc_md9}{}\doxysection{Recv\+File}\label{md__e_n__functions_autotoc_md9}
 {\ttfamily bool Recv\+File(EN\+\_\+\+SOCKET\& File\+Send\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
  The function is needed to receiving files. ~\newline
 
@@ -51,7 +51,7 @@ By default, the library function is used to output to the console ~\newline
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-By default, the library function is used to output to the console\hypertarget{md__e_n__functions_autotoc_md9}{}\doxysection{Download\+Status}\label{md__e_n__functions_autotoc_md9}
+By default, the library function is used to output to the console\hypertarget{md__e_n__functions_autotoc_md10}{}\doxysection{Download\+Status}\label{md__e_n__functions_autotoc_md10}
 {\ttfamily void Download\+Status(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)} The function displays the status of the file transfer to the console
 \begin{DoxyItemize}
 \item The first is how many bytes were transmitted. ~\newline
@@ -62,8 +62,8 @@ By default, the library function is used to output to the console\hypertarget{md
 
 \item The fourth shows the remaining time in seconds ~\newline
 
-\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md10}{}\doxysection{Is\+File\+Exist}\label{md__e_n__functions_autotoc_md10}
+\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md11}{}\doxysection{Is\+File\+Exist}\label{md__e_n__functions_autotoc_md11}
 {\ttfamily bool Is\+File\+Exist(std\+::string file\+Path)} ~\newline
- Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md11}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md11}
+ Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md12}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md12}
 {\ttfamily void Delay(int milliseconds)} ~\newline
  Crossplatform function for program suspension. Gets milliseconds 
