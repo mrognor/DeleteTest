@@ -29,9 +29,9 @@ var NAVTREE =
     [ "Library documentation:", "index.html#autotoc_md1", null ],
     [ "Library usage", "index.html#autotoc_md2", [
       [ "Windows library usage guide", "index.html#autotoc_md3", null ],
-      [ "Linux library usage", "index.html#autotoc_md4", null ],
-      [ "Important", "index.html#autotoc_md5", null ]
+      [ "Linux library usage", "index.html#autotoc_md4", null ]
     ] ],
+    [ "Important", "index.html#autotoc_md5", null ],
     [ "Usefull library functions", "md__e_n__functions.html", [
       [ "Split", "md__e_n__functions.html#autotoc_md7", null ],
       [ "SendFile", "md__e_n__functions.html#autotoc_md8", null ],

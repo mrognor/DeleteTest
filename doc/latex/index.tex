@@ -55,7 +55,7 @@ Open menu on C/\+C++ -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{
  {\ttfamily ./server.sh} and {\ttfamily ./client.sh}
 \end{DoxyEnumerate}
 
-\hypertarget{index_autotoc_md5}{}\doxysubsection{Important}\label{index_autotoc_md5}
+\hypertarget{index_autotoc_md5}{}\doxysection{Important}\label{index_autotoc_md5}
 I know that no one reads further than the readme, so I want to bring some important things here ~\newline
 
 \begin{DoxyEnumerate}
@@ -63,5 +63,6 @@ I know that no one reads further than the readme, so I want to bring some import
 
 \item On linux, after disconnecting clients from the server, the port may be blocked for a small amount of time. Due to when trying to start the server again, errors will come out. We just have to wait a little ~\newline
 
-\item 
+\item The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes ~\newline
+ 
 \end{DoxyEnumerate}

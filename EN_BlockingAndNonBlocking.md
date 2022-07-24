@@ -1,1 +1,52 @@
 # Blocking and NonBlocking  
+
+If you have worked with sockets directly before, 
+then you know that there are blocking and non-blocking sockets. 
+They differ in how messages are received in user programs. 
+The blocking socket stops the thread in which it is working and waits for information 
+to be received, execution will continue only after that. 
+A non-blocking socket does not stop the thread. 
+You don't work with sockets in the library, but you can create an abstract analogue 
+of a non-blocking socket.  
+
+Non-blocking mode should work like this. 
+You have a kind of loop in which the logic of your application works. 
+Inside this loop, you check for a new message from the server and if there is one, 
+then you read it and execute certain logic  
+
+And this is how you can do it  
+
+First of all, you should save the last incoming message to some variable. 
+Also, for convenience, you can have a Boolean variable to store information about 
+whether this message was read earlier or it is new  
+ 
+	void ServerMessageHandler(std::string message)
+    {
+        LastMessage = message;
+        isNewMessage = true;
+    }
+
+Secondly, you must implement a function to receive the last message and 
+to receive information about the arrival of a new message  
+
+	public:
+		bool IsNewMessage()
+		{
+			return isNewMessage;
+		}
+
+		std::string GetLastMessage()
+		{
+			isNewMessage = false;
+			return LastMessage;
+		}
+
+Third in the main application loop you have to check if a new message has arrived and process it    
+
+	while (window.isOpen())
+    {
+        if (Client.IsNewMessage())
+        {
+            DoSomeLogic();
+        }
+	}

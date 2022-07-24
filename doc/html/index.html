@@ -138,15 +138,16 @@ Linux library usage</h2>
  <code>./server.sh</code> and <code>./client.sh</code></li>
 </ol>
 <p ><img src="https://user-images.githubusercontent.com/47296449/166113135-c9fc8b7d-bf3a-4589-bdce-3582c5f7abd0.png" alt="image" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Important</h2>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Important</h1>
 <p >I know that no one reads further than the readme, so I want to bring some important things here <br  />
 </p><ol type="1">
 <li>When working with linux, you may notice that std::cout does not output characters to the console. Don't worry, your code works as it should, you can check it yourself with cerr. <br  />
 </li>
 <li>On linux, after disconnecting clients from the server, the port may be blocked for a small amount of time. Due to when trying to start the server again, errors will come out. We just have to wait a little <br  />
 </li>
-<li></li>
+<li>The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes <br  />
+ </li>
 </ol>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
