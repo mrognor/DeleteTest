@@ -32,16 +32,29 @@ var NAVTREE =
       [ "Linux library usage", "index.html#autotoc_md4", null ]
     ] ],
     [ "Important", "index.html#autotoc_md5", null ],
+    [ "How to choose a class", "index.html#autotoc_md6", [
+      [ "TCP classes", "index.html#autotoc_md7", [
+        [ "EN_TCP_Server", "index.html#autotoc_md8", null ],
+        [ "EN_TCP_Client", "index.html#autotoc_md9", null ]
+      ] ],
+      [ "UDP classes", "index.html#autotoc_md10", [
+        [ "EN_UDP_Server", "index.html#autotoc_md11", null ],
+        [ "EN_UDP_Client", "index.html#autotoc_md12", null ]
+      ] ],
+      [ "RAU classes", "index.html#autotoc_md13", [
+        [ "EN_RAU_Server", "index.html#autotoc_md14", null ],
+        [ "EN_RAU_Client", "index.html#autotoc_md15", null ]
+      ] ]
+    ] ],
     [ "Usefull library functions", "md__e_n__functions.html", [
-      [ "Split", "md__e_n__functions.html#autotoc_md7", null ],
-      [ "SendFile", "md__e_n__functions.html#autotoc_md8", null ],
-      [ "RecvFile", "md__e_n__functions.html#autotoc_md9", null ],
-      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md10", null ],
-      [ "IsFileExist", "md__e_n__functions.html#autotoc_md11", null ],
-      [ "Delay", "md__e_n__functions.html#autotoc_md12", null ]
+      [ "Split", "md__e_n__functions.html#autotoc_md17", null ],
+      [ "SendFile", "md__e_n__functions.html#autotoc_md18", null ],
+      [ "RecvFile", "md__e_n__functions.html#autotoc_md19", null ],
+      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md20", null ],
+      [ "IsFileExist", "md__e_n__functions.html#autotoc_md21", null ],
+      [ "Delay", "md__e_n__functions.html#autotoc_md22", null ]
     ] ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
-    [ "ClassesOverview", "md__e_n__classes_overview.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

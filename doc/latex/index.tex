@@ -63,6 +63,92 @@ I know that no one reads further than the readme, so I want to bring some import
 
 \item On linux, after disconnecting clients from the server, the port may be blocked for a small amount of time. Due to when trying to start the server again, errors will come out. We just have to wait a little ~\newline
 
-\item The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes ~\newline
- 
+\item The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md6}{}\doxysection{How to choose a class}\label{index_autotoc_md6}
+This is a small overview of the library classes to simplify class selection\hypertarget{index_autotoc_md7}{}\doxysubsection{TCP classes}\label{index_autotoc_md7}
+These classes support connection and have got only reliable message sending. ~\newline
+ \hypertarget{index_autotoc_md8}{}\doxysubsubsection{EN\+\_\+\+TCP\+\_\+\+Server}\label{index_autotoc_md8}
+You have to define 3 methods
+\begin{DoxyEnumerate}
+\item void On\+Client\+Connected(int Client\+ID) ~\newline
+
+\item void Client\+Message\+Handler(std\+::string message, int Client\+ID) ~\newline
+
+\item void On\+Client\+Disconnect(int Client\+ID) ~\newline
+
 \end{DoxyEnumerate}
+
+The server ip address and port are set in the constructor. ~\newline
+ To start the server, you need to call the Run method ~\newline
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+TCP\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md9}{}\doxysubsubsection{EN\+\_\+\+TCP\+\_\+\+Client}\label{index_autotoc_md9}
+You have to define 3 methods ~\newline
+
+\begin{DoxyEnumerate}
+\item void After\+Connect() ~\newline
+
+\item void Server\+Message\+Handler(std\+::string message) ~\newline
+
+\item void Before\+Disconnect() ~\newline
+
+\end{DoxyEnumerate}
+
+To connect to the server, you need to call the function Connect. ~\newline
+ Before shutting down the program, you need to disconnect from the server using the method Disconnect ~\newline
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+TCP\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md10}{}\doxysubsection{UDP classes}\label{index_autotoc_md10}
+These classes do not support connection and have got only unreliable message sending. ~\newline
+ \hypertarget{index_autotoc_md11}{}\doxysubsubsection{EN\+\_\+\+UDP\+\_\+\+Server}\label{index_autotoc_md11}
+You have to define 2 methods
+\begin{DoxyEnumerate}
+\item void Client\+Message\+Handler(std\+::string message, std\+::string Client\+Ip\+Address, long long Time\+Since\+Package\+Arrived)
+\item bool Instant\+Client\+Message\+Handler(std\+::string message, std\+::string Client\+Ip\+Address, long long Time\+When\+Package\+Arrived) ~\newline
+
+\end{DoxyEnumerate}
+
+The entire configuration of the server takes place in the constructor. ~\newline
+ To start the server, you must call the method Run. To stop the server, you need to call the method Shutdown. ~\newline
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+UDP\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md12}{}\doxysubsubsection{EN\+\_\+\+UDP\+\_\+\+Client}\label{index_autotoc_md12}
+You have to define 1 method
+\begin{DoxyEnumerate}
+\item void Server\+Message\+Handler(std\+::string message) ~\newline
+
+\end{DoxyEnumerate}
+
+To start the client\textquotesingle{}s work, you must call the method Run. ~\newline
+ To complete the work, you must call the method Close. ~\newline
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+UDP\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md13}{}\doxysubsection{RAU classes}\label{index_autotoc_md13}
+This class supports connection. There is both reliable sending of messages and unreliable. ~\newline
+ The RAU differs from the TCP only in the ability to unreliable message send. ~\newline
+ \hypertarget{index_autotoc_md14}{}\doxysubsubsection{EN\+\_\+\+RAU\+\_\+\+Server}\label{index_autotoc_md14}
+You have to define 3 methods
+\begin{DoxyEnumerate}
+\item void On\+Client\+Connected(int Client\+ID) ~\newline
+
+\item void Client\+Message\+Handler(std\+::string message, int Client\+ID) ~\newline
+
+\item void On\+Client\+Disconnect(int Client\+ID) ~\newline
+
+\end{DoxyEnumerate}
+
+The entire configuration of the server takes place in the constructor ~\newline
+ To start the server, you need to call the Run method ~\newline
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+RAU\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md15}{}\doxysubsubsection{EN\+\_\+\+RAU\+\_\+\+Client}\label{index_autotoc_md15}
+You have to define 3 methods ~\newline
+
+\begin{DoxyEnumerate}
+\item void After\+Connect() ~\newline
+
+\item void Server\+Message\+Handler(std\+::string message) ~\newline
+
+\item void Before\+Disconnect() ~\newline
+
+\end{DoxyEnumerate}
+
+To connect to the server, you need to call the function Connect. ~\newline
+ Before shutting down the program, you need to disconnect from the server using the method Disconnect ~\newline
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+RAU\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
+ 

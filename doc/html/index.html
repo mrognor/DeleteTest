@@ -147,9 +147,103 @@ Important</h1>
 </li>
 <li>On linux, after disconnecting clients from the server, the port may be blocked for a small amount of time. Due to when trying to start the server again, errors will come out. We just have to wait a little <br  />
 </li>
-<li>The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes <br  />
- </li>
+<li>The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes</li>
 </ol>
+<h1><a class="anchor" id="autotoc_md6"></a>
+How to choose a class</h1>
+<p >This is a small overview of the library classes to simplify class selection</p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+TCP classes</h2>
+<p >These classes support connection and have got only reliable message sending. <br  />
+ </p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+EN_TCP_Server</h3>
+<p >You have to define 3 methods</p><ol type="1">
+<li>void OnClientConnected(int ClientID) <br  />
+</li>
+<li>void ClientMessageHandler(std::string message, int ClientID) <br  />
+</li>
+<li>void OnClientDisconnect(int ClientID) <br  />
+</li>
+</ol>
+<p >The server ip address and port are set in the constructor. <br  />
+ To start the server, you need to call the Run method <br  />
+ An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp</a> <br  />
+</p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+EN_TCP_Client</h3>
+<p >You have to define 3 methods <br  />
+</p><ol type="1">
+<li>void AfterConnect() <br  />
+</li>
+<li>void ServerMessageHandler(std::string message) <br  />
+</li>
+<li>void BeforeDisconnect() <br  />
+</li>
+</ol>
+<p >To connect to the server, you need to call the function Connect. <br  />
+ Before shutting down the program, you need to disconnect from the server using the method Disconnect <br  />
+ An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp</a> <br  />
+</p>
+<h2><a class="anchor" id="autotoc_md10"></a>
+UDP classes</h2>
+<p >These classes do not support connection and have got only unreliable message sending. <br  />
+ </p>
+<h3><a class="anchor" id="autotoc_md11"></a>
+EN_UDP_Server</h3>
+<p >You have to define 2 methods</p><ol type="1">
+<li>void ClientMessageHandler(std::string message, std::string ClientIpAddress, long long TimeSincePackageArrived)</li>
+<li>bool InstantClientMessageHandler(std::string message, std::string ClientIpAddress, long long TimeWhenPackageArrived) <br  />
+</li>
+</ol>
+<p >The entire configuration of the server takes place in the constructor. <br  />
+ To start the server, you must call the method Run. To stop the server, you need to call the method Shutdown. <br  />
+ An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp</a> <br  />
+</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+EN_UDP_Client</h3>
+<p >You have to define 1 method</p><ol type="1">
+<li>void ServerMessageHandler(std::string message) <br  />
+</li>
+</ol>
+<p >To start the client's work, you must call the method Run. <br  />
+ To complete the work, you must call the method Close. <br  />
+ An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp</a> <br  />
+</p>
+<h2><a class="anchor" id="autotoc_md13"></a>
+RAU classes</h2>
+<p >This class supports connection. There is both reliable sending of messages and unreliable. <br  />
+ The RAU differs from the TCP only in the ability to unreliable message send. <br  />
+ </p>
+<h3><a class="anchor" id="autotoc_md14"></a>
+EN_RAU_Server</h3>
+<p >You have to define 3 methods</p><ol type="1">
+<li>void OnClientConnected(int ClientID) <br  />
+</li>
+<li>void ClientMessageHandler(std::string message, int ClientID) <br  />
+</li>
+<li>void OnClientDisconnect(int ClientID) <br  />
+</li>
+</ol>
+<p >The entire configuration of the server takes place in the constructor <br  />
+ To start the server, you need to call the Run method <br  />
+ An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp</a> <br  />
+</p>
+<h3><a class="anchor" id="autotoc_md15"></a>
+EN_RAU_Client</h3>
+<p >You have to define 3 methods <br  />
+</p><ol type="1">
+<li>void AfterConnect() <br  />
+</li>
+<li>void ServerMessageHandler(std::string message) <br  />
+</li>
+<li>void BeforeDisconnect() <br  />
+</li>
+</ol>
+<p >To connect to the server, you need to call the function Connect. <br  />
+ Before shutting down the program, you need to disconnect from the server using the method Disconnect <br  />
+ An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Client.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Client.cpp</a> <br  />
+ </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
