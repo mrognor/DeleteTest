@@ -1,7 +1,7 @@
 \hypertarget{md__e_n__functions_autotoc_md17}{}\doxysection{Split}\label{md__e_n__functions_autotoc_md17}
 {\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::string\texorpdfstring{$>$}{>} Split(std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})} ~\newline
  The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation\hypertarget{md__e_n__functions_autotoc_md18}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md18}
-{\ttfamily bool Send\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr, int Delay\+In\+Milliseconds = 0)} ~\newline
+{\ttfamily bool Send\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr, int Chunks\+Number\+Between\+Delay = 0)} ~\newline
  The function is needed to send files. The message receiving function should be called on the other side. ~\newline
 
 \begin{DoxyItemize}
@@ -23,13 +23,12 @@
 \item The fourth shows the remaining time in seconds ~\newline
 
 \end{DoxyItemize}
-\item The fifth parameter is needed to regulate the file transfer rate. Gets milliseconds for the delay between sending chunks of the file ~\newline
+\item The fifth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay ~\newline
 
 \end{DoxyItemize}
 
 By default, the library function is used to output to the console ~\newline
- One kilobyte of data is transmitted at a time. If you make a delay of 100 milliseconds, 10 pieces or 10 kilobytes will be transmitted per second ~\newline
-\hypertarget{md__e_n__functions_autotoc_md19}{}\doxysection{Recv\+File}\label{md__e_n__functions_autotoc_md19}
+ Timeout between sending set to 20. You adjust the number of chunks that will be sent between the delay\hypertarget{md__e_n__functions_autotoc_md19}{}\doxysection{Recv\+File}\label{md__e_n__functions_autotoc_md19}
 {\ttfamily bool Recv\+File(EN\+\_\+\+SOCKET\& File\+Send\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
  The function is needed to receiving files. ~\newline
 

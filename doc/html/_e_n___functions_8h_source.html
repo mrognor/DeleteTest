@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Easy network: C:/Users/mrognor/Desktop/EasyNetwork/Easy_Network/EN_Functions.h Source File</title>
+<title>Easy network: C:/Users/timur/Desktop/EasyNetwork/Easy_Network/EN_Functions.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('_e_n___functions_8h_source.html',''); 
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    std::vector&lt;std::string&gt; Split(std::string StringToSplit, std::string SplitterString=<span class="stringliteral">&quot; &quot;</span>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">bool</span> SendFile(EN_SOCKET FileSendSocket, std::string FilePath, <span class="keywordtype">bool</span>&amp; IsStop, </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = <span class="keyword">nullptr</span>, <span class="keywordtype">int</span> DelayInMilliseconds = 0);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = <span class="keyword">nullptr</span>, <span class="keywordtype">int</span> ChunksNumberBetweenDelay = 0);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> RecvFile(EN_SOCKET FileSendSocket, <span class="keywordtype">bool</span>&amp; IsStop, <span class="keywordtype">void</span> (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
@@ -135,8 +135,8 @@ $(document).ready(function(){initNavTree('_e_n___functions_8h_source.html',''); 
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">bool</span> IsFileExist(std::string filePath);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> Delay(<span class="keywordtype">int</span> milliseconds);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">void</span> Delay(<span class="keywordtype">int</span> milliseconds);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

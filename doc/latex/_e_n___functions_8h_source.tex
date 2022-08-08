@@ -1,5 +1,5 @@
 \hypertarget{_e_n___functions_8h_source}{}\doxysection{EN\+\_\+\+Functions.\+h}
-\label{_e_n___functions_8h_source}\index{C:/Users/mrognor/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.h@{C:/Users/mrognor/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.h}}
+\label{_e_n___functions_8h_source}\index{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.h@{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
@@ -39,7 +39,7 @@
 \DoxyCodeLine{38     std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString=\textcolor{stringliteral}{"{} "{}});}
 \DoxyCodeLine{39 }
 \DoxyCodeLine{43     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, }
-\DoxyCodeLine{44         \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr}, \textcolor{keywordtype}{int} DelayInMilliseconds = 0);}
+\DoxyCodeLine{44         \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr}, \textcolor{keywordtype}{int} ChunksNumberBetweenDelay = 0);}
 \DoxyCodeLine{45 }
 \DoxyCodeLine{48     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
 \DoxyCodeLine{49 }
@@ -49,7 +49,7 @@
 \DoxyCodeLine{59 }
 \DoxyCodeLine{61     \textcolor{keywordtype}{bool} IsFileExist(std::string filePath);}
 \DoxyCodeLine{62 }
-\DoxyCodeLine{64     \textcolor{keywordtype}{void} Delay(\textcolor{keywordtype}{int} milliseconds);}
-\DoxyCodeLine{65 \}}
+\DoxyCodeLine{65     \textcolor{keywordtype}{void} Delay(\textcolor{keywordtype}{int} milliseconds);}
+\DoxyCodeLine{66 \}}
 
 \end{DoxyCode}
