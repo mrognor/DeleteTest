@@ -9,7 +9,7 @@ var class_e_n_1_1_e_n___t_c_p___client =
     [ "Disconnect", "class_e_n_1_1_e_n___t_c_p___client.html#a61c7c25d34cebbb4e203a99d2973a824", null ],
     [ "GetServerIpAddress", "class_e_n_1_1_e_n___t_c_p___client.html#aec271dd5d04eb40795b010ec7f5d3964", null ],
     [ "GetServerPort", "class_e_n_1_1_e_n___t_c_p___client.html#a1b7a235e03db3098d9d29dee85e13af0", null ],
-    [ "GetSocket", "class_e_n_1_1_e_n___t_c_p___client.html#aee26c7dd14648fb0388c69c9d26392e8", null ],
+    [ "GetSocket", "class_e_n_1_1_e_n___t_c_p___client.html#a6b49e4b3221b354346159fa7c0c20bb1", null ],
     [ "IsConnected", "class_e_n_1_1_e_n___t_c_p___client.html#a94e673593d1d188f9bfe5ffea57eb6e3", null ],
     [ "Run", "class_e_n_1_1_e_n___t_c_p___client.html#ad54c154f41759d2baa00a5c33217552c", null ],
     [ "SendToServer", "class_e_n_1_1_e_n___t_c_p___client.html#aa7e4bcc151d94ae31ef5864b36cdd746", null ],

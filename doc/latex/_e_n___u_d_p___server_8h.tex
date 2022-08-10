@@ -1,0 +1,77 @@
+\hypertarget{_e_n___u_d_p___server_8h}{}\doxysection{C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+EN\+\_\+\+UDP\+\_\+\+Server.h File Reference}
+\label{_e_n___u_d_p___server_8h}\index{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_UDP\_Server.h@{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_UDP\_Server.h}}
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}EN\+\_\+\+Functions.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server}}
+\begin{DoxyCompactList}\small\item\em Base udp server class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_e_n}{EN}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_e_n___u_d_p___server_8h_a26769957ec1a2beaf223f33b66ee64ab}{INVALID\+\_\+\+SOCKET}}~-\/1
+\item 
+\#define \mbox{\hyperlink{_e_n___u_d_p___server_8h_a633b0396ff93d336a088412a190a5072}{SOCKET\+\_\+\+ERROR}}~-\/1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \mbox{\hyperlink{_e_n___u_d_p___server_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}}
+\item 
+typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{_e_n___u_d_p___server_8h_ab36cd396506985768dcdbf5c6a7b5698}{EN\+\_\+\+Time\+Point}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespace_e_n_ab6020967b6f529cc6165884e9e6b39b7}{EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+Bufer\+Type}} \{ \mbox{\hyperlink{namespace_e_n_ab6020967b6f529cc6165884e9e6b39b7a21436807fa858af6f3a6b5a1aa53e468}{EN\+::\+Queue}}
+, \mbox{\hyperlink{namespace_e_n_ab6020967b6f529cc6165884e9e6b39b7a4fbb7d11ca35d7dec167c59254047e8f}{EN\+::\+Stack}}
+ \}
+\begin{DoxyCompactList}\small\item\em UDP server buffer types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_e_n___u_d_p___server_8h_a26769957ec1a2beaf223f33b66ee64ab}\label{_e_n___u_d_p___server_8h_a26769957ec1a2beaf223f33b66ee64ab}} 
+\index{EN\_UDP\_Server.h@{EN\_UDP\_Server.h}!INVALID\_SOCKET@{INVALID\_SOCKET}}
+\index{INVALID\_SOCKET@{INVALID\_SOCKET}!EN\_UDP\_Server.h@{EN\_UDP\_Server.h}}
+\doxysubsubsection{\texorpdfstring{INVALID\_SOCKET}{INVALID\_SOCKET}}
+{\footnotesize\ttfamily \#define INVALID\+\_\+\+SOCKET~-\/1}
+
+\mbox{\Hypertarget{_e_n___u_d_p___server_8h_a633b0396ff93d336a088412a190a5072}\label{_e_n___u_d_p___server_8h_a633b0396ff93d336a088412a190a5072}} 
+\index{EN\_UDP\_Server.h@{EN\_UDP\_Server.h}!SOCKET\_ERROR@{SOCKET\_ERROR}}
+\index{SOCKET\_ERROR@{SOCKET\_ERROR}!EN\_UDP\_Server.h@{EN\_UDP\_Server.h}}
+\doxysubsubsection{\texorpdfstring{SOCKET\_ERROR}{SOCKET\_ERROR}}
+{\footnotesize\ttfamily \#define SOCKET\+\_\+\+ERROR~-\/1}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_e_n___u_d_p___server_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}\label{_e_n___u_d_p___server_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}} 
+\index{EN\_UDP\_Server.h@{EN\_UDP\_Server.h}!EN\_SOCKET@{EN\_SOCKET}}
+\index{EN\_SOCKET@{EN\_SOCKET}!EN\_UDP\_Server.h@{EN\_UDP\_Server.h}}
+\doxysubsubsection{\texorpdfstring{EN\_SOCKET}{EN\_SOCKET}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}}}
+
+\mbox{\Hypertarget{_e_n___u_d_p___server_8h_ab36cd396506985768dcdbf5c6a7b5698}\label{_e_n___u_d_p___server_8h_ab36cd396506985768dcdbf5c6a7b5698}} 
+\index{EN\_UDP\_Server.h@{EN\_UDP\_Server.h}!EN\_TimePoint@{EN\_TimePoint}}
+\index{EN\_TimePoint@{EN\_TimePoint}!EN\_UDP\_Server.h@{EN\_UDP\_Server.h}}
+\doxysubsubsection{\texorpdfstring{EN\_TimePoint}{EN\_TimePoint}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{_e_n___u_d_p___server_8h_ab36cd396506985768dcdbf5c6a7b5698}{EN\+\_\+\+Time\+Point}}}
+

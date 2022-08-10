@@ -1,5 +1,6 @@
 var class_e_n_1_1_e_n___t_c_p___file_sender =
 [
+    [ "ContinueRecvFileFromServer", "class_e_n_1_1_e_n___t_c_p___file_sender.html#a386a47e98a735dd68c283038cab315aa", null ],
     [ "RecvFileFromServer", "class_e_n_1_1_e_n___t_c_p___file_sender.html#af19298d072e4c89232ec9004deaed86e", null ],
     [ "RecvMessageFromServer", "class_e_n_1_1_e_n___t_c_p___file_sender.html#a08bf5ac1cd4717a74c08d6f95a5ab546", null ],
     [ "SendFileToServer", "class_e_n_1_1_e_n___t_c_p___file_sender.html#a8765a2ffe8f4e442305edcf645bfc381", null ],

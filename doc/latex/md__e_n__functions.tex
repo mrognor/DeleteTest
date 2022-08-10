@@ -1,7 +1,7 @@
 \hypertarget{md__e_n__functions_autotoc_md17}{}\doxysection{Split}\label{md__e_n__functions_autotoc_md17}
 {\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::string\texorpdfstring{$>$}{>} Split(std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})} ~\newline
  The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation\hypertarget{md__e_n__functions_autotoc_md18}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md18}
-{\ttfamily bool Send\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr, int Chunks\+Number\+Between\+Delay = 0)} ~\newline
+{\ttfamily bool Send\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr, uint64\+\_\+t Previously\+Sended\+Size = 0, int Chunks\+Number\+Between\+Delay = 0);} ~\newline
  The function is needed to send files. The message receiving function should be called on the other side. ~\newline
 
 \begin{DoxyItemize}
@@ -23,7 +23,8 @@
 \item The fourth shows the remaining time in seconds ~\newline
 
 \end{DoxyItemize}
-\item The fifth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay ~\newline
+\item The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending
+\item The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay ~\newline
 
 \end{DoxyItemize}
 
@@ -50,7 +51,52 @@ By default, the library function is used to output to the console ~\newline
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-By default, the library function is used to output to the console\hypertarget{md__e_n__functions_autotoc_md20}{}\doxysection{Download\+Status}\label{md__e_n__functions_autotoc_md20}
+By default, the library function is used to output to the console\hypertarget{md__e_n__functions_autotoc_md20}{}\doxysection{Continue\+Recv\+File}\label{md__e_n__functions_autotoc_md20}
+{\ttfamily bool Continue\+Recv\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
+ Function to continue receiving the file
+\begin{DoxyItemize}
+\item The first parameter is the socket for receiving files ~\newline
+
+\item The second parameter is a reference to a boolean variable to stop file transfer
+\item The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. ~\newline
+
+\begin{DoxyItemize}
+\item The first is how many bytes were transmitted. ~\newline
+
+\item The second is the total number of bytes. ~\newline
+
+\item The third parameter shows the transfer rate in bytes. ~\newline
+
+\item The fourth shows the remaining time in seconds ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+By default, the library function is used to output to the console ~\newline
+\hypertarget{md__e_n__functions_autotoc_md21}{}\doxysection{Forward\+File}\label{md__e_n__functions_autotoc_md21}
+{\ttfamily bool Forward\+File(EN\+\_\+\+SOCKET Source\+File\+Socket, EN\+\_\+\+SOCKET Destination\+File\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
+ This function will forward file from one socket to another. ~\newline
+
+\begin{DoxyItemize}
+\item First parametr is source socket
+\item Second parametr is destination socket
+\item Third parametr its refernce to bool to stop transmission.
+\item The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. ~\newline
+
+\begin{DoxyItemize}
+\item The first is how many bytes were transmitted. ~\newline
+
+\item The second is the total number of bytes. ~\newline
+
+\item The third parameter shows the transfer rate in bytes. ~\newline
+
+\item The fourth shows the remaining time in seconds ~\newline
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+By default, the library function is used to output to the console ~\newline
+\hypertarget{md__e_n__functions_autotoc_md22}{}\doxysection{Download\+Status}\label{md__e_n__functions_autotoc_md22}
 {\ttfamily void Download\+Status(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)} The function displays the status of the file transfer to the console
 \begin{DoxyItemize}
 \item The first is how many bytes were transmitted. ~\newline
@@ -61,8 +107,8 @@ By default, the library function is used to output to the console\hypertarget{md
 
 \item The fourth shows the remaining time in seconds ~\newline
 
-\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md21}{}\doxysection{Is\+File\+Exist}\label{md__e_n__functions_autotoc_md21}
+\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md23}{}\doxysection{Is\+File\+Exist}\label{md__e_n__functions_autotoc_md23}
 {\ttfamily bool Is\+File\+Exist(std\+::string file\+Path)} ~\newline
- Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md22}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md22}
+ Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md24}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md24}
 {\ttfamily void Delay(int milliseconds)} ~\newline
  Crossplatform function for program suspension. Gets milliseconds 

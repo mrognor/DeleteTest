@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.5</span>
+   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.1</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -113,6 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8765a2ffe8f4e442305edcf645bfc381"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af19298d072e4c89232ec9004deaed86e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#af19298d072e4c89232ec9004deaed86e">RecvFileFromServer</a> (void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</td></tr>
 <tr class="separator:af19298d072e4c89232ec9004deaed86e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a386a47e98a735dd68c283038cab315aa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___file_sender.html#a386a47e98a735dd68c283038cab315aa">ContinueRecvFileFromServer</a> (void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</td></tr>
+<tr class="separator:a386a47e98a735dd68c283038cab315aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08bf5ac1cd4717a74c08d6f95a5ab546"><td class="memItemLeft" align="right" valign="top"><a id="a08bf5ac1cd4717a74c08d6f95a5ab546" name="a08bf5ac1cd4717a74c08d6f95a5ab546"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RecvMessageFromServer</b> (std::string &amp;msg)</td></tr>
 <tr class="memdesc:a08bf5ac1cd4717a74c08d6f95a5ab546"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to get message from server. <br /></td></tr>
@@ -134,10 +136,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerPort</b> ()</
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>GetServerIpAddress</b> ()</td></tr>
 <tr class="memdesc:aec271dd5d04eb40795b010ec7f5d3964 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="mdescLeft">&#160;</td><td class="mdescRight">Server ip getter. <br /></td></tr>
 <tr class="separator:aec271dd5d04eb40795b010ec7f5d3964 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee26c7dd14648fb0388c69c9d26392e8 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="memItemLeft" align="right" valign="top"><a id="aee26c7dd14648fb0388c69c9d26392e8" name="aee26c7dd14648fb0388c69c9d26392e8"></a>
-EN_SOCKET *&#160;</td><td class="memItemRight" valign="bottom"><b>GetSocket</b> ()</td></tr>
-<tr class="memdesc:aee26c7dd14648fb0388c69c9d26392e8 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket getter. <br /></td></tr>
-<tr class="separator:aee26c7dd14648fb0388c69c9d26392e8 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b49e4b3221b354346159fa7c0c20bb1 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="memItemLeft" align="right" valign="top"><a id="a6b49e4b3221b354346159fa7c0c20bb1" name="a6b49e4b3221b354346159fa7c0c20bb1"></a>
+EN_SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>GetSocket</b> ()</td></tr>
+<tr class="memdesc:a6b49e4b3221b354346159fa7c0c20bb1 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="mdescLeft">&#160;</td><td class="mdescRight">Socket getter. <br /></td></tr>
+<tr class="separator:a6b49e4b3221b354346159fa7c0c20bb1 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94e673593d1d188f9bfe5ffea57eb6e3 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="memItemLeft" align="right" valign="top"><a id="a94e673593d1d188f9bfe5ffea57eb6e3" name="a94e673593d1d188f9bfe5ffea57eb6e3"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsConnected</b> ()</td></tr>
 <tr class="memdesc:a94e673593d1d188f9bfe5ffea57eb6e3 inherit pub_methods_class_e_n_1_1_e_n___t_c_p___client"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function return true if client connected to server. <br /></td></tr>
@@ -177,6 +179,25 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Client class for sending files to the server. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a386a47e98a735dd68c283038cab315aa" name="a386a47e98a735dd68c283038cab315aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a386a47e98a735dd68c283038cab315aa">&#9670;&nbsp;</a></span>ContinueRecvFileFromServer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::EN_TCP_FileSender::ContinueRecvFileFromServer </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)&#160;</td>
+          <td class="paramname"><em>ProgressFunction</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function to continue receiving file from server </p><dl class="section return"><dt>Returns</dt><dd>Return true if file transmission success, false otherwise </dd></dl>
+
+</div>
+</div>
 <a id="af19298d072e4c89232ec9004deaed86e" name="af19298d072e4c89232ec9004deaed86e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af19298d072e4c89232ec9004deaed86e">&#9670;&nbsp;</a></span>RecvFileFromServer()</h2>
 

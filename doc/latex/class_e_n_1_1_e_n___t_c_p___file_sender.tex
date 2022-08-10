@@ -22,6 +22,8 @@ bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a8765a2ffe8f4e4423
 \begin{DoxyCompactList}\small\item\em Function to send file to server. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_af19298d072e4c89232ec9004deaed86e}{Recv\+File\+From\+Server}} (void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
 \item 
+bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___file_sender_a386a47e98a735dd68c283038cab315aa}{Continue\+Recv\+File\+From\+Server}} (void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a08bf5ac1cd4717a74c08d6f95a5ab546}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a08bf5ac1cd4717a74c08d6f95a5ab546}} 
 void {\bfseries Recv\+Message\+From\+Server} (std\+::string \&msg)
 \begin{DoxyCompactList}\small\item\em Function to get message from server. \end{DoxyCompactList}\item 
@@ -35,6 +37,15 @@ void {\bfseries Stop\+Downloading} ()
 Client class for sending files to the server. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_a386a47e98a735dd68c283038cab315aa}\label{class_e_n_1_1_e_n___t_c_p___file_sender_a386a47e98a735dd68c283038cab315aa}} 
+\index{EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}!ContinueRecvFileFromServer@{ContinueRecvFileFromServer}}
+\index{ContinueRecvFileFromServer@{ContinueRecvFileFromServer}!EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}}
+\doxysubsubsection{\texorpdfstring{ContinueRecvFileFromServer()}{ContinueRecvFileFromServer()}}
+{\footnotesize\ttfamily bool EN\+::\+EN\+\_\+\+TCP\+\_\+\+File\+Sender\+::\+Continue\+Recv\+File\+From\+Server (\begin{DoxyParamCaption}\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function }\end{DoxyParamCaption})}
+
+Function to continue receiving file from server \begin{DoxyReturn}{Returns}
+Return true if file transmission success, false otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___file_sender_af19298d072e4c89232ec9004deaed86e}\label{class_e_n_1_1_e_n___t_c_p___file_sender_af19298d072e4c89232ec9004deaed86e}} 
 \index{EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}!RecvFileFromServer@{RecvFileFromServer}}
 \index{RecvFileFromServer@{RecvFileFromServer}!EN::EN\_TCP\_FileSender@{EN::EN\_TCP\_FileSender}}

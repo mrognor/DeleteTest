@@ -50,9 +50,11 @@ var NAVTREE =
       [ "Split", "md__e_n__functions.html#autotoc_md17", null ],
       [ "SendFile", "md__e_n__functions.html#autotoc_md18", null ],
       [ "RecvFile", "md__e_n__functions.html#autotoc_md19", null ],
-      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md20", null ],
-      [ "IsFileExist", "md__e_n__functions.html#autotoc_md21", null ],
-      [ "Delay", "md__e_n__functions.html#autotoc_md22", null ]
+      [ "ContinueRecvFile", "md__e_n__functions.html#autotoc_md20", null ],
+      [ "ForwardFile", "md__e_n__functions.html#autotoc_md21", null ],
+      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md22", null ],
+      [ "IsFileExist", "md__e_n__functions.html#autotoc_md23", null ],
+      [ "Delay", "md__e_n__functions.html#autotoc_md24", null ]
     ] ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
     [ "Classes", "annotated.html", [

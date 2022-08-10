@@ -1,0 +1,31 @@
+\hypertarget{_e_n___functions_8cpp}{}\doxysection{C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+EN\+\_\+\+Functions.cpp File Reference}
+\label{_e_n___functions_8cpp}\index{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.cpp@{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.cpp}}
+{\ttfamily \#include \char`\"{}EN\+\_\+\+Functions.\+h\char`\"{}}\newline
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_e_n}{EN}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_e_n_a6cd41b67e7f621f361ed38c5dd5d7166}{EN\+::\+TCP\+\_\+\+Send}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} sock, std\+::string message, int Message\+Delay=10)
+\begin{DoxyCompactList}\small\item\em Wrapper over the send function. Allows you to send std\+::string. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_e_n_a32a63388cd4ad8ee41e5ed4a51767b1b}{EN\+::\+TCP\+\_\+\+Recv}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} sock, std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Wrapper over the recv function. Allows you to recv std\+::string. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace_e_n_a01c43c7496b1373336bf695267a93043}{EN\+::\+Split}} (std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})
+\begin{DoxyCompactList}\small\item\em Divides the string to std\+::vector$<$std\+::string$>$. Second string is string divider. By default set to space(\char`\"{} \char`\"{}) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_e_n_abb34fd39ecf23c45870a78e91860ec35}{EN\+::\+Send\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} File\+Send\+Socket, std\+::string File\+Name, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta), uint64\+\_\+t Previously\+Sended\+Size, int Chunks\+Number\+Between\+Delay)
+\item 
+bool \mbox{\hyperlink{namespace_e_n_af3a0eb472fb10023f1d76e6e55e761f5}{EN\+::\+Recv\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} File\+Send\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+\item 
+bool \mbox{\hyperlink{namespace_e_n_ae32e02db2dba65470e6a585495341c18}{EN\+::\+Continue\+Recv\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} File\+Send\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+\item 
+bool \mbox{\hyperlink{namespace_e_n_ae6ea2bdb70747893b66082907def2588}{EN\+::\+Forward\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} Source\+File\+Socket, \mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} Destination\+File\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+\item 
+void \mbox{\hyperlink{namespace_e_n_afb380fd9a02de5126d4fa3a5e613a4d0}{EN\+::\+Download\+Status}} (uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)
+\begin{DoxyCompactList}\small\item\em This function will print information about file downloading. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{namespace_e_n_a9e4485f0a8d8f567260a07cbbe5f44c5}{EN\+::\+Is\+File\+Exist}} (std\+::string file\+Path)
+\begin{DoxyCompactList}\small\item\em Return true if file exists, otherwise rerurn false. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_e_n_a5a2b916df05d59d57381340ff11fcac1}{EN\+::\+Delay}} (int milliseconds)
+\end{DoxyCompactItemize}

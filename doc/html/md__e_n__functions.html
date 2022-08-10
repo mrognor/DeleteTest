@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.5</span>
+   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.1</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -94,7 +94,7 @@ Split</h1>
  The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation</p>
 <h1><a class="anchor" id="autotoc_md18"></a>
 SendFile</h1>
-<p ><code>bool SendFile(EN_SOCKET FileSendSocket, std::string FilePath, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr, int ChunksNumberBetweenDelay = 0)</code> <br  />
+<p ><code>bool SendFile(EN_SOCKET FileSendSocket, std::string FilePath, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr, uint64_t PreviouslySendedSize = 0, int ChunksNumberBetweenDelay = 0);</code> <br  />
  The function is needed to send files. The message receiving function should be called on the other side. <br  />
 </p><ul>
 <li>The first parameter is the socket for sending files <br  />
@@ -115,7 +115,8 @@ SendFile</h1>
 </li>
 </ul>
 </li>
-<li>The fifth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay <br  />
+<li>The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending</li>
+<li>The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay <br  />
 </li>
 </ul>
 <p >By default, the library function is used to output to the console <br  />
@@ -143,6 +144,51 @@ RecvFile</h1>
 </ul>
 <p >By default, the library function is used to output to the console</p>
 <h1><a class="anchor" id="autotoc_md20"></a>
+ContinueRecvFile</h1>
+<p ><code>bool ContinueRecvFile(EN_SOCKET FileSendSocket, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
+ Function to continue receiving the file</p><ul>
+<li>The first parameter is the socket for receiving files <br  />
+</li>
+<li>The second parameter is a reference to a boolean variable to stop file transfer</li>
+<li>The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. <br  />
+<ul>
+<li>The first is how many bytes were transmitted. <br  />
+</li>
+<li>The second is the total number of bytes. <br  />
+</li>
+<li>The third parameter shows the transfer rate in bytes. <br  />
+</li>
+<li>The fourth shows the remaining time in seconds <br  />
+</li>
+</ul>
+</li>
+</ul>
+<p >By default, the library function is used to output to the console <br  />
+</p>
+<h1><a class="anchor" id="autotoc_md21"></a>
+ForwardFile</h1>
+<p ><code>bool ForwardFile(EN_SOCKET SourceFileSocket, EN_SOCKET DestinationFileSocket, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
+ This function will forward file from one socket to another. <br  />
+</p><ul>
+<li>First parametr is source socket</li>
+<li>Second parametr is destination socket</li>
+<li>Third parametr its refernce to bool to stop transmission.</li>
+<li>The fourth parameter is a pointer to a function that is used to track the status of file transfer This function gets 4 parameters. <br  />
+<ul>
+<li>The first is how many bytes were transmitted. <br  />
+</li>
+<li>The second is the total number of bytes. <br  />
+</li>
+<li>The third parameter shows the transfer rate in bytes. <br  />
+</li>
+<li>The fourth shows the remaining time in seconds <br  />
+</li>
+</ul>
+</li>
+</ul>
+<p >By default, the library function is used to output to the console <br  />
+</p>
+<h1><a class="anchor" id="autotoc_md22"></a>
 DownloadStatus</h1>
 <p ><code>void DownloadStatus(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)</code> The function displays the status of the file transfer to the console</p><ul>
 <li>The first is how many bytes were transmitted. <br  />
@@ -154,11 +200,11 @@ DownloadStatus</h1>
 <li>The fourth shows the remaining time in seconds <br  />
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 IsFileExist</h1>
 <p ><code>bool IsFileExist(std::string filePath)</code> <br  />
  Return true if file exists, otherwise rerurn false</p>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 Delay</h1>
 <p ><code>void Delay(int milliseconds)</code> <br  />
  Crossplatform function for program suspension. Gets milliseconds </p>
