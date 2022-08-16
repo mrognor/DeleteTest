@@ -73,9 +73,13 @@ The function displays the status of the file transfer to the console
 * The fourth shows the remaining time in seconds  
 
 ## IsFileExist  
-`bool IsFileExist(std::string filePath)`  
+`bool IsFileExist(std::string FilePath)`  
 Return true if file exists, otherwise rerurn false
 
+## GetFileSize  
+`uint64_t GetFileSize(std::string FileName)`
+Return file size in bytes. If couldn't open the file return 0
+	
 ## Delay
 `void Delay(int milliseconds)`  
-Crossplatform function for program suspension. Gets milliseconds
+Crossplatform function for program suspension. Gets milliseconds. 
