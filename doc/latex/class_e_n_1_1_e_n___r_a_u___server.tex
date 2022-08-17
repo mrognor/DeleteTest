@@ -29,7 +29,7 @@ void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a9491516a94dece0d7c7654
 \mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a827357084d58ea5b6b9ac06430a5420e}\label{class_e_n_1_1_e_n___r_a_u___server_a827357084d58ea5b6b9ac06430a5420e}} 
 void {\bfseries Shutdown} ()
 \begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}{Send\+To\+Client}} (int Client\+Id, std\+::string message, bool Is\+Reliable=true)
+void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server_a3b22dbd3ada33c3d3a1ba1a6d74d1a0d}{Send\+To\+Client}} (int Client\+Id, std\+::string message, bool Is\+Reliable=true, int Message\+Delay=10)
 \begin{DoxyCompactList}\small\item\em Method that send message to client. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -112,11 +112,11 @@ Method that runs after the client is disconnected.
 \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}\label{class_e_n_1_1_e_n___r_a_u___server_a4caf42a3bc46a5b0c4fb5708133f2532}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___server_a3b22dbd3ada33c3d3a1ba1a6d74d1a0d}\label{class_e_n_1_1_e_n___r_a_u___server_a3b22dbd3ada33c3d3a1ba1a6d74d1a0d}} 
 \index{EN::EN\_RAU\_Server@{EN::EN\_RAU\_Server}!SendToClient@{SendToClient}}
 \index{SendToClient@{SendToClient}!EN::EN\_RAU\_Server@{EN::EN\_RAU\_Server}}
 \doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}
-{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+Id,  }\item[{std\+::string}]{message,  }\item[{bool}]{Is\+Reliable = {\ttfamily true} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+RAU\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+Id,  }\item[{std\+::string}]{message,  }\item[{bool}]{Is\+Reliable = {\ttfamily true},  }\item[{int}]{Message\+Delay = {\ttfamily 10} }\end{DoxyParamCaption})}
 
 
 
@@ -128,7 +128,9 @@ Method that send message to client.
 \hline
 \mbox{\texttt{ in}}  & {\em message} & The message to be sent to the client \\
 \hline
-\mbox{\texttt{ in}}  & {\em Is\+Reliable} & if the parameter is set to true, the message is guaranteed to reach. if the parameter is set to false before the message delivery is not guaranteed \\
+\mbox{\texttt{ in}}  & {\em Is\+Reliable} & if the parameter is set to true, the message is guaranteed to reach. If the parameter is set to false the message delivery is not guaranteed \\
+\hline
+\mbox{\texttt{ in}}  & {\em Message\+Delay} & The delay after sending message. Useless if Is\+Reliable set to false. \\
 \hline
 \end{DoxyParams}
 

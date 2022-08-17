@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sendfiletoserver_0',['SendFileToServer',['../class_e_n_1_1_e_n___t_c_p___file_sender.html#a8765a2ffe8f4e442305edcf645bfc381',1,'EN::EN_TCP_FileSender']]],
-  ['sendtoclient_1',['SendToClient',['../class_e_n_1_1_e_n___r_a_u___server.html#a4caf42a3bc46a5b0c4fb5708133f2532',1,'EN::EN_RAU_Server::SendToClient()'],['../class_e_n_1_1_e_n___t_c_p___server.html#a0483f7f073b9b978d657a4d822de166c',1,'EN::EN_TCP_Server::SendToClient()'],['../class_e_n_1_1_e_n___u_d_p___server.html#a493dc5a1c0014b2d759cb6b74a98b12f',1,'EN::EN_UDP_Server::SendToClient()']]],
+  ['sendtoclient_1',['SendToClient',['../class_e_n_1_1_e_n___r_a_u___server.html#a3b22dbd3ada33c3d3a1ba1a6d74d1a0d',1,'EN::EN_RAU_Server::SendToClient()'],['../class_e_n_1_1_e_n___t_c_p___server.html#a5388644d0904f37054886a272b7c18a7',1,'EN::EN_TCP_Server::SendToClient()'],['../class_e_n_1_1_e_n___u_d_p___server.html#a493dc5a1c0014b2d759cb6b74a98b12f',1,'EN::EN_UDP_Server::SendToClient()']]],
   ['sendtoserver_2',['SendToServer',['../class_e_n_1_1_e_n___r_a_u___client.html#a511c3631134f12e7cc3afa4573575821',1,'EN::EN_RAU_Client::SendToServer()'],['../class_e_n_1_1_e_n___t_c_p___client.html#aa7e4bcc151d94ae31ef5864b36cdd746',1,'EN::EN_TCP_Client::SendToServer()'],['../class_e_n_1_1_e_n___u_d_p___client.html#a95b11e4a64358af9ffe7287eac17f279',1,'EN::EN_UDP_Client::SendToServer()']]],
   ['serverbufertype_3',['ServerBuferType',['../class_e_n_1_1_e_n___u_d_p___server.html#aa8d74ed37894279619f988eb9083444f',1,'EN::EN_UDP_Server']]],
   ['serveripaddress_4',['ServerIpAddress',['../class_e_n_1_1_e_n___u_d_p___client.html#aba2523ac99417083f2ee957d5cf0a5eb',1,'EN::EN_UDP_Client']]],

@@ -29,7 +29,7 @@ void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423a
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}\label{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}} 
 void {\bfseries Shutdown} ()
 \begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4d822de166c}{Send\+To\+Client}} (int Client\+Id, std\+::string message)
+void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}{Send\+To\+Client}} (int Client\+Id, std\+::string message, int Message\+Delay=10)
 \begin{DoxyCompactList}\small\item\em Method that send message to client. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
@@ -112,11 +112,11 @@ Method that runs after the client is disconnected.
 \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4d822de166c}\label{class_e_n_1_1_e_n___t_c_p___server_a0483f7f073b9b978d657a4d822de166c}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}\label{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!SendToClient@{SendToClient}}
 \index{SendToClient@{SendToClient}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}
-{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+Id,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+Id,  }\item[{std\+::string}]{message,  }\item[{int}]{Message\+Delay = {\ttfamily 10} }\end{DoxyParamCaption})}
 
 
 
@@ -127,6 +127,8 @@ Method that send message to client.
 \mbox{\texttt{ in}}  & {\em Client\+ID} & The number of the client \\
 \hline
 \mbox{\texttt{ in}}  & {\em message} & The message to be sent to the client \\
+\hline
+\mbox{\texttt{ in}}  & {\em Message\+Delay} & The delay after sending message \\
 \hline
 \end{DoxyParams}
 

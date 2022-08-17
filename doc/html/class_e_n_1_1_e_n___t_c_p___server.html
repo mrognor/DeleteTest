@@ -124,9 +124,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> ()</td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> ()</td></tr>
 <tr class="memdesc:a37f609d5555cd0f84a236889eb0bab11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that stops the server. <br /></td></tr>
 <tr class="separator:a37f609d5555cd0f84a236889eb0bab11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0483f7f073b9b978d657a4d822de166c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___server.html#a0483f7f073b9b978d657a4d822de166c">SendToClient</a> (int ClientId, std::string message)</td></tr>
-<tr class="memdesc:a0483f7f073b9b978d657a4d822de166c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that send message to client.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#a0483f7f073b9b978d657a4d822de166c">More...</a><br /></td></tr>
-<tr class="separator:a0483f7f073b9b978d657a4d822de166c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5388644d0904f37054886a272b7c18a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___t_c_p___server.html#a5388644d0904f37054886a272b7c18a7">SendToClient</a> (int ClientId, std::string message, int MessageDelay=10)</td></tr>
+<tr class="memdesc:a5388644d0904f37054886a272b7c18a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that send message to client.  <a href="class_e_n_1_1_e_n___t_c_p___server.html#a5388644d0904f37054886a272b7c18a7">More...</a><br /></td></tr>
+<tr class="separator:a5388644d0904f37054886a272b7c18a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -281,8 +281,8 @@ std::vector&lt; EN_SOCKET &gt;&#160;</td><td class="memItemRight" valign="bottom
 
 </div>
 </div>
-<a id="a0483f7f073b9b978d657a4d822de166c" name="a0483f7f073b9b978d657a4d822de166c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0483f7f073b9b978d657a4d822de166c">&#9670;&nbsp;</a></span>SendToClient()</h2>
+<a id="a5388644d0904f37054886a272b7c18a7" name="a5388644d0904f37054886a272b7c18a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5388644d0904f37054886a272b7c18a7">&#9670;&nbsp;</a></span>SendToClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +297,13 @@ std::vector&lt; EN_SOCKET &gt;&#160;</td><td class="memItemRight" valign="bottom
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>message</em>&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MessageDelay</em> = <code>10</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -312,6 +318,7 @@ std::vector&lt; EN_SOCKET &gt;&#160;</td><td class="memItemRight" valign="bottom
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ClientID</td><td>The number of the client </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>The message to be sent to the client </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MessageDelay</td><td>The delay after sending message </td></tr>
   </table>
   </dd>
 </dl>

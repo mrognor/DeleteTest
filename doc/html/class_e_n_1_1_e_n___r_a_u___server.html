@@ -124,9 +124,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Run</b> ()</td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Shutdown</b> ()</td></tr>
 <tr class="memdesc:a827357084d58ea5b6b9ac06430a5420e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that stops the server. <br /></td></tr>
 <tr class="separator:a827357084d58ea5b6b9ac06430a5420e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4caf42a3bc46a5b0c4fb5708133f2532"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___r_a_u___server.html#a4caf42a3bc46a5b0c4fb5708133f2532">SendToClient</a> (int ClientId, std::string message, bool IsReliable=true)</td></tr>
-<tr class="memdesc:a4caf42a3bc46a5b0c4fb5708133f2532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that send message to client.  <a href="class_e_n_1_1_e_n___r_a_u___server.html#a4caf42a3bc46a5b0c4fb5708133f2532">More...</a><br /></td></tr>
-<tr class="separator:a4caf42a3bc46a5b0c4fb5708133f2532"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b22dbd3ada33c3d3a1ba1a6d74d1a0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___r_a_u___server.html#a3b22dbd3ada33c3d3a1ba1a6d74d1a0d">SendToClient</a> (int ClientId, std::string message, bool IsReliable=true, int MessageDelay=10)</td></tr>
+<tr class="memdesc:a3b22dbd3ada33c3d3a1ba1a6d74d1a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that send message to client.  <a href="class_e_n_1_1_e_n___r_a_u___server.html#a3b22dbd3ada33c3d3a1ba1a6d74d1a0d">More...</a><br /></td></tr>
+<tr class="separator:a3b22dbd3ada33c3d3a1ba1a6d74d1a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -281,8 +281,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxUnreliableMessageSi
 
 </div>
 </div>
-<a id="a4caf42a3bc46a5b0c4fb5708133f2532" name="a4caf42a3bc46a5b0c4fb5708133f2532"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4caf42a3bc46a5b0c4fb5708133f2532">&#9670;&nbsp;</a></span>SendToClient()</h2>
+<a id="a3b22dbd3ada33c3d3a1ba1a6d74d1a0d" name="a3b22dbd3ada33c3d3a1ba1a6d74d1a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b22dbd3ada33c3d3a1ba1a6d74d1a0d">&#9670;&nbsp;</a></span>SendToClient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -303,7 +303,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxUnreliableMessageSi
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>IsReliable</em> = <code>true</code>&#160;</td>
+          <td class="paramname"><em>IsReliable</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MessageDelay</em> = <code>10</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -318,7 +324,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxUnreliableMessageSi
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ClientID</td><td>The number of the client </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>The message to be sent to the client </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">IsReliable</td><td>if the parameter is set to true, the message is guaranteed to reach. if the parameter is set to false before the message delivery is not guaranteed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">IsReliable</td><td>if the parameter is set to true, the message is guaranteed to reach. If the parameter is set to false the message delivery is not guaranteed </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MessageDelay</td><td>The delay after sending message. Useless if IsReliable set to false. </td></tr>
   </table>
   </dd>
 </dl>
