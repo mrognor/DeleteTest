@@ -131,5 +131,6 @@ var NAVTREEINDEX0 =
 "md__e_n__functions.html#autotoc_md22":[5,5],
 "md__e_n__functions.html#autotoc_md23":[5,6],
 "md__e_n__functions.html#autotoc_md24":[5,7],
+"md__e_n__functions.html#autotoc_md25":[5,8],
 "pages.html":[]
 };

@@ -116,8 +116,7 @@ SendFile</h1>
 </ul>
 </li>
 <li>The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending</li>
-<li>The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay <br  />
-</li>
+<li>The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay. The delay between sending the chunks is 20 millimeconds.</li>
 </ul>
 <p >By default, the library function is used to output to the console <br  />
  Timeout between sending set to 20. You adjust the number of chunks that will be sent between the delay</p>
@@ -202,12 +201,15 @@ DownloadStatus</h1>
 </ul>
 <h1><a class="anchor" id="autotoc_md23"></a>
 IsFileExist</h1>
-<p ><code>bool IsFileExist(std::string filePath)</code> <br  />
+<p ><code>bool IsFileExist(std::string FilePath)</code> <br  />
  Return true if file exists, otherwise rerurn false</p>
 <h1><a class="anchor" id="autotoc_md24"></a>
+GetFileSize</h1>
+<p ><code>uint64_t GetFileSize(std::string FileName)</code> Return file size in bytes. If couldn't open the file return 0</p>
+<h1><a class="anchor" id="autotoc_md25"></a>
 Delay</h1>
 <p ><code>void Delay(int milliseconds)</code> <br  />
- Crossplatform function for program suspension. Gets milliseconds </p>
+ Crossplatform function for program suspension. Gets milliseconds. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

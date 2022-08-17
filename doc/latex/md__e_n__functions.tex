@@ -24,8 +24,7 @@
 
 \end{DoxyItemize}
 \item The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending
-\item The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay ~\newline
-
+\item The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay. The delay between sending the chunks is 20 millimeconds.
 \end{DoxyItemize}
 
 By default, the library function is used to output to the console ~\newline
@@ -108,7 +107,8 @@ By default, the library function is used to output to the console ~\newline
 \item The fourth shows the remaining time in seconds ~\newline
 
 \end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md23}{}\doxysection{Is\+File\+Exist}\label{md__e_n__functions_autotoc_md23}
-{\ttfamily bool Is\+File\+Exist(std\+::string file\+Path)} ~\newline
- Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md24}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md24}
+{\ttfamily bool Is\+File\+Exist(std\+::string File\+Path)} ~\newline
+ Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md24}{}\doxysection{Get\+File\+Size}\label{md__e_n__functions_autotoc_md24}
+{\ttfamily uint64\+\_\+t Get\+File\+Size(std\+::string File\+Name)} Return file size in bytes. If couldn\textquotesingle{}t open the file return 0\hypertarget{md__e_n__functions_autotoc_md25}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md25}
 {\ttfamily void Delay(int milliseconds)} ~\newline
- Crossplatform function for program suspension. Gets milliseconds 
+ Crossplatform function for program suspension. Gets milliseconds. 

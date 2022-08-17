@@ -18,7 +18,7 @@ The function is needed to send files. The message receiving function should be c
 	* The third parameter shows the transfer rate in bytes.  
 	* The fourth shows the remaining time in seconds  
 * The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending
-* The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay  
+* The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay. The delay between sending the chunks is 20 millimeconds.
 
 By default, the library function is used to output to the console  
 Timeout between sending set to 20. You adjust the number of chunks that will be sent between the delay

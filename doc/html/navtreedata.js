@@ -54,7 +54,8 @@ var NAVTREE =
       [ "ForwardFile", "md__e_n__functions.html#autotoc_md21", null ],
       [ "DownloadStatus", "md__e_n__functions.html#autotoc_md22", null ],
       [ "IsFileExist", "md__e_n__functions.html#autotoc_md23", null ],
-      [ "Delay", "md__e_n__functions.html#autotoc_md24", null ]
+      [ "GetFileSize", "md__e_n__functions.html#autotoc_md24", null ],
+      [ "Delay", "md__e_n__functions.html#autotoc_md25", null ]
     ] ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
     [ "Classes", "annotated.html", [
