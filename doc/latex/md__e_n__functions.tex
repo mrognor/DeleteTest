@@ -1,6 +1,7 @@
 \hypertarget{md__e_n__functions_autotoc_md17}{}\doxysection{Split}\label{md__e_n__functions_autotoc_md17}
 {\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::string\texorpdfstring{$>$}{>} Split(std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})} ~\newline
- The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation\hypertarget{md__e_n__functions_autotoc_md18}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md18}
+ The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation. If there is a separator string at the end, then there will be an empty string at the end of the vector ~\newline
+\hypertarget{md__e_n__functions_autotoc_md18}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md18}
 {\ttfamily bool Send\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr, uint64\+\_\+t Previously\+Sended\+Size = 0, int Chunks\+Number\+Between\+Delay = 0);} ~\newline
  The function is needed to send files. The message receiving function should be called on the other side. ~\newline
 

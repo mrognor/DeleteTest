@@ -4,7 +4,7 @@
 `std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString=" ")`  
 The function is needed for convenient work with incoming messages. 
 Designed to split a string into a vector of strings. 
-Divides by spaces by default, but you can set your own line for separation
+Divides by spaces by default, but you can set your own line for separation. If there is a separator string at the end, then there will be an empty string at the end of the vector  
 
 ## SendFile  
 `bool SendFile(EN_SOCKET FileSendSocket, std::string FilePath, bool& IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr, uint64_t PreviouslySendedSize = 0, int ChunksNumberBetweenDelay = 0);`    

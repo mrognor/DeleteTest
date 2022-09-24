@@ -91,7 +91,8 @@ $(document).ready(function(){initNavTree('md__e_n__functions.html',''); initResi
 <div class="textblock"><h1><a class="anchor" id="autotoc_md17"></a>
 Split</h1>
 <p ><code>std::vector&lt;std::string&gt; Split(std::string StringToSplit, std::string SplitterString=" ")</code> <br  />
- The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation</p>
+ The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation. If there is a separator string at the end, then there will be an empty string at the end of the vector <br  />
+</p>
 <h1><a class="anchor" id="autotoc_md18"></a>
 SendFile</h1>
 <p ><code>bool SendFile(EN_SOCKET FileSendSocket, std::string FilePath, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr, uint64_t PreviouslySendedSize = 0, int ChunksNumberBetweenDelay = 0);</code> <br  />

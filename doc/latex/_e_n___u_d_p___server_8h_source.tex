@@ -4,7 +4,7 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
 \DoxyCodeLine{2 }
-\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#if defined WIN32 || defined \_WIN64 }}
 \DoxyCodeLine{4 }
 \DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
 \DoxyCodeLine{6 \textcolor{preprocessor}{\#include <winsock2.h>}}
