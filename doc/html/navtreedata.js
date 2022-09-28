@@ -55,7 +55,9 @@ var NAVTREE =
       [ "DownloadStatus", "md__e_n__functions.html#autotoc_md22", null ],
       [ "IsFileExist", "md__e_n__functions.html#autotoc_md23", null ],
       [ "GetFileSize", "md__e_n__functions.html#autotoc_md24", null ],
-      [ "Delay", "md__e_n__functions.html#autotoc_md25", null ]
+      [ "Delay", "md__e_n__functions.html#autotoc_md25", null ],
+      [ "IntToString", "md__e_n__functions.html#autotoc_md26", null ],
+      [ "StringToInt", "md__e_n__functions.html#autotoc_md27", null ]
     ] ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
     [ "Classes", "annotated.html", [
