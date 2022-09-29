@@ -123,7 +123,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsConnected</b> ()</t
 <tr class="memdesc:af98ad9b3c3de71b876ef817cd186ec10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect to current ip and current port.  <a href="class_e_n_1_1_e_n___r_a_u___client.html#af98ad9b3c3de71b876ef817cd186ec10">More...</a><br /></td></tr>
 <tr class="separator:af98ad9b3c3de71b876ef817cd186ec10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2c32cbaf50b1336b16247465329042d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___r_a_u___client.html#ad2c32cbaf50b1336b16247465329042d">Run</a> ()</td></tr>
-<tr class="memdesc:ad2c32cbaf50b1336b16247465329042d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to start server.  <a href="class_e_n_1_1_e_n___r_a_u___client.html#ad2c32cbaf50b1336b16247465329042d">More...</a><br /></td></tr>
+<tr class="memdesc:ad2c32cbaf50b1336b16247465329042d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to start server listening.  <a href="class_e_n_1_1_e_n___r_a_u___client.html#ad2c32cbaf50b1336b16247465329042d">More...</a><br /></td></tr>
 <tr class="separator:ad2c32cbaf50b1336b16247465329042d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a511c3631134f12e7cc3afa4573575821"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_e_n_1_1_e_n___r_a_u___client.html#a511c3631134f12e7cc3afa4573575821">SendToServer</a> (std::string message, bool IsReliable=true, int MessageDelay=10)</td></tr>
 <tr class="memdesc:a511c3631134f12e7cc3afa4573575821"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for sending a message to a connected server.  <a href="class_e_n_1_1_e_n___r_a_u___client.html#a511c3631134f12e7cc3afa4573575821">More...</a><br /></td></tr>
@@ -311,8 +311,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>MaxUnreliableMessageSi
       </table>
 </div><div class="memdoc">
 
-<p>Method to start server. </p>
-<p >Starts a thread to process server responses Important! You have to determine <a class="el" href="class_e_n_1_1_e_n___r_a_u___client.html#a9f55c59b8f0bca6d79b0c21f20aecda4" title="This function is called after connecting to the server.">AfterConnect()</a>, <a class="el" href="class_e_n_1_1_e_n___r_a_u___client.html#a2e628002b39e45466005bf5ba154392e" title="The function processes all incoming messages.">ServerMessageHandler()</a> and <a class="el" href="class_e_n_1_1_e_n___r_a_u___client.html#aa84dbde7f8803ff82b91bfbfd5beffbb" title="The function is called before disconnecting from the server.">BeforeDisconnect()</a> </p>
+<p>Method to start server listening. </p>
+<p >Starts a thread to process server responses </p>
 
 </div>
 </div>

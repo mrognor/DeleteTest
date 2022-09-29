@@ -28,7 +28,7 @@ bool \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_ad3a0b8c584870062ce7ba1
 bool \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_af98ad9b3c3de71b876ef817cd186ec10}{Connect}} (std\+::string ip\+Addr, int port)
 \begin{DoxyCompactList}\small\item\em Connect to current ip and current port. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_ad2c32cbaf50b1336b16247465329042d}{Run}} ()
-\begin{DoxyCompactList}\small\item\em Method to start server. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Method to start server listening. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}{Send\+To\+Server}} (std\+::string message, bool Is\+Reliable=true, int Message\+Delay=10)
 \begin{DoxyCompactList}\small\item\em Function for sending a message to a connected server. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_ac5d179e920398855cb17ec7ca09faeef}\label{class_e_n_1_1_e_n___r_a_u___client_ac5d179e920398855cb17ec7ca09faeef}} 
@@ -140,9 +140,9 @@ Returns true in case of success, false otherwise
 
 
 
-Method to start server. 
+Method to start server listening. 
 
-Starts a thread to process server responses Important! You have to determine \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a9f55c59b8f0bca6d79b0c21f20aecda4}{After\+Connect()}}, \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_a2e628002b39e45466005bf5ba154392e}{Server\+Message\+Handler()}} and \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client_aa84dbde7f8803ff82b91bfbfd5beffbb}{Before\+Disconnect()}} \mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}\label{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}} 
+Starts a thread to process server responses \mbox{\Hypertarget{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}\label{class_e_n_1_1_e_n___r_a_u___client_a511c3631134f12e7cc3afa4573575821}} 
 \index{EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}!SendToServer@{SendToServer}}
 \index{SendToServer@{SendToServer}!EN::EN\_RAU\_Client@{EN::EN\_RAU\_Client}}
 \doxysubsubsection{\texorpdfstring{SendToServer()}{SendToServer()}}
