@@ -28,36 +28,37 @@ var NAVTREE =
     [ "Easy_Network", "index.html#autotoc_md0", null ],
     [ "Library documentation:", "index.html#autotoc_md1", null ],
     [ "Library usage", "index.html#autotoc_md2", [
-      [ "Windows library usage guide", "index.html#autotoc_md3", null ],
-      [ "Linux library usage", "index.html#autotoc_md4", null ]
+      [ "Visual Studio library usage guide", "index.html#autotoc_md3", null ],
+      [ "MinGW library usage guide", "index.html#autotoc_md4", null ],
+      [ "Linux library usage", "index.html#autotoc_md5", null ]
     ] ],
-    [ "Important", "index.html#autotoc_md5", null ],
-    [ "How to choose a class", "index.html#autotoc_md6", [
-      [ "TCP classes", "index.html#autotoc_md7", [
-        [ "EN_TCP_Server", "index.html#autotoc_md8", null ],
-        [ "EN_TCP_Client", "index.html#autotoc_md9", null ]
+    [ "Important", "index.html#autotoc_md6", null ],
+    [ "How to choose a class", "index.html#autotoc_md7", [
+      [ "TCP classes", "index.html#autotoc_md8", [
+        [ "EN_TCP_Server", "index.html#autotoc_md9", null ],
+        [ "EN_TCP_Client", "index.html#autotoc_md10", null ]
       ] ],
-      [ "UDP classes", "index.html#autotoc_md10", [
-        [ "EN_UDP_Server", "index.html#autotoc_md11", null ],
-        [ "EN_UDP_Client", "index.html#autotoc_md12", null ]
+      [ "UDP classes", "index.html#autotoc_md11", [
+        [ "EN_UDP_Server", "index.html#autotoc_md12", null ],
+        [ "EN_UDP_Client", "index.html#autotoc_md13", null ]
       ] ],
-      [ "RAU classes", "index.html#autotoc_md13", [
-        [ "EN_RAU_Server", "index.html#autotoc_md14", null ],
-        [ "EN_RAU_Client", "index.html#autotoc_md15", null ]
+      [ "RAU classes", "index.html#autotoc_md14", [
+        [ "EN_RAU_Server", "index.html#autotoc_md15", null ],
+        [ "EN_RAU_Client", "index.html#autotoc_md16", null ]
       ] ]
     ] ],
     [ "Usefull library functions", "md__e_n__functions.html", [
-      [ "Split", "md__e_n__functions.html#autotoc_md17", null ],
-      [ "SendFile", "md__e_n__functions.html#autotoc_md18", null ],
-      [ "RecvFile", "md__e_n__functions.html#autotoc_md19", null ],
-      [ "ContinueRecvFile", "md__e_n__functions.html#autotoc_md20", null ],
-      [ "ForwardFile", "md__e_n__functions.html#autotoc_md21", null ],
-      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md22", null ],
-      [ "IsFileExist", "md__e_n__functions.html#autotoc_md23", null ],
-      [ "GetFileSize", "md__e_n__functions.html#autotoc_md24", null ],
-      [ "Delay", "md__e_n__functions.html#autotoc_md25", null ],
-      [ "IntToString", "md__e_n__functions.html#autotoc_md26", null ],
-      [ "StringToInt", "md__e_n__functions.html#autotoc_md27", null ]
+      [ "Split", "md__e_n__functions.html#autotoc_md18", null ],
+      [ "SendFile", "md__e_n__functions.html#autotoc_md19", null ],
+      [ "RecvFile", "md__e_n__functions.html#autotoc_md20", null ],
+      [ "ContinueRecvFile", "md__e_n__functions.html#autotoc_md21", null ],
+      [ "ForwardFile", "md__e_n__functions.html#autotoc_md22", null ],
+      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md23", null ],
+      [ "IsFileExist", "md__e_n__functions.html#autotoc_md24", null ],
+      [ "GetFileSize", "md__e_n__functions.html#autotoc_md25", null ],
+      [ "Delay", "md__e_n__functions.html#autotoc_md26", null ],
+      [ "IntToString", "md__e_n__functions.html#autotoc_md27", null ],
+      [ "StringToInt", "md__e_n__functions.html#autotoc_md28", null ]
     ] ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
     [ "Classes", "annotated.html", [

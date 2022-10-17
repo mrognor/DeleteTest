@@ -1,7 +1,7 @@
-\hypertarget{md__e_n__functions_autotoc_md17}{}\doxysection{Split}\label{md__e_n__functions_autotoc_md17}
+\hypertarget{md__e_n__functions_autotoc_md18}{}\doxysection{Split}\label{md__e_n__functions_autotoc_md18}
 {\ttfamily std\+::vector\texorpdfstring{$<$}{<}std\+::string\texorpdfstring{$>$}{>} Split(std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})} ~\newline
  The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation. If there is a separator string at the end, then there will be an empty string at the end of the vector ~\newline
-\hypertarget{md__e_n__functions_autotoc_md18}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md18}
+\hypertarget{md__e_n__functions_autotoc_md19}{}\doxysection{Send\+File}\label{md__e_n__functions_autotoc_md19}
 {\ttfamily bool Send\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr, uint64\+\_\+t Previously\+Sended\+Size = 0, int Chunks\+Number\+Between\+Delay = 0);} ~\newline
  The function is needed to send files. The message receiving function should be called on the other side. ~\newline
 
@@ -29,7 +29,7 @@
 \end{DoxyItemize}
 
 By default, the library function is used to output to the console ~\newline
- Timeout between sending set to 20. You adjust the number of chunks that will be sent between the delay\hypertarget{md__e_n__functions_autotoc_md19}{}\doxysection{Recv\+File}\label{md__e_n__functions_autotoc_md19}
+ Timeout between sending set to 20. You adjust the number of chunks that will be sent between the delay\hypertarget{md__e_n__functions_autotoc_md20}{}\doxysection{Recv\+File}\label{md__e_n__functions_autotoc_md20}
 {\ttfamily bool Recv\+File(EN\+\_\+\+SOCKET\& File\+Send\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
  The function is needed to receiving files. ~\newline
 
@@ -51,7 +51,7 @@ By default, the library function is used to output to the console ~\newline
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-By default, the library function is used to output to the console\hypertarget{md__e_n__functions_autotoc_md20}{}\doxysection{Continue\+Recv\+File}\label{md__e_n__functions_autotoc_md20}
+By default, the library function is used to output to the console\hypertarget{md__e_n__functions_autotoc_md21}{}\doxysection{Continue\+Recv\+File}\label{md__e_n__functions_autotoc_md21}
 {\ttfamily bool Continue\+Recv\+File(EN\+\_\+\+SOCKET File\+Send\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
  Function to continue receiving the file
 \begin{DoxyItemize}
@@ -73,7 +73,7 @@ By default, the library function is used to output to the console\hypertarget{md
 \end{DoxyItemize}
 
 By default, the library function is used to output to the console ~\newline
-\hypertarget{md__e_n__functions_autotoc_md21}{}\doxysection{Forward\+File}\label{md__e_n__functions_autotoc_md21}
+\hypertarget{md__e_n__functions_autotoc_md22}{}\doxysection{Forward\+File}\label{md__e_n__functions_autotoc_md22}
 {\ttfamily bool Forward\+File(EN\+\_\+\+SOCKET Source\+File\+Socket, EN\+\_\+\+SOCKET Destination\+File\+Socket, bool\& Is\+Stop, void ($\ast$\+Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta) = nullptr)} ~\newline
  This function will forward file from one socket to another. ~\newline
 
@@ -96,7 +96,7 @@ By default, the library function is used to output to the console ~\newline
 \end{DoxyItemize}
 
 By default, the library function is used to output to the console ~\newline
-\hypertarget{md__e_n__functions_autotoc_md22}{}\doxysection{Download\+Status}\label{md__e_n__functions_autotoc_md22}
+\hypertarget{md__e_n__functions_autotoc_md23}{}\doxysection{Download\+Status}\label{md__e_n__functions_autotoc_md23}
 {\ttfamily void Download\+Status(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)} The function displays the status of the file transfer to the console
 \begin{DoxyItemize}
 \item The first is how many bytes were transmitted. ~\newline
@@ -107,16 +107,16 @@ By default, the library function is used to output to the console ~\newline
 
 \item The fourth shows the remaining time in seconds ~\newline
 
-\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md23}{}\doxysection{Is\+File\+Exist}\label{md__e_n__functions_autotoc_md23}
+\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md24}{}\doxysection{Is\+File\+Exist}\label{md__e_n__functions_autotoc_md24}
 {\ttfamily bool Is\+File\+Exist(std\+::string File\+Path)} ~\newline
- Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md24}{}\doxysection{Get\+File\+Size}\label{md__e_n__functions_autotoc_md24}
-{\ttfamily uint64\+\_\+t Get\+File\+Size(std\+::string File\+Name)} Return file size in bytes. If couldn\textquotesingle{}t open the file return 0\hypertarget{md__e_n__functions_autotoc_md25}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md25}
+ Return true if file exists, otherwise rerurn false\hypertarget{md__e_n__functions_autotoc_md25}{}\doxysection{Get\+File\+Size}\label{md__e_n__functions_autotoc_md25}
+{\ttfamily uint64\+\_\+t Get\+File\+Size(std\+::string File\+Name)} Return file size in bytes. If couldn\textquotesingle{}t open the file return 0\hypertarget{md__e_n__functions_autotoc_md26}{}\doxysection{Delay}\label{md__e_n__functions_autotoc_md26}
 {\ttfamily void Delay(int milliseconds)} ~\newline
- Crossplatform function for program suspension. Gets milliseconds.\hypertarget{md__e_n__functions_autotoc_md26}{}\doxysection{Int\+To\+String}\label{md__e_n__functions_autotoc_md26}
+ Crossplatform function for program suspension. Gets milliseconds.\hypertarget{md__e_n__functions_autotoc_md27}{}\doxysection{Int\+To\+String}\label{md__e_n__functions_autotoc_md27}
 {\ttfamily std\+::string Int\+To\+String(int n)} Function to convert int to string.
 \begin{DoxyItemize}
 \item int number to convert One char takes 1 byte, and a int takes 4 bytes. If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. This function turns a number into a character, since a character occupies a byte, then you can transfer numbers up to 255 in one byte. This function can be considered as the translation of a number into a number system with a base of 256 This function does not work with negative numbers.
-\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md27}{}\doxysection{String\+To\+Int}\label{md__e_n__functions_autotoc_md27}
+\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md28}{}\doxysection{String\+To\+Int}\label{md__e_n__functions_autotoc_md28}
 {\ttfamily int String\+To\+Int(std\+::string str)} Function to convert string to int.
 \begin{DoxyItemize}
 \item string to convert to int Works with strings from function EN\+::\+Int\+To\+String. 

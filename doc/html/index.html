@@ -100,7 +100,7 @@ Library usage</h1>
 <p >Before you start, I advise you to download the code examples. For linux, you can save files to one folder, and for visual studio, you will need to add these files to different projects <br  />
  Examples available here: <a href="https://github.com/mrognor/Easy_Network/tree/master/Examples">https://github.com/mrognor/Easy_Network/tree/master/Examples</a></p>
 <h2><a class="anchor" id="autotoc_md3"></a>
-Windows library usage guide</h2>
+Visual Studio library usage guide</h2>
 <ol type="1">
 <li>Download the latest release from github</li>
 <li>Create a new project in visual studio</li>
@@ -122,10 +122,24 @@ Windows library usage guide</h2>
 </li>
 </ol>
 <h2><a class="anchor" id="autotoc_md4"></a>
+MinGW library usage guide</h2>
+<ol type="1">
+<li>Download the latest release from github</li>
+<li>You can extract library release archive to any folder. Make sure that the path to the header files in your code is up to date</li>
+<li>Now all ready to compile your project <br  />
+ You can compile server using command: <br  />
+ <code>g++ -pthread -lws2_32 TCPServer.cpp bin/libEasyNetwork.a -o server.sh</code> <br  />
+ You can compile client using command: <br  />
+ <code>g++ -pthread -lws2_32 TCPClient.cpp bin/libEasyNetwork.a -o client.sh</code> <br  />
+</li>
+<li>Run your programs using command: <br  />
+ <code>./server.sh</code> and <code>./client.sh</code></li>
+</ol>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Linux library usage</h2>
 <ol type="1">
 <li>Download the latest release from github</li>
-<li>You can extract library release archive to any folder. I will save everything in one folder for convenience</li>
+<li>You can extract library release archive to any folder. I will save everything in one folder for convenience. Make sure that the path to the header files in your code is up to date</li>
 </ol>
 <p ><img src="https://user-images.githubusercontent.com/47296449/166112771-628c328f-cef5-4c75-a440-d018841f351b.png" alt="image" class="inline"/></p>
 <ol type="1">
@@ -139,7 +153,7 @@ Linux library usage</h2>
  <code>./server.sh</code> and <code>./client.sh</code></li>
 </ol>
 <p ><img src="https://user-images.githubusercontent.com/47296449/166113135-c9fc8b7d-bf3a-4589-bdce-3582c5f7abd0.png" alt="image" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md5"></a>
+<h1><a class="anchor" id="autotoc_md6"></a>
 Important</h1>
 <p >I know that no one reads further than the readme, so I want to bring some important things here <br  />
 </p><ol type="1">
@@ -148,15 +162,17 @@ Important</h1>
 <li>On linux, after disconnecting clients from the server, the port may be blocked for a small amount of time. Due to when trying to start the server again, errors will come out. We just have to wait a little <br  />
 </li>
 <li>The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes</li>
+<li>Note that the maximum size of a udp packet that can be guaranteed to be sent and received is 508 bytes. You can send more, but then the message may not go away <br  />
+</li>
 </ol>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md7"></a>
 How to choose a class</h1>
 <p >This is a small overview of the library classes to simplify class selection</p>
-<h2><a class="anchor" id="autotoc_md7"></a>
+<h2><a class="anchor" id="autotoc_md8"></a>
 TCP classes</h2>
 <p >These classes support connection and have got only reliable message sending. <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md8"></a>
+<h3><a class="anchor" id="autotoc_md9"></a>
 EN_TCP_Server</h3>
 <p >You have to define 3 methods</p><ol type="1">
 <li>void OnClientConnected(int ClientID) <br  />
@@ -170,7 +186,7 @@ EN_TCP_Server</h3>
  To start the server, you need to call the Run method <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp</a> <br  />
 </p>
-<h3><a class="anchor" id="autotoc_md9"></a>
+<h3><a class="anchor" id="autotoc_md10"></a>
 EN_TCP_Client</h3>
 <p >You have to define 3 methods <br  />
 </p><ol type="1">
@@ -185,11 +201,11 @@ EN_TCP_Client</h3>
  Before shutting down the program, you need to disconnect from the server using the method Disconnect <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp</a> <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md10"></a>
+<h2><a class="anchor" id="autotoc_md11"></a>
 UDP classes</h2>
 <p >These classes do not support connection and have got only unreliable message sending. <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md11"></a>
+<h3><a class="anchor" id="autotoc_md12"></a>
 EN_UDP_Server</h3>
 <p >You have to define 2 methods</p><ol type="1">
 <li>void ClientMessageHandler(std::string message, std::string ClientIpAddress, long long TimeSincePackageArrived)</li>
@@ -200,7 +216,7 @@ EN_UDP_Server</h3>
  To start the server, you must call the method Run. To stop the server, you need to call the method Shutdown. <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp</a> <br  />
 </p>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<h3><a class="anchor" id="autotoc_md13"></a>
 EN_UDP_Client</h3>
 <p >You have to define 1 method</p><ol type="1">
 <li>void ServerMessageHandler(std::string message) <br  />
@@ -210,12 +226,12 @@ EN_UDP_Client</h3>
  To complete the work, you must call the method Close. <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp</a> <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md13"></a>
+<h2><a class="anchor" id="autotoc_md14"></a>
 RAU classes</h2>
 <p >This class supports connection. There is both reliable sending of messages and unreliable. <br  />
  The RAU differs from the TCP only in the ability to unreliable message send. <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md14"></a>
+<h3><a class="anchor" id="autotoc_md15"></a>
 EN_RAU_Server</h3>
 <p >You have to define 3 methods</p><ol type="1">
 <li>void OnClientConnected(int ClientID) <br  />
@@ -229,7 +245,7 @@ EN_RAU_Server</h3>
  To start the server, you need to call the Run method <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp</a> <br  />
 </p>
-<h3><a class="anchor" id="autotoc_md15"></a>
+<h3><a class="anchor" id="autotoc_md16"></a>
 EN_RAU_Client</h3>
 <p >You have to define 3 methods <br  />
 </p><ol type="1">
