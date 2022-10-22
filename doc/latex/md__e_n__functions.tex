@@ -115,9 +115,16 @@ By default, the library function is used to output to the console ~\newline
  Crossplatform function for program suspension. Gets milliseconds.\hypertarget{md__e_n__functions_autotoc_md27}{}\doxysection{Int\+To\+String}\label{md__e_n__functions_autotoc_md27}
 {\ttfamily std\+::string Int\+To\+String(int n)} Function to convert int to string.
 \begin{DoxyItemize}
-\item int number to convert One char takes 1 byte, and a int takes 4 bytes. If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. This function turns a number into a character, since a character occupies a byte, then you can transfer numbers up to 255 in one byte. This function can be considered as the translation of a number into a number system with a base of 256 This function does not work with negative numbers.
-\end{DoxyItemize}\hypertarget{md__e_n__functions_autotoc_md28}{}\doxysection{String\+To\+Int}\label{md__e_n__functions_autotoc_md28}
+\item int number to convert ~\newline
+
+\end{DoxyItemize}
+
+One char takes 1 byte, and a int takes 4 bytes. If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. This function turns a number into a character, since a character occupies a byte, then you can transfer numbers up to 255 in one byte. This function can be considered as the translation of a number into a number system with a base of 256 This function does not work with negative numbers.\hypertarget{md__e_n__functions_autotoc_md28}{}\doxysection{String\+To\+Int}\label{md__e_n__functions_autotoc_md28}
 {\ttfamily int String\+To\+Int(std\+::string str)} Function to convert string to int.
 \begin{DoxyItemize}
-\item string to convert to int Works with strings from function EN\+::\+Int\+To\+String. 
+\item string to convert to int ~\newline
+
 \end{DoxyItemize}
+
+Works with strings from function EN\+::\+Int\+To\+String. Note that since the number is converted to a string, some digits may become spaces. This is important because problems may occur when using the Split function. For example, you divide a string by spaces and the function will divide your number into 2 lines ~\newline
+ 

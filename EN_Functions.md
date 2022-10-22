@@ -87,7 +87,8 @@ Crossplatform function for program suspension. Gets milliseconds.
 ## IntToString
 `std::string IntToString(int n)`
 Function to convert int to string. 
-* int number to convert
+* int number to convert  
+
 One char takes 1 byte, and a int takes 4 bytes.
 If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. 
 This function turns a number into a character, since a character occupies a byte, 
@@ -98,6 +99,9 @@ This function does not work with negative numbers.
 ## StringToInt
 `int StringToInt(std::string str)`
 Function to convert string to int.
-* string to convert to int
+* string to convert to int  
+
 Works with strings from function EN::IntToString.
-	
+Note that since the number is converted to a string, some digits may become spaces. 
+This is important because problems may occur when using the Split function. 
+For example, you divide a string by spaces and the function will divide your number into 2 lines  

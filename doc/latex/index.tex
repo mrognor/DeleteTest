@@ -41,9 +41,9 @@ Open menu on C/\+C++ -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{
 \item You can extract library release archive to any folder. Make sure that the path to the header files in your code is up to date
 \item Now all ready to compile your project ~\newline
  You can compile server using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/lws2\+\_\+32 TCPServer.\+cpp bin/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 TCPServer.\+cpp bin/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
  You can compile client using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/lws2\+\_\+32 TCPClient.\+cpp bin/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 TCPClient.\+cpp bin/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
 
 \item Run your programs using command\+: ~\newline
  {\ttfamily ./server.sh} and {\ttfamily ./client.sh}
@@ -60,9 +60,9 @@ Open menu on C/\+C++ -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{
 \begin{DoxyEnumerate}
 \item Now all ready to compile your project ~\newline
  You can compile server using command\+: ~\newline
- {\ttfamily g++ -\/pthread TCPServer.\+cpp bin/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 TCPServer.\+cpp bin/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
  You can compile client using command\+: ~\newline
- {\ttfamily g++ -\/pthread TCPClient.\+cpp bin/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 TCPClient.\+cpp bin/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
 
 \item Run your programs using command\+: ~\newline
  {\ttfamily ./server.sh} and {\ttfamily ./client.sh}

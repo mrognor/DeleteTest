@@ -128,9 +128,9 @@ MinGW library usage guide</h2>
 <li>You can extract library release archive to any folder. Make sure that the path to the header files in your code is up to date</li>
 <li>Now all ready to compile your project <br  />
  You can compile server using command: <br  />
- <code>g++ -pthread -lws2_32 TCPServer.cpp bin/libEasyNetwork.a -o server.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 -lws2_32 TCPServer.cpp bin/libEasyNetwork.a -o server.sh</code> <br  />
  You can compile client using command: <br  />
- <code>g++ -pthread -lws2_32 TCPClient.cpp bin/libEasyNetwork.a -o client.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 -lws2_32 TCPClient.cpp bin/libEasyNetwork.a -o client.sh</code> <br  />
 </li>
 <li>Run your programs using command: <br  />
  <code>./server.sh</code> and <code>./client.sh</code></li>
@@ -145,9 +145,9 @@ Linux library usage</h2>
 <ol type="1">
 <li>Now all ready to compile your project <br  />
  You can compile server using command: <br  />
- <code>g++ -pthread TCPServer.cpp bin/libEasyNetwork.a -o server.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 TCPServer.cpp bin/libEasyNetwork.a -o server.sh</code> <br  />
  You can compile client using command: <br  />
- <code>g++ -pthread TCPClient.cpp bin/libEasyNetwork.a -o client.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 TCPClient.cpp bin/libEasyNetwork.a -o client.sh</code> <br  />
 </li>
 <li>Run your programs using command: <br  />
  <code>./server.sh</code> and <code>./client.sh</code></li>
