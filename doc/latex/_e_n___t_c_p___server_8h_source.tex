@@ -6,74 +6,73 @@
 \DoxyCodeLine{2 }
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#if defined WIN32 || defined \_WIN64 }}
 \DoxyCodeLine{4 }
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <winsock2.h>}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
-\DoxyCodeLine{8 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <unistd.h>}}
-\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <sys/socket.h>}}
-\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <netinet/in.h>}}
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
-\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET; }
-\DoxyCodeLine{17 \textcolor{preprocessor}{\#define INVALID\_SOCKET -\/1}}
-\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SOCKET\_ERROR -\/1}}
-\DoxyCodeLine{19 }
-\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}thread"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
+\DoxyCodeLine{7 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <netinet/in.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{15 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET; }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define INVALID\_SOCKET -\/1}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define SOCKET\_ERROR -\/1}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}thread"{}}}
+\DoxyCodeLine{23 }
 \DoxyCodeLine{24 }
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26 \textcolor{keyword}{namespace }EN}
-\DoxyCodeLine{27 \{}
-\DoxyCodeLine{29     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\_TCP\_Server}}}
-\DoxyCodeLine{30     \{}
-\DoxyCodeLine{31     \textcolor{keyword}{private}:}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33         \textcolor{comment}{// Boolean variable that displays the status of the server }}
-\DoxyCodeLine{34         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{36         \textcolor{comment}{// A method that processes messages from clients. Sends a message to the function ClientMessageHandler().}}
-\DoxyCodeLine{37         \textcolor{keywordtype}{void} ClientHandler(\textcolor{keywordtype}{int} ClientID);}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39         \textcolor{comment}{// The method that receives messages from the client. The first parameter is the socket index in the vector}}
-\DoxyCodeLine{40         \textcolor{keywordtype}{int} RecvFromClient(\textcolor{keywordtype}{int} ClientSocketID, std::string\& message);}
-\DoxyCodeLine{41 }
-\DoxyCodeLine{42     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{43 }
-\DoxyCodeLine{45         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1649702e5eacebcb9c400f1b3300b8db}{Port}} = 1111;}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{48         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}{IpAddress}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
-\DoxyCodeLine{49 }
-\DoxyCodeLine{51         std::vector<EN\_SOCKET> \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1052a2a74e8d9c618b0e77da1529e604}{ClientSockets}};}
-\DoxyCodeLine{52         }
-\DoxyCodeLine{58         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}{OnClientConnected}}(\textcolor{keywordtype}{int} ClientID) = 0;}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{65         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}{ClientMessageHandler}}(std::string message, \textcolor{keywordtype}{int} ClientID) = 0;}
-\DoxyCodeLine{66 }
-\DoxyCodeLine{72         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}{OnClientDisconnect}}(\textcolor{keywordtype}{int} ClientID) = 0;}
-\DoxyCodeLine{73 }
-\DoxyCodeLine{74     \textcolor{keyword}{public}:}
-\DoxyCodeLine{75 }
-\DoxyCodeLine{76         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\_TCP\_Server}}();}
-\DoxyCodeLine{77 }
-\DoxyCodeLine{79         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a80ae830ad30f0743d247037b44610f9b}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1649702e5eacebcb9c400f1b3300b8db}{Port}}; \}}
-\DoxyCodeLine{80 }
-\DoxyCodeLine{82         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a89afa1f70cbd95083f99f6a0b12b7a9c}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}{IpAddress}}; \}}
-\DoxyCodeLine{83 }
-\DoxyCodeLine{85         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_af024e34d9445792d9063118b9dd681cc}{GetConnectionsCount}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1052a2a74e8d9c618b0e77da1529e604}{ClientSockets}}.size(); \}}
-\DoxyCodeLine{86 }
-\DoxyCodeLine{88         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}{Run}}();}
-\DoxyCodeLine{89 }
-\DoxyCodeLine{95         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}{DisconnectClient}}(\textcolor{keywordtype}{int} ClientID);}
-\DoxyCodeLine{96 }
-\DoxyCodeLine{98         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}{Shutdown}}();}
-\DoxyCodeLine{99         }
-\DoxyCodeLine{107         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}{SendToClient}}(\textcolor{keywordtype}{int} ClientId, std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
-\DoxyCodeLine{108     \};}
-\DoxyCodeLine{109 \}}
+\DoxyCodeLine{25 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{28     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\_TCP\_Server}}}
+\DoxyCodeLine{29     \{}
+\DoxyCodeLine{30     \textcolor{keyword}{private}:}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{comment}{// Boolean variable that displays the status of the server }}
+\DoxyCodeLine{33         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35         \textcolor{comment}{// A method that processes messages from clients. Sends a message to the function ClientMessageHandler().}}
+\DoxyCodeLine{36         \textcolor{keywordtype}{void} ClientHandler(\textcolor{keywordtype}{int} ClientID);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38         \textcolor{comment}{// The method that receives messages from the client. The first parameter is the socket index in the vector}}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} RecvFromClient(\textcolor{keywordtype}{int} ClientSocketID, std::string\& message);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1649702e5eacebcb9c400f1b3300b8db}{Port}} = 1111;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{47         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}{IpAddress}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50         std::vector<EN\_SOCKET> \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1052a2a74e8d9c618b0e77da1529e604}{ClientSockets}};}
+\DoxyCodeLine{51         }
+\DoxyCodeLine{57         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}{OnClientConnected}}(\textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{64         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}{ClientMessageHandler}}(std::string message, \textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{71         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}{OnClientDisconnect}}(\textcolor{keywordtype}{int} ClientID) = 0;}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keyword}{public}:}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75         \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server}{EN\_TCP\_Server}}();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{78         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a80ae830ad30f0743d247037b44610f9b}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1649702e5eacebcb9c400f1b3300b8db}{Port}}; \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{81         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a89afa1f70cbd95083f99f6a0b12b7a9c}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}{IpAddress}}; \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{84         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_af024e34d9445792d9063118b9dd681cc}{GetConnectionsCount}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1052a2a74e8d9c618b0e77da1529e604}{ClientSockets}}.size(); \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{87         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}{Run}}();}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{94         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}{DisconnectClient}}(\textcolor{keywordtype}{int} ClientID);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{97         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}{Shutdown}}();}
+\DoxyCodeLine{98         }
+\DoxyCodeLine{106         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}{SendToClient}}(\textcolor{keywordtype}{int} ClientId, std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
+\DoxyCodeLine{107     \};}
+\DoxyCodeLine{108 \}}
 
 \end{DoxyCode}

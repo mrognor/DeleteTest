@@ -31,7 +31,7 @@ Open menu on C/\+C++ -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{
 
 
 \begin{DoxyEnumerate}
-\item Open menu on Linker -\/\texorpdfstring{$>$}{>} Input -\/\texorpdfstring{$>$}{>} Additional Dependencies and add \char`\"{}\+Easy\+Network.\+lib\char`\"{} here. Note that you must specify the correct file name for each build configuration. For example, to compile the debug x86 version, you must specify \char`\"{}\+Easy\+Network-\/x86d.\+lib\char`\"{}, to release x86 -\/ \char`\"{}\+Easy\+Network-\/x86.\+lib\char`\"{}, to debug x64 -\/ \char`\"{}\+Easy\+Network-\/x64d.\+lib\char`\"{}, to release x64 -\/ \char`\"{}\+Easy\+Network-\/x64.\+lib\char`\"{} 
+\item Open menu on Linker -\/\texorpdfstring{$>$}{>} Input -\/\texorpdfstring{$>$}{>} Additional Dependencies and add \char`\"{}\+Easy\+Network.\+lib\char`\"{} here. Note that you must specify the correct file name for each build configuration. For example, to compile the debug x86 version, you must specify \char`\"{}\+Easy\+Network-\/x86d.\+lib\char`\"{}, to release x86 -\/ \char`\"{}\+Easy\+Network-\/x86.\+lib\char`\"{}, to debug x64 -\/ \char`\"{}\+Easy\+Network-\/x64d.\+lib\char`\"{}, to release x64 -\/ \char`\"{}\+Easy\+Network-\/x64.\+lib\char`\"{}. Also add \char`\"{}ws2\+\_\+32.\+lib\char`\"{} 
 \item The configuration of the project for working with the library is completed. Now you can use the code samples and try to make own programm ~\newline
 
 \end{DoxyEnumerate}\hypertarget{index_autotoc_md4}{}\doxysubsection{Min\+GW library usage guide}\label{index_autotoc_md4}
@@ -41,9 +41,9 @@ Open menu on C/\+C++ -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{
 \item You can extract library release archive to any folder. Make sure that the path to the header files in your code is up to date
 \item Now all ready to compile your project ~\newline
  You can compile server using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 TCPServer.\+cpp bin/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 TCPServer.\+cpp lib/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
  You can compile client using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 TCPClient.\+cpp bin/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 TCPClient.\+cpp lib/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
 
 \item Run your programs using command\+: ~\newline
  {\ttfamily ./server.sh} and {\ttfamily ./client.sh}
@@ -60,9 +60,9 @@ Open menu on C/\+C++ -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{
 \begin{DoxyEnumerate}
 \item Now all ready to compile your project ~\newline
  You can compile server using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 TCPServer.\+cpp bin/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 TCPServer.\+cpp lib/lib\+Easy\+Network.\+a -\/o server.\+sh} ~\newline
  You can compile client using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 TCPClient.\+cpp bin/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 TCPClient.\+cpp lib/lib\+Easy\+Network.\+a -\/o client.\+sh} ~\newline
 
 \item Run your programs using command\+: ~\newline
  {\ttfamily ./server.sh} and {\ttfamily ./client.sh}

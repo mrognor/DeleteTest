@@ -6,72 +6,71 @@
 \DoxyCodeLine{2 }
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#if defined WIN32 || defined \_WIN64 }}
 \DoxyCodeLine{4 }
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <winsock2.h>}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
-\DoxyCodeLine{8 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <unistd.h>}}
-\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <sys/socket.h>}}
-\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <netinet/in.h>}}
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
-\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET;}
-\DoxyCodeLine{17 \textcolor{preprocessor}{\#define INVALID\_SOCKET -\/1}}
-\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SOCKET\_ERROR -\/1}}
-\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{20 }
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <iostream>}}
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <thread>}}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
-\DoxyCodeLine{26 }
-\DoxyCodeLine{27 \textcolor{keyword}{namespace }EN}
-\DoxyCodeLine{28 \{}
-\DoxyCodeLine{30     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{EN\_UDP\_Client}}}
-\DoxyCodeLine{31     \{}
-\DoxyCodeLine{32     \textcolor{keyword}{private}:}
-\DoxyCodeLine{33         \textcolor{comment}{// Server address}}
-\DoxyCodeLine{34         sockaddr\_in ServerSockAddr;}
-\DoxyCodeLine{35 }
-\DoxyCodeLine{37         EN\_SOCKET ServerConnectionSocket = INVALID\_SOCKET;}
-\DoxyCodeLine{38         }
-\DoxyCodeLine{39         \textcolor{comment}{// The server's internal method for processing incoming messages. }}
-\DoxyCodeLine{40         \textcolor{comment}{// Passes the incoming string to method ServerMessageHandler to interpretate incoming message}}
-\DoxyCodeLine{41         \textcolor{keywordtype}{void} ServerHandler();}
-\DoxyCodeLine{42 }
-\DoxyCodeLine{43     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{44 }
-\DoxyCodeLine{46         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}} = 1111;}
-\DoxyCodeLine{47 }
-\DoxyCodeLine{49         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ad234ba02ece2d965b157e9100c8639d9}{MaxMessageSize}} = 256;}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{52         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aba2523ac99417083f2ee957d5cf0a5eb}{ServerIpAddress}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{56         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}{ServerMessageHandler}}(std::string message) = 0;}
-\DoxyCodeLine{57 }
-\DoxyCodeLine{58     \textcolor{keyword}{public}:}
-\DoxyCodeLine{59         \textcolor{comment}{// Default constructor. Initiate winsock api}}
-\DoxyCodeLine{60         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{EN\_UDP\_Client}}();}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{63         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a1e8589d4b8a8af5a2db313a65be30bfb}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}}; \}}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{66         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a297b8d26f3965a2ecc1609ae62a7364e}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aba2523ac99417083f2ee957d5cf0a5eb}{ServerIpAddress}}; \}}
-\DoxyCodeLine{67 }
-\DoxyCodeLine{69         EN\_SOCKET \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a45c6e4da9bb1a31c42bbf2da93d9a04e}{GetSocket}}() \{ \textcolor{keywordflow}{return} ServerConnectionSocket; \}}
-\DoxyCodeLine{70 }
-\DoxyCodeLine{72         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a4751eab3ad696f6f740cbb21434b54ed}{Run}}();}
-\DoxyCodeLine{73 }
-\DoxyCodeLine{80         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a95b11e4a64358af9ffe7287eac17f279}{SendToServer}}(std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{83         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a1a57fa02dc7f7ef24476b76bd054b146}{Stop}}();}
-\DoxyCodeLine{84 }
-\DoxyCodeLine{85         \textcolor{comment}{// Default destructor}}
-\DoxyCodeLine{86         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{\string~EN\_UDP\_Client}}();}
-\DoxyCodeLine{87     \};}
-\DoxyCodeLine{88 \}}
-\DoxyCodeLine{89 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
+\DoxyCodeLine{7 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <netinet/in.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{15 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET;}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define INVALID\_SOCKET -\/1}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define SOCKET\_ERROR -\/1}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{29     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{EN\_UDP\_Client}}}
+\DoxyCodeLine{30     \{}
+\DoxyCodeLine{31     \textcolor{keyword}{private}:}
+\DoxyCodeLine{32         \textcolor{comment}{// Server address}}
+\DoxyCodeLine{33         sockaddr\_in ServerSockAddr;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{36         EN\_SOCKET ServerConnectionSocket = INVALID\_SOCKET;}
+\DoxyCodeLine{37         }
+\DoxyCodeLine{38         \textcolor{comment}{// The server's internal method for processing incoming messages. }}
+\DoxyCodeLine{39         \textcolor{comment}{// Passes the incoming string to method ServerMessageHandler to interpretate incoming message}}
+\DoxyCodeLine{40         \textcolor{keywordtype}{void} ServerHandler();}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{45         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}} = 1111;}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{48         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ad234ba02ece2d965b157e9100c8639d9}{MaxMessageSize}} = 256;}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{51         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aba2523ac99417083f2ee957d5cf0a5eb}{ServerIpAddress}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{55         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aec18f98cbdc95f77816f070bba6b3afb}{ServerMessageHandler}}(std::string message) = 0;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keyword}{public}:}
+\DoxyCodeLine{58         \textcolor{comment}{// Default constructor. Initiate winsock api}}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{EN\_UDP\_Client}}();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{62         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a1e8589d4b8a8af5a2db313a65be30bfb}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_ae259275e8195c9de6e0e8d75b00e4b23}{ServerPort}}; \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{65         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a297b8d26f3965a2ecc1609ae62a7364e}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_aba2523ac99417083f2ee957d5cf0a5eb}{ServerIpAddress}}; \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68         EN\_SOCKET \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a45c6e4da9bb1a31c42bbf2da93d9a04e}{GetSocket}}() \{ \textcolor{keywordflow}{return} ServerConnectionSocket; \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a4751eab3ad696f6f740cbb21434b54ed}{Run}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a95b11e4a64358af9ffe7287eac17f279}{SendToServer}}(std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client_a1a57fa02dc7f7ef24476b76bd054b146}{Stop}}();}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84         \textcolor{comment}{// Default destructor}}
+\DoxyCodeLine{85         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___client}{\string~EN\_UDP\_Client}}();}
+\DoxyCodeLine{86     \};}
+\DoxyCodeLine{87 \}}
+\DoxyCodeLine{88 }
 
 \end{DoxyCode}

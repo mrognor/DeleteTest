@@ -6,102 +6,101 @@
 \DoxyCodeLine{2 }
 \DoxyCodeLine{3 \textcolor{preprocessor}{\#if defined WIN32 || defined \_WIN64 }}
 \DoxyCodeLine{4 }
-\DoxyCodeLine{5 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
-\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <winsock2.h>}}
-\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
-\DoxyCodeLine{8 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
-\DoxyCodeLine{9 }
-\DoxyCodeLine{10 \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{11 }
-\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <unistd.h>}}
-\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <sys/socket.h>}}
-\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <netinet/in.h>}}
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
-\DoxyCodeLine{16 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET;}
-\DoxyCodeLine{17 \textcolor{preprocessor}{\#define INVALID\_SOCKET -\/1}}
-\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SOCKET\_ERROR -\/1}}
-\DoxyCodeLine{19 }
-\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <thread>}}
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <mutex>}}
-\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <queue>}}
-\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <vector>}}
-\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <string>}}
-\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <condition\_variable>}}
-\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <chrono>}}
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <stack>}}
-\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <list>}}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33 \textcolor{keyword}{typedef} std::chrono::system\_clock::time\_point EN\_TimePoint;}
-\DoxyCodeLine{34 }
-\DoxyCodeLine{35 \textcolor{keyword}{namespace }EN}
-\DoxyCodeLine{36 \{}
-\DoxyCodeLine{38     \textcolor{keyword}{enum} EN\_UDP\_ServerBuferType}
-\DoxyCodeLine{39     \{}
-\DoxyCodeLine{40         Queue, }
-\DoxyCodeLine{41         Stack }
-\DoxyCodeLine{42     \};}
-\DoxyCodeLine{43 }
-\DoxyCodeLine{45     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\_UDP\_Server}}}
-\DoxyCodeLine{46     \{}
-\DoxyCodeLine{47     \textcolor{keyword}{private}:}
-\DoxyCodeLine{48         \textcolor{comment}{// Variable to shutdown server}}
-\DoxyCodeLine{49         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
-\DoxyCodeLine{50 }
-\DoxyCodeLine{51         \textcolor{comment}{// Server address}}
-\DoxyCodeLine{52         sockaddr\_in ServerAddress;}
-\DoxyCodeLine{53 }
-\DoxyCodeLine{54         \textcolor{comment}{// Server socket}}
-\DoxyCodeLine{55         EN\_SOCKET UDP\_ServerSocket;}
-\DoxyCodeLine{56 }
-\DoxyCodeLine{57         \textcolor{comment}{// Array of pointer}}
-\DoxyCodeLine{58         std::list<std::string>** QueueMessageVec;}
-\DoxyCodeLine{59         std::list<sockaddr\_in>** QueueAddrVec;}
-\DoxyCodeLine{60         std::list<EN\_TimePoint>** QueueTimeVec;}
-\DoxyCodeLine{61         std::condition\_variable** CondVarVec;}
-\DoxyCodeLine{62         std::mutex** Mutexes;}
-\DoxyCodeLine{63         std::thread* ThreadVec;}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{65         \textcolor{comment}{// Functions to handle incoming message buffer}}
-\DoxyCodeLine{66         \textcolor{keywordtype}{void} ThreadListHandler(\textcolor{keywordtype}{int} ThreadID);}
-\DoxyCodeLine{67 }
-\DoxyCodeLine{68     \textcolor{keyword}{protected}:}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{71         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}{Port}} = 1111;}
-\DoxyCodeLine{72 }
-\DoxyCodeLine{74         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_afe7190d8c1cf38109564546cdca2d33e}{MaxMessageSize}} = 256;}
-\DoxyCodeLine{75 }
-\DoxyCodeLine{77         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}{IpAddress}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
-\DoxyCodeLine{78 }
-\DoxyCodeLine{80         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}{ThreadAmount}} = 2;}
-\DoxyCodeLine{81 }
-\DoxyCodeLine{87         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a46c9bf106cf479503e430a13aa580e5c}{MaxStackBuffSize}} = 16;}
-\DoxyCodeLine{88 }
-\DoxyCodeLine{90         EN\_UDP\_ServerBuferType \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}{ServerBuferType}} = Queue;}
-\DoxyCodeLine{91 }
-\DoxyCodeLine{99         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_ae30a93ee005f4517f7500c4294e021ae}{ClientMessageHandler}}(std::string message, std::string ClientIpAddress, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
-\DoxyCodeLine{100 }
-\DoxyCodeLine{109         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a87bdc6ad475dcea3d6e8b40b3148e0d1}{InstantClientMessageHandler}}(std::string message, std::string ClientIpAddress, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
-\DoxyCodeLine{110 }
-\DoxyCodeLine{111     \textcolor{keyword}{public}:}
-\DoxyCodeLine{112 }
-\DoxyCodeLine{113         \textcolor{comment}{// Default constructor. Port: 1111. Ip address: 127.0.0.1(localhost)}}
-\DoxyCodeLine{114         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\_UDP\_Server}}();}
-\DoxyCodeLine{115 }
-\DoxyCodeLine{117         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}{Port}}; \}}
-\DoxyCodeLine{118 }
-\DoxyCodeLine{120         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}{IpAddress}}; \}}
-\DoxyCodeLine{121 }
-\DoxyCodeLine{123         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}{Run}}();}
-\DoxyCodeLine{124 }
-\DoxyCodeLine{126         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}{Shutdown}}();}
-\DoxyCodeLine{127 }
-\DoxyCodeLine{134         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}{SendToClient}}(std::string ClientIpAddress, std::string message);}
-\DoxyCodeLine{135 }
-\DoxyCodeLine{136         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{\string~EN\_UDP\_Server}}();}
-\DoxyCodeLine{137     \};}
-\DoxyCodeLine{138 \}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
+\DoxyCodeLine{7 \textcolor{keyword}{typedef} SOCKET EN\_SOCKET;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <sys/socket.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <netinet/in.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <arpa/inet.h>}}
+\DoxyCodeLine{15 \textcolor{keyword}{typedef} \textcolor{keywordtype}{int} EN\_SOCKET;}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#define INVALID\_SOCKET -\/1}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define SOCKET\_ERROR -\/1}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}EN\_Functions.h"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <condition\_variable>}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <stack>}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{typedef} std::chrono::system\_clock::time\_point EN\_TimePoint;}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{37     \textcolor{keyword}{enum} EN\_UDP\_ServerBuferType}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         Queue, }
+\DoxyCodeLine{40         Stack }
+\DoxyCodeLine{41     \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\_UDP\_Server}}}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46     \textcolor{keyword}{private}:}
+\DoxyCodeLine{47         \textcolor{comment}{// Variable to shutdown server}}
+\DoxyCodeLine{48         \textcolor{keywordtype}{bool} IsShutdown = \textcolor{keyword}{false};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50         \textcolor{comment}{// Server address}}
+\DoxyCodeLine{51         sockaddr\_in ServerAddress;}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \textcolor{comment}{// Server socket}}
+\DoxyCodeLine{54         EN\_SOCKET UDP\_ServerSocket;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56         \textcolor{comment}{// Array of pointer}}
+\DoxyCodeLine{57         std::list<std::string>** QueueMessageVec;}
+\DoxyCodeLine{58         std::list<sockaddr\_in>** QueueAddrVec;}
+\DoxyCodeLine{59         std::list<EN\_TimePoint>** QueueTimeVec;}
+\DoxyCodeLine{60         std::condition\_variable** CondVarVec;}
+\DoxyCodeLine{61         std::mutex** Mutexes;}
+\DoxyCodeLine{62         std::thread* ThreadVec;}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64         \textcolor{comment}{// Functions to handle incoming message buffer}}
+\DoxyCodeLine{65         \textcolor{keywordtype}{void} ThreadListHandler(\textcolor{keywordtype}{int} ThreadID);}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     \textcolor{keyword}{protected}:}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{70         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}{Port}} = 1111;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{73         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_afe7190d8c1cf38109564546cdca2d33e}{MaxMessageSize}} = 256;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{76         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}{IpAddress}} = \textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}{ThreadAmount}} = 2;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{86         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a46c9bf106cf479503e430a13aa580e5c}{MaxStackBuffSize}} = 16;}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{89         EN\_UDP\_ServerBuferType \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}{ServerBuferType}} = Queue;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{98         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_ae30a93ee005f4517f7500c4294e021ae}{ClientMessageHandler}}(std::string message, std::string ClientIpAddress, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{108         \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a87bdc6ad475dcea3d6e8b40b3148e0d1}{InstantClientMessageHandler}}(std::string message, std::string ClientIpAddress, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} TimeWhenPackageArrived) = 0;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110     \textcolor{keyword}{public}:}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112         \textcolor{comment}{// Default constructor. Port: 1111. Ip address: 127.0.0.1(localhost)}}
+\DoxyCodeLine{113         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{EN\_UDP\_Server}}();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{116         \textcolor{keywordtype}{int} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}{GetPort}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}{Port}}; \}}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{119         std::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}{GetIpAddr}}() \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}{IpAddress}}; \}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{122         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}{Run}}();}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{125         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}{Shutdown}}();}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{133         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}{SendToClient}}(std::string ClientIpAddress, std::string message);}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135         \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server}{\string~EN\_UDP\_Server}}();}
+\DoxyCodeLine{136     \};}
+\DoxyCodeLine{137 \}}
 
 \end{DoxyCode}

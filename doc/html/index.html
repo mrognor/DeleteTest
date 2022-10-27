@@ -117,7 +117,7 @@ Visual Studio library usage guide</h2>
 </ol>
 <p ><img src="https://user-images.githubusercontent.com/47296449/165807739-68487caa-84ea-4caf-8630-63198174dea2.png" alt="image" class="inline"/></p>
 <ol type="1">
-<li>Open menu on Linker -&gt; Input -&gt; Additional Dependencies and add "EasyNetwork.lib" here. Note that you must specify the correct file name for each build configuration. For example, to compile the debug x86 version, you must specify "EasyNetwork-x86d.lib", to release x86 - "EasyNetwork-x86.lib", to debug x64 - "EasyNetwork-x64d.lib", to release x64 - "EasyNetwork-x64.lib" <img src="https://user-images.githubusercontent.com/47296449/165808413-9a2e783d-5a25-4829-858e-c48ed7267bac.png" alt="image" class="inline"/></li>
+<li>Open menu on Linker -&gt; Input -&gt; Additional Dependencies and add "EasyNetwork.lib" here. Note that you must specify the correct file name for each build configuration. For example, to compile the debug x86 version, you must specify "EasyNetwork-x86d.lib", to release x86 - "EasyNetwork-x86.lib", to debug x64 - "EasyNetwork-x64d.lib", to release x64 - "EasyNetwork-x64.lib". Also add "ws2_32.lib" <img src="https://user-images.githubusercontent.com/47296449/198310488-4a83e847-6c09-4909-9ef2-8d812059046c.png" alt="image" width="590" class="inline"/></li>
 <li>The configuration of the project for working with the library is completed. Now you can use the code samples and try to make own programm <br  />
 </li>
 </ol>
@@ -128,9 +128,9 @@ MinGW library usage guide</h2>
 <li>You can extract library release archive to any folder. Make sure that the path to the header files in your code is up to date</li>
 <li>Now all ready to compile your project <br  />
  You can compile server using command: <br  />
- <code>g++ -pthread -std=c++11 -lws2_32 TCPServer.cpp bin/libEasyNetwork.a -o server.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 -lws2_32 TCPServer.cpp lib/libEasyNetwork.a -o server.sh</code> <br  />
  You can compile client using command: <br  />
- <code>g++ -pthread -std=c++11 -lws2_32 TCPClient.cpp bin/libEasyNetwork.a -o client.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 -lws2_32 TCPClient.cpp lib/libEasyNetwork.a -o client.sh</code> <br  />
 </li>
 <li>Run your programs using command: <br  />
  <code>./server.sh</code> and <code>./client.sh</code></li>
@@ -145,9 +145,9 @@ Linux library usage</h2>
 <ol type="1">
 <li>Now all ready to compile your project <br  />
  You can compile server using command: <br  />
- <code>g++ -pthread -std=c++11 TCPServer.cpp bin/libEasyNetwork.a -o server.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 TCPServer.cpp lib/libEasyNetwork.a -o server.sh</code> <br  />
  You can compile client using command: <br  />
- <code>g++ -pthread -std=c++11 TCPClient.cpp bin/libEasyNetwork.a -o client.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 TCPClient.cpp lib/libEasyNetwork.a -o client.sh</code> <br  />
 </li>
 <li>Run your programs using command: <br  />
  <code>./server.sh</code> and <code>./client.sh</code></li>
