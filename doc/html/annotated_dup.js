@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "EN", null, [
+      [ "EN_ParallelFor", "class_e_n_1_1_e_n___parallel_for.html", "class_e_n_1_1_e_n___parallel_for" ],
       [ "EN_RAU_Client", "class_e_n_1_1_e_n___r_a_u___client.html", "class_e_n_1_1_e_n___r_a_u___client" ],
       [ "EN_RAU_Server", "class_e_n_1_1_e_n___r_a_u___server.html", "class_e_n_1_1_e_n___r_a_u___server" ],
       [ "EN_TCP_Client", "class_e_n_1_1_e_n___t_c_p___client.html", "class_e_n_1_1_e_n___t_c_p___client" ],

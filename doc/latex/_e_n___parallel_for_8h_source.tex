@@ -1,0 +1,79 @@
+\hypertarget{_e_n___parallel_for_8h_source}{}\doxysection{EN\+\_\+\+Parallel\+For.\+h}
+\label{_e_n___parallel_for_8h_source}\index{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_ParallelFor.h@{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_ParallelFor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <mutex>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <condition\_variable>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{11     \textcolor{keyword}{class }\mbox{\hyperlink{class_e_n_1_1_e_n___parallel_for}{EN\_ParallelFor}}}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13     \textcolor{keyword}{private}:}
+\DoxyCodeLine{14         std::mutex StepMutex, ThreadFinishingMutex, ConditionVarMutex;}
+\DoxyCodeLine{15         std::condition\_variable CondVar;}
+\DoxyCodeLine{16         \textcolor{keywordtype}{int} ThreadAmount, EndedThreads;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \textcolor{keyword}{private}:}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20         \textcolor{comment}{// A function running in a separate thread. Calls a custom function}}
+\DoxyCodeLine{21         \textcolor{comment}{// Gets template position and end. Its can be iterator or a numbers}}
+\DoxyCodeLine{22         \textcolor{comment}{// Gets lambda function to invoke it}}
+\DoxyCodeLine{23         \textcolor{keyword}{template}<\textcolor{keyword}{class} T, \textcolor{keyword}{class} F>}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} ThreadFunc(T\& Pos, \textcolor{keyword}{const} T\& End, \textcolor{keyword}{const} F\& lambda\_func)}
+\DoxyCodeLine{25         \{}
+\DoxyCodeLine{26             T LocalPos; \textcolor{comment}{// Local var to store thread position}}
+\DoxyCodeLine{27             \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{28             \{}
+\DoxyCodeLine{29                 StepMutex.lock(); \textcolor{comment}{// Start working with positions}}
+\DoxyCodeLine{30                 LocalPos = Pos;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32                 \textcolor{keywordflow}{if} (Pos != End) \textcolor{comment}{// Check if its last element}}
+\DoxyCodeLine{33                     Pos++;}
+\DoxyCodeLine{34                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{35                 \{}
+\DoxyCodeLine{36                     ThreadFinishingMutex.lock(); \textcolor{comment}{// Start working with thread killing}}
+\DoxyCodeLine{37                     EndedThreads++; \textcolor{comment}{// Increment stopped threads amount}}
+\DoxyCodeLine{38                     StepMutex.unlock(); \textcolor{comment}{// Stop working with positions}}
+\DoxyCodeLine{39                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{40                 \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42                 StepMutex.unlock(); \textcolor{comment}{// Stop working with positions}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44                 lambda\_func(LocalPos); \textcolor{comment}{// Invokes user function }}
+\DoxyCodeLine{45             \}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47             \textcolor{keywordflow}{if} (EndedThreads >= ThreadAmount) \textcolor{comment}{// Checks if all threads ended}}
+\DoxyCodeLine{48                 CondVar.notify\_all(); \textcolor{comment}{// Notify condition variable to exit from operator()}}
+\DoxyCodeLine{49             ThreadFinishingMutex.unlock(); \textcolor{comment}{// Stop working with thread killing}}
+\DoxyCodeLine{50         \}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keyword}{public}:}
+\DoxyCodeLine{61         \textcolor{keyword}{template}<\textcolor{keyword}{class} T, \textcolor{keyword}{class} F>}
+\DoxyCodeLine{62         \textcolor{keywordtype}{void} \mbox{\hyperlink{class_e_n_1_1_e_n___parallel_for_a8b0030afaa70c483cc7c5ae35db734da}{operator() }}(T start, T end, \textcolor{keywordtype}{int} thread\_amount, \textcolor{keyword}{const} F\& lambda\_func)}
+\DoxyCodeLine{63         \{}
+\DoxyCodeLine{64             EndedThreads = 0; }
+\DoxyCodeLine{65             T Pos = start; T End = end; ThreadAmount = thread\_amount;}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67             std::unique\_lock<std::mutex> CondVarUniqueLock(ConditionVarMutex);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69             \textcolor{comment}{// Creating threads with lambdas}}
+\DoxyCodeLine{70             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < thread\_amount; i++)}
+\DoxyCodeLine{71             \{}
+\DoxyCodeLine{72                 std::thread th([\textcolor{keyword}{this}, lambda\_func, \&Pos, \&End]()}
+\DoxyCodeLine{73                     \{}
+\DoxyCodeLine{74                         ThreadFunc(Pos, End, lambda\_func);}
+\DoxyCodeLine{75                     \});}
+\DoxyCodeLine{76                 th.detach();}
+\DoxyCodeLine{77             \}}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79             CondVar.wait(CondVarUniqueLock);}
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81     \};}
+\DoxyCodeLine{82 \}}
+
+\end{DoxyCode}

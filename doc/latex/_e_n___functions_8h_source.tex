@@ -28,37 +28,39 @@
 \DoxyCodeLine{24 \textcolor{preprocessor}{\#include <ctime>}}
 \DoxyCodeLine{25 \textcolor{preprocessor}{\#include <fstream>}}
 \DoxyCodeLine{26 }
-\DoxyCodeLine{27 \textcolor{preprocessor}{\#define SendFileBufLen 1024}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}EN\_ParallelFor.h"{}}}
 \DoxyCodeLine{28 }
-\DoxyCodeLine{29 \textcolor{keyword}{namespace }EN}
-\DoxyCodeLine{30 \{ }
-\DoxyCodeLine{32     \textcolor{keywordtype}{void} TCP\_Send(EN\_SOCKET sock, std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
-\DoxyCodeLine{33 }
-\DoxyCodeLine{35     \textcolor{keywordtype}{bool} TCP\_Recv(EN\_SOCKET sock, std::string\& message);}
-\DoxyCodeLine{36 }
-\DoxyCodeLine{38     std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString=\textcolor{stringliteral}{"{} "{}});}
-\DoxyCodeLine{39 }
-\DoxyCodeLine{45     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, }
-\DoxyCodeLine{46         \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr}, }
-\DoxyCodeLine{47         uint64\_t PreviouslySendedSize = 0, \textcolor{keywordtype}{int} ChunksNumberBetweenDelay = 0);}
-\DoxyCodeLine{48 }
-\DoxyCodeLine{51     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{52 }
-\DoxyCodeLine{56     \textcolor{keywordtype}{bool} ContinueRecvFile(EN\_SOCKET FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{57 }
-\DoxyCodeLine{63     \textcolor{keywordtype}{bool} ForwardFile(EN\_SOCKET SourceFileSocket, EN\_SOCKET DestinationFileSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{64 }
-\DoxyCodeLine{66     \textcolor{keywordtype}{void} DownloadStatus(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta);}
-\DoxyCodeLine{67 }
-\DoxyCodeLine{69     \textcolor{keywordtype}{bool} IsFileExist(std::string FilePath);}
-\DoxyCodeLine{70 }
-\DoxyCodeLine{73     uint64\_t GetFileSize(std::string FileName);}
-\DoxyCodeLine{74 }
-\DoxyCodeLine{76     \textcolor{keywordtype}{void} Delay(\textcolor{keywordtype}{int} milliseconds);}
-\DoxyCodeLine{77 }
-\DoxyCodeLine{85     std::string IntToString(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n);}
-\DoxyCodeLine{86 }
-\DoxyCodeLine{89     \textcolor{keywordtype}{int} StringToInt(std::string str);}
-\DoxyCodeLine{90 \}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define SendFileBufLen 1024}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keyword}{namespace }EN}
+\DoxyCodeLine{32 \{ }
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} TCP\_Send(EN\_SOCKET sock, std::string message, \textcolor{keywordtype}{int} MessageDelay = 10);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{37     \textcolor{keywordtype}{bool} TCP\_Recv(EN\_SOCKET sock, std::string\& message);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{40     std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString=\textcolor{stringliteral}{"{} "{}});}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} SendFile(EN\_SOCKET FileSendSocket, std::string FilePath, \textcolor{keywordtype}{bool}\& IsStop, }
+\DoxyCodeLine{48         \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr}, }
+\DoxyCodeLine{49         uint64\_t PreviouslySendedSize = 0, \textcolor{keywordtype}{int} ChunksNumberBetweenDelay = 0);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{53     \textcolor{keywordtype}{bool} RecvFile(EN\_SOCKET FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58     \textcolor{keywordtype}{bool} ContinueRecvFile(EN\_SOCKET FileSendSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{bool} ForwardFile(EN\_SOCKET SourceFileSocket, EN\_SOCKET DestinationFileSocket, \textcolor{keywordtype}{bool}\& IsStop, \textcolor{keywordtype}{void} (*ProgressFunction)(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta) = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} DownloadStatus(uint64\_t current, uint64\_t all, uint64\_t speed, uint64\_t eta);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} IsFileExist(std::string FilePath);}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{75     uint64\_t GetFileSize(std::string FileName);}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} Delay(\textcolor{keywordtype}{int} milliseconds);}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{87     std::string IntToString(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{91     \textcolor{keywordtype}{int} StringToInt(std::string str);}
+\DoxyCodeLine{92 \}}
 
 \end{DoxyCode}

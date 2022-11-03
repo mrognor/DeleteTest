@@ -61,6 +61,7 @@ var NAVTREE =
       [ "StringToInt", "md__e_n__functions.html#autotoc_md28", null ]
     ] ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
+    [ "Parallel for", "md__e_n__parallel_for.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
