@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Easy network: Easy network</title>
+<title>Easy Network: Easy Network</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.2</span>
+   <div id="projectname">Easy Network<span id="projectnumber">&#160;v0.0.2</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -85,7 +85,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">Easy network </div></div>
+  <div class="headertitle"><div class="title">Easy Network </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
@@ -125,34 +125,28 @@ Visual Studio library usage guide</h2>
 MinGW library usage guide</h2>
 <ol type="1">
 <li>Download the latest release from github</li>
-<li>You can extract library release archive to any folder. Make sure that the path to the header files in your code is up to date</li>
+<li>You can extract library release archive to any folder</li>
 <li>Now all ready to compile your project <br  />
  You can compile server using command: <br  />
- <code>g++ -pthread -std=c++11 -lws2_32 TCPServer.cpp lib/libEasyNetwork.a -o server.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 -lws2_32 PathToServer/Server.cpp -IEasyNetworkDir/ -LEasyNetworkDir/bin -lEasyNetwork -o server</code> <br  />
  You can compile client using command: <br  />
- <code>g++ -pthread -std=c++11 -lws2_32 TCPClient.cpp lib/libEasyNetwork.a -o client.sh</code> <br  />
+ <code>g++ -pthread -std=c++11 -lws2_32 PathToClient/Client.cpp -IEasyNetworkDir/ -LEasyNetworkDir/bin -lEasyNetwork -o client</code> <br  />
 </li>
 <li>Run your programs using command: <br  />
- <code>./server.sh</code> and <code>./client.sh</code></li>
+ <code>server.exe</code> and <code>client.exe</code></li>
 </ol>
 <h2><a class="anchor" id="autotoc_md5"></a>
 Linux library usage</h2>
 <ol type="1">
 <li>Download the latest release from github</li>
-<li>You can extract library release archive to any folder. I will save everything in one folder for convenience. Make sure that the path to the header files in your code is up to date</li>
-</ol>
-<p ><img src="https://user-images.githubusercontent.com/47296449/166112771-628c328f-cef5-4c75-a440-d018841f351b.png" alt="image" class="inline"/></p>
-<ol type="1">
+<li>You can extract library release archive to any folder</li>
 <li>Now all ready to compile your project <br  />
  You can compile server using command: <br  />
- <code>g++ -pthread -std=c++11 TCPServer.cpp lib/libEasyNetwork.a -o server.sh</code> <br  />
- You can compile client using command: <br  />
- <code>g++ -pthread -std=c++11 TCPClient.cpp lib/libEasyNetwork.a -o client.sh</code> <br  />
-</li>
+ <code>g++ -pthread -std=c++11 PathToServer/Server.cpp -IEasyNetworkDir/ -LEasyNetworkDir/bin -lEasyNetwork -o server</code> You can compile client using command: <br  />
+ <code>g++ -pthread -std=c++11 PathToClient/Client.cpp -IEasyNetworkDir/ -LEasyNetworkDir/bin -lEasyNetwork -o client</code></li>
 <li>Run your programs using command: <br  />
- <code>./server.sh</code> and <code>./client.sh</code></li>
+ <code>./server</code> and <code>./client</code></li>
 </ol>
-<p ><img src="https://user-images.githubusercontent.com/47296449/166113135-c9fc8b7d-bf3a-4589-bdce-3582c5f7abd0.png" alt="image" class="inline"/></p>
 <h1><a class="anchor" id="autotoc_md6"></a>
 Important</h1>
 <p >I know that no one reads further than the readme, so I want to bring some important things here <br  />
@@ -166,13 +160,19 @@ Important</h1>
 </li>
 </ol>
 <h1><a class="anchor" id="autotoc_md7"></a>
+Free white ip</h1>
+<p >White ip allow you to use your programs outside your local network. <br  />
+ You can use free utility named <a href="https://ngrok.com/">ngrok</a>. This program let you free white ip. <br  />
+ You can launch ngrok using command <code>ngrok tcp 1111</code>. You can use any protocol and port you want. <br  />
+ Note that when using this program, URLs will be provided to you, but ip is used to connect. To solve this problem, use the <code>GetIpByURL</code> function</p>
+<h1><a class="anchor" id="autotoc_md8"></a>
 How to choose a class</h1>
 <p >This is a small overview of the library classes to simplify class selection</p>
-<h2><a class="anchor" id="autotoc_md8"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 TCP classes</h2>
 <p >These classes support connection and have got only reliable message sending. <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md9"></a>
+<h3><a class="anchor" id="autotoc_md10"></a>
 EN_TCP_Server</h3>
 <p >You have to define 3 methods</p><ol type="1">
 <li>void OnClientConnected(int ClientID) <br  />
@@ -186,7 +186,7 @@ EN_TCP_Server</h3>
  To start the server, you need to call the Run method <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp</a> <br  />
 </p>
-<h3><a class="anchor" id="autotoc_md10"></a>
+<h3><a class="anchor" id="autotoc_md11"></a>
 EN_TCP_Client</h3>
 <p >You have to define 3 methods <br  />
 </p><ol type="1">
@@ -201,11 +201,11 @@ EN_TCP_Client</h3>
  Before shutting down the program, you need to disconnect from the server using the method Disconnect <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp</a> <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md11"></a>
+<h2><a class="anchor" id="autotoc_md12"></a>
 UDP classes</h2>
 <p >These classes do not support connection and have got only unreliable message sending. <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md12"></a>
+<h3><a class="anchor" id="autotoc_md13"></a>
 EN_UDP_Server</h3>
 <p >You have to define 2 methods</p><ol type="1">
 <li>void ClientMessageHandler(std::string message, std::string ClientIpAddress, long long TimeSincePackageArrived)</li>
@@ -216,7 +216,7 @@ EN_UDP_Server</h3>
  To start the server, you must call the method Run. To stop the server, you need to call the method Shutdown. <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp</a> <br  />
 </p>
-<h3><a class="anchor" id="autotoc_md13"></a>
+<h3><a class="anchor" id="autotoc_md14"></a>
 EN_UDP_Client</h3>
 <p >You have to define 1 method</p><ol type="1">
 <li>void ServerMessageHandler(std::string message) <br  />
@@ -226,12 +226,12 @@ EN_UDP_Client</h3>
  To complete the work, you must call the method Close. <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp</a> <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md14"></a>
+<h2><a class="anchor" id="autotoc_md15"></a>
 RAU classes</h2>
 <p >This class supports connection. There is both reliable sending of messages and unreliable. <br  />
  The RAU differs from the TCP only in the ability to unreliable message send. <br  />
  </p>
-<h3><a class="anchor" id="autotoc_md15"></a>
+<h3><a class="anchor" id="autotoc_md16"></a>
 EN_RAU_Server</h3>
 <p >You have to define 3 methods</p><ol type="1">
 <li>void OnClientConnected(int ClientID) <br  />
@@ -245,7 +245,7 @@ EN_RAU_Server</h3>
  To start the server, you need to call the Run method <br  />
  An example of using the class can be found here: <a href="https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp">https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp</a> <br  />
 </p>
-<h3><a class="anchor" id="autotoc_md16"></a>
+<h3><a class="anchor" id="autotoc_md17"></a>
 EN_RAU_Client</h3>
 <p >You have to define 3 methods <br  />
 </p><ol type="1">

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['easy_20network_0',['Easy network',['../index.html',1,'']]],
+  ['easy_20network_0',['Easy Network',['../index.html',1,'']]],
   ['en_5fparallelfor_1',['EN_ParallelFor',['../class_e_n_1_1_e_n___parallel_for.html',1,'EN']]],
   ['en_5frau_5fclient_2',['EN_RAU_Client',['../class_e_n_1_1_e_n___r_a_u___client.html',1,'EN']]],
   ['en_5frau_5fserver_3',['EN_RAU_Server',['../class_e_n_1_1_e_n___r_a_u___server.html',1,'EN']]],

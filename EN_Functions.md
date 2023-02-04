@@ -1,5 +1,10 @@
 # Usefull library functions
 
+## GetIpByURL
+`std::string GetIpByURL(std::string url)`
+Function for getting an ip address from a url
+* The first parameter is url
+
 ## Split  
 `std::vector<std::string> Split(std::string StringToSplit, std::string SplitterString=" ")`  
 The function is needed for convenient work with incoming messages. 

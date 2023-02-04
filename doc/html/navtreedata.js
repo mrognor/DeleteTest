@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Easy network", "index.html", [
+  [ "Easy Network", "index.html", [
     [ "Easy_Network", "index.html#autotoc_md0", null ],
     [ "Library documentation:", "index.html#autotoc_md1", null ],
     [ "Library usage", "index.html#autotoc_md2", [
@@ -33,32 +33,34 @@ var NAVTREE =
       [ "Linux library usage", "index.html#autotoc_md5", null ]
     ] ],
     [ "Important", "index.html#autotoc_md6", null ],
-    [ "How to choose a class", "index.html#autotoc_md7", [
-      [ "TCP classes", "index.html#autotoc_md8", [
-        [ "EN_TCP_Server", "index.html#autotoc_md9", null ],
-        [ "EN_TCP_Client", "index.html#autotoc_md10", null ]
+    [ "Free white ip", "index.html#autotoc_md7", null ],
+    [ "How to choose a class", "index.html#autotoc_md8", [
+      [ "TCP classes", "index.html#autotoc_md9", [
+        [ "EN_TCP_Server", "index.html#autotoc_md10", null ],
+        [ "EN_TCP_Client", "index.html#autotoc_md11", null ]
       ] ],
-      [ "UDP classes", "index.html#autotoc_md11", [
-        [ "EN_UDP_Server", "index.html#autotoc_md12", null ],
-        [ "EN_UDP_Client", "index.html#autotoc_md13", null ]
+      [ "UDP classes", "index.html#autotoc_md12", [
+        [ "EN_UDP_Server", "index.html#autotoc_md13", null ],
+        [ "EN_UDP_Client", "index.html#autotoc_md14", null ]
       ] ],
-      [ "RAU classes", "index.html#autotoc_md14", [
-        [ "EN_RAU_Server", "index.html#autotoc_md15", null ],
-        [ "EN_RAU_Client", "index.html#autotoc_md16", null ]
+      [ "RAU classes", "index.html#autotoc_md15", [
+        [ "EN_RAU_Server", "index.html#autotoc_md16", null ],
+        [ "EN_RAU_Client", "index.html#autotoc_md17", null ]
       ] ]
     ] ],
     [ "Usefull library functions", "md__e_n__functions.html", [
-      [ "Split", "md__e_n__functions.html#autotoc_md18", null ],
-      [ "SendFile", "md__e_n__functions.html#autotoc_md19", null ],
-      [ "RecvFile", "md__e_n__functions.html#autotoc_md20", null ],
-      [ "ContinueRecvFile", "md__e_n__functions.html#autotoc_md21", null ],
-      [ "ForwardFile", "md__e_n__functions.html#autotoc_md22", null ],
-      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md23", null ],
-      [ "IsFileExist", "md__e_n__functions.html#autotoc_md24", null ],
-      [ "GetFileSize", "md__e_n__functions.html#autotoc_md25", null ],
-      [ "Delay", "md__e_n__functions.html#autotoc_md26", null ],
-      [ "IntToString", "md__e_n__functions.html#autotoc_md27", null ],
-      [ "StringToInt", "md__e_n__functions.html#autotoc_md28", null ]
+      [ "GetIpByURL", "md__e_n__functions.html#autotoc_md19", null ],
+      [ "Split", "md__e_n__functions.html#autotoc_md20", null ],
+      [ "SendFile", "md__e_n__functions.html#autotoc_md21", null ],
+      [ "RecvFile", "md__e_n__functions.html#autotoc_md22", null ],
+      [ "ContinueRecvFile", "md__e_n__functions.html#autotoc_md23", null ],
+      [ "ForwardFile", "md__e_n__functions.html#autotoc_md24", null ],
+      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md25", null ],
+      [ "IsFileExist", "md__e_n__functions.html#autotoc_md26", null ],
+      [ "GetFileSize", "md__e_n__functions.html#autotoc_md27", null ],
+      [ "Delay", "md__e_n__functions.html#autotoc_md28", null ],
+      [ "IntToString", "md__e_n__functions.html#autotoc_md29", null ],
+      [ "StringToInt", "md__e_n__functions.html#autotoc_md30", null ]
     ] ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
     [ "Parallel for", "md__e_n__parallel_for.html", null ],

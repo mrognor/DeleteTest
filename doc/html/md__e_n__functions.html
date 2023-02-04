@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Easy network: Usefull library functions</title>
+<title>Easy Network: Usefull library functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.2</span>
+   <div id="projectname">Easy Network<span id="projectnumber">&#160;v0.0.2</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -88,12 +88,17 @@ $(document).ready(function(){initNavTree('md__e_n__functions.html',''); initResi
   <div class="headertitle"><div class="title">Usefull library functions </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md18"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md19"></a>
+GetIpByURL</h1>
+<p ><code>std::string GetIpByURL(std::string url)</code> Function for getting an ip address from a url</p><ul>
+<li>The first parameter is url</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md20"></a>
 Split</h1>
 <p ><code>std::vector&lt;std::string&gt; Split(std::string StringToSplit, std::string SplitterString=" ")</code> <br  />
  The function is needed for convenient work with incoming messages. Designed to split a string into a vector of strings. Divides by spaces by default, but you can set your own line for separation. If there is a separator string at the end, then there will be an empty string at the end of the vector <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md19"></a>
+<h1><a class="anchor" id="autotoc_md21"></a>
 SendFile</h1>
 <p ><code>bool SendFile(EN_SOCKET FileSendSocket, std::string FilePath, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr, uint64_t PreviouslySendedSize = 0, int ChunksNumberBetweenDelay = 0);</code> <br  />
  The function is needed to send files. The message receiving function should be called on the other side. <br  />
@@ -121,7 +126,7 @@ SendFile</h1>
 </ul>
 <p >By default, the library function is used to output to the console <br  />
  Timeout between sending set to 20. You adjust the number of chunks that will be sent between the delay</p>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 RecvFile</h1>
 <p ><code>bool RecvFile(EN_SOCKET&amp; FileSendSocket, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
  The function is needed to receiving files. <br  />
@@ -143,7 +148,7 @@ RecvFile</h1>
 </li>
 </ul>
 <p >By default, the library function is used to output to the console</p>
-<h1><a class="anchor" id="autotoc_md21"></a>
+<h1><a class="anchor" id="autotoc_md23"></a>
 ContinueRecvFile</h1>
 <p ><code>bool ContinueRecvFile(EN_SOCKET FileSendSocket, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
  Function to continue receiving the file</p><ul>
@@ -165,7 +170,7 @@ ContinueRecvFile</h1>
 </ul>
 <p >By default, the library function is used to output to the console <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 ForwardFile</h1>
 <p ><code>bool ForwardFile(EN_SOCKET SourceFileSocket, EN_SOCKET DestinationFileSocket, bool&amp; IsStop, void (*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta) = nullptr)</code> <br  />
  This function will forward file from one socket to another. <br  />
@@ -188,7 +193,7 @@ ForwardFile</h1>
 </ul>
 <p >By default, the library function is used to output to the console <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md23"></a>
+<h1><a class="anchor" id="autotoc_md25"></a>
 DownloadStatus</h1>
 <p ><code>void DownloadStatus(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)</code> The function displays the status of the file transfer to the console</p><ul>
 <li>The first is how many bytes were transmitted. <br  />
@@ -200,25 +205,25 @@ DownloadStatus</h1>
 <li>The fourth shows the remaining time in seconds <br  />
 </li>
 </ul>
-<h1><a class="anchor" id="autotoc_md24"></a>
+<h1><a class="anchor" id="autotoc_md26"></a>
 IsFileExist</h1>
 <p ><code>bool IsFileExist(std::string FilePath)</code> <br  />
  Return true if file exists, otherwise rerurn false</p>
-<h1><a class="anchor" id="autotoc_md25"></a>
+<h1><a class="anchor" id="autotoc_md27"></a>
 GetFileSize</h1>
 <p ><code>uint64_t GetFileSize(std::string FileName)</code> Return file size in bytes. If couldn't open the file return 0</p>
-<h1><a class="anchor" id="autotoc_md26"></a>
+<h1><a class="anchor" id="autotoc_md28"></a>
 Delay</h1>
 <p ><code>void Delay(int milliseconds)</code> <br  />
  Crossplatform function for program suspension. Gets milliseconds.</p>
-<h1><a class="anchor" id="autotoc_md27"></a>
+<h1><a class="anchor" id="autotoc_md29"></a>
 IntToString</h1>
 <p ><code>std::string IntToString(int n)</code> Function to convert int to string.</p><ul>
 <li>int number to convert <br  />
 </li>
 </ul>
 <p >One char takes 1 byte, and a int takes 4 bytes. If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. This function turns a number into a character, since a character occupies a byte, then you can transfer numbers up to 255 in one byte. This function can be considered as the translation of a number into a number system with a base of 256 This function does not work with negative numbers.</p>
-<h1><a class="anchor" id="autotoc_md28"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 StringToInt</h1>
 <p ><code>int StringToInt(std::string str)</code> Function to convert string to int.</p><ul>
 <li>string to convert to int <br  />
