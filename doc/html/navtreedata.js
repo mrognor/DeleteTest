@@ -48,20 +48,7 @@ var NAVTREE =
         [ "EN_RAU_Client", "index.html#autotoc_md17", null ]
       ] ]
     ] ],
-    [ "Usefull library functions", "md__e_n__functions.html", [
-      [ "GetIpByURL", "md__e_n__functions.html#autotoc_md19", null ],
-      [ "Split", "md__e_n__functions.html#autotoc_md20", null ],
-      [ "SendFile", "md__e_n__functions.html#autotoc_md21", null ],
-      [ "RecvFile", "md__e_n__functions.html#autotoc_md22", null ],
-      [ "ContinueRecvFile", "md__e_n__functions.html#autotoc_md23", null ],
-      [ "ForwardFile", "md__e_n__functions.html#autotoc_md24", null ],
-      [ "DownloadStatus", "md__e_n__functions.html#autotoc_md25", null ],
-      [ "IsFileExist", "md__e_n__functions.html#autotoc_md26", null ],
-      [ "GetFileSize", "md__e_n__functions.html#autotoc_md27", null ],
-      [ "Delay", "md__e_n__functions.html#autotoc_md28", null ],
-      [ "IntToString", "md__e_n__functions.html#autotoc_md29", null ],
-      [ "StringToInt", "md__e_n__functions.html#autotoc_md30", null ]
-    ] ],
+    [ "Functions", "index.html#autotoc_md18", null ],
     [ "Blocking and NonBlocking", "md__e_n__blocking_and_non_blocking.html", null ],
     [ "Parallel for", "md__e_n__parallel_for.html", null ],
     [ "Classes", "annotated.html", [
@@ -82,7 +69,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_e_n___functions_8h_source.html"
+"_e_n___functions_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

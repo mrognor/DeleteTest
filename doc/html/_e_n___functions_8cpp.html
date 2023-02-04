@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Easy network: C:/Users/timur/Desktop/EasyNetwork/Easy_Network/EN_Functions.cpp File Reference</title>
+<title>Easy Network: C:/Users/timur/Desktop/EasyNetwork/Easy_Network/EN_Functions.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.1</span>
+   <div id="projectname">Easy Network<span id="projectnumber">&#160;v0.0.2</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -100,6 +100,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a0aad2351f0aa3d05579fc4ff0ff1d7fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a0aad2351f0aa3d05579fc4ff0ff1d7fc">EN::GetIpByURL</a> (std::string url)</td></tr>
+<tr class="memdesc:a0aad2351f0aa3d05579fc4ff0ff1d7fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for getting an ip address from a url.  <a href="namespace_e_n.html#a0aad2351f0aa3d05579fc4ff0ff1d7fc">More...</a><br /></td></tr>
+<tr class="separator:a0aad2351f0aa3d05579fc4ff0ff1d7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cd41b67e7f621f361ed38c5dd5d7166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a6cd41b67e7f621f361ed38c5dd5d7166">EN::TCP_Send</a> (<a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> sock, std::string message, int MessageDelay=10)</td></tr>
 <tr class="memdesc:a6cd41b67e7f621f361ed38c5dd5d7166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper over the send function. Allows you to send std::string.  <a href="namespace_e_n.html#a6cd41b67e7f621f361ed38c5dd5d7166">More...</a><br /></td></tr>
 <tr class="separator:a6cd41b67e7f621f361ed38c5dd5d7166"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,11 +123,18 @@ Functions</h2></td></tr>
 <tr class="memitem:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#afb380fd9a02de5126d4fa3a5e613a4d0">EN::DownloadStatus</a> (uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)</td></tr>
 <tr class="memdesc:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will print information about file downloading.  <a href="namespace_e_n.html#afb380fd9a02de5126d4fa3a5e613a4d0">More...</a><br /></td></tr>
 <tr class="separator:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e4485f0a8d8f567260a07cbbe5f44c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a9e4485f0a8d8f567260a07cbbe5f44c5">EN::IsFileExist</a> (std::string filePath)</td></tr>
-<tr class="memdesc:a9e4485f0a8d8f567260a07cbbe5f44c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if file exists, otherwise rerurn false.  <a href="namespace_e_n.html#a9e4485f0a8d8f567260a07cbbe5f44c5">More...</a><br /></td></tr>
-<tr class="separator:a9e4485f0a8d8f567260a07cbbe5f44c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37667196804e8985a60321a1d9adc969"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a37667196804e8985a60321a1d9adc969">EN::IsFileExist</a> (std::string FilePath)</td></tr>
+<tr class="memdesc:a37667196804e8985a60321a1d9adc969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if file exists, otherwise rerurn false.  <a href="namespace_e_n.html#a37667196804e8985a60321a1d9adc969">More...</a><br /></td></tr>
+<tr class="separator:a37667196804e8985a60321a1d9adc969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048c53258f6400c269f9ba5ffc030df5"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a048c53258f6400c269f9ba5ffc030df5">EN::GetFileSize</a> (std::string FileName)</td></tr>
+<tr class="separator:a048c53258f6400c269f9ba5ffc030df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2b916df05d59d57381340ff11fcac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a5a2b916df05d59d57381340ff11fcac1">EN::Delay</a> (int milliseconds)</td></tr>
+<tr class="memdesc:a5a2b916df05d59d57381340ff11fcac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crossplatform function for program suspension.  <a href="namespace_e_n.html#a5a2b916df05d59d57381340ff11fcac1">More...</a><br /></td></tr>
 <tr class="separator:a5a2b916df05d59d57381340ff11fcac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ccdb23d0833fe4cdaf2c1ef478049a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a73ccdb23d0833fe4cdaf2c1ef478049a">EN::IntToString</a> (unsigned int n)</td></tr>
+<tr class="separator:a73ccdb23d0833fe4cdaf2c1ef478049a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099c0b273d31cc3ab71f41ca4d917270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a099c0b273d31cc3ab71f41ca4d917270">EN::StringToInt</a> (std::string str)</td></tr>
+<tr class="separator:a099c0b273d31cc3ab71f41ca4d917270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -1,5 +1,7 @@
 # Usefull library functions
 
+[New page:](_e_n___functions_8h.html)
+
 ## GetIpByURL
 `std::string GetIpByURL(std::string url)`
 Function for getting an ip address from a url

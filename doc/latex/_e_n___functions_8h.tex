@@ -1,68 +1,235 @@
 \hypertarget{_e_n___functions_8h}{}\doxysection{C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/\+EN\+\_\+\+Functions.h File Reference}
 \label{_e_n___functions_8h}\index{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.h@{C:/Users/timur/Desktop/EasyNetwork/Easy\_Network/EN\_Functions.h}}
-{\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include $<$unistd.\+h$>$}\newline
-{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
-{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
-{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
-{\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include $<$vector$>$}\newline
-{\ttfamily \#include $<$ctime$>$}\newline
-{\ttfamily \#include $<$fstream$>$}\newline
-\doxysubsection*{Namespaces}
-\begin{DoxyCompactItemize}
-\item 
-namespace \mbox{\hyperlink{namespace_e_n}{EN}}
-\end{DoxyCompactItemize}
-\doxysubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{_e_n___functions_8h_a3417f8b24e33450676f3967c920db78d}{Send\+File\+Buf\+Len}}~1024
-\end{DoxyCompactItemize}
-\doxysubsection*{Typedefs}
-\begin{DoxyCompactItemize}
-\item 
-typedef int \mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}}
-\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{namespace_e_n_a6cd41b67e7f621f361ed38c5dd5d7166}{EN\+::\+TCP\+\_\+\+Send}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} sock, std\+::string message, int Message\+Delay=10)
-\begin{DoxyCompactList}\small\item\em Wrapper over the send function. Allows you to send std\+::string. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespace_e_n_a32a63388cd4ad8ee41e5ed4a51767b1b}{EN\+::\+TCP\+\_\+\+Recv}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} sock, std\+::string \&message)
-\begin{DoxyCompactList}\small\item\em Wrapper over the recv function. Allows you to recv std\+::string. \end{DoxyCompactList}\item 
-std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{namespace_e_n_a01c43c7496b1373336bf695267a93043}{EN\+::\+Split}} (std\+::string String\+To\+Split, std\+::string Splitter\+String=\char`\"{} \char`\"{})
-\begin{DoxyCompactList}\small\item\em Divides the string to std\+::vector$<$std\+::string$>$. Second string is string divider. By default set to space(\char`\"{} \char`\"{}) \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespace_e_n_abb34fd39ecf23c45870a78e91860ec35}{EN\+::\+Send\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} File\+Send\+Socket, std\+::string File\+Name, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta), uint64\+\_\+t Previously\+Sended\+Size, int Chunks\+Number\+Between\+Delay)
+std\+::string \mbox{\hyperlink{_e_n___functions_8cpp_a0aad2351f0aa3d05579fc4ff0ff1d7fc}{EN\+::\+Get\+Ip\+By\+URL}} (std\+::string url)
 \item 
-bool \mbox{\hyperlink{namespace_e_n_af3a0eb472fb10023f1d76e6e55e761f5}{EN\+::\+Recv\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} File\+Send\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+void \mbox{\hyperlink{_e_n___functions_8cpp_a46c9b5e98fa456b4725cc61b6fa3ac95}{EN\+::\+TCP\+\_\+\+Send}} (EN\+\_\+\+SOCKET sock, std\+::string message, int Message\+Delay)
 \item 
-bool \mbox{\hyperlink{namespace_e_n_ae32e02db2dba65470e6a585495341c18}{EN\+::\+Continue\+Recv\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} File\+Send\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+bool \mbox{\hyperlink{_e_n___functions_8cpp_a32a63388cd4ad8ee41e5ed4a51767b1b}{EN\+::\+TCP\+\_\+\+Recv}} (EN\+\_\+\+SOCKET sock, std\+::string \&message)
 \item 
-bool \mbox{\hyperlink{namespace_e_n_ae6ea2bdb70747893b66082907def2588}{EN\+::\+Forward\+File}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} Source\+File\+Socket, \mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} Destination\+File\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta))
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{_e_n___functions_8cpp_a68d1f7b87287581952cf05d08f79c623}{EN\+::\+Split}} (std\+::string String\+To\+Split, std\+::string Splitter\+String)
 \item 
-void \mbox{\hyperlink{namespace_e_n_afb380fd9a02de5126d4fa3a5e613a4d0}{EN\+::\+Download\+Status}} (uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)
+bool \mbox{\hyperlink{_e_n___functions_8cpp_ad0da32429055e2a4bdfaf12a5daa79c2}{EN\+::\+Send\+File}} (EN\+\_\+\+SOCKET File\+Send\+Socket, std\+::string File\+Path, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)=nullptr, uint64\+\_\+t Previously\+Sended\+Size=0, int Chunks\+Number\+Between\+Delay=0)
+\begin{DoxyCompactList}\small\item\em The function gets socket and filename and send file to socket. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_e_n___functions_8cpp_a264e3768daa878d32da39471a40bad1c}{EN\+::\+Recv\+File}} (EN\+\_\+\+SOCKET File\+Send\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)=nullptr)
+\begin{DoxyCompactList}\small\item\em This function will wait incoming file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_e_n___functions_8cpp_a2e9414f75fef1744454538fdb41cb778}{EN\+::\+Continue\+Recv\+File}} (EN\+\_\+\+SOCKET File\+Send\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)=nullptr)
+\begin{DoxyCompactList}\small\item\em Function to continue receiving the file. This function will wait file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_e_n___functions_8cpp_a997d67a94f0881510430be43f59d7e50}{EN\+::\+Forward\+File}} (EN\+\_\+\+SOCKET Source\+File\+Socket, EN\+\_\+\+SOCKET Destination\+File\+Socket, bool \&Is\+Stop, void($\ast$Progress\+Function)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)=nullptr)
+\begin{DoxyCompactList}\small\item\em This function will forward file from one socket to another. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_e_n___functions_8cpp_afb380fd9a02de5126d4fa3a5e613a4d0}{EN\+::\+Download\+Status}} (uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)
 \begin{DoxyCompactList}\small\item\em This function will print information about file downloading. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespace_e_n_a9e4485f0a8d8f567260a07cbbe5f44c5}{EN\+::\+Is\+File\+Exist}} (std\+::string file\+Path)
+\mbox{\Hypertarget{_e_n___functions_8cpp_a37667196804e8985a60321a1d9adc969}\label{_e_n___functions_8cpp_a37667196804e8985a60321a1d9adc969}} 
+bool {\bfseries EN\+::\+Is\+File\+Exist} (std\+::string File\+Path)
 \begin{DoxyCompactList}\small\item\em Return true if file exists, otherwise rerurn false. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{namespace_e_n_a5a2b916df05d59d57381340ff11fcac1}{EN\+::\+Delay}} (int milliseconds)
+\mbox{\Hypertarget{_e_n___functions_8cpp_a048c53258f6400c269f9ba5ffc030df5}\label{_e_n___functions_8cpp_a048c53258f6400c269f9ba5ffc030df5}} 
+uint64\+\_\+t {\bfseries EN\+::\+Get\+File\+Size} (std\+::string File\+Name)
+\begin{DoxyCompactList}\small\item\em Return file size in bytes If couldn\textquotesingle{}t open the file return 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{_e_n___functions_8cpp_a5a2b916df05d59d57381340ff11fcac1}\label{_e_n___functions_8cpp_a5a2b916df05d59d57381340ff11fcac1}} 
+void {\bfseries EN\+::\+Delay} (int milliseconds)
+\begin{DoxyCompactList}\small\item\em Crossplatform function for program suspension. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{_e_n___functions_8cpp_a73ccdb23d0833fe4cdaf2c1ef478049a}{EN\+::\+Int\+To\+String}} (unsigned int n)
+\begin{DoxyCompactList}\small\item\em Function to convert int to string. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_e_n___functions_8cpp_a099c0b273d31cc3ab71f41ca4d917270}{EN\+::\+String\+To\+Int}} (std\+::string str)
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{_e_n___functions_8h_a3417f8b24e33450676f3967c920db78d}\label{_e_n___functions_8h_a3417f8b24e33450676f3967c920db78d}} 
-\index{EN\_Functions.h@{EN\_Functions.h}!SendFileBufLen@{SendFileBufLen}}
-\index{SendFileBufLen@{SendFileBufLen}!EN\_Functions.h@{EN\_Functions.h}}
-\doxysubsubsection{\texorpdfstring{SendFileBufLen}{SendFileBufLen}}
-{\footnotesize\ttfamily \#define Send\+File\+Buf\+Len~1024}
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_e_n___functions_8cpp_a2e9414f75fef1744454538fdb41cb778}\label{_e_n___functions_8cpp_a2e9414f75fef1744454538fdb41cb778}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!ContinueRecvFile@{ContinueRecvFile}}
+\index{ContinueRecvFile@{ContinueRecvFile}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{ContinueRecvFile()}{ContinueRecvFile()}}
+{\footnotesize\ttfamily bool EN\+::\+Continue\+Recv\+File (\begin{DoxyParamCaption}\item[{EN\+\_\+\+SOCKET}]{File\+Send\+Socket,  }\item[{bool \&}]{Is\+Stop,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
 
 
-\doxysubsection{Typedef Documentation}
-\mbox{\Hypertarget{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}\label{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}} 
-\index{EN\_Functions.h@{EN\_Functions.h}!EN\_SOCKET@{EN\_SOCKET}}
-\index{EN\_SOCKET@{EN\_SOCKET}!EN\_Functions.h@{EN\_Functions.h}}
-\doxysubsubsection{\texorpdfstring{EN\_SOCKET}{EN\_SOCKET}}
-{\footnotesize\ttfamily typedef int \mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}}}
+Function to continue receiving the file. This function will wait file. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em File\+Send\+Socket} & the socket for receiving files \\
+\hline
+\mbox{\texttt{ in}}  & {\em Is\+Stop} & the reference to a boolean variable to stop file transfer \\
+\hline
+\mbox{\texttt{ in}}  & {\em Progress\+Function} & the pointer to a function that is used to track the status of file transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of file transmition success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_n___functions_8cpp_afb380fd9a02de5126d4fa3a5e613a4d0}\label{_e_n___functions_8cpp_afb380fd9a02de5126d4fa3a5e613a4d0}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!DownloadStatus@{DownloadStatus}}
+\index{DownloadStatus@{DownloadStatus}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{DownloadStatus()}{DownloadStatus()}}
+{\footnotesize\ttfamily void EN\+::\+Download\+Status (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{current,  }\item[{uint64\+\_\+t}]{all,  }\item[{uint64\+\_\+t}]{speed,  }\item[{uint64\+\_\+t}]{eta }\end{DoxyParamCaption})}
+
+
+
+This function will print information about file downloading. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em current} & the first is how many bytes were transmitted. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em all} & the second is the total number of bytes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em speed} & the third parameter shows the transfer rate in bytes. ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em eta} & the fourth shows the remaining time in seconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_e_n___functions_8cpp_a997d67a94f0881510430be43f59d7e50}\label{_e_n___functions_8cpp_a997d67a94f0881510430be43f59d7e50}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!ForwardFile@{ForwardFile}}
+\index{ForwardFile@{ForwardFile}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{ForwardFile()}{ForwardFile()}}
+{\footnotesize\ttfamily bool EN\+::\+Forward\+File (\begin{DoxyParamCaption}\item[{EN\+\_\+\+SOCKET}]{Source\+File\+Socket,  }\item[{EN\+\_\+\+SOCKET}]{Destination\+File\+Socket,  }\item[{bool \&}]{Is\+Stop,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+This function will forward file from one socket to another. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Source\+File\+Socket} & the source socket for receiving files \\
+\hline
+\mbox{\texttt{ in}}  & {\em Destination\+File\+Socket} & the destination socket for sending files \\
+\hline
+\mbox{\texttt{ in}}  & {\em Is\+Stop} & the reference to a boolean variable to stop file transfer \\
+\hline
+\mbox{\texttt{ in}}  & {\em Progress\+Function} & the pointer to a function that is used to track the status of file transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of file transmition success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_n___functions_8cpp_a0aad2351f0aa3d05579fc4ff0ff1d7fc}\label{_e_n___functions_8cpp_a0aad2351f0aa3d05579fc4ff0ff1d7fc}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!GetIpByURL@{GetIpByURL}}
+\index{GetIpByURL@{GetIpByURL}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{GetIpByURL()}{GetIpByURL()}}
+{\footnotesize\ttfamily std\+::string EN\+::\+Get\+Ip\+By\+URL (\begin{DoxyParamCaption}\item[{std\+::string}]{url }\end{DoxyParamCaption})}
+
+Function for getting an ip address from a url. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em url} & address to get ip \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_e_n___functions_8cpp_a73ccdb23d0833fe4cdaf2c1ef478049a}\label{_e_n___functions_8cpp_a73ccdb23d0833fe4cdaf2c1ef478049a}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!IntToString@{IntToString}}
+\index{IntToString@{IntToString}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{IntToString()}{IntToString()}}
+{\footnotesize\ttfamily std\+::string EN\+::\+Int\+To\+String (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+
+
+Function to convert int to string. 
+
+One char takes 1 byte, and a int takes 4 bytes. If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. This function turns a number into a character, since a character occupies a byte, then you can transfer numbers up to 255 in one byte. This function can be considered as the translation of a number into a number system with a base of 256 This function does not work with negative numbers. \mbox{\Hypertarget{_e_n___functions_8cpp_a264e3768daa878d32da39471a40bad1c}\label{_e_n___functions_8cpp_a264e3768daa878d32da39471a40bad1c}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!RecvFile@{RecvFile}}
+\index{RecvFile@{RecvFile}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{RecvFile()}{RecvFile()}}
+{\footnotesize\ttfamily bool EN\+::\+Recv\+File (\begin{DoxyParamCaption}\item[{EN\+\_\+\+SOCKET}]{File\+Send\+Socket,  }\item[{bool \&}]{Is\+Stop,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+This function will wait incoming file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em File\+Send\+Socket} & the socket for receiving files \\
+\hline
+\mbox{\texttt{ in}}  & {\em Is\+Stop} & the reference to a boolean variable to stop file transfer \\
+\hline
+\mbox{\texttt{ in}}  & {\em Progress\+Function} & the pointer to a function that is used to track the status of file transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of file transmition success, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_n___functions_8cpp_ad0da32429055e2a4bdfaf12a5daa79c2}\label{_e_n___functions_8cpp_ad0da32429055e2a4bdfaf12a5daa79c2}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!SendFile@{SendFile}}
+\index{SendFile@{SendFile}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{SendFile()}{SendFile()}}
+{\footnotesize\ttfamily bool EN\+::\+Send\+File (\begin{DoxyParamCaption}\item[{EN\+\_\+\+SOCKET}]{File\+Send\+Socket,  }\item[{std\+::string}]{File\+Path,  }\item[{bool \&}]{Is\+Stop,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function = {\ttfamily nullptr},  }\item[{uint64\+\_\+t}]{Previously\+Sended\+Size = {\ttfamily 0},  }\item[{int}]{Chunks\+Number\+Between\+Delay = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+The function gets socket and filename and send file to socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em File\+Send\+Socket} & the socket for sending files \\
+\hline
+\mbox{\texttt{ in}}  & {\em File\+Path} & the full path to the file to be sent \\
+\hline
+\mbox{\texttt{ in}}  & {\em Is\+Stop} & the reference to a boolean variable to stop file transfer ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em Progress\+Function} & the pointer to a function that is used to track the status of file transfer. By default using EN\+::\+Download\+Status \\
+\hline
+\mbox{\texttt{ in}}  & {\em Previously\+Sended\+Size} & The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending \\
+\hline
+\mbox{\texttt{ in}}  & {\em Chunks\+Number\+Between\+Delay} & The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay. The delay between sending the chunks is 20 millimeconds. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of file transmition success, false otherwise
+\end{DoxyReturn}
+By default, the library progress function is used to output to the console. ~\newline
+ Timeout between sending file chunks set to 20. You adjust the number of chunks that will be sent between the this timeout \mbox{\Hypertarget{_e_n___functions_8cpp_a68d1f7b87287581952cf05d08f79c623}\label{_e_n___functions_8cpp_a68d1f7b87287581952cf05d08f79c623}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!Split@{Split}}
+\index{Split@{Split}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ EN\+::\+Split (\begin{DoxyParamCaption}\item[{std\+::string}]{String\+To\+Split,  }\item[{std\+::string}]{Splitter\+String = {\ttfamily \char`\"{}~\char`\"{}} }\end{DoxyParamCaption})}
+
+Divides the string to std\+::vector$<$std\+::string$>$. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em String\+To\+Split} & string to split \\
+\hline
+\mbox{\texttt{ in}}  & {\em Splitter\+String} & the string that divides the string. Default set to space(\char`\"{} \char`\"{}) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of strings 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_n___functions_8cpp_a099c0b273d31cc3ab71f41ca4d917270}\label{_e_n___functions_8cpp_a099c0b273d31cc3ab71f41ca4d917270}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!StringToInt@{StringToInt}}
+\index{StringToInt@{StringToInt}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{StringToInt()}{StringToInt()}}
+{\footnotesize\ttfamily int EN\+::\+String\+To\+Int (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+Function to convert string to int. Works with strings from function EN\+::\+Int\+To\+String. \mbox{\Hypertarget{_e_n___functions_8cpp_a32a63388cd4ad8ee41e5ed4a51767b1b}\label{_e_n___functions_8cpp_a32a63388cd4ad8ee41e5ed4a51767b1b}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!TCP\_Recv@{TCP\_Recv}}
+\index{TCP\_Recv@{TCP\_Recv}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{TCP\_Recv()}{TCP\_Recv()}}
+{\footnotesize\ttfamily bool EN\+::\+TCP\+\_\+\+Recv (\begin{DoxyParamCaption}\item[{EN\+\_\+\+SOCKET}]{sock,  }\item[{std\+::string \&}]{message }\end{DoxyParamCaption})}
+
+Wrapper over the recv function. Allows you to recv std\+::string. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em socket} & socket to get data \\
+\hline
+\mbox{\texttt{ out}}  & {\em message} & string to put received data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false if it was disconnection 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_e_n___functions_8cpp_a46c9b5e98fa456b4725cc61b6fa3ac95}\label{_e_n___functions_8cpp_a46c9b5e98fa456b4725cc61b6fa3ac95}} 
+\index{EN\_Functions.h@{EN\_Functions.h}!TCP\_Send@{TCP\_Send}}
+\index{TCP\_Send@{TCP\_Send}!EN\_Functions.h@{EN\_Functions.h}}
+\doxysubsubsection{\texorpdfstring{TCP\_Send()}{TCP\_Send()}}
+{\footnotesize\ttfamily void EN\+::\+TCP\+\_\+\+Send (\begin{DoxyParamCaption}\item[{EN\+\_\+\+SOCKET}]{sock,  }\item[{std\+::string}]{message,  }\item[{int}]{Message\+Delay = {\ttfamily 10} }\end{DoxyParamCaption})}
+
+Wrapper over the send function. Allows you to send std\+::string. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sock} & socket to send data \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & message to send \\
+\hline
+\mbox{\texttt{ in}}  & {\em Message\+Delay} & delay after message sending \\
+\hline
+\end{DoxyParams}

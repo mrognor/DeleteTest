@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Easy network: C:/Users/timur/Desktop/EasyNetwork/Easy_Network/EN_Functions.h File Reference</title>
+<title>Easy Network: C:/Users/timur/Desktop/EasyNetwork/Easy_Network/EN_Functions.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,7 +27,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="icon.jpg"/></td>
   <td id="projectalign">
-   <div id="projectname">Easy network<span id="projectnumber">&#160;v0.0.1</span>
+   <div id="projectname">Easy Network<span id="projectnumber">&#160;v0.0.2</span>
    </div>
    <div id="projectbrief">Simple C++ network library</div>
   </td>
@@ -86,96 +86,497 @@ $(document).ready(function(){initNavTree('_e_n___functions_8h.html',''); initRes
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">EN_Functions.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &lt;sys/socket.h&gt;</code><br />
-<code>#include &lt;netinet/in.h&gt;</code><br />
-<code>#include &lt;arpa/inet.h&gt;</code><br />
-<code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;ctime&gt;</code><br />
-<code>#include &lt;fstream&gt;</code><br />
-</div>
+
 <p><a href="_e_n___functions_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespace_e_n"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html">EN</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a3417f8b24e33450676f3967c920db78d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8h.html#a3417f8b24e33450676f3967c920db78d">SendFileBufLen</a>&#160;&#160;&#160;1024</td></tr>
-<tr class="separator:a3417f8b24e33450676f3967c920db78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a2944f0dc2494dcd2ca0f0f3a8d82686e"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a></td></tr>
-<tr class="separator:a2944f0dc2494dcd2ca0f0f3a8d82686e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a6cd41b67e7f621f361ed38c5dd5d7166"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a6cd41b67e7f621f361ed38c5dd5d7166">EN::TCP_Send</a> (<a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> sock, std::string message, int MessageDelay=10)</td></tr>
-<tr class="memdesc:a6cd41b67e7f621f361ed38c5dd5d7166"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper over the send function. Allows you to send std::string.  <a href="namespace_e_n.html#a6cd41b67e7f621f361ed38c5dd5d7166">More...</a><br /></td></tr>
-<tr class="separator:a6cd41b67e7f621f361ed38c5dd5d7166"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32a63388cd4ad8ee41e5ed4a51767b1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a32a63388cd4ad8ee41e5ed4a51767b1b">EN::TCP_Recv</a> (<a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> sock, std::string &amp;message)</td></tr>
-<tr class="memdesc:a32a63388cd4ad8ee41e5ed4a51767b1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper over the recv function. Allows you to recv std::string.  <a href="namespace_e_n.html#a32a63388cd4ad8ee41e5ed4a51767b1b">More...</a><br /></td></tr>
+<tr class="memitem:a0aad2351f0aa3d05579fc4ff0ff1d7fc"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a0aad2351f0aa3d05579fc4ff0ff1d7fc">EN::GetIpByURL</a> (std::string url)</td></tr>
+<tr class="separator:a0aad2351f0aa3d05579fc4ff0ff1d7fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c9b5e98fa456b4725cc61b6fa3ac95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a46c9b5e98fa456b4725cc61b6fa3ac95">EN::TCP_Send</a> (EN_SOCKET sock, std::string message, int MessageDelay)</td></tr>
+<tr class="separator:a46c9b5e98fa456b4725cc61b6fa3ac95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a63388cd4ad8ee41e5ed4a51767b1b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a32a63388cd4ad8ee41e5ed4a51767b1b">EN::TCP_Recv</a> (EN_SOCKET sock, std::string &amp;message)</td></tr>
 <tr class="separator:a32a63388cd4ad8ee41e5ed4a51767b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01c43c7496b1373336bf695267a93043"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a01c43c7496b1373336bf695267a93043">EN::Split</a> (std::string StringToSplit, std::string SplitterString=&quot; &quot;)</td></tr>
-<tr class="memdesc:a01c43c7496b1373336bf695267a93043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Divides the string to std::vector&lt;std::string&gt;. Second string is string divider. By default set to space(" ")  <a href="namespace_e_n.html#a01c43c7496b1373336bf695267a93043">More...</a><br /></td></tr>
-<tr class="separator:a01c43c7496b1373336bf695267a93043"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb34fd39ecf23c45870a78e91860ec35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#abb34fd39ecf23c45870a78e91860ec35">EN::SendFile</a> (<a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> FileSendSocket, std::string FileName, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta), uint64_t PreviouslySendedSize, int ChunksNumberBetweenDelay)</td></tr>
-<tr class="separator:abb34fd39ecf23c45870a78e91860ec35"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3a0eb472fb10023f1d76e6e55e761f5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#af3a0eb472fb10023f1d76e6e55e761f5">EN::RecvFile</a> (<a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> FileSendSocket, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</td></tr>
-<tr class="separator:af3a0eb472fb10023f1d76e6e55e761f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae32e02db2dba65470e6a585495341c18"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#ae32e02db2dba65470e6a585495341c18">EN::ContinueRecvFile</a> (<a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> FileSendSocket, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</td></tr>
-<tr class="separator:ae32e02db2dba65470e6a585495341c18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae6ea2bdb70747893b66082907def2588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#ae6ea2bdb70747893b66082907def2588">EN::ForwardFile</a> (<a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> SourceFileSocket, <a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a> DestinationFileSocket, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta))</td></tr>
-<tr class="separator:ae6ea2bdb70747893b66082907def2588"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#afb380fd9a02de5126d4fa3a5e613a4d0">EN::DownloadStatus</a> (uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)</td></tr>
-<tr class="memdesc:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will print information about file downloading.  <a href="namespace_e_n.html#afb380fd9a02de5126d4fa3a5e613a4d0">More...</a><br /></td></tr>
+<tr class="memitem:a68d1f7b87287581952cf05d08f79c623"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a68d1f7b87287581952cf05d08f79c623">EN::Split</a> (std::string StringToSplit, std::string SplitterString)</td></tr>
+<tr class="separator:a68d1f7b87287581952cf05d08f79c623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0da32429055e2a4bdfaf12a5daa79c2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#ad0da32429055e2a4bdfaf12a5daa79c2">EN::SendFile</a> (EN_SOCKET FileSendSocket, std::string FilePath, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)=nullptr, uint64_t PreviouslySendedSize=0, int ChunksNumberBetweenDelay=0)</td></tr>
+<tr class="memdesc:ad0da32429055e2a4bdfaf12a5daa79c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function gets socket and filename and send file to socket.  <a href="_e_n___functions_8cpp.html#ad0da32429055e2a4bdfaf12a5daa79c2">More...</a><br /></td></tr>
+<tr class="separator:ad0da32429055e2a4bdfaf12a5daa79c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264e3768daa878d32da39471a40bad1c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a264e3768daa878d32da39471a40bad1c">EN::RecvFile</a> (EN_SOCKET FileSendSocket, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)=nullptr)</td></tr>
+<tr class="memdesc:a264e3768daa878d32da39471a40bad1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will wait incoming file.  <a href="_e_n___functions_8cpp.html#a264e3768daa878d32da39471a40bad1c">More...</a><br /></td></tr>
+<tr class="separator:a264e3768daa878d32da39471a40bad1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9414f75fef1744454538fdb41cb778"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a2e9414f75fef1744454538fdb41cb778">EN::ContinueRecvFile</a> (EN_SOCKET FileSendSocket, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)=nullptr)</td></tr>
+<tr class="memdesc:a2e9414f75fef1744454538fdb41cb778"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to continue receiving the file. This function will wait file.  <a href="_e_n___functions_8cpp.html#a2e9414f75fef1744454538fdb41cb778">More...</a><br /></td></tr>
+<tr class="separator:a2e9414f75fef1744454538fdb41cb778"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a997d67a94f0881510430be43f59d7e50"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a997d67a94f0881510430be43f59d7e50">EN::ForwardFile</a> (EN_SOCKET SourceFileSocket, EN_SOCKET DestinationFileSocket, bool &amp;IsStop, void(*ProgressFunction)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)=nullptr)</td></tr>
+<tr class="memdesc:a997d67a94f0881510430be43f59d7e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will forward file from one socket to another.  <a href="_e_n___functions_8cpp.html#a997d67a94f0881510430be43f59d7e50">More...</a><br /></td></tr>
+<tr class="separator:a997d67a94f0881510430be43f59d7e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#afb380fd9a02de5126d4fa3a5e613a4d0">EN::DownloadStatus</a> (uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)</td></tr>
+<tr class="memdesc:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will print information about file downloading.  <a href="_e_n___functions_8cpp.html#afb380fd9a02de5126d4fa3a5e613a4d0">More...</a><br /></td></tr>
 <tr class="separator:afb380fd9a02de5126d4fa3a5e613a4d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e4485f0a8d8f567260a07cbbe5f44c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a9e4485f0a8d8f567260a07cbbe5f44c5">EN::IsFileExist</a> (std::string filePath)</td></tr>
-<tr class="memdesc:a9e4485f0a8d8f567260a07cbbe5f44c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if file exists, otherwise rerurn false.  <a href="namespace_e_n.html#a9e4485f0a8d8f567260a07cbbe5f44c5">More...</a><br /></td></tr>
-<tr class="separator:a9e4485f0a8d8f567260a07cbbe5f44c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a2b916df05d59d57381340ff11fcac1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_e_n.html#a5a2b916df05d59d57381340ff11fcac1">EN::Delay</a> (int milliseconds)</td></tr>
+<tr class="memitem:a37667196804e8985a60321a1d9adc969"><td class="memItemLeft" align="right" valign="top"><a id="a37667196804e8985a60321a1d9adc969" name="a37667196804e8985a60321a1d9adc969"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>EN::IsFileExist</b> (std::string FilePath)</td></tr>
+<tr class="memdesc:a37667196804e8985a60321a1d9adc969"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return true if file exists, otherwise rerurn false. <br /></td></tr>
+<tr class="separator:a37667196804e8985a60321a1d9adc969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a048c53258f6400c269f9ba5ffc030df5"><td class="memItemLeft" align="right" valign="top"><a id="a048c53258f6400c269f9ba5ffc030df5" name="a048c53258f6400c269f9ba5ffc030df5"></a>
+uint64_t&#160;</td><td class="memItemRight" valign="bottom"><b>EN::GetFileSize</b> (std::string FileName)</td></tr>
+<tr class="memdesc:a048c53258f6400c269f9ba5ffc030df5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return file size in bytes If couldn't open the file return 0. <br /></td></tr>
+<tr class="separator:a048c53258f6400c269f9ba5ffc030df5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a2b916df05d59d57381340ff11fcac1"><td class="memItemLeft" align="right" valign="top"><a id="a5a2b916df05d59d57381340ff11fcac1" name="a5a2b916df05d59d57381340ff11fcac1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>EN::Delay</b> (int milliseconds)</td></tr>
+<tr class="memdesc:a5a2b916df05d59d57381340ff11fcac1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crossplatform function for program suspension. <br /></td></tr>
 <tr class="separator:a5a2b916df05d59d57381340ff11fcac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ccdb23d0833fe4cdaf2c1ef478049a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a73ccdb23d0833fe4cdaf2c1ef478049a">EN::IntToString</a> (unsigned int n)</td></tr>
+<tr class="memdesc:a73ccdb23d0833fe4cdaf2c1ef478049a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to convert int to string.  <a href="_e_n___functions_8cpp.html#a73ccdb23d0833fe4cdaf2c1ef478049a">More...</a><br /></td></tr>
+<tr class="separator:a73ccdb23d0833fe4cdaf2c1ef478049a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a099c0b273d31cc3ab71f41ca4d917270"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_e_n___functions_8cpp.html#a099c0b273d31cc3ab71f41ca4d917270">EN::StringToInt</a> (std::string str)</td></tr>
+<tr class="separator:a099c0b273d31cc3ab71f41ca4d917270"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a3417f8b24e33450676f3967c920db78d" name="a3417f8b24e33450676f3967c920db78d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3417f8b24e33450676f3967c920db78d">&#9670;&nbsp;</a></span>SendFileBufLen</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a2e9414f75fef1744454538fdb41cb778" name="a2e9414f75fef1744454538fdb41cb778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9414f75fef1744454538fdb41cb778">&#9670;&nbsp;</a></span>ContinueRecvFile()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SendFileBufLen&#160;&#160;&#160;1024</td>
+          <td class="memname">bool EN::ContinueRecvFile </td>
+          <td>(</td>
+          <td class="paramtype">EN_SOCKET&#160;</td>
+          <td class="paramname"><em>FileSendSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>IsStop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)&#160;</td>
+          <td class="paramname"><em>ProgressFunction</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Function to continue receiving the file. This function will wait file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">FileSendSocket</td><td>the socket for receiving files </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">IsStop</td><td>the reference to a boolean variable to stop file transfer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ProgressFunction</td><td>the pointer to a function that is used to track the status of file transfer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of file transmition success, false otherwise </dd></dl>
+
 </div>
 </div>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a2944f0dc2494dcd2ca0f0f3a8d82686e" name="a2944f0dc2494dcd2ca0f0f3a8d82686e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2944f0dc2494dcd2ca0f0f3a8d82686e">&#9670;&nbsp;</a></span>EN_SOCKET</h2>
+<a id="afb380fd9a02de5126d4fa3a5e613a4d0" name="afb380fd9a02de5126d4fa3a5e613a4d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb380fd9a02de5126d4fa3a5e613a4d0">&#9670;&nbsp;</a></span>DownloadStatus()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int <a class="el" href="_e_n___functions_8h.html#a2944f0dc2494dcd2ca0f0f3a8d82686e">EN_SOCKET</a></td>
+          <td class="memname">void EN::DownloadStatus </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>current</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>all</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>speed</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>eta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>This function will print information about file downloading. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">current</td><td>the first is how many bytes were transmitted. <br  />
+ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">all</td><td>the second is the total number of bytes. <br  />
+ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">speed</td><td>the third parameter shows the transfer rate in bytes. <br  />
+ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">eta</td><td>the fourth shows the remaining time in seconds </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a997d67a94f0881510430be43f59d7e50" name="a997d67a94f0881510430be43f59d7e50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a997d67a94f0881510430be43f59d7e50">&#9670;&nbsp;</a></span>ForwardFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::ForwardFile </td>
+          <td>(</td>
+          <td class="paramtype">EN_SOCKET&#160;</td>
+          <td class="paramname"><em>SourceFileSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EN_SOCKET&#160;</td>
+          <td class="paramname"><em>DestinationFileSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>IsStop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)&#160;</td>
+          <td class="paramname"><em>ProgressFunction</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will forward file from one socket to another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">SourceFileSocket</td><td>the source socket for receiving files </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">DestinationFileSocket</td><td>the destination socket for sending files </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">IsStop</td><td>the reference to a boolean variable to stop file transfer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ProgressFunction</td><td>the pointer to a function that is used to track the status of file transfer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of file transmition success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a0aad2351f0aa3d05579fc4ff0ff1d7fc" name="a0aad2351f0aa3d05579fc4ff0ff1d7fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0aad2351f0aa3d05579fc4ff0ff1d7fc">&#9670;&nbsp;</a></span>GetIpByURL()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string EN::GetIpByURL </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>url</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function for getting an ip address from a url. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>address to get ip </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a73ccdb23d0833fe4cdaf2c1ef478049a" name="a73ccdb23d0833fe4cdaf2c1ef478049a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ccdb23d0833fe4cdaf2c1ef478049a">&#9670;&nbsp;</a></span>IntToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string EN::IntToString </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to convert int to string. </p>
+<p >One char takes 1 byte, and a int takes 4 bytes. If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. This function turns a number into a character, since a character occupies a byte, then you can transfer numbers up to 255 in one byte. This function can be considered as the translation of a number into a number system with a base of 256 This function does not work with negative numbers. </p>
+
+</div>
+</div>
+<a id="a264e3768daa878d32da39471a40bad1c" name="a264e3768daa878d32da39471a40bad1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264e3768daa878d32da39471a40bad1c">&#9670;&nbsp;</a></span>RecvFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::RecvFile </td>
+          <td>(</td>
+          <td class="paramtype">EN_SOCKET&#160;</td>
+          <td class="paramname"><em>FileSendSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>IsStop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)&#160;</td>
+          <td class="paramname"><em>ProgressFunction</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will wait incoming file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">FileSendSocket</td><td>the socket for receiving files </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">IsStop</td><td>the reference to a boolean variable to stop file transfer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ProgressFunction</td><td>the pointer to a function that is used to track the status of file transfer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of file transmition success, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ad0da32429055e2a4bdfaf12a5daa79c2" name="ad0da32429055e2a4bdfaf12a5daa79c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0da32429055e2a4bdfaf12a5daa79c2">&#9670;&nbsp;</a></span>SendFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::SendFile </td>
+          <td>(</td>
+          <td class="paramtype">EN_SOCKET&#160;</td>
+          <td class="paramname"><em>FileSendSocket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>FilePath</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>IsStop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(uint64_t current, uint64_t all, uint64_t speed, uint64_t eta)&#160;</td>
+          <td class="paramname"><em>ProgressFunction</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>PreviouslySendedSize</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ChunksNumberBetweenDelay</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The function gets socket and filename and send file to socket. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">FileSendSocket</td><td>the socket for sending files </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">FilePath</td><td>the full path to the file to be sent </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">IsStop</td><td>the reference to a boolean variable to stop file transfer <br  />
+ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ProgressFunction</td><td>the pointer to a function that is used to track the status of file transfer. By default using EN::DownloadStatus </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">PreviouslySendedSize</td><td>The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ChunksNumberBetweenDelay</td><td>The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay. The delay between sending the chunks is 20 millimeconds. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of file transmition success, false otherwise</dd></dl>
+<p>By default, the library progress function is used to output to the console. <br  />
+ Timeout between sending file chunks set to 20. You adjust the number of chunks that will be sent between the this timeout </p>
+
+</div>
+</div>
+<a id="a68d1f7b87287581952cf05d08f79c623" name="a68d1f7b87287581952cf05d08f79c623"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68d1f7b87287581952cf05d08f79c623">&#9670;&nbsp;</a></span>Split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; std::string &gt; EN::Split </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>StringToSplit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>SplitterString</em> = <code>&quot;&#160;&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Divides the string to std::vector&lt;std::string&gt;. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">StringToSplit</td><td>string to split </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">SplitterString</td><td>the string that divides the string. Default set to space(" ") </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Vector of strings </dd></dl>
+
+</div>
+</div>
+<a id="a099c0b273d31cc3ab71f41ca4d917270" name="a099c0b273d31cc3ab71f41ca4d917270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099c0b273d31cc3ab71f41ca4d917270">&#9670;&nbsp;</a></span>StringToInt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EN::StringToInt </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function to convert string to int. Works with strings from function EN::IntToString. </p>
+
+</div>
+</div>
+<a id="a32a63388cd4ad8ee41e5ed4a51767b1b" name="a32a63388cd4ad8ee41e5ed4a51767b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32a63388cd4ad8ee41e5ed4a51767b1b">&#9670;&nbsp;</a></span>TCP_Recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EN::TCP_Recv </td>
+          <td>(</td>
+          <td class="paramtype">EN_SOCKET&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Wrapper over the recv function. Allows you to recv std::string. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket</td><td>socket to get data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">message</td><td>string to put received data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true in case of success, false if it was disconnection </dd></dl>
+
+</div>
+</div>
+<a id="a46c9b5e98fa456b4725cc61b6fa3ac95" name="a46c9b5e98fa456b4725cc61b6fa3ac95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c9b5e98fa456b4725cc61b6fa3ac95">&#9670;&nbsp;</a></span>TCP_Send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void EN::TCP_Send </td>
+          <td>(</td>
+          <td class="paramtype">EN_SOCKET&#160;</td>
+          <td class="paramname"><em>sock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>MessageDelay</em> = <code>10</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Wrapper over the send function. Allows you to send std::string. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sock</td><td>socket to send data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">message</td><td>message to send </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">MessageDelay</td><td>delay after message sending </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

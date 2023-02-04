@@ -3,6 +3,8 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+class \mbox{\hyperlink{class_e_n_1_1_e_n___parallel_for}{EN\+\_\+\+Parallel\+For}}
+\begin{DoxyCompactList}\small\item\em Class implementing a thread pool. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___client}{EN\+\_\+\+RAU\+\_\+\+Client}}
 \begin{DoxyCompactList}\small\item\em Client class with connection and the possibility of reliable and unreliable sending and receiveng. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_e_n_1_1_e_n___r_a_u___server}{EN\+\_\+\+RAU\+\_\+\+Server}}
@@ -27,6 +29,8 @@ enum \mbox{\hyperlink{namespace_e_n_ab6020967b6f529cc6165884e9e6b39b7}{EN\+\_\+\
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+std\+::string \mbox{\hyperlink{namespace_e_n_a0aad2351f0aa3d05579fc4ff0ff1d7fc}{Get\+Ip\+By\+URL}} (std\+::string url)
+\begin{DoxyCompactList}\small\item\em Function for getting an ip address from a url. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{namespace_e_n_a6cd41b67e7f621f361ed38c5dd5d7166}{TCP\+\_\+\+Send}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} sock, std\+::string message, int Message\+Delay=10)
 \begin{DoxyCompactList}\small\item\em Wrapper over the send function. Allows you to send std\+::string. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{namespace_e_n_a32a63388cd4ad8ee41e5ed4a51767b1b}{TCP\+\_\+\+Recv}} (\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}} sock, std\+::string \&message)
@@ -43,9 +47,15 @@ bool \mbox{\hyperlink{namespace_e_n_ae6ea2bdb70747893b66082907def2588}{Forward\+
 \item 
 void \mbox{\hyperlink{namespace_e_n_afb380fd9a02de5126d4fa3a5e613a4d0}{Download\+Status}} (uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)
 \begin{DoxyCompactList}\small\item\em This function will print information about file downloading. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{namespace_e_n_a9e4485f0a8d8f567260a07cbbe5f44c5}{Is\+File\+Exist}} (std\+::string file\+Path)
+bool \mbox{\hyperlink{namespace_e_n_a37667196804e8985a60321a1d9adc969}{Is\+File\+Exist}} (std\+::string File\+Path)
 \begin{DoxyCompactList}\small\item\em Return true if file exists, otherwise rerurn false. \end{DoxyCompactList}\item 
+uint64\+\_\+t \mbox{\hyperlink{namespace_e_n_a048c53258f6400c269f9ba5ffc030df5}{Get\+File\+Size}} (std\+::string File\+Name)
+\item 
 void \mbox{\hyperlink{namespace_e_n_a5a2b916df05d59d57381340ff11fcac1}{Delay}} (int milliseconds)
+\begin{DoxyCompactList}\small\item\em Crossplatform function for program suspension. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{namespace_e_n_a73ccdb23d0833fe4cdaf2c1ef478049a}{Int\+To\+String}} (unsigned int n)
+\item 
+int \mbox{\hyperlink{namespace_e_n_a099c0b273d31cc3ab71f41ca4d917270}{String\+To\+Int}} (std\+::string str)
 \end{DoxyCompactItemize}
 
 
@@ -85,7 +95,11 @@ Function to continue receiving the file This function will wait file. Second par
 \doxysubsubsection{\texorpdfstring{Delay()}{Delay()}}
 {\footnotesize\ttfamily void EN\+::\+Delay (\begin{DoxyParamCaption}\item[{int}]{milliseconds }\end{DoxyParamCaption})}
 
-Crossplatform function for program suspension Minimum time is 20 \mbox{\Hypertarget{namespace_e_n_afb380fd9a02de5126d4fa3a5e613a4d0}\label{namespace_e_n_afb380fd9a02de5126d4fa3a5e613a4d0}} 
+
+
+Crossplatform function for program suspension. 
+
+\mbox{\Hypertarget{namespace_e_n_afb380fd9a02de5126d4fa3a5e613a4d0}\label{namespace_e_n_afb380fd9a02de5126d4fa3a5e613a4d0}} 
 \index{EN@{EN}!DownloadStatus@{DownloadStatus}}
 \index{DownloadStatus@{DownloadStatus}!EN@{EN}}
 \doxysubsubsection{\texorpdfstring{DownloadStatus()}{DownloadStatus()}}
@@ -101,11 +115,33 @@ This function will print information about file downloading.
 \doxysubsubsection{\texorpdfstring{ForwardFile()}{ForwardFile()}}
 {\footnotesize\ttfamily bool EN\+::\+Forward\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}}}]{Source\+File\+Socket,  }\item[{\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}}}]{Destination\+File\+Socket,  }\item[{bool \&}]{Is\+Stop,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function = {\ttfamily nullptr} }\end{DoxyParamCaption})}
 
-This function will forward file from one socket to another. First parametr is source socket Second parametr is destination socket Third parametr its refernce to bool to stop transmission. The fird parameter is a pointer to a function to handle the remaining transfer time \mbox{\Hypertarget{namespace_e_n_a9e4485f0a8d8f567260a07cbbe5f44c5}\label{namespace_e_n_a9e4485f0a8d8f567260a07cbbe5f44c5}} 
+This function will forward file from one socket to another. First parametr is source socket Second parametr is destination socket Third parametr its refernce to bool to stop transmission. The fird parameter is a pointer to a function to handle the remaining transfer time \mbox{\Hypertarget{namespace_e_n_a048c53258f6400c269f9ba5ffc030df5}\label{namespace_e_n_a048c53258f6400c269f9ba5ffc030df5}} 
+\index{EN@{EN}!GetFileSize@{GetFileSize}}
+\index{GetFileSize@{GetFileSize}!EN@{EN}}
+\doxysubsubsection{\texorpdfstring{GetFileSize()}{GetFileSize()}}
+{\footnotesize\ttfamily uint64\+\_\+t EN\+::\+Get\+File\+Size (\begin{DoxyParamCaption}\item[{std\+::string}]{File\+Name }\end{DoxyParamCaption})}
+
+Return file size in bytes If couldn\textquotesingle{}t open the file return 0 \mbox{\Hypertarget{namespace_e_n_a0aad2351f0aa3d05579fc4ff0ff1d7fc}\label{namespace_e_n_a0aad2351f0aa3d05579fc4ff0ff1d7fc}} 
+\index{EN@{EN}!GetIpByURL@{GetIpByURL}}
+\index{GetIpByURL@{GetIpByURL}!EN@{EN}}
+\doxysubsubsection{\texorpdfstring{GetIpByURL()}{GetIpByURL()}}
+{\footnotesize\ttfamily std\+::string EN\+::\+Get\+Ip\+By\+URL (\begin{DoxyParamCaption}\item[{std\+::string}]{url }\end{DoxyParamCaption})}
+
+
+
+Function for getting an ip address from a url. 
+
+\mbox{\Hypertarget{namespace_e_n_a73ccdb23d0833fe4cdaf2c1ef478049a}\label{namespace_e_n_a73ccdb23d0833fe4cdaf2c1ef478049a}} 
+\index{EN@{EN}!IntToString@{IntToString}}
+\index{IntToString@{IntToString}!EN@{EN}}
+\doxysubsubsection{\texorpdfstring{IntToString()}{IntToString()}}
+{\footnotesize\ttfamily std\+::string EN\+::\+Int\+To\+String (\begin{DoxyParamCaption}\item[{unsigned int}]{n }\end{DoxyParamCaption})}
+
+Function to convert int to string. One char takes 1 byte, and a int takes 4 bytes. If you try to translate the number 120 into a string, then you will have 3 characters or 3 bytes. This function turns a number into a character, since a character occupies a byte, then you can transfer numbers up to 255 in one byte. This function can be considered as the translation of a number into a number system with a base of 256 This function does not work with negative numbers. \mbox{\Hypertarget{namespace_e_n_a37667196804e8985a60321a1d9adc969}\label{namespace_e_n_a37667196804e8985a60321a1d9adc969}} 
 \index{EN@{EN}!IsFileExist@{IsFileExist}}
 \index{IsFileExist@{IsFileExist}!EN@{EN}}
 \doxysubsubsection{\texorpdfstring{IsFileExist()}{IsFileExist()}}
-{\footnotesize\ttfamily bool EN\+::\+Is\+File\+Exist (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool EN\+::\+Is\+File\+Exist (\begin{DoxyParamCaption}\item[{std\+::string}]{File\+Path }\end{DoxyParamCaption})}
 
 
 
@@ -123,7 +159,7 @@ This function will wait file. Second parametr its refernce to bool to stop trans
 \doxysubsubsection{\texorpdfstring{SendFile()}{SendFile()}}
 {\footnotesize\ttfamily bool EN\+::\+Send\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_e_n___functions_8h_a2944f0dc2494dcd2ca0f0f3a8d82686e}{EN\+\_\+\+SOCKET}}}]{File\+Send\+Socket,  }\item[{std\+::string}]{File\+Path,  }\item[{bool \&}]{Is\+Stop,  }\item[{void($\ast$)(uint64\+\_\+t current, uint64\+\_\+t all, uint64\+\_\+t speed, uint64\+\_\+t eta)}]{Progress\+Function = {\ttfamily nullptr},  }\item[{uint64\+\_\+t}]{Previously\+Sended\+Size = {\ttfamily 0},  }\item[{int}]{Chunks\+Number\+Between\+Delay = {\ttfamily 0} }\end{DoxyParamCaption})}
 
-Functions gets socket and filename and send file to socket. Third parametr its refernce to bool to stop transmission. The fourth parameter is a pointer to a function to handle the remaining transfer time The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay \mbox{\Hypertarget{namespace_e_n_a01c43c7496b1373336bf695267a93043}\label{namespace_e_n_a01c43c7496b1373336bf695267a93043}} 
+Functions gets socket and filename and send file to socket. Third parametr its refernce to bool to stop transmission. The fourth parameter is a pointer to a function to handle the remaining transfer time The fifth parameter is needed to continue downloading. Gets the size of the previously transmitted file in bytes. 0 means no previosly sending The sixth parameter is needed to regulate the file transfer rate. Gets amount of chunks between sending delay. 0 means no delay The delay between sending the chunks is 20 millimeconds. \mbox{\Hypertarget{namespace_e_n_a01c43c7496b1373336bf695267a93043}\label{namespace_e_n_a01c43c7496b1373336bf695267a93043}} 
 \index{EN@{EN}!Split@{Split}}
 \index{Split@{Split}!EN@{EN}}
 \doxysubsubsection{\texorpdfstring{Split()}{Split()}}
@@ -133,7 +169,13 @@ Functions gets socket and filename and send file to socket. Third parametr its r
 
 Divides the string to std\+::vector$<$std\+::string$>$. Second string is string divider. By default set to space(\char`\"{} \char`\"{}) 
 
-\mbox{\Hypertarget{namespace_e_n_a32a63388cd4ad8ee41e5ed4a51767b1b}\label{namespace_e_n_a32a63388cd4ad8ee41e5ed4a51767b1b}} 
+\mbox{\Hypertarget{namespace_e_n_a099c0b273d31cc3ab71f41ca4d917270}\label{namespace_e_n_a099c0b273d31cc3ab71f41ca4d917270}} 
+\index{EN@{EN}!StringToInt@{StringToInt}}
+\index{StringToInt@{StringToInt}!EN@{EN}}
+\doxysubsubsection{\texorpdfstring{StringToInt()}{StringToInt()}}
+{\footnotesize\ttfamily int EN\+::\+String\+To\+Int (\begin{DoxyParamCaption}\item[{std\+::string}]{str }\end{DoxyParamCaption})}
+
+Function to convert string to int. Works with strings from function \mbox{\hyperlink{namespace_e_n_a73ccdb23d0833fe4cdaf2c1ef478049a}{EN\+::\+Int\+To\+String}}. \mbox{\Hypertarget{namespace_e_n_a32a63388cd4ad8ee41e5ed4a51767b1b}\label{namespace_e_n_a32a63388cd4ad8ee41e5ed4a51767b1b}} 
 \index{EN@{EN}!TCP\_Recv@{TCP\_Recv}}
 \index{TCP\_Recv@{TCP\_Recv}!EN@{EN}}
 \doxysubsubsection{\texorpdfstring{TCP\_Recv()}{TCP\_Recv()}}
