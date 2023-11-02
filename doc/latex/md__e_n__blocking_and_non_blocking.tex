@@ -14,7 +14,9 @@ First of all, you should save the last incoming message to some variable. Also, 
     isNewMessage = true;
 }
 \end{DoxyVerb}
- Secondly, you must implement a function to receive the last message and to receive information about the arrival of a new message ~\newline
+
+
+Secondly, you must implement a function to receive the last message and to receive information about the arrival of a new message ~\newline
  \begin{DoxyVerb}public:
     bool IsNewMessage()
     {
@@ -27,7 +29,9 @@ First of all, you should save the last incoming message to some variable. Also, 
         return LastMessage;
     }
 \end{DoxyVerb}
- Third in the main application loop you have to check if a new message has arrived and process it ~\newline
+
+
+Third in the main application loop you have to check if a new message has arrived and process it ~\newline
  \begin{DoxyVerb}while (window.isOpen())
 {
     if (Client.IsNewMessage())

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rau_5fserver_0',['RAU_Server',['../class_r_a_u___server.html',1,'']]]
+  ['predefinedsocketoptions_109',['PredefinedSocketOptions',['../struct_e_n_1_1_predefined_socket_options.html',1,'EN']]]
 ];

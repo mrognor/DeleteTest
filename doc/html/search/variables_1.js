@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ipaddress_0',['IpAddress',['../class_e_n_1_1_e_n___r_a_u___server.html#a327db3e95b2bc5c7c4ceff7c33fdef2d',1,'EN::EN_RAU_Server::IpAddress()'],['../class_e_n_1_1_e_n___t_c_p___server.html#a4d44c3817d3288c822ab6c4f5155df68',1,'EN::EN_TCP_Server::IpAddress()'],['../class_e_n_1_1_e_n___u_d_p___server.html#a0642c0623cbb5ad0e36376bcdb315131',1,'EN::EN_UDP_Server::IpAddress()']]]
+  ['data_158',['data',['../struct_e_n_1_1_t_c_p___session_context___s_c.html#a8c3f4f8d89e09515e42d2336d20505e9',1,'EN::TCP_SessionContext_SC::data()'],['../struct_e_n_1_1_t_c_p___session_context___s_c_u_p.html#a1f02daa344bff3522167b074350c1544',1,'EN::TCP_SessionContext_SCUP::data()']]]
 ];

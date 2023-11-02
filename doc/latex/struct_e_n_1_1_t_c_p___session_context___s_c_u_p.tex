@@ -1,0 +1,47 @@
+\hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c_u_p}{}\doxysection{EN\+::T\+C\+P\+\_\+\+Session\+Context\+\_\+\+S\+C\+UP$<$ T $>$ Struct Template Reference}
+\label{struct_e_n_1_1_t_c_p___session_context___s_c_u_p}\index{EN::TCP\_SessionContext\_SCUP$<$ T $>$@{EN::TCP\_SessionContext\_SCUP$<$ T $>$}}
+
+
+Template class for storing different information during a single client session.  
+
+
+
+
+{\ttfamily \#include $<$E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C\+U\+P.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_ac12a0721f977f1821ff80b84d59dcaf2}\label{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_ac12a0721f977f1821ff80b84d59dcaf2}} 
+T $\ast$ {\bfseries operator-\/$>$} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_a1f02daa344bff3522167b074350c1544}\label{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_a1f02daa344bff3522167b074350c1544}} 
+T \mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_a1f02daa344bff3522167b074350c1544}{data}}
+\begin{DoxyCompactList}\small\item\em Template variable to store session data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_a9d0366f50a49e7501fe53b02e5fc3fd6}\label{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_a9d0366f50a49e7501fe53b02e5fc3fd6}} 
+bool($\ast$ {\bfseries T\+C\+P\+\_\+\+Send} )(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, const std\+::string \&message) = nullptr
+\item 
+\mbox{\Hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_a2a7adaf1484927f57898cc4a507d8bef}\label{struct_e_n_1_1_t_c_p___session_context___s_c_u_p_a2a7adaf1484927f57898cc4a507d8bef}} 
+bool($\ast$ {\bfseries T\+C\+P\+\_\+\+Recv} )(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, std\+::string \&message) = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+struct E\+N\+::\+T\+C\+P\+\_\+\+Session\+Context\+\_\+\+S\+C\+U\+P$<$ T $>$}
+
+Template class for storing different information during a single client session. 
+
+An object of this class will be created after the client is connected, it will be created in the client processing thread and will be available in all three methods of working with the connected client, i.\+e. with On\+Client\+Connected, Client\+Message\+Handler and On\+Client\+Disconnect. As the type of this class, you need to specify the type or class that stores all the necessary variables to describe the session. Data is accessed via the \char`\"{}-\/$>$\char`\"{} operator. Also, this class allows you to change the communication protocol for each individual client while working with him, for this you need to set new values for the parameters T\+C\+P\+\_\+\+Send and T\+C\+P\+\_\+\+Recv. Inside \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c}{E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC}}, each object of this class is used only in its own thread, so it is thread-\/safe, and you should not try to use it in different threads.
+
+\begin{DoxyWarning}{Warning}
+Note that if T\+C\+P\+\_\+\+Send and T\+C\+P\+\_\+\+Recv have a default value not equal to nullptr, then when creating \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c}{E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC}}, the methods E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C\+::\+T\+C\+P\+\_\+\+Send and E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C\+::\+T\+C\+P\+\_\+\+Recv will be set the same as T\+C\+P\+\_\+\+Session\+Context\+\_\+\+S\+C\+\_\+\+C\+UP, regardless of which methods were setted in the childs of the \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c}{E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC}} class 
+\end{DoxyWarning}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C\+U\+P.\+h\end{DoxyCompactItemize}

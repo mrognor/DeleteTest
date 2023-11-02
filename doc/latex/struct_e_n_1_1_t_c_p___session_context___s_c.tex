@@ -1,0 +1,36 @@
+\hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c}{}\doxysection{EN\+::T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC$<$ T $>$ Struct Template Reference}
+\label{struct_e_n_1_1_t_c_p___session_context___s_c}\index{EN::TCP\_SessionContext\_SC$<$ T $>$@{EN::TCP\_SessionContext\_SC$<$ T $>$}}
+
+
+Template class for storing different information during a single client session.  
+
+
+
+
+{\ttfamily \#include $<$E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c_a600bd84cbfb68241ee32fa124d2acf53}\label{struct_e_n_1_1_t_c_p___session_context___s_c_a600bd84cbfb68241ee32fa124d2acf53}} 
+T $\ast$ {\bfseries operator-\/$>$} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_e_n_1_1_t_c_p___session_context___s_c_a8c3f4f8d89e09515e42d2336d20505e9}\label{struct_e_n_1_1_t_c_p___session_context___s_c_a8c3f4f8d89e09515e42d2336d20505e9}} 
+T \mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c_a8c3f4f8d89e09515e42d2336d20505e9}{data}}
+\begin{DoxyCompactList}\small\item\em Template variable to store session data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+struct E\+N\+::\+T\+C\+P\+\_\+\+Session\+Context\+\_\+\+S\+C$<$ T $>$}
+
+Template class for storing different information during a single client session. 
+
+An object of this class will be created after the client is connected, it will be created in the client processing thread and will be available in all three methods of working with the connected client, i.\+e. with On\+Client\+Connected, Client\+Message\+Handler and On\+Client\+Disconnect. As the type of this class, you need to specify the type or class that stores all the necessary variables to describe the session. Data is accessed via the \char`\"{}-\/$>$\char`\"{} operator. Inside \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c}{E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC}}, each object of this class is used only in its own thread, so it is thread-\/safe, and you should not try to use it in different threads. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C.\+h\end{DoxyCompactItemize}

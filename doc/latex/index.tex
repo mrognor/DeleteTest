@@ -1,14 +1,15 @@
 \hypertarget{index_autotoc_md0}{}\doxysection{Easy\+\_\+\+Network}\label{index_autotoc_md0}
 Simple C++ network library \hypertarget{index_autotoc_md1}{}\doxysection{Library documentation\+:}\label{index_autotoc_md1}
 \href{https://mrognor.github.io/Easy_Network_Documentation/doc/html/index.html}{\texttt{ https\+://mrognor.\+github.\+io/\+Easy\+\_\+\+Network\+\_\+\+Documentation/doc/html/index.\+html}} ~\newline
-\hypertarget{index_autotoc_md2}{}\doxysection{Library usage}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md2}{}\doxysection{Library roadmap}\label{index_autotoc_md2}
+\hypertarget{index_autotoc_md3}{}\doxysection{Library usage}\label{index_autotoc_md3}
 Before you start, I advise you to download the code examples. For linux, you can save files to one folder, and for visual studio, you will need to add these files to different projects ~\newline
- Examples available here\+: \href{https://github.com/mrognor/Easy_Network/tree/master/Examples}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/tree/master/\+Examples}}\hypertarget{index_autotoc_md3}{}\doxysubsection{Visual Studio library usage guide}\label{index_autotoc_md3}
+ Examples available here\+: \href{https://github.com/mrognor/Easy_Network/tree/master/Examples}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/tree/master/\+Examples}}\hypertarget{index_autotoc_md4}{}\doxysubsection{Visual Studio library usage guide}\label{index_autotoc_md4}
 
 \begin{DoxyEnumerate}
 \item Download the latest release from github
 \item Create a new project in visual studio
-\item Click project -\/\texorpdfstring{$>$}{>} properties
+\item Click project -\/$>$ properties
 \end{DoxyEnumerate}
 
 
@@ -18,47 +19,47 @@ Before you start, I advise you to download the code examples. For linux, you can
 \item Make sure that the configuration is selected to \char`\"{}\+All Configurations\char`\"{}
 \end{DoxyEnumerate}
 
-Open menu on C/\+C++ -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{>} Additional Include Directories and add the path to the include library folder there
+Open menu on C/\+C++ -\/$>$ General -\/$>$ Additional Include Directories and add the path to the include library folder there
 
 
 
 
 \begin{DoxyEnumerate}
-\item Open menu on Linker -\/\texorpdfstring{$>$}{>} General -\/\texorpdfstring{$>$}{>} Additional Library Directories and add the path to the lib library folder there
+\item Open menu on Linker -\/$>$ General -\/$>$ Additional Library Directories and add the path to the lib library folder there
 \end{DoxyEnumerate}
 
 
 
 
 \begin{DoxyEnumerate}
-\item Open menu on Linker -\/\texorpdfstring{$>$}{>} Input -\/\texorpdfstring{$>$}{>} Additional Dependencies and add \char`\"{}\+Easy\+Network.\+lib\char`\"{} here. Note that you must specify the correct file name for each build configuration. For example, to compile the debug x86 version, you must specify \char`\"{}\+Easy\+Network-\/x86d.\+lib\char`\"{}, to release x86 -\/ \char`\"{}\+Easy\+Network-\/x86.\+lib\char`\"{}, to debug x64 -\/ \char`\"{}\+Easy\+Network-\/x64d.\+lib\char`\"{}, to release x64 -\/ \char`\"{}\+Easy\+Network-\/x64.\+lib\char`\"{}. Also add \char`\"{}ws2\+\_\+32.\+lib\char`\"{} 
+\item Open menu on Linker -\/$>$ Input -\/$>$ Additional Dependencies and add \char`\"{}\+Easy\+Network.\+lib\char`\"{} here. Note that you must specify the correct file name for each build configuration. For example, to compile the debug x86 version, you must specify \char`\"{}\+Easy\+Network-\/x86d.\+lib\char`\"{}, to release x86 -\/ \char`\"{}\+Easy\+Network-\/x86.\+lib\char`\"{}, to debug x64 -\/ \char`\"{}\+Easy\+Network-\/x64d.\+lib\char`\"{}, to release x64 -\/ \char`\"{}\+Easy\+Network-\/x64.\+lib\char`\"{}. Also add \char`\"{}ws2\+\_\+32.\+lib\char`\"{} 
 \item The configuration of the project for working with the library is completed. Now you can use the code samples and try to make own programm ~\newline
 
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md4}{}\doxysubsection{Min\+GW library usage guide}\label{index_autotoc_md4}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md5}{}\doxysubsection{Min\+G\+W library usage guide}\label{index_autotoc_md5}
 
 \begin{DoxyEnumerate}
 \item Download the latest release from github
 \item You can extract library release archive to any folder
 \item Now all ready to compile your project ~\newline
  You can compile server using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 Path\+To\+Server/\+Server.\+cpp -\/IEasy\+Network\+Dir/ -\/LEasy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o server} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 Path\+To\+Server/\+Server.\+cpp -\/I\+Easy\+Network\+Dir/ -\/L\+Easy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o server} ~\newline
  You can compile client using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 Path\+To\+Client/\+Client.\+cpp -\/IEasy\+Network\+Dir/ -\/LEasy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o client} ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 -\/lws2\+\_\+32 Path\+To\+Client/\+Client.\+cpp -\/I\+Easy\+Network\+Dir/ -\/L\+Easy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o client} ~\newline
 
 \item Run your programs using command\+: ~\newline
  {\ttfamily server.\+exe} and {\ttfamily client.\+exe}
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md5}{}\doxysubsection{Linux library usage}\label{index_autotoc_md5}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md6}{}\doxysubsection{Linux library usage}\label{index_autotoc_md6}
 
 \begin{DoxyEnumerate}
 \item Download the latest release from github
 \item You can extract library release archive to any folder
 \item Now all ready to compile your project ~\newline
  You can compile server using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 Path\+To\+Server/\+Server.\+cpp -\/IEasy\+Network\+Dir/ -\/LEasy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o server} You can compile client using command\+: ~\newline
- {\ttfamily g++ -\/pthread -\/std=c++11 Path\+To\+Client/\+Client.\+cpp -\/IEasy\+Network\+Dir/ -\/LEasy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o client}
+ {\ttfamily g++ -\/pthread -\/std=c++11 Path\+To\+Server/\+Server.\+cpp -\/I\+Easy\+Network\+Dir/ -\/L\+Easy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o server} You can compile client using command\+: ~\newline
+ {\ttfamily g++ -\/pthread -\/std=c++11 Path\+To\+Client/\+Client.\+cpp -\/I\+Easy\+Network\+Dir/ -\/L\+Easy\+Network\+Dir/bin -\/l\+Easy\+Network -\/o client}
 \item Run your programs using command\+: ~\newline
  {\ttfamily ./server} and {\ttfamily ./client}
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md6}{}\doxysection{Important}\label{index_autotoc_md6}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md7}{}\doxysection{Important}\label{index_autotoc_md7}
 I know that no one reads further than the readme, so I want to bring some important things here ~\newline
 
 \begin{DoxyEnumerate}
@@ -66,48 +67,48 @@ I know that no one reads further than the readme, so I want to bring some import
 
 \item On linux, after disconnecting clients from the server, the port may be blocked for a small amount of time. Due to when trying to start the server again, errors will come out. We just have to wait a little ~\newline
 
-\item The UDP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes
+\item The U\+DP server cannot send a message to the client if it has not received a message from this client before. This does not apply to unreliable sending of messages in rau classes
 \item Note that the maximum size of a udp packet that can be guaranteed to be sent and received is 508 bytes. You can send more, but then the message may not go away ~\newline
 
-\end{DoxyEnumerate}\hypertarget{index_autotoc_md7}{}\doxysection{Free white ip}\label{index_autotoc_md7}
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md8}{}\doxysection{Free white ip}\label{index_autotoc_md8}
 White ip allow you to use your programs outside your local network. ~\newline
  You can use free utility named \href{https://ngrok.com/}{\texttt{ ngrok}}. This program let you free white ip. ~\newline
  You can launch ngrok using command {\ttfamily ngrok tcp 1111}. You can use any protocol and port you want. ~\newline
- Note that when using this program, URLs will be provided to you, but ip is used to connect. To solve this problem, use the {\ttfamily Get\+Ip\+By\+URL} function\hypertarget{index_autotoc_md8}{}\doxysection{How to choose a class}\label{index_autotoc_md8}
-This is a small overview of the library classes to simplify class selection\hypertarget{index_autotoc_md9}{}\doxysubsection{TCP classes}\label{index_autotoc_md9}
+ Note that when using this program, U\+R\+Ls will be provided to you, but ip is used to connect. To solve this problem, use the {\ttfamily Get\+Ip\+By\+U\+RL} function\hypertarget{index_autotoc_md9}{}\doxysection{How to choose a class}\label{index_autotoc_md9}
+This is a small overview of the library classes to simplify class selection\hypertarget{index_autotoc_md10}{}\doxysubsection{T\+C\+P classes}\label{index_autotoc_md10}
 These classes support connection and have got only reliable message sending. ~\newline
- \hypertarget{index_autotoc_md10}{}\doxysubsubsection{EN\+\_\+\+TCP\+\_\+\+Server}\label{index_autotoc_md10}
+ \hypertarget{index_autotoc_md11}{}\doxysubsubsection{E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}\label{index_autotoc_md11}
 You have to define 3 methods
 \begin{DoxyEnumerate}
-\item void On\+Client\+Connected(int Client\+ID) ~\newline
+\item void On\+Client\+Connected(\+E\+N\+\_\+\+S\+O\+C\+K\+E\+T client\+Socket) ~\newline
 
-\item void Client\+Message\+Handler(std\+::string message, int Client\+ID) ~\newline
+\item void Client\+Message\+Handler(\+E\+N\+\_\+\+S\+O\+C\+K\+E\+T client\+Socket, std\+::string message) ~\newline
 
-\item void On\+Client\+Disconnect(int Client\+ID) ~\newline
+\item void On\+Client\+Disconnect(\+E\+N\+\_\+\+S\+O\+C\+K\+E\+T client\+Socket) ~\newline
 
 \end{DoxyEnumerate}
 
 The server ip address and port are set in the constructor. ~\newline
  To start the server, you need to call the Run method ~\newline
- An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+TCP\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
-\hypertarget{index_autotoc_md11}{}\doxysubsubsection{EN\+\_\+\+TCP\+\_\+\+Client}\label{index_autotoc_md11}
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+T\+C\+P\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md12}{}\doxysubsubsection{E\+N\+\_\+\+T\+C\+P\+\_\+\+Client}\label{index_autotoc_md12}
 You have to define 3 methods ~\newline
 
 \begin{DoxyEnumerate}
-\item void After\+Connect() ~\newline
+\item void On\+Connect() ~\newline
 
 \item void Server\+Message\+Handler(std\+::string message) ~\newline
 
-\item void Before\+Disconnect() ~\newline
+\item void On\+Disconnect() ~\newline
 
 \end{DoxyEnumerate}
 
 To connect to the server, you need to call the function Connect. ~\newline
  Before shutting down the program, you need to disconnect from the server using the method Disconnect ~\newline
- An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+TCP\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
-\hypertarget{index_autotoc_md12}{}\doxysubsection{UDP classes}\label{index_autotoc_md12}
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/TCP_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+T\+C\+P\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md13}{}\doxysubsection{U\+D\+P classes}\label{index_autotoc_md13}
 These classes do not support connection and have got only unreliable message sending. ~\newline
- \hypertarget{index_autotoc_md13}{}\doxysubsubsection{EN\+\_\+\+UDP\+\_\+\+Server}\label{index_autotoc_md13}
+ \hypertarget{index_autotoc_md14}{}\doxysubsubsection{E\+N\+\_\+\+U\+D\+P\+\_\+\+Server}\label{index_autotoc_md14}
 You have to define 2 methods
 \begin{DoxyEnumerate}
 \item void Client\+Message\+Handler(std\+::string message, std\+::string Client\+Ip\+Address, long long Time\+Since\+Package\+Arrived)
@@ -117,8 +118,8 @@ You have to define 2 methods
 
 The entire configuration of the server takes place in the constructor. ~\newline
  To start the server, you must call the method Run. To stop the server, you need to call the method Shutdown. ~\newline
- An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+UDP\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
-\hypertarget{index_autotoc_md14}{}\doxysubsubsection{EN\+\_\+\+UDP\+\_\+\+Client}\label{index_autotoc_md14}
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+U\+D\+P\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md15}{}\doxysubsubsection{E\+N\+\_\+\+U\+D\+P\+\_\+\+Client}\label{index_autotoc_md15}
 You have to define 1 method
 \begin{DoxyEnumerate}
 \item void Server\+Message\+Handler(std\+::string message) ~\newline
@@ -127,38 +128,38 @@ You have to define 1 method
 
 To start the client\textquotesingle{}s work, you must call the method Run. ~\newline
  To complete the work, you must call the method Close. ~\newline
- An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+UDP\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
-\hypertarget{index_autotoc_md15}{}\doxysubsection{RAU classes}\label{index_autotoc_md15}
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/UDP_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+U\+D\+P\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md16}{}\doxysubsection{R\+A\+U classes}\label{index_autotoc_md16}
 This class supports connection. There is both reliable sending of messages and unreliable. ~\newline
- The RAU differs from the TCP only in the ability to unreliable message send. ~\newline
- \hypertarget{index_autotoc_md16}{}\doxysubsubsection{EN\+\_\+\+RAU\+\_\+\+Server}\label{index_autotoc_md16}
+ The R\+AU differs from the T\+CP only in the ability to unreliable message send. ~\newline
+ \hypertarget{index_autotoc_md17}{}\doxysubsubsection{E\+N\+\_\+\+R\+A\+U\+\_\+\+Server}\label{index_autotoc_md17}
 You have to define 3 methods
 \begin{DoxyEnumerate}
-\item void On\+Client\+Connected(int Client\+ID) ~\newline
+\item void On\+Client\+Connected(int Client\+I\+D) ~\newline
 
-\item void Client\+Message\+Handler(std\+::string message, int Client\+ID) ~\newline
+\item void Client\+Message\+Handler(std\+::string message, int Client\+I\+D) ~\newline
 
-\item void On\+Client\+Disconnect(int Client\+ID) ~\newline
+\item void On\+Client\+Disconnect(int Client\+I\+D) ~\newline
 
 \end{DoxyEnumerate}
 
 The entire configuration of the server takes place in the constructor ~\newline
  To start the server, you need to call the Run method ~\newline
- An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+RAU\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
-\hypertarget{index_autotoc_md17}{}\doxysubsubsection{EN\+\_\+\+RAU\+\_\+\+Client}\label{index_autotoc_md17}
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Server.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+R\+A\+U\+\_\+\+Chat\+\_\+\+Server.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md18}{}\doxysubsubsection{E\+N\+\_\+\+R\+A\+U\+\_\+\+Client}\label{index_autotoc_md18}
 You have to define 3 methods ~\newline
 
 \begin{DoxyEnumerate}
-\item void After\+Connect() ~\newline
+\item void On\+Connect() ~\newline
 
 \item void Server\+Message\+Handler(std\+::string message) ~\newline
 
-\item void Before\+Disconnect() ~\newline
+\item void On\+Disconnect() ~\newline
 
 \end{DoxyEnumerate}
 
 To connect to the server, you need to call the function Connect. ~\newline
  Before shutting down the program, you need to disconnect from the server using the method Disconnect ~\newline
- An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+RAU\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
-\hypertarget{index_autotoc_md18}{}\doxysection{Functions}\label{index_autotoc_md18}
+ An example of using the class can be found here\+: \href{https://github.com/mrognor/Easy_Network/blob/master/Examples/RAU_Chat_Client.cpp}{\texttt{ https\+://github.\+com/mrognor/\+Easy\+\_\+\+Network/blob/master/\+Examples/\+R\+A\+U\+\_\+\+Chat\+\_\+\+Client.\+cpp}} ~\newline
+\hypertarget{index_autotoc_md19}{}\doxysection{Functions}\label{index_autotoc_md19}
 \href{namespace_e_n.html\#func-members}{\texttt{ Info about all library functions\+:}} 

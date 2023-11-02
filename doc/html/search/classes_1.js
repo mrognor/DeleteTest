@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['myclient_0',['MyClient',['../class_my_client.html',1,'']]],
-  ['myserver_1',['MyServer',['../class_my_server.html',1,'']]]
+  ['filelogger_108',['FileLogger',['../class_file_logger.html',1,'']]]
 ];

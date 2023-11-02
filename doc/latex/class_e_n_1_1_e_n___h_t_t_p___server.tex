@@ -1,0 +1,104 @@
+\hypertarget{class_e_n_1_1_e_n___h_t_t_p___server}{}\doxysection{EN\+::E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server Class Reference}
+\label{class_e_n_1_1_e_n___h_t_t_p___server}\index{EN::EN\_HTTP\_Server@{EN::EN\_HTTP\_Server}}
+Inheritance diagram for EN\+::E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_n_1_1_e_n___h_t_t_p___server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___h_t_t_p___server_aac259baaf900279420391f3edb28b789}{On\+Client\+Connected}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket)
+\begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___h_t_t_p___server_a75f51fabc4b6eb3391eb8fb651923505}{Client\+Message\+Handler}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, std\+::string message)
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___h_t_t_p___server_a85a021decc4569db83a9c9e808461dd6}{On\+Client\+Disconnect}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket)
+\begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___h_t_t_p___server_a92144bc811be10e5053e69f6124c1106}\label{class_e_n_1_1_e_n___h_t_t_p___server_a92144bc811be10e5053e69f6124c1106}} 
+void {\bfseries Set\+Web\+Files\+Path} (std\+::string path)
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___h_t_t_p___server_aba6c3750ce5005cdac2d1d84f0e5daa7}\label{class_e_n_1_1_e_n___h_t_t_p___server_aba6c3750ce5005cdac2d1d84f0e5daa7}} 
+virtual void {\bfseries Get\+Url\+Params\+Handler} (const std\+::string \&url\+Params)=0
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___h_t_t_p___server_ae0a4f15245b0b3ee5dc4cadb2ad4333c}\label{class_e_n_1_1_e_n___h_t_t_p___server_ae0a4f15245b0b3ee5dc4cadb2ad4333c}} 
+virtual void {\bfseries H\+T\+T\+P\+Request\+Handler} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, std\+::map$<$ std\+::string, std\+::string $>$ parsed\+Request\+Map, std\+::string request\+Header)=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___h_t_t_p___server_a75f51fabc4b6eb3391eb8fb651923505}\label{class_e_n_1_1_e_n___h_t_t_p___server_a75f51fabc4b6eb3391eb8fb651923505}} 
+\index{EN::EN\_HTTP\_Server@{EN::EN\_HTTP\_Server}!ClientMessageHandler@{ClientMessageHandler}}
+\index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_HTTP\_Server@{EN::EN\_HTTP\_Server}}
+\doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The socket of the client from which the message came \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & Message from the client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_afdc2dc320a03e763dfefa4ebbffc940b}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___h_t_t_p___server_aac259baaf900279420391f3edb28b789}\label{class_e_n_1_1_e_n___h_t_t_p___server_aac259baaf900279420391f3edb28b789}} 
+\index{EN::EN\_HTTP\_Server@{EN::EN\_HTTP\_Server}!OnClientConnected@{OnClientConnected}}
+\index{OnClientConnected@{OnClientConnected}!EN::EN\_HTTP\_Server@{EN::EN\_HTTP\_Server}}
+\doxysubsubsection{\texorpdfstring{OnClientConnected()}{OnClientConnected()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server\+::\+On\+Client\+Connected (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method that is executed when the client connects to the server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the connected client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a830035051b2f270c119de261a58e647d}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___h_t_t_p___server_a85a021decc4569db83a9c9e808461dd6}\label{class_e_n_1_1_e_n___h_t_t_p___server_a85a021decc4569db83a9c9e808461dd6}} 
+\index{EN::EN\_HTTP\_Server@{EN::EN\_HTTP\_Server}!OnClientDisconnect@{OnClientDisconnect}}
+\index{OnClientDisconnect@{OnClientDisconnect}!EN::EN\_HTTP\_Server@{EN::EN\_HTTP\_Server}}
+\doxysubsubsection{\texorpdfstring{OnClientDisconnect()}{OnClientDisconnect()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server\+::\+On\+Client\+Disconnect (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that runs after the client is disconnected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the disconnected client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6619294c5d5294de08aee089d8194177}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/experimental/E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server.\+h\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/experimental/E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

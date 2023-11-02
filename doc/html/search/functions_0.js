@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['afterconnect_0',['AfterConnect',['../class_e_n_1_1_e_n___r_a_u___client.html#a9f55c59b8f0bca6d79b0c21f20aecda4',1,'EN::EN_RAU_Client::AfterConnect()'],['../class_e_n_1_1_e_n___t_c_p___client.html#a2a65531b657fe16f0d6dc159bc238aab',1,'EN::EN_TCP_Client::AfterConnect()']]]
+  ['addacceptsocketoption_115',['AddAcceptSocketOption',['../class_e_n_1_1_e_n___t_c_p___server.html#a6c8a9ed7e0c5c05c1e808ef941de5615',1,'EN::EN_TCP_Server::AddAcceptSocketOption(int level, int optionName, int optionValue)'],['../class_e_n_1_1_e_n___t_c_p___server.html#a3284edf4774320c6e18092a20bb6641a',1,'EN::EN_TCP_Server::AddAcceptSocketOption(PredefinedSocketOptions socketOptions)']]],
+  ['addonsocketcreateoption_116',['AddOnSocketCreateOption',['../class_e_n_1_1_e_n___t_c_p___server.html#ab62307d2510f61390d0f461fc83fe344',1,'EN::EN_TCP_Server::AddOnSocketCreateOption(int level, int optionName, int optionValue)'],['../class_e_n_1_1_e_n___t_c_p___server.html#a927be598ac9ff5dafb1170b39d61f6dc',1,'EN::EN_TCP_Server::AddOnSocketCreateOption(PredefinedSocketOptions socketOptions)']]],
+  ['addontcpsocketcreateoption_117',['AddOnTCPSocketCreateOption',['../class_e_n_1_1_e_n___r_a_u___server.html#aefd633077f0e3b2f84518900e2cadfba',1,'EN::EN_RAU_Server::AddOnTCPSocketCreateOption(int level, int optionName, int optionValue)'],['../class_e_n_1_1_e_n___r_a_u___server.html#ae0e387bee016866a3151576e76164562',1,'EN::EN_RAU_Server::AddOnTCPSocketCreateOption(PredefinedSocketOptions socketOptions)']]]
 ];

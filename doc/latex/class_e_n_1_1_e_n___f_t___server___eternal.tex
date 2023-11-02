@@ -1,0 +1,98 @@
+\hypertarget{class_e_n_1_1_e_n___f_t___server___eternal}{}\doxysection{EN\+::E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal Class Reference}
+\label{class_e_n_1_1_e_n___f_t___server___eternal}\index{EN::EN\_FT\_Server\_Eternal@{EN::EN\_FT\_Server\_Eternal}}
+Inheritance diagram for EN\+::E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_n_1_1_e_n___f_t___server___eternal}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___f_t___server___eternal_ab4c97c2ef3655cf6b1811422087cc83a}\label{class_e_n_1_1_e_n___f_t___server___eternal_ab4c97c2ef3655cf6b1811422087cc83a}} 
+void {\bfseries Set\+Ip\+And\+Port} (std\+::string ip\+Address, int port)
+\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server___eternal_a67e72bafdf36248864d8c994bdf8ec90}{On\+Client\+Connected}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket) override
+\begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server___eternal_a08b028300970e4fb7829f8516c6f8d28}{Client\+Message\+Handler}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, std\+::string message) override
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server___eternal_ad09aa980014480009b3b797c9fd264b4}{On\+Client\+Disconnect}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket) override
+\begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___f_t___server___eternal_a08b028300970e4fb7829f8516c6f8d28}\label{class_e_n_1_1_e_n___f_t___server___eternal_a08b028300970e4fb7829f8516c6f8d28}} 
+\index{EN::EN\_FT\_Server\_Eternal@{EN::EN\_FT\_Server\_Eternal}!ClientMessageHandler@{ClientMessageHandler}}
+\index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_FT\_Server\_Eternal@{EN::EN\_FT\_Server\_Eternal}}
+\doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The socket of the client from which the message came \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & Message from the client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_afdc2dc320a03e763dfefa4ebbffc940b}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___f_t___server___eternal_a67e72bafdf36248864d8c994bdf8ec90}\label{class_e_n_1_1_e_n___f_t___server___eternal_a67e72bafdf36248864d8c994bdf8ec90}} 
+\index{EN::EN\_FT\_Server\_Eternal@{EN::EN\_FT\_Server\_Eternal}!OnClientConnected@{OnClientConnected}}
+\index{OnClientConnected@{OnClientConnected}!EN::EN\_FT\_Server\_Eternal@{EN::EN\_FT\_Server\_Eternal}}
+\doxysubsubsection{\texorpdfstring{OnClientConnected()}{OnClientConnected()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal\+::\+On\+Client\+Connected (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+The method that is executed when the client connects to the server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the connected client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a830035051b2f270c119de261a58e647d}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___f_t___server___eternal_ad09aa980014480009b3b797c9fd264b4}\label{class_e_n_1_1_e_n___f_t___server___eternal_ad09aa980014480009b3b797c9fd264b4}} 
+\index{EN::EN\_FT\_Server\_Eternal@{EN::EN\_FT\_Server\_Eternal}!OnClientDisconnect@{OnClientDisconnect}}
+\index{OnClientDisconnect@{OnClientDisconnect}!EN::EN\_FT\_Server\_Eternal@{EN::EN\_FT\_Server\_Eternal}}
+\doxysubsubsection{\texorpdfstring{OnClientDisconnect()}{OnClientDisconnect()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal\+::\+On\+Client\+Disconnect (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Method that runs after the client is disconnected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the disconnected client\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6619294c5d5294de08aee089d8194177}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+F\+T\+\_\+\+Server.\+h\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+F\+T\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

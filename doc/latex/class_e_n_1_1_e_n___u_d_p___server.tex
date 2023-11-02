@@ -1,4 +1,4 @@
-\hypertarget{class_e_n_1_1_e_n___u_d_p___server}{}\doxysection{EN\+::EN\+\_\+\+UDP\+\_\+\+Server Class Reference}
+\hypertarget{class_e_n_1_1_e_n___u_d_p___server}{}\doxysection{EN\+::E\+N\+\_\+\+U\+D\+P\+\_\+\+Server Class Reference}
 \label{class_e_n_1_1_e_n___u_d_p___server}\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 
 
@@ -7,25 +7,32 @@ Base udp server class.
 
 
 
-{\ttfamily \#include $<$EN\+\_\+\+UDP\+\_\+\+Server.\+h$>$}
+{\ttfamily \#include $<$E\+N\+\_\+\+U\+D\+P\+\_\+\+Server.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}\label{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}} 
-int {\bfseries Get\+Port} ()
+int \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a70bb71aac592d474f86245d12550a4e6}{Get\+Port}} ()
 \begin{DoxyCompactList}\small\item\em Port getter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}\label{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}} 
-std\+::string {\bfseries Get\+Ip\+Addr} ()
+std\+::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a93b00d343fd2d37d239f2d877f0629e4}{Get\+Ip\+Addr}} ()
 \begin{DoxyCompactList}\small\item\em Ip getter. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}\label{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}} 
-void {\bfseries Run} ()
-\begin{DoxyCompactList}\small\item\em Method to start server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Method to start server. Blocking call. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}\label{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}} 
-void {\bfseries Shutdown} ()
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a5d67e5fe4de7566dfc931bc96e3954d6}{Shutdown}} ()
 \begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}{Send\+To\+Client}} (std\+::string Client\+Ip\+Address, std\+::string message)
-\begin{DoxyCompactList}\small\item\em function for sending a message to the client \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function for sending a message to the client \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a1fd82bd3e35a861cbaa8550a29b90a13}{Set\+Socket\+Option}} (int level, int option\+Name, int option\+Value)
+\begin{DoxyCompactList}\small\item\em The method sets options for client socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a95871f7b06b3580b7bde75eb404ee769}{Set\+Socket\+Option}} (\mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}} socket\+Options)
+\begin{DoxyCompactList}\small\item\em The method sets options for client socket. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a7597b0d280ca40dca5679cbd7e7c53c1}{Set\+U\+D\+P\+Send\+Function}} (void($\ast$U\+D\+P\+Send\+Function)(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, std\+::string destination\+Address, const std\+::string \&message))
+\begin{DoxyCompactList}\small\item\em The method sets custom send function. Allow you use your own protocol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_ad43156015e25f9593534102423d5abb9}{Set\+U\+D\+P\+Recv\+Function}} (bool($\ast$U\+D\+P\+Recv\+Function)(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, std\+::string \&source\+Address, std\+::string \&message))
+\begin{DoxyCompactList}\small\item\em The method sets custom recv function. Allow you use your own protocol. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,21 +44,18 @@ virtual bool \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a87bdc6ad475dce
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}\label{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}} 
-int {\bfseries Port} = 1111
+int \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a57eefa7f21f48f8d089c054c4b3ec8c9}{Port}} = 1111
 \begin{DoxyCompactList}\small\item\em Server port. Default set to 1111. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_afe7190d8c1cf38109564546cdca2d33e}\label{class_e_n_1_1_e_n___u_d_p___server_afe7190d8c1cf38109564546cdca2d33e}} 
-int {\bfseries Max\+Message\+Size} = 256
-\begin{DoxyCompactList}\small\item\em Maximum number of characters in a message. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}\label{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}} 
-std\+::string {\bfseries Ip\+Address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
+std\+::string \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a0642c0623cbb5ad0e36376bcdb315131}{Ip\+Address}} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
 \begin{DoxyCompactList}\small\item\em Server ip address string. Default set to localhost. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}\label{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}} 
-int {\bfseries Thread\+Amount} = 2
+int \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a41009349c2879bc3baca632b23009374}{Thread\+Amount}} = 2
 \begin{DoxyCompactList}\small\item\em The number of threads in which incoming messages will be processed. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_a46c9bf106cf479503e430a13aa580e5c}{Max\+Stack\+Buff\+Size}} = 16
+size\+\_\+t \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_aedceaf89f88a89fc2b5ae346b4aa8cbf}{Max\+Stack\+Buff\+Size}} = 16
 \begin{DoxyCompactList}\small\item\em The maximum size of the incoming message stack. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}\label{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}} 
-EN\+\_\+\+UDP\+\_\+\+Server\+Bufer\+Type {\bfseries Server\+Bufer\+Type} = Queue
+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+Bufer\+Type \mbox{\hyperlink{class_e_n_1_1_e_n___u_d_p___server_aa8d74ed37894279619f988eb9083444f}{Server\+Bufer\+Type}} = Queue
 \begin{DoxyCompactList}\small\item\em Incoming message buffer type. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -63,33 +67,44 @@ Base udp server class.
 \index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!ClientMessageHandler@{ClientMessageHandler}}
 \index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 \doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
-{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
 Method that processes incoming messages. 
 
-This method processes a message from the buffer Get message, UDP client address and time since message come to server \begin{DoxyWarning}{Warning}
+This method processes a message from the buffer Get message, U\+DP client address and time in milliseconds since message come to server \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
 \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a87bdc6ad475dcea3d6e8b40b3148e0d1}\label{class_e_n_1_1_e_n___u_d_p___server_a87bdc6ad475dcea3d6e8b40b3148e0d1}} 
 \index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!InstantClientMessageHandler@{InstantClientMessageHandler}}
 \index{InstantClientMessageHandler@{InstantClientMessageHandler}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 \doxysubsubsection{\texorpdfstring{InstantClientMessageHandler()}{InstantClientMessageHandler()}}
-{\footnotesize\ttfamily virtual bool EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Instant\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual bool E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Instant\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{long long}]{Time\+When\+Package\+Arrived }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
 Method that processes incoming messages. 
 
-This method processes messages before they are placed in the buffer Get message, UDP client address and time since message come to server Return true if you want to put message into bufer, false otherwise \begin{DoxyWarning}{Warning}
+This method processes messages before they are placed in the buffer Get message, U\+DP client address and time in milliseconds since message come to server Return true if you want to put message into bufer, false otherwise \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}\label{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}\label{class_e_n_1_1_e_n___u_d_p___server_a0a9a4c847b595c1338f27e9324e18592}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!Run@{Run}}
+\index{Run@{Run}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Method to start server. Blocking call. 
+
+Place this method in try block to catch errors. Throws socket errors. To get information about the error, use the documentation of your operating system. For Windows, errors go through W\+S\+A\+Get\+Last\+Error, for Linux, errors go through errno. ~\newline
+ All errors with the description are duplicated in the log system. \mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}\label{class_e_n_1_1_e_n___u_d_p___server_a493dc5a1c0014b2d759cb6b74a98b12f}} 
 \index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!SendToClient@{SendToClient}}
 \index{SendToClient@{SendToClient}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 \doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}
-{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{std\+::string}]{Client\+Ip\+Address,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})}
 
 
 
@@ -102,22 +117,89 @@ function for sending a message to the client
 \mbox{\texttt{ in}}  & {\em Client\+Socket\+Addr} & string with server address. Format\+: 127.\+0.\+0.\+1\+:1111 \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a1fd82bd3e35a861cbaa8550a29b90a13}\label{class_e_n_1_1_e_n___u_d_p___server_a1fd82bd3e35a861cbaa8550a29b90a13}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!SetSocketOption@{SetSocketOption}}
+\index{SetSocketOption@{SetSocketOption}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetSocketOption()}{SetSocketOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Set\+Socket\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option\+Name,  }\item[{int}]{option\+Value }\end{DoxyParamCaption})}
+
+
+
+The method sets options for client socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em level} & The level at which the option is defined (for example, S\+O\+L\+\_\+\+S\+O\+C\+K\+ET). \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Name} & The socket option for which the value is to be set (for example, S\+O\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST). The option\+Name parameter must be a socket option defined within the specified level, or behavior is undefined. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Value} & The value for the requested option is specified. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a95871f7b06b3580b7bde75eb404ee769}\label{class_e_n_1_1_e_n___u_d_p___server_a95871f7b06b3580b7bde75eb404ee769}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!SetSocketOption@{SetSocketOption}}
+\index{SetSocketOption@{SetSocketOption}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetSocketOption()}{SetSocketOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Set\+Socket\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}}}]{socket\+Options }\end{DoxyParamCaption})}
+
+
+
+The method sets options for client socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em socket\+Options} & This parameter takes a predefined structure to specify a package of socket options at once. The list of all predefined structures is in \mbox{\hyperlink{_e_n___socket_options_8h_source}{E\+N\+\_\+\+Socket\+Options.\+h}}. You can create your own sets of options using define or by creating structure objects \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_ad43156015e25f9593534102423d5abb9}\label{class_e_n_1_1_e_n___u_d_p___server_ad43156015e25f9593534102423d5abb9}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!SetUDPRecvFunction@{SetUDPRecvFunction}}
+\index{SetUDPRecvFunction@{SetUDPRecvFunction}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetUDPRecvFunction()}{SetUDPRecvFunction()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Set\+U\+D\+P\+Recv\+Function (\begin{DoxyParamCaption}\item[{bool($\ast$)(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, std\+::string \&source\+Address, std\+::string \&message)}]{U\+D\+P\+Recv\+Function }\end{DoxyParamCaption})}
+
+
+
+The method sets custom recv function. Allow you use your own protocol. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+D\+P\+Recv\+Function} & This parameter is a pointer to a function for receiving messages from the socket. The function accepts the socket of the connected client, where you want to recv from the message and the message itself \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a7597b0d280ca40dca5679cbd7e7c53c1}\label{class_e_n_1_1_e_n___u_d_p___server_a7597b0d280ca40dca5679cbd7e7c53c1}} 
+\index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!SetUDPSendFunction@{SetUDPSendFunction}}
+\index{SetUDPSendFunction@{SetUDPSendFunction}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetUDPSendFunction()}{SetUDPSendFunction()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Set\+U\+D\+P\+Send\+Function (\begin{DoxyParamCaption}\item[{void($\ast$)(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, std\+::string destination\+Address, const std\+::string \&message)}]{U\+D\+P\+Send\+Function }\end{DoxyParamCaption})}
+
+
+
+The method sets custom send function. Allow you use your own protocol. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em U\+D\+P\+Send\+Function} & This parameter is a pointer to a function for sending messages to the socket. The function accepts the socket of the connected client, where you want to send the message and the message itself\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+If you want to use your protocol, use only one send call. This is necessary because the send function is thread-\/safe, but if you send one message to 2 send calls, then if 2 threads write to the same socket, then the data of two different messages may be mixed and you will receive errors 
+\end{DoxyWarning}
 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_a46c9bf106cf479503e430a13aa580e5c}\label{class_e_n_1_1_e_n___u_d_p___server_a46c9bf106cf479503e430a13aa580e5c}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___u_d_p___server_aedceaf89f88a89fc2b5ae346b4aa8cbf}\label{class_e_n_1_1_e_n___u_d_p___server_aedceaf89f88a89fc2b5ae346b4aa8cbf}} 
 \index{EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}!MaxStackBuffSize@{MaxStackBuffSize}}
 \index{MaxStackBuffSize@{MaxStackBuffSize}!EN::EN\_UDP\_Server@{EN::EN\_UDP\_Server}}
 \doxysubsubsection{\texorpdfstring{MaxStackBuffSize}{MaxStackBuffSize}}
-{\footnotesize\ttfamily int EN\+::\+EN\+\_\+\+UDP\+\_\+\+Server\+::\+Max\+Stack\+Buff\+Size = 16\hspace{0.3cm}{\ttfamily [protected]}}
+{\footnotesize\ttfamily size\+\_\+t E\+N\+::\+E\+N\+\_\+\+U\+D\+P\+\_\+\+Server\+::\+Max\+Stack\+Buff\+Size = 16\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
 The maximum size of the incoming message stack. 
 
-Used only if Server\+Bufer\+Type set to EN\+::\+Stack 
+Used only if Server\+Bufer\+Type set to E\+N\+::\+Stack 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/EN\+\_\+\+UDP\+\_\+\+Server.\+h\item 
-C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/EN\+\_\+\+UDP\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+U\+D\+P\+\_\+\+Server.\+h\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+U\+D\+P\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

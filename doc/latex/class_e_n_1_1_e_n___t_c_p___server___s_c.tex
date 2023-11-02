@@ -1,0 +1,116 @@
+\hypertarget{class_e_n_1_1_e_n___t_c_p___server___s_c}{}\doxysection{EN\+::E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC$<$ T $>$ Class Template Reference}
+\label{class_e_n_1_1_e_n___t_c_p___server___s_c}\index{EN::EN\_TCP\_Server\_SC$<$ T $>$@{EN::EN\_TCP\_Server\_SC$<$ T $>$}}
+
+
+Tcp server with session context.  
+
+
+
+
+{\ttfamily \#include $<$E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C.\+h$>$}
+
+Inheritance diagram for EN\+::E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC$<$ T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_e_n_1_1_e_n___t_c_p___server___s_c}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c_af45343d72ce3c84e9e2b926b0c42c111}{On\+Client\+Connected}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, \mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}$<$ T $>$ \&session\+Context)=0
+\begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c_a741fcd19b8d1dda9475d25ce28b77877}{Client\+Message\+Handler}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, std\+::string message, \mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}$<$ T $>$ \&session\+Context)=0
+\begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c_a0324922ca61eed30a9b3fbee96d6b39a}{On\+Client\+Disconnect}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, \mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}$<$ T $>$ \&session\+Context)=0
+\begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server___s_c_ad8370001350656cb03c6339bf90944a0}\label{class_e_n_1_1_e_n___t_c_p___server___s_c_ad8370001350656cb03c6339bf90944a0}} 
+\mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}$<$ T $>$ \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c_ad8370001350656cb03c6339bf90944a0}{Session\+Context}}
+\begin{DoxyCompactList}\small\item\em Variable to store session context data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C$<$ T $>$}
+
+Tcp server with session context. 
+
+This class adds the ability to store data within a single client session. The type of data to store is specified in the class template specification. The user class will be wrapped in \mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}, data access inside it is implemented through the \char`\"{}-\/$>$\char`\"{} operator.
+
+An object of the \mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}} class will be created after the client is connected, it will be created in the client processing thread and will be available in all three methods of working with the connected client, i.\+e. with On\+Client\+Connected, Client\+Message\+Handler and On\+Client\+Disconnect. Each object of this class is used only in its own thread, so it is thread-\/safe, and you should not try to use it in different threads. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server___s_c_a741fcd19b8d1dda9475d25ce28b77877}\label{class_e_n_1_1_e_n___t_c_p___server___s_c_a741fcd19b8d1dda9475d25ce28b77877}} 
+\index{EN::EN\_TCP\_Server\_SC$<$ T $>$@{EN::EN\_TCP\_Server\_SC$<$ T $>$}!ClientMessageHandler@{ClientMessageHandler}}
+\index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_TCP\_Server\_SC$<$ T $>$@{EN::EN\_TCP\_Server\_SC$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC}}$<$ T $>$\+::Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{std\+::string}]{message,  }\item[{\mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}$<$ T $>$ \&}]{session\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method that processes incoming messages. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The socket of the client from which the message came \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & Message from the client \\
+\hline
+\mbox{\texttt{ in}}  & {\em session\+Context} & A reference to a variable that stores the context of the connected client\textquotesingle{}s session\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server___s_c_af45343d72ce3c84e9e2b926b0c42c111}\label{class_e_n_1_1_e_n___t_c_p___server___s_c_af45343d72ce3c84e9e2b926b0c42c111}} 
+\index{EN::EN\_TCP\_Server\_SC$<$ T $>$@{EN::EN\_TCP\_Server\_SC$<$ T $>$}!OnClientConnected@{OnClientConnected}}
+\index{OnClientConnected@{OnClientConnected}!EN::EN\_TCP\_Server\_SC$<$ T $>$@{EN::EN\_TCP\_Server\_SC$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OnClientConnected()}{OnClientConnected()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC}}$<$ T $>$\+::On\+Client\+Connected (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{\mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}$<$ T $>$ \&}]{session\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+The method that is executed when the client connects to the server. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the connected client \\
+\hline
+\mbox{\texttt{ in}}  & {\em session\+Context} & A reference to a variable that stores the context of the connected client\textquotesingle{}s session\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server___s_c_a0324922ca61eed30a9b3fbee96d6b39a}\label{class_e_n_1_1_e_n___t_c_p___server___s_c_a0324922ca61eed30a9b3fbee96d6b39a}} 
+\index{EN::EN\_TCP\_Server\_SC$<$ T $>$@{EN::EN\_TCP\_Server\_SC$<$ T $>$}!OnClientDisconnect@{OnClientDisconnect}}
+\index{OnClientDisconnect@{OnClientDisconnect}!EN::EN\_TCP\_Server\_SC$<$ T $>$@{EN::EN\_TCP\_Server\_SC$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{OnClientDisconnect()}{OnClientDisconnect()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+SC}}$<$ T $>$\+::On\+Client\+Disconnect (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{\mbox{\hyperlink{struct_e_n_1_1_t_c_p___session_context___s_c}{T\+C\+P\+\_\+\+Session\+Context\+\_\+\+SC}}$<$ T $>$ \&}]{session\+Context }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Method that runs after the client is disconnected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the disconnected client \\
+\hline
+\mbox{\texttt{ in}}  & {\em session\+Context} & A reference to a variable that stores the context of the connected client\textquotesingle{}s session\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Must be defined by the user 
+\end{DoxyWarning}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C.\+h\end{DoxyCompactItemize}

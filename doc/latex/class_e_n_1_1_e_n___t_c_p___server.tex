@@ -1,4 +1,4 @@
-\hypertarget{class_e_n_1_1_e_n___t_c_p___server}{}\doxysection{EN\+::EN\+\_\+\+TCP\+\_\+\+Server Class Reference}
+\hypertarget{class_e_n_1_1_e_n___t_c_p___server}{}\doxysection{EN\+::E\+N\+\_\+\+T\+C\+P\+\_\+\+Server Class Reference}
 \label{class_e_n_1_1_e_n___t_c_p___server}\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 
 
@@ -7,75 +7,198 @@ Base tcp server class.
 
 
 
-{\ttfamily \#include $<$EN\+\_\+\+TCP\+\_\+\+Server.\+h$>$}
+{\ttfamily \#include $<$E\+N\+\_\+\+T\+C\+P\+\_\+\+Server.\+h$>$}
 
+Inheritance diagram for EN\+::E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.019231cm]{class_e_n_1_1_e_n___t_c_p___server}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a80ae830ad30f0743d247037b44610f9b}\label{class_e_n_1_1_e_n___t_c_p___server_a80ae830ad30f0743d247037b44610f9b}} 
-int {\bfseries Get\+Port} ()
+virtual int \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a80ae830ad30f0743d247037b44610f9b}{Get\+Port}} ()
 \begin{DoxyCompactList}\small\item\em Port getter. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a89afa1f70cbd95083f99f6a0b12b7a9c}\label{class_e_n_1_1_e_n___t_c_p___server_a89afa1f70cbd95083f99f6a0b12b7a9c}} 
-std\+::string {\bfseries Get\+Ip\+Addr} ()
+virtual std\+::string \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a89afa1f70cbd95083f99f6a0b12b7a9c}{Get\+Ip\+Addr}} ()
 \begin{DoxyCompactList}\small\item\em Ip getter. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_af024e34d9445792d9063118b9dd681cc}\label{class_e_n_1_1_e_n___t_c_p___server_af024e34d9445792d9063118b9dd681cc}} 
-int {\bfseries Get\+Connections\+Count} ()
+virtual size\+\_\+t \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a2ca651d1629093ca5408a22a67d171ee}{Get\+Connections\+Count}} ()
 \begin{DoxyCompactList}\small\item\em The function returns the number of connected devices. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}\label{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}} 
-void {\bfseries Run} ()
-\begin{DoxyCompactList}\small\item\em Method to start server. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}{Disconnect\+Client}} (int Client\+ID)
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Method to start server. Blocking call. Returns control to the thread after the last client is disconnected. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a14887bd25c99872713156450e5813c1f}{Disconnect\+Client}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket)
 \begin{DoxyCompactList}\small\item\em Method that disconnects the client from the server. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}\label{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}} 
-void {\bfseries Shutdown} ()
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}{Shutdown}} ()
 \begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}{Send\+To\+Client}} (int Client\+Id, std\+::string message, int Message\+Delay=10)
-\begin{DoxyCompactList}\small\item\em Method that send message to client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a5a4aa84701bf4ce09875cd81d0092159}\label{class_e_n_1_1_e_n___t_c_p___server_a5a4aa84701bf4ce09875cd81d0092159}} 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a5a4aa84701bf4ce09875cd81d0092159}{Disconnect\+All\+Connected\+Clients}} ()
+\begin{DoxyCompactList}\small\item\em Method that disconnect all connected clients. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ac045262e8892e1a13891861470e1ed3a}{Send\+To\+Client}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, std\+::string message)
+\begin{DoxyCompactList}\small\item\em Method that send message to client. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ab4b3f546ec28270513f7235664f29d5b}{Multicast\+Send}} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em Method that send message to all connected clients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_ae9db0d80e673d30bd7ca4ee57ff00790}\label{class_e_n_1_1_e_n___t_c_p___server_ae9db0d80e673d30bd7ca4ee57ff00790}} 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ae9db0d80e673d30bd7ca4ee57ff00790}{Wait\+While\+All\+Clients\+Disconnect}} ()
+\begin{DoxyCompactList}\small\item\em Method to wait while all clients disconnect. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a9b0e27825efe58649b7df2182d1df762}{Wait\+Message}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, std\+::string \&message)
+\begin{DoxyCompactList}\small\item\em Method that wait new incoming message from client. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a5dbc47bd298c21bdf016815f1aca04c7}{Lock\+Client\+Sockets}} ()
+\begin{DoxyCompactList}\small\item\em Function to lock client sockets list. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a418ea06b89e48dae5e1a41a663159073}{Unlock\+Client\+Sockets}} ()
+\begin{DoxyCompactList}\small\item\em Function to unlock client sockets list. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6c8a9ed7e0c5c05c1e808ef941de5615}{Add\+Accept\+Socket\+Option}} (int level, int option\+Name, int option\+Value)
+\begin{DoxyCompactList}\small\item\em The method sets options for accept socket. Accept socket accepts incoming connections from clients. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a3284edf4774320c6e18092a20bb6641a}{Add\+Accept\+Socket\+Option}} (\mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}} socket\+Options)
+\begin{DoxyCompactList}\small\item\em The method sets options for accept socket. Accept socket accepts incoming connections from clients. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ab62307d2510f61390d0f461fc83fe344}{Add\+On\+Socket\+Create\+Option}} (int level, int option\+Name, int option\+Value)
+\begin{DoxyCompactList}\small\item\em The method sets options for all sockets that will connect after its call. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a927be598ac9ff5dafb1170b39d61f6dc}{Add\+On\+Socket\+Create\+Option}} (\mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}} socket\+Options)
+\begin{DoxyCompactList}\small\item\em The method sets options for all sockets that will connect after its call. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_afa416785445a67f16c68b53450601d14}{Set\+Socket\+Option}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, int level, int option\+Name, int option\+Value)
+\begin{DoxyCompactList}\small\item\em The method sets options for client socket. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1a3a449788c01d9a3cfaa3472e226d71}{Set\+Socket\+Option}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, \mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}} socket\+Options)
+\begin{DoxyCompactList}\small\item\em The method sets options for client socket. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a3958ceb11e848aa3d4fc835c0e4a524f}{Set\+T\+C\+P\+Send\+Function}} (bool($\ast$T\+C\+P\+Send\+Function)(E\+N\+\_\+\+S\+O\+C\+K\+ET, const std\+::string \&))
+\begin{DoxyCompactList}\small\item\em The method sets custom send function. Allow you use your own protocol. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a809f258c9a5351108127582942356536}{Set\+T\+C\+P\+Recv\+Function}} (bool($\ast$T\+C\+P\+Recv\+Function)(E\+N\+\_\+\+S\+O\+C\+K\+ET, std\+::string \&))
+\begin{DoxyCompactList}\small\item\em The method sets custom recv function. Allow you use your own protocol. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}{On\+Client\+Connected}} (int Client\+ID)=0
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a830035051b2f270c119de261a58e647d}{On\+Client\+Connected}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket)=0
 \begin{DoxyCompactList}\small\item\em The method that is executed when the client connects to the server. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}{Client\+Message\+Handler}} (std\+::string message, int Client\+ID)=0
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_afdc2dc320a03e763dfefa4ebbffc940b}{Client\+Message\+Handler}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket, std\+::string message)=0
 \begin{DoxyCompactList}\small\item\em Method that processes incoming messages. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}{On\+Client\+Disconnect}} (int Client\+ID)=0
+virtual void \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a6619294c5d5294de08aee089d8194177}{On\+Client\+Disconnect}} (E\+N\+\_\+\+S\+O\+C\+K\+ET client\+Socket)=0
 \begin{DoxyCompactList}\small\item\em Method that runs after the client is disconnected. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a1649702e5eacebcb9c400f1b3300b8db}\label{class_e_n_1_1_e_n___t_c_p___server_a1649702e5eacebcb9c400f1b3300b8db}} 
-int {\bfseries Port} = 1111
+int \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a1649702e5eacebcb9c400f1b3300b8db}{Port}} = 1111
 \begin{DoxyCompactList}\small\item\em Server port. Default set to 1111. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}\label{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}} 
-std\+::string {\bfseries Ip\+Address} = \char`\"{}127.\+0.\+0.\+1\char`\"{}
-\begin{DoxyCompactList}\small\item\em Server ip address string. Default set to localhost. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a1052a2a74e8d9c618b0e77da1529e604}\label{class_e_n_1_1_e_n___t_c_p___server_a1052a2a74e8d9c618b0e77da1529e604}} 
-std\+::vector$<$ EN\+\_\+\+SOCKET $>$ {\bfseries Client\+Sockets}
-\begin{DoxyCompactList}\small\item\em vector of sockets of connected clients \end{DoxyCompactList}\end{DoxyCompactItemize}
+std\+::string \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}{Ip\+Address}} = \char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em Server ip address string. \end{DoxyCompactList}\item 
+std\+::set$<$ E\+N\+\_\+\+S\+O\+C\+K\+ET $>$ \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_afaddb6e4e872b689bfd69bd26b4ab014}{Client\+Sockets}}
+\begin{DoxyCompactList}\small\item\em Set of sockets of connected clients. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_ae98bb8da444529d3af6834f08c8e4e36}\label{class_e_n_1_1_e_n___t_c_p___server_ae98bb8da444529d3af6834f08c8e4e36}} 
+bool($\ast$ {\bfseries T\+C\+P\+\_\+\+Send} )(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, const std\+::string \&message) = E\+N\+::\+Default\+\_\+\+T\+C\+P\+\_\+\+Send
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a7d96772de152720366220a7c545fbf6b}\label{class_e_n_1_1_e_n___t_c_p___server_a7d96772de152720366220a7c545fbf6b}} 
+bool($\ast$ {\bfseries T\+C\+P\+\_\+\+Recv} )(E\+N\+\_\+\+S\+O\+C\+K\+ET sock, std\+::string \&message) = E\+N\+::\+Default\+\_\+\+T\+C\+P\+\_\+\+Recv
+\item 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_ad06d664e7dabfbae2fca94cd8ba3bf89}\label{class_e_n_1_1_e_n___t_c_p___server_ad06d664e7dabfbae2fca94cd8ba3bf89}} 
+\mbox{\hyperlink{class_e_n_1_1_e_n___thread_cross_walk}{E\+N\+\_\+\+Thread\+Cross\+Walk}} {\bfseries Cross\+Walk}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Base tcp server class. 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}\label{class_e_n_1_1_e_n___t_c_p___server_a6fdafde84bab249425fa9514c3d4b3dd}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a6c8a9ed7e0c5c05c1e808ef941de5615}\label{class_e_n_1_1_e_n___t_c_p___server_a6c8a9ed7e0c5c05c1e808ef941de5615}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!AddAcceptSocketOption@{AddAcceptSocketOption}}
+\index{AddAcceptSocketOption@{AddAcceptSocketOption}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{AddAcceptSocketOption()}{AddAcceptSocketOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Add\+Accept\+Socket\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option\+Name,  }\item[{int}]{option\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method sets options for accept socket. Accept socket accepts incoming connections from clients. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em level} & The level at which the option is defined (for example, S\+O\+L\+\_\+\+S\+O\+C\+K\+ET). \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Name} & The socket option for which the value is to be set (for example, S\+O\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST). The option\+Name parameter must be a socket option defined within the specified level, or behavior is undefined. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Value} & The value for the requested option is specified. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a3284edf4774320c6e18092a20bb6641a}\label{class_e_n_1_1_e_n___t_c_p___server_a3284edf4774320c6e18092a20bb6641a}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!AddAcceptSocketOption@{AddAcceptSocketOption}}
+\index{AddAcceptSocketOption@{AddAcceptSocketOption}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{AddAcceptSocketOption()}{AddAcceptSocketOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Add\+Accept\+Socket\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}}}]{socket\+Options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method sets options for accept socket. Accept socket accepts incoming connections from clients. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em socket\+Options} & This parameter takes a predefined structure to specify a package of socket options at once. The list of all predefined structures is in \mbox{\hyperlink{_e_n___socket_options_8h_source}{E\+N\+\_\+\+Socket\+Options.\+h}}. You can create your own sets of options using define or by creating structure objects \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_ab62307d2510f61390d0f461fc83fe344}\label{class_e_n_1_1_e_n___t_c_p___server_ab62307d2510f61390d0f461fc83fe344}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!AddOnSocketCreateOption@{AddOnSocketCreateOption}}
+\index{AddOnSocketCreateOption@{AddOnSocketCreateOption}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{AddOnSocketCreateOption()}{AddOnSocketCreateOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Add\+On\+Socket\+Create\+Option (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{option\+Name,  }\item[{int}]{option\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method sets options for all sockets that will connect after its call. 
+
+It makes sense to call this method before starting connecting clients, since it does not affect previously created sockets
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em level} & The level at which the option is defined (for example, S\+O\+L\+\_\+\+S\+O\+C\+K\+ET). \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Name} & The socket option for which the value is to be set (for example, S\+O\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST). The option\+Name parameter must be a socket option defined within the specified level, or behavior is undefined. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Value} & The value for the requested option is specified. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a927be598ac9ff5dafb1170b39d61f6dc}\label{class_e_n_1_1_e_n___t_c_p___server_a927be598ac9ff5dafb1170b39d61f6dc}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!AddOnSocketCreateOption@{AddOnSocketCreateOption}}
+\index{AddOnSocketCreateOption@{AddOnSocketCreateOption}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{AddOnSocketCreateOption()}{AddOnSocketCreateOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Add\+On\+Socket\+Create\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}}}]{socket\+Options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method sets options for all sockets that will connect after its call. 
+
+It makes sense to call this method before starting connecting clients, since it does not affect previously created sockets
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em socket\+Options} & This parameter takes a predefined structure to specify a package of socket options at once. The list of all predefined structures is in \mbox{\hyperlink{_e_n___socket_options_8h_source}{E\+N\+\_\+\+Socket\+Options.\+h}}. You can create your own sets of options using define or by creating structure objects \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_afdc2dc320a03e763dfefa4ebbffc940b}\label{class_e_n_1_1_e_n___t_c_p___server_afdc2dc320a03e763dfefa4ebbffc940b}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!ClientMessageHandler@{ClientMessageHandler}}
 \index{ClientMessageHandler@{ClientMessageHandler}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{ClientMessageHandler()}{ClientMessageHandler()}}
-{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{std\+::string}]{message,  }\item[{int}]{Client\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Client\+Message\+Handler (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
 Method that processes incoming messages. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The socket of the client from which the message came \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & Message from the client\\
+\hline
+\end{DoxyParams}
 \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}\label{class_e_n_1_1_e_n___t_c_p___server_a42ff69d264d5ae2946423ad7721bc68a}} 
+
+
+Implemented in \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server___eternal_a08b028300970e4fb7829f8516c6f8d28}{E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal}}, and \mbox{\hyperlink{class_e_n_1_1_e_n___h_t_t_p___server_a75f51fabc4b6eb3391eb8fb651923505}{E\+N\+::\+E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a14887bd25c99872713156450e5813c1f}\label{class_e_n_1_1_e_n___t_c_p___server_a14887bd25c99872713156450e5813c1f}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!DisconnectClient@{DisconnectClient}}
 \index{DisconnectClient@{DisconnectClient}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{DisconnectClient()}{DisconnectClient()}}
-{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server\+::\+Disconnect\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+ID }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Disconnect\+Client (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -83,40 +206,115 @@ Method that disconnects the client from the server.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em Client\+ID} & The number of the client to be disconnect \\
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Client socket to be disconnected \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}\label{class_e_n_1_1_e_n___t_c_p___server_ad3f664072e682537d3ff7a1b3dc17350}} 
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a2ca651d1629093ca5408a22a67d171ee}\label{class_e_n_1_1_e_n___t_c_p___server_a2ca651d1629093ca5408a22a67d171ee}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!GetConnectionsCount@{GetConnectionsCount}}
+\index{GetConnectionsCount@{GetConnectionsCount}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{GetConnectionsCount()}{GetConnectionsCount()}}
+{\footnotesize\ttfamily size\+\_\+t E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Get\+Connections\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The function returns the number of connected devices. 
+
+\begin{DoxyWarning}{Warning}
+Use the function only inside methods Lock\+Client\+Sockets and Unlock\+Client\+Sockets This is necessary because you can write logic depending on the number of connected clients, and after receiving the number, one of the clients will disconnect. 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a5dbc47bd298c21bdf016815f1aca04c7}\label{class_e_n_1_1_e_n___t_c_p___server_a5dbc47bd298c21bdf016815f1aca04c7}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!LockClientSockets@{LockClientSockets}}
+\index{LockClientSockets@{LockClientSockets}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{LockClientSockets()}{LockClientSockets()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Lock\+Client\+Sockets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Function to lock client sockets list. 
+
+This function is necessary to synchronize multiple threads when working with a list of connected clients. It will not allow other threads to change the list, while the ability to send messages and read them from the list items remains. Equals Thread\+Cross\+Walk.\+Car\+Start\+Cross\+Road(); \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_ab4b3f546ec28270513f7235664f29d5b}\label{class_e_n_1_1_e_n___t_c_p___server_ab4b3f546ec28270513f7235664f29d5b}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!MulticastSend@{MulticastSend}}
+\index{MulticastSend@{MulticastSend}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{MulticastSend()}{MulticastSend()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Multicast\+Send (\begin{DoxyParamCaption}\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that send message to all connected clients. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em message} & The message to be sent to the client \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server___s_c_u_p_aa6a7334e91941c953b467e2f587a14ef}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+\_\+\+S\+C\+U\+P$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a830035051b2f270c119de261a58e647d}\label{class_e_n_1_1_e_n___t_c_p___server_a830035051b2f270c119de261a58e647d}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!OnClientConnected@{OnClientConnected}}
 \index{OnClientConnected@{OnClientConnected}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{OnClientConnected()}{OnClientConnected()}}
-{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server\+::\+On\+Client\+Connected (\begin{DoxyParamCaption}\item[{int}]{Client\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+On\+Client\+Connected (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
 The method that is executed when the client connects to the server. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the connected client\\
+\hline
+\end{DoxyParams}
 \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}\label{class_e_n_1_1_e_n___t_c_p___server_a06ea023f3b6a3302f8731addf59cad0d}} 
+
+
+Implemented in \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server___eternal_a67e72bafdf36248864d8c994bdf8ec90}{E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal}}, and \mbox{\hyperlink{class_e_n_1_1_e_n___h_t_t_p___server_aac259baaf900279420391f3edb28b789}{E\+N\+::\+E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a6619294c5d5294de08aee089d8194177}\label{class_e_n_1_1_e_n___t_c_p___server_a6619294c5d5294de08aee089d8194177}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!OnClientDisconnect@{OnClientDisconnect}}
 \index{OnClientDisconnect@{OnClientDisconnect}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{OnClientDisconnect()}{OnClientDisconnect()}}
-{\footnotesize\ttfamily virtual void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server\+::\+On\+Client\+Disconnect (\begin{DoxyParamCaption}\item[{int}]{Client\+ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+On\+Client\+Disconnect (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
 
 
 
 Method that runs after the client is disconnected. 
 
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & Socket of the disconnected client\\
+\hline
+\end{DoxyParams}
 \begin{DoxyWarning}{Warning}
 Must be defined by the user 
 \end{DoxyWarning}
-\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}\label{class_e_n_1_1_e_n___t_c_p___server_a5388644d0904f37054886a272b7c18a7}} 
+
+
+Implemented in \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server___eternal_ad09aa980014480009b3b797c9fd264b4}{E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+\_\+\+Eternal}}, and \mbox{\hyperlink{class_e_n_1_1_e_n___h_t_t_p___server_a85a021decc4569db83a9c9e808461dd6}{E\+N\+::\+E\+N\+\_\+\+H\+T\+T\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}\label{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!Run@{Run}}
+\index{Run@{Run}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to start server. Blocking call. Returns control to the thread after the last client is disconnected. 
+
+Place this method in try block to catch errors. Throws socket errors. To get information about the error, use the documentation of your operating system. For Windows, errors go through W\+S\+A\+Get\+Last\+Error, for Linux, errors go through errno. ~\newline
+ All errors with the description are duplicated in the log system. 
+
+Reimplemented in \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server_a1107c86ccf2ba547c039964163bb3914}{E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_ac045262e8892e1a13891861470e1ed3a}\label{class_e_n_1_1_e_n___t_c_p___server_ac045262e8892e1a13891861470e1ed3a}} 
 \index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!SendToClient@{SendToClient}}
 \index{SendToClient@{SendToClient}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
 \doxysubsubsection{\texorpdfstring{SendToClient()}{SendToClient()}}
-{\footnotesize\ttfamily void EN\+::\+EN\+\_\+\+TCP\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{int}]{Client\+Id,  }\item[{std\+::string}]{message,  }\item[{int}]{Message\+Delay = {\ttfamily 10} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Send\+To\+Client (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{std\+::string}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -124,16 +322,168 @@ Method that send message to client.
 
 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em Client\+ID} & The number of the client \\
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The number of the client \\
 \hline
-\mbox{\texttt{ in}}  & {\em message} & The message to be sent to the client \\
-\hline
-\mbox{\texttt{ in}}  & {\em Message\+Delay} & The delay after sending message \\
+\mbox{\texttt{ in}}  & {\em message} & The message to be sent to the client\\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false if it was disconnection ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_afa416785445a67f16c68b53450601d14}\label{class_e_n_1_1_e_n___t_c_p___server_afa416785445a67f16c68b53450601d14}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!SetSocketOption@{SetSocketOption}}
+\index{SetSocketOption@{SetSocketOption}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetSocketOption()}{SetSocketOption()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Set\+Socket\+Option (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{int}]{level,  }\item[{int}]{option\+Name,  }\item[{int}]{option\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
+
+
+The method sets options for client socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The descriptor of the client \\
+\hline
+\mbox{\texttt{ in}}  & {\em level} & The level at which the option is defined (for example, S\+O\+L\+\_\+\+S\+O\+C\+K\+ET). \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Name} & The socket option for which the value is to be set (for example, S\+O\+\_\+\+B\+R\+O\+A\+D\+C\+A\+ST). The option\+Name parameter must be a socket option defined within the specified level, or behavior is undefined. \\
+\hline
+\mbox{\texttt{ in}}  & {\em option\+Value} & The value for the requested option is specified. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a1a3a449788c01d9a3cfaa3472e226d71}\label{class_e_n_1_1_e_n___t_c_p___server_a1a3a449788c01d9a3cfaa3472e226d71}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!SetSocketOption@{SetSocketOption}}
+\index{SetSocketOption@{SetSocketOption}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetSocketOption()}{SetSocketOption()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Set\+Socket\+Option (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{\mbox{\hyperlink{struct_e_n_1_1_predefined_socket_options}{Predefined\+Socket\+Options}}}]{socket\+Options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method sets options for client socket. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The descriptor of the client \\
+\hline
+\mbox{\texttt{ in}}  & {\em socket\+Options} & This parameter takes a predefined structure to specify a package of socket options at once. The list of all predefined structures is in \mbox{\hyperlink{_e_n___socket_options_8h_source}{E\+N\+\_\+\+Socket\+Options.\+h}}. You can create your own sets of options using define or by creating structure objects \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a809f258c9a5351108127582942356536}\label{class_e_n_1_1_e_n___t_c_p___server_a809f258c9a5351108127582942356536}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!SetTCPRecvFunction@{SetTCPRecvFunction}}
+\index{SetTCPRecvFunction@{SetTCPRecvFunction}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetTCPRecvFunction()}{SetTCPRecvFunction()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Set\+T\+C\+P\+Recv\+Function (\begin{DoxyParamCaption}\item[{bool($\ast$)(E\+N\+\_\+\+S\+O\+C\+K\+ET, std\+::string \&)}]{T\+C\+P\+Recv\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method sets custom recv function. Allow you use your own protocol. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em T\+C\+P\+Recv\+Function} & This parameter is a pointer to a function for receiving messages from the socket. The function accepts the socket of the connected client, where you want to recv from the message and the message itself \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Use this method only while the server is down 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a3958ceb11e848aa3d4fc835c0e4a524f}\label{class_e_n_1_1_e_n___t_c_p___server_a3958ceb11e848aa3d4fc835c0e4a524f}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!SetTCPSendFunction@{SetTCPSendFunction}}
+\index{SetTCPSendFunction@{SetTCPSendFunction}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{SetTCPSendFunction()}{SetTCPSendFunction()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Set\+T\+C\+P\+Send\+Function (\begin{DoxyParamCaption}\item[{bool($\ast$)(E\+N\+\_\+\+S\+O\+C\+K\+ET, const std\+::string \&)}]{T\+C\+P\+Send\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+The method sets custom send function. Allow you use your own protocol. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em T\+C\+P\+Send\+Function} & This parameter is a pointer to a function for sending messages to the socket. The function accepts the socket of the connected client, where you want to send the message and the message itself\\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+If you want to use your protocol, use only one send call. This is necessary because the send function is thread-\/safe, but if you send one message to 2 send calls, then if 2 threads write to the same socket, then the data of two different messages may be mixed and you will receive errors 
+
+Use this method only while the server is down 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}\label{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that stops the server. 
+
+If it is called before the Run method, then the next Run method will not start the server. This method will not wait for all clients to be disconnected. If you need to wait for all clients to finish, use the Wait\+While\+All\+Clients\+Disconnect method 
+
+Reimplemented in \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server_a50d37ab2e97fe0678a3e9ee80b6c384e}{E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a418ea06b89e48dae5e1a41a663159073}\label{class_e_n_1_1_e_n___t_c_p___server_a418ea06b89e48dae5e1a41a663159073}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!UnlockClientSockets@{UnlockClientSockets}}
+\index{UnlockClientSockets@{UnlockClientSockets}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{UnlockClientSockets()}{UnlockClientSockets()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Unlock\+Client\+Sockets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Function to unlock client sockets list. 
+
+This function is necessary to synchronize multiple threads when working with a list of connected clients. It will not allow other threads to change the list, while the ability to send messages and read them from the list items remains. Equals Thread\+Cross\+Walk.\+Car\+Start\+Cross\+Road(); \mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a9b0e27825efe58649b7df2182d1df762}\label{class_e_n_1_1_e_n___t_c_p___server_a9b0e27825efe58649b7df2182d1df762}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!WaitMessage@{WaitMessage}}
+\index{WaitMessage@{WaitMessage}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{WaitMessage()}{WaitMessage()}}
+{\footnotesize\ttfamily bool E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Wait\+Message (\begin{DoxyParamCaption}\item[{E\+N\+\_\+\+S\+O\+C\+K\+ET}]{client\+Socket,  }\item[{std\+::string \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that wait new incoming message from client. 
+
+\begin{DoxyWarning}{Warning}
+Since the Client\+Message\+Handler runs in a separate thread, the call to the Wait\+Message method must be in the same thread. ~\newline
+ This is necessary so that there is no waiting for a new message in different threads, which leads to undefined behavior. Note that you still can use this function on client connection because Client\+Message\+Handler invokes after On\+Client\+Connected.
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em client\+Socket} & The number of the client \\
+\hline
+\mbox{\texttt{ in}}  & {\em message} & The string to store incoming message \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true in case of success, false if it was disconnection 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_afaddb6e4e872b689bfd69bd26b4ab014}\label{class_e_n_1_1_e_n___t_c_p___server_afaddb6e4e872b689bfd69bd26b4ab014}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!ClientSockets@{ClientSockets}}
+\index{ClientSockets@{ClientSockets}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{ClientSockets}{ClientSockets}}
+{\footnotesize\ttfamily std\+::set$<$E\+N\+\_\+\+S\+O\+C\+K\+ET$>$ E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Client\+Sockets\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Set of sockets of connected clients. 
+
+\begin{DoxyWarning}{Warning}
+Dont modify set because it is not thread safety You can only work with set elements, for this use the methods Lock\+Client\+Sockets and Unlock\+Client\+Sockets 
+\end{DoxyWarning}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}\label{class_e_n_1_1_e_n___t_c_p___server_a4d44c3817d3288c822ab6c4f5155df68}} 
+\index{EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}!IpAddress@{IpAddress}}
+\index{IpAddress@{IpAddress}!EN::EN\_TCP\_Server@{EN::EN\_TCP\_Server}}
+\doxysubsubsection{\texorpdfstring{IpAddress}{IpAddress}}
+{\footnotesize\ttfamily std\+::string E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server\+::\+Ip\+Address = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Server ip address string. 
+
+Default set to empty string. Equals I\+N\+A\+D\+D\+R\+\_\+\+A\+NY Which means that the server can accept connections from any computer network. For example. The computer can be connected to a local network and to a V\+PN network. Then it will have 2 network interfaces and it will be possible to connect from both networks. Use this variable only if you want to accept connections from one specific network. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/EN\+\_\+\+TCP\+\_\+\+Server.\+h\item 
-C\+:/\+Users/timur/\+Desktop/\+Easy\+Network/\+Easy\+\_\+\+Network/EN\+\_\+\+TCP\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+T\+C\+P\+\_\+\+Server.\+h\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+T\+C\+P\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}

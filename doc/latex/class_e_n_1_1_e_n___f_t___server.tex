@@ -1,0 +1,54 @@
+\hypertarget{class_e_n_1_1_e_n___f_t___server}{}\doxysection{EN\+::E\+N\+\_\+\+F\+T\+\_\+\+Server Class Reference}
+\label{class_e_n_1_1_e_n___f_t___server}\index{EN::EN\_FT\_Server@{EN::EN\_FT\_Server}}
+Inheritance diagram for EN\+::E\+N\+\_\+\+F\+T\+\_\+\+Server\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_n_1_1_e_n___f_t___server}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server_a1107c86ccf2ba547c039964163bb3914}{Run}} ()
+\begin{DoxyCompactList}\small\item\em Method to start server. Blocking call. Returns control to the thread after the last client is disconnected. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_e_n_1_1_e_n___f_t___server_a50d37ab2e97fe0678a3e9ee80b6c384e}{Shutdown}} ()
+\begin{DoxyCompactList}\small\item\em Method that stops the server. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_e_n_1_1_e_n___f_t___server_a1107c86ccf2ba547c039964163bb3914}\label{class_e_n_1_1_e_n___f_t___server_a1107c86ccf2ba547c039964163bb3914}} 
+\index{EN::EN\_FT\_Server@{EN::EN\_FT\_Server}!Run@{Run}}
+\index{Run@{Run}!EN::EN\_FT\_Server@{EN::EN\_FT\_Server}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+::\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to start server. Blocking call. Returns control to the thread after the last client is disconnected. 
+
+Place this method in try block to catch errors. Throws socket errors. To get information about the error, use the documentation of your operating system. For Windows, errors go through W\+S\+A\+Get\+Last\+Error, for Linux, errors go through errno. ~\newline
+ All errors with the description are duplicated in the log system. 
+
+Reimplemented from \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a29f033fe8fbe80d846dc0b1d2ba398cf}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+\mbox{\Hypertarget{class_e_n_1_1_e_n___f_t___server_a50d37ab2e97fe0678a3e9ee80b6c384e}\label{class_e_n_1_1_e_n___f_t___server_a50d37ab2e97fe0678a3e9ee80b6c384e}} 
+\index{EN::EN\_FT\_Server@{EN::EN\_FT\_Server}!Shutdown@{Shutdown}}
+\index{Shutdown@{Shutdown}!EN::EN\_FT\_Server@{EN::EN\_FT\_Server}}
+\doxysubsubsection{\texorpdfstring{Shutdown()}{Shutdown()}}
+{\footnotesize\ttfamily void E\+N\+::\+E\+N\+\_\+\+F\+T\+\_\+\+Server\+::\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method that stops the server. 
+
+If it is called before the Run method, then the next Run method will not start the server. This method will not wait for all clients to be disconnected. If you need to wait for all clients to finish, use the Wait\+While\+All\+Clients\+Disconnect method 
+
+Reimplemented from \mbox{\hyperlink{class_e_n_1_1_e_n___t_c_p___server_a37f609d5555cd0f84a236889eb0bab11}{E\+N\+::\+E\+N\+\_\+\+T\+C\+P\+\_\+\+Server}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+F\+T\+\_\+\+Server.\+h\item 
+/home/mrognor/\+Desktop/\+C++/\+Easy\+\_\+\+Network/E\+N\+\_\+\+F\+T\+\_\+\+Server.\+cpp\end{DoxyCompactItemize}
